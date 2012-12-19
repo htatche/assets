@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  empkey: 1
+  brakey: 1
+  ctkey: 1
+  numdoc: MyString
+  datdoc: 2012-12-01
+  datsis: 2012-12-01
+  impdoc: 1.5
+  comdoc: MyString
+  optgen: 1
+  optimp: 1
+  optpag: 1
+  optreb: 1
+  indcom: 1
+  datcom: 2012-12-01
+  ctasse: 1
+
+two:
+  empkey: 1
+  brakey: 1
+  ctkey: 1
+  numdoc: MyString
+  datdoc: 2012-12-01
+  datsis: 2012-12-01
+  impdoc: 1.5
+  comdoc: MyString
+  optgen: 1
+  optimp: 1
+  optpag: 1
+  optreb: 1
+  indcom: 1
+  datcom: 2012-12-01
+  ctasse: 1

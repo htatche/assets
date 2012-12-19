@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ctemp: 1
+  ctkey: 1
+  ctcte: MyString
+  ctdesc: MyString
+  ctdesa: MyString
+  ctindi: MyString
+  pgckey: 1
+
+two:
+  ctemp: 1
+  ctkey: 1
+  ctcte: MyString
+  ctdesc: MyString
+  ctdesa: MyString
+  ctindi: MyString
+  pgckey: 1

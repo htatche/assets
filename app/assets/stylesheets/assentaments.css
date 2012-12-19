@@ -1,0 +1,38 @@
+h3 {
+  display: inline-block;
+  margin: 0px;
+}
+
+fieldset {
+  overflow: hidden;
+  width: 400px;
+  border: 1px solid gray;
+  margin: 4px;
+}
+
+label {
+  clear: both;
+  float: left;
+  padding-right: 10px;
+  width: 120px;
+}
+
+input {
+  float: right;
+  width: 200px;
+}
+
+#submitButton {
+  margin: 5px;
+  width: 80px;
+  float: left;;
+}
+
+#nou_assentament {
+  margin-bottom: 10px;
+}
+
+#frmErrors {
+  color: red;
+  margin: 5px;
+}

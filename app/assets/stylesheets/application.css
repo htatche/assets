@@ -1,0 +1,151 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require jquery.ui.all
+
+ * We apply our custom theme for jquery-ui based on smoothness theme
+ * Saved in assets/stylesheets/jquery-ui/
+ * Modifications: 12px font-size for widgets
+ *= require jquery-ui/smoothness/jquery-ui-1.9.1.custom.css
+
+ *= require_tree ../../../vendor/assets/stylesheets/jqwidgets/
+ *= require_tree . 
+*/
+
+/* App */
+body {
+  padding: 10px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #333;
+  font-size: 2.6em;
+}
+
+#appContainer {
+  width: 1000px;
+  margin: auto;
+}
+
+/* Icones del menu general */
+.menuOptions {
+  width: 600px;
+  margin-left: 200px;
+  display: inline-block;
+}
+
+.menuOptions div.option {
+  float: left;
+  width: 100px;
+  height: 110px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.menuOptions div.option img {
+  top: -100px;
+  z-index: -1;
+}
+
+.menuOptions div.option div.text {
+  vertical-align: middle;
+  margin: 5px;
+}
+
+/* Inside TAB */
+.tab-container {
+  margin: 5px;
+  width: auto;
+  overflow: hidden;
+
+}
+.tab-container .content {
+  width: auto;
+  height: auto;
+}
+
+.tab-container .menu {
+}
+
+.formulari {
+  width: 700px;
+  height: 300px;
+  font-family: Verdana ,Arial,sans-serif;
+  font-style: normal;
+  border: 1px gray solid;
+}
+.formulari .title {
+  padding: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  color: gray;
+  background-color: #E8E8E8;
+  border-bottom: 1px gray solid;
+}
+.formulari .content {
+  padding: 6px;
+  font-size: 12px;
+
+}
+.formulari .content .left {
+  float: left;
+  width: 200px;
+
+}
+.formulari .content .right {
+  float: right;
+  width: 200px;
+}
+
+div.ui-datepicker{
+   font-size:10px;
+}
+
+/* New code */
+
+#container {
+  padding: 5px;
+  width: 1000px;
+
+}
+#container #left {
+  float: left;
+  width: 210px;
+
+}
+#container #right {
+  float: right;
+  width: 790px;
+}
+
+.input-validation-error-highlight {
+  background-color: #fe6d70;
+}
+
+/* Form Errors */
+form div.errors {
+  display: none;
+  width: 400px;
+  margin: 20px 0 20px 15px;
+  padding: 10px;
+  border: 1px solid;
+}
+
+form div.notice {
+  display: none;
+  width: 200px;
+  height: 20px;
+  margin: 20px 0 20px 15px;
+  padding: 10px;
+}
+
+/* jquery-ui modifications */
+
+.ui-button-text {
+  text-align: left;
+  padding-left: 2.5em;
+};

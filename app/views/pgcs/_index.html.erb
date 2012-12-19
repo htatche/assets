@@ -1,0 +1,21 @@
+<%# javascript 'pgc.js' %>
+
+<div id='pgcIndex'>
+  <div> <h3> Pla general de comptabilitat </h3> </div>
+  <div> 
+    <div style='float: left;'>
+      <div id="pgcTreeContainer" style="float:left">
+        <div id="pgcTreeLoading"><%= image_tag("loading.gif") %></div>
+        <%= render :partial => "tree" %>
+      </div>
+
+      <div id="pgcMenuContainer" style='float:right'>
+          <button id="bAddGrup">Afeigir grup</button>
+          <button id="bAddSubgrup">Afeigir subgrup</button>
+          <button id="bAddCompteToTree">Afeigir compte</button>
+          <button id="bEditItemFromTree">Modificar</button>
+          <button id="bRemoveFromTree">Eliminar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<div id="splitter">
+  <div>
+      <div style="border: none;" id='jqxTree'>
+          <ul>
+              <li id="comptabilitat" item-expanded='true'>
+                      <span item-title="true">Comptabilitat</span>
+                  <ul>
+                      <li id="pgc" item-expanded='true'>
+                        <span item-title="true"><%= link_to "Pla general de comptabilitat", pgcs_path %></span> </li>
+                      <li id="consulta_assentaments">
+                        <span item-title="true">Consulta general d'assentaments</span> </li>
+                      <li id="entrada_assentaments">
+                        <span item-title="true"><%= link_to "Entrada d'assentaments", new_assentament_path %></span> </li>
+                  </ul>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div id="ContentPanel">
+  </div>
+</div>

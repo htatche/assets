@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mnuord: 1
+  mnutit: MyString
+  mnuico: MyString
+  mnugrp: 1
+
+two:
+  mnuord: 1
+  mnutit: MyString
+  mnuico: MyString
+  mnugrp: 1

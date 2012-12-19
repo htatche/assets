@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hislin: 1
+  ctkey: 1
+  impbas: 1.5
+
+two:
+  hislin: 1
+  ctkey: 1
+  impbas: 1.5

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hislin: 1
+  fpkey: 1
+  import: 1.5
+  datven: 2012-12-01
+  comen: MyString
+
+two:
+  hislin: 1
+  fpkey: 1
+  import: 1.5
+  datven: 2012-12-01
+  comen: MyString

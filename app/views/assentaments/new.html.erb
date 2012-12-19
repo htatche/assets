@@ -1,0 +1,41 @@
+<div id="nou_assentament">
+  <div> <h3> Nou assentament </h3> </div>
+  <div> 
+
+    <%= form_for @apunt, :remote => true, :html => { :'data-type' => 'html', :id => 'create_apunt_form' } do |f| %>
+
+      <div id="frmErrors">
+      </div>
+
+      <fieldset>
+      <legend> Dades assentament </legend>
+      <label for="numAssentament">Nº de assentament</label>
+      <%= text_field_tag :numAssentament, '', :id => "numAssentament" %>
+      <label for="comAssentament">Comentari general</label>
+      <%= text_field_tag :comAssentament, '', :id => "comAssentament" %>
+      </fieldset>
+
+      <fieldset>
+        <legend> Dades apunt </legend>
+        <label for="numCompte">Nº de compte</label>
+        <%= text_field_tag :numCompte, '', :id => "numCompte" %>
+        <label for="descrCompte">Descripció</label>
+        <%= text_field_tag :descrCompte, '', :id => "descrCompte" %>
+        <label for="deure">Deure</label>
+        <%= f.text_field :deure, :id => "deure" %>
+        <label for="haver">Haver</label>
+        <%= f.text_field :haver, :id => "haver" %>
+        <label for="dataApunt">Data apunt</label>
+        <%= f.text_field :ctdcta, :id => "dataApunt" %>
+        <label for="cttext">Comentari</label>
+        <%= f.text_field :cttext, :id => "cttext" %>
+      </fieldset>
+
+      <%= f.submit "Guardar", :id => "submitButton" %>
+    <% end %>
+  </div>
+</div>
+
+<div id="apunts">
+  <%= render :partial => "moviments/grid" %>
+</div>

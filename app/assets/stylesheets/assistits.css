@@ -1,0 +1,149 @@
+div.assistit {
+  margin-top: 10px;
+}
+
+div.assistit h3 {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #333;
+}
+
+.frm_new_p1 {
+  margin: 10px 0 0 5px;
+}
+
+
+.frm_new_p1 .input-validation-error {
+  display: none;
+  float: left;
+  line-height: 14px;
+  margin: 4px 0 0 30px;
+  padding: 4px;
+  border: 1px solid #D45252;
+  background-color: #FFAAAA;
+}
+
+.frm_new_p1 .input-validation-error::before {
+  content: "\25C0"; /* left point triangle in escaped unicode */
+  color: #d45252;
+  position: relative;
+  top: -1px;
+  left: -15px;
+}
+
+.frm_new_p1 fieldset {
+  width: auto;
+  border: 0;
+}
+
+.frm_new_p1 fieldset legend {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.frm_new_p1 fieldset ol {
+  padding: 0;
+}
+.frm_new_p1 fieldset ol li {
+  line-height: 30px;
+  list-style: none;
+  margin-bottom: 2px;
+}
+
+.frm_new_p1 fieldset ol li.ctcte input {
+  width: 150px;
+}
+.frm_new_p1 fieldset ol li.ctcte input[type=checkbox] {
+  float: none;
+  width: 20px;
+}
+.frm_new_p1 fieldset ol li.ctcte span.ui-icon-search {
+  float:left;
+  margin: 7px;
+}
+.frm_new_p1 fieldset ol li.import {
+  line-height: 50px;
+}
+
+.frm_new_p1 fieldset.main div.ctcte-combobox,
+                          div.numeric {
+  width: 220px;
+  float:left;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+.frm_new_p1 fieldset.main div.numeric input {
+  font-size: 1.4em;
+}
+
+.frm_new_p1 fieldset label {
+  width: 150px;
+  float: left;
+  padding-bottom: 10px;
+  color: #333
+}
+
+.frm_new_p1 fieldset input[name=numdoc] {
+  width: 60px;
+}
+.frm_new_p1 fieldset input[name=ctdesc] {
+  width: 220px;
+}
+.frm_new_p1 fieldset input[name=date] {
+  width: 220px;
+}
+.frm_new_p1 fieldset input[name=comment] {
+  width: 220px;
+}
+
+.frm_new_p1 fieldset input:not([type=submit]), select {
+  float: left;
+  border: 1px solid #aaa;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  outline: none;
+  padding: 5px;
+}
+
+.frm_new_p1 input[type=submit] {
+  float: right;
+  width: auto;
+  margin: 10px;
+  font-size: 2em;
+}
+
+.frm_new_p1 fieldset.desglossat td {
+  padding-right: 10px;
+}
+
+.frm_new_p1 fieldset.desglossat select.compte {
+  width: 250px;
+}
+
+.frm_new_p1 fieldset.desglossat input.import {
+  width: 100px;
+}
+.frm_new_p1 fieldset.desglossat div.numeric {
+  display: none;
+  width: 100px;
+}
+
+.frm_new_p1 fieldset.desglossat input.comment {
+  width: 300px;
+}
+
+.frm_new_p1 fieldset.desglossat input.date {
+  width: 120px;
+}
+
+.frm_new_p1 fieldset.desglossat td.delete {
+  width: 20px;
+}
+
+.frm_new_p1 button {
+  margin-top: 20px;
+}

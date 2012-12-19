@@ -1,0 +1,23 @@
+<%= form_for @compte, :remote => true, :html => { :'data-type' => 'html' } do |f| %>
+
+  <div class="validation-error">
+  </div>
+
+  <fieldset>
+    <label for="name">Subgrup: </label>
+      <%= text_field_tag :subgrup, nil, :disabled => true %>
+      <%= f.hidden_field :pgc_id %>
+    <label for="name">Compte comptable</label>
+      <% if @compte.new_record? %>
+        <%= f.text_field :ctcte, :maxlength => @empresa.emplos %>
+      <% else %>
+        <%= f.text_field :ctcte, :disabled => true %>
+        <%= f.hidden_field :ctcte %>
+      <% end %>
+    <label for="email">Descripció compte</label>
+      <%= f.text_field :ctdesc %>
+
+    <%= f.submit "Guardar" %>
+  </fieldset>
+
+<% end %>

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mnukey: 1
+  opccord: 1
+  opcdes: MyString
+  opcdbo: MyString
+  opcfrm: MyString
+  opcind: 1
+  opcbot: 1
+  brakey: 1
+  pantip: 1
+  mnusec: 1
+
+two:
+  mnukey: 1
+  opccord: 1
+  opcdes: MyString
+  opcdbo: MyString
+  opcfrm: MyString
+  opcind: 1
+  opcbot: 1
+  brakey: 1
+  pantip: 1
+  mnusec: 1

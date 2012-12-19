@@ -1,0 +1,46 @@
+<script type="text/javascript">
+
+  $(document).ready(function () {
+    var source =
+    {
+        datatype: "json",
+        datafields: [
+            { name: 'ctdcta' },
+            { name: 'ctasse' },
+            { name: 'ctkey' },
+            { name: 'cttext' },
+            { name: 'deure_' },
+            { name: 'haver_' },
+            { name: 'cttext' }
+        ],
+        url: "/moviments/grid",
+        data: {
+            featureClass: "P",
+            style: "full",
+            maxRows: 50
+        }
+    };
+    var dataAdapter = new $.jqx.dataAdapter(source);
+
+    $("#jqxgrid").jqxGrid(
+    {
+        width: 700,
+        source: dataAdapter,
+        columnsresize: true,
+        columns: [
+            { text: 'Data', datafield: 'ctdcta', width: 100 },
+            { text: 'Nº Assentament', datafield: 'numass', width: 100 },
+            { text: 'Compte', datafield: 'ctkey', width: 100 },
+            { text: 'Descripcio', datafield: 'cttext', width: 100 },
+            { text: 'Deure', datafield: 'deure_', width: 100 },
+            { text: 'Haver', datafield: 'haver_', width: 100 },
+            { text: 'Comentari', datafield: 'cttext', width: 100 }
+        ]
+    });
+  });
+
+</script>
+
+<div id='jqxWidget' style="font-size: 13px; font-family: Verdana; float: left;">
+  <div id="jqxgrid"></div>
+</div>

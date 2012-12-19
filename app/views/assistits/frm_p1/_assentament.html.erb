@@ -1,0 +1,24 @@
+<tr>
+  <td>
+    <%= select_tag 'assent_compte['+@nrow+']',
+          options_from_collection_for_select(@comptes_desti,
+                                             'ctcte',
+                                             'ctfullname'),
+          {:class => 'assent_compte', :tabindex => 7} %> 
+  </td>
+  <td class='import'>
+    <%= text_field_tag 'assent_import['+@nrow+']',
+                       ' ',
+                       {:class => 'assent_import',
+                        :tabindex => 8} %> 
+  </td>
+  <td>
+    <%= text_field_tag 'assent_comment['+@nrow+']',
+                       ' ',
+                       {:class => 'assent_comment',
+                        :tabindex => 9} %> 
+  </td>
+  <td>
+    <span class='ui-icon ui-icon-closethick'></span>
+  </td>
+</tr>

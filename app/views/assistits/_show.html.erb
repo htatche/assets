@@ -1,0 +1,18 @@
+<div class="tab-container">
+  <div class='menu'>
+    <div class='jqx-menu'>
+      <ul>
+        <li> Assistits
+          <ul>
+            <% menuOptions.each{ |i| %>
+              <li id='assistit/<%= i.id %>'><%= i.opcdes %></li>
+            <% } %>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='content'>
+  </div>
+</div>

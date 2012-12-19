@@ -1,0 +1,24 @@
+<%= form_for @grup, :remote => true, :html => { :'data-type' => 'html' } do |f| %>
+  <div class="validation-error">
+  </div>
+
+  <fieldset>
+    <% if @subgrup %>
+      <label for="name">Pertany a  </label>
+        <%= text_field_tag :parent, nil, :disabled => true %>
+        <%= hidden_field_tag :parent_id %>
+    <% end %>
+    <label for="name">Codi</label>
+      <% if @grup.new_record? %>
+        <%= f.text_field :pgccte, :maxlength => 1, :disabled => false %>
+      <% else %>
+        <%= f.text_field :pgccte, :disabled => true %>
+        <%= f.hidden_field :pgccte %>
+      <% end %>
+    <label for="email">Descripció</label>
+      <%= f.text_field :pgcdes %>
+
+    <%= f.submit "Guardar" %>
+  </fieldset>
+
+<% end %>

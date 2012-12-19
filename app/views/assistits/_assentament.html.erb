@@ -1,0 +1,26 @@
+<tr>
+  <td>
+    <%= select_tag 'apunt['+@nrow+'][compte]',
+          options_from_collection_for_select(@comptes_desti,
+                                             'ctcte',
+                                             'ctfullname'),
+          {:class => 'compte assent_compte',
+           :tabindex => 7} %> 
+  </td>
+  <td>
+    <%= text_field_tag 'apunt['+@nrow+'][import]',
+                       '',
+                       {:class => 'import assent_import',
+                        :tabindex => 8} %> 
+    <div class='numeric'> </div>
+  </td>
+  <td>
+    <%= text_field_tag 'apunt['+@nrow+'][comment]',
+                       '',
+                       {:class => 'comment assent_comment',
+                        :tabindex => 9} %> 
+  </td>
+  <td class='destroy'>
+    <span class='ui-icon ui-icon-closethick'></span>
+  </td>
+</tr>

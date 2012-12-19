@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  hislin: 1
+  ctkey: 1
+  import: 1.5
+  comen: MyString
+
+two:
+  hislin: 1
+  ctkey: 1
+  import: 1.5
+  comen: MyString

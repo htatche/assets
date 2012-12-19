@@ -1,0 +1,10 @@
+ca:
+  errors:
+    messages:
+      blank: 'no pot estar buit'
+      not_a_number: 'no te un format correcte'
+  activerecord:
+    attributes: 
+      histgen:
+        ctkey: 'Compte'
+        import: 'Import'

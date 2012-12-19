@@ -1,0 +1,56 @@
+/* PGC Tree */
+
+#pgcTreeContainer {
+  width: 720px;
+  margin: 10px 0 0 15px;
+}
+#pgcTreeLoading {
+  display: none;
+}
+
+/* PGC Menu options */
+
+#pgcMenuContainer {
+  width: 150px;
+  margin-top: 10px;
+}
+
+#pgcMenuContainer button {
+  width: 140px;
+}
+
+/* Dialogs */
+
+.pgcDialog {
+  font-size: 12px;
+  height: auto;
+}
+
+/* Dialogs forms */
+
+.pgcDialog .validation-error {
+  display: none;
+  border: 1px solid;
+  padding: 0.3em;
+}
+
+.validation-error-highlight {
+  background-color: #fe6d70;
+}
+
+.pgcDialog fieldset {
+  border: 0;
+  width: 340px;
+}
+.pgcDialog fieldset label {
+  padding-bottom: 10px;
+  padding-top: 5px;
+}
+
+.pgcDialog input {
+  width: 200px;
+}
+.pgcDialog input[type="submit"] {
+  width: 100px;
+  margin-top: 15px;
+}

@@ -1,0 +1,130 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ApplicationController	controllers/application_controller.rb	/^class ApplicationController < ActionController::Base$/;"	c
+ApplicationHelper	helpers/application_helper.rb	/^module ApplicationHelper$/;"	m
+Assentament	assets/javascripts/api/assistit.js	/^var Assentament = Backbone.Model.extend({$/;"	v
+Assentament	assets/javascripts/assistits.js	/^function Assentament(el) {$/;"	f
+AssentamentView	assets/javascripts/api/assistit.js	/^var AssentamentView = Backbone.View.extend({ $/;"	v
+AssentamentsController	controllers/assentaments_controller.rb	/^class AssentamentsController < ApplicationController$/;"	c
+AssentamentsHelper	helpers/assentaments_helper.rb	/^module AssentamentsHelper$/;"	m
+Assistit	assets/javascripts/assistits.js	/^function Assistit(tab, el) {$/;"	f
+AssistitsController	controllers/assistits_controller.rb	/^class AssistitsController < ApplicationController$/;"	c
+AssistitsHelper	helpers/assistits_helper.rb	/^module AssistitsHelper$/;"	m
+Brain	models/brain.rb	/^class Brain < ActiveRecord::Base$/;"	c
+Braindet	models/braindet.rb	/^class Braindet < ActiveRecord::Base$/;"	c
+Compte	models/compte.rb	/^class Compte < ActiveRecord::Base$/;"	c
+ComptesController	controllers/comptes_controller.rb	/^class ComptesController < ApplicationController$/;"	c
+ComptesHelper	helpers/comptes_helper.rb	/^module ComptesHelper$/;"	m
+Contrapartida	assets/javascripts/api/assistit.js	/^var Contrapartida = Backbone.Collection.extend({$/;"	v
+Empresa	models/empresa.rb	/^class Empresa < ActiveRecord::Base$/;"	c
+Histgen	models/histgen.rb	/^class Histgen < ActiveRecord::Base$/;"	c
+Histimp	models/histimp.rb	/^class Histimp < ActiveRecord::Base$/;"	c
+Historial	models/historial.rb	/^class Historial < ActiveRecord::Base$/;"	c
+Histpag	models/histpag.rb	/^class Histpag < ActiveRecord::Base$/;"	c
+MainController	controllers/main_controller.rb	/^class MainController < ApplicationController$/;"	c
+MainHelper	helpers/main_helper.rb	/^module MainHelper$/;"	m
+Menu	models/menu.rb	/^class Menu < ActiveRecord::Base$/;"	c
+MenuController	controllers/menu_controller.rb	/^class MenuController < ApplicationController$/;"	c
+MenuHelper	helpers/menu_helper.rb	/^module MenuHelper$/;"	m
+Menudet	models/menudet.rb	/^class Menudet < ActiveRecord::Base$/;"	c
+Menulit	models/menulit.rb	/^class Menulit < ActiveRecord::Base$/;"	c
+Moviment	models/moviment.rb	/^class Moviment < ActiveRecord::Base$/;"	c
+MovimentsController	controllers/moviments_controller.rb	/^class MovimentsController < ApplicationController$/;"	c
+MovimentsHelper	helpers/moviments_helper.rb	/^module MovimentsHelper$/;"	m
+Pgc	models/pgc.rb	/^class Pgc < ActiveRecord::Base$/;"	c
+PgcHelper	helpers/pgc_helper.rb	/^module PgcHelper$/;"	m
+PgcsController	controllers/pgcs_controller.rb	/^class PgcsController < ApplicationController$/;"	c
+Tab	assets/javascripts/assistits.js	/^function Tab (tabIndex) {$/;"	f
+_this.bindDestoyIcon	assets/javascripts/assistits.js	/^  _this.bindDestoyIcon = function(fieldset) {$/;"	f
+_this.bindKeydown	assets/javascripts/assistits.js	/^  _this.bindKeydown = function(fieldset) {$/;"	f
+_this.bindings	assets/javascripts/assistits.js	/^  _this.bindings = function() {$/;"	f
+_this.fire	assets/javascripts/assistits.js	/^  _this.fire = function() {$/;"	f
+_this.getCodiCompte	assets/javascripts/assistits.js	/^  _this.getCodiCompte = function(ctcte, errtpl, input) {$/;"	f
+_this.getComptes	assets/javascripts/assistits.js	/^  _this.getComptes = function() {$/;"	f
+_this.getFacturaDuplicada	assets/javascripts/assistits.js	/^  _this.getFacturaDuplicada = function(numdoc, ctekey, opckey) {$/;"	f
+_this.getRow	assets/javascripts/assistits.js	/^  _this.getRow = function(fieldset) {$/;"	f
+_this.initialize	assets/javascripts/assistits.js	/^  _this.initialize = function() {$/;"	f
+_this.nrows	assets/javascripts/assistits.js	/^  _this.nrows = function(fieldset) {$/;"	f
+_this.reload	assets/javascripts/assistits.js	/^  _this.reload = function() {$/;"	f
+_this.setBindings	assets/javascripts/assistits.js	/^  _this.setBindings = function() {$/;"	f
+_this.setRow	assets/javascripts/assistits.js	/^  _this.setRow = function(fieldset, data) {$/;"	f
+_this.setTabindexes	assets/javascripts/assistits.js	/^  _this.setTabindexes = function() {$/;"	f
+_this.submit	assets/javascripts/assistits.js	/^  _this.submit = function() {$/;"	f
+assistit	controllers/assistits_controller.rb	/^  def assistit$/;"	f	class:AssistitsController
+autoCompleteCtcte	models/compte.rb	/^  def self.autoCompleteCtcte(numCompte)$/;"	F	class:Compte
+buscarFactura	controllers/assistits_controller.rb	/^  def buscarFactura(numdoc, ctcte, opckey)$/;"	f	class:AssistitsController
+buscarGrupComptable	controllers/assistits_controller.rb	/^  def buscarGrupComptable(opckey)$/;"	f	class:AssistitsController
+buscarGrupComptable	controllers/moviments_controller.rb	/^  def buscarGrupComptable$/;"	f	class:MovimentsController
+checkAssistitErrors	models/compte.rb	/^  def self.checkAssistitErrors(opckey, ctcte, ctdesc, auto)$/;"	F	class:Compte
+check_ctcte	models/compte.rb	/^  def self.check_ctcte(empKey, numCompte)$/;"	F	class:Compte
+cleanFormInputs	assets/javascripts/pgc/pgc.js	/^function cleanFormInputs(frm) {$/;"	f
+completarCodi	models/compte.rb	/^  def self.completarCodi(grup, ctcte)$/;"	F	class:Compte
+comptabilitzar	models/historial.rb	/^  def comptabilitzar$/;"	f	class:Historial
+create	controllers/assistits_controller.rb	/^  def create$/;"	f	class:AssistitsController
+create	controllers/comptes_controller.rb	/^  def create$/;"	f	class:ComptesController
+create	controllers/moviments_controller.rb	/^  def create$/;"	f	class:MovimentsController
+create	controllers/pgcs_controller.rb	/^  def create$/;"	f	class:PgcsController
+cteMaxLength	models/empresa.rb	/^  def self.cteMaxLength(empkey)$/;"	F	class:Empresa
+ctfullname	models/compte.rb	/^  def ctfullname$/;"	f	class:Compte
+datdoc_is_date	models/historial.rb	/^  def datdoc_is_date$/;"	f	class:Historial
+delete	controllers/comptes_controller.rb	/^  def delete$/;"	f	class:ComptesController
+delete	controllers/pgcs_controller.rb	/^  def delete$/;"	f	class:PgcsController
+descrCompte	models/moviment.rb	/^  def descrCompte$/;"	f	class:Moviment
+destroy	controllers/comptes_controller.rb	/^  def destroy$/;"	f	class:ComptesController
+destroy	controllers/pgcs_controller.rb	/^  def destroy$/;"	f	class:PgcsController
+deure=	models/moviment.rb	/^  def deure=(import)$/;"	f	class:Moviment
+display_all	helpers/pgc_helper.rb	/^def display_all(collection)$/;"	f
+display_pgc	helpers/pgc_helper.rb	/^def display_pgc(categories)$/;"	f	class:PgcHelper
+edit	controllers/comptes_controller.rb	/^  def edit$/;"	f	class:ComptesController
+edit	controllers/pgcs_controller.rb	/^  def edit$/;"	f	class:PgcsController
+errors.message	assets/javascripts/pgc/pgc.js	/^    errors = {message: "Sisplau refresqui la pagina i torni a probar"};$/;"	p
+fillCtcteInput	controllers/assentaments_controller.rb	/^  def fillCtcteInput$/;"	f	class:AssentamentsController
+find_if_exists	models/compte.rb	/^  def self.find_if_exists(id)$/;"	F	class:Compte
+fire	models/moviment.rb	/^  def fire$/;"	f	class:Moviment
+fireOptionJs	assets/javascripts/pgc/pgc.js	/^function fireOptionJs() {$/;"	f
+formatPgccte	models/pgc.rb	/^  def formatPgccte$/;"	f	class:Pgc
+generarNou	models/compte.rb	/^  def self.generarNou(grup)$/;"	F	class:Compte
+getAssentament	controllers/assistits_controller.rb	/^  def getAssentament$/;"	f	class:AssistitsController
+getCodiCompte	controllers/assistits_controller.rb	/^  def getCodiCompte$/;"	f	class:AssistitsController
+getCompteId	models/compte.rb	/^  def self.getCompteId(ctcte)$/;"	F	class:Compte
+getComptes	controllers/assistits_controller.rb	/^  def getComptes$/;"	f	class:AssistitsController
+getDeureHaver	models/brain.rb	/^  def self.getDeureHaver(brakey)$/;"	F	class:Brain
+getFacturaDuplicada	controllers/assistits_controller.rb	/^  def getFacturaDuplicada$/;"	f	class:AssistitsController
+getFormLabels	models/menulit.rb	/^  def self.getFormLabels(option)$/;"	F	class:Menulit
+getImpost	controllers/assistits_controller.rb	/^  def getImpost$/;"	f	class:AssistitsController
+getNewNumass	models/moviment.rb	/^  def self.getNewNumass$/;"	F	class:Moviment
+getPagament	controllers/assistits_controller.rb	/^  def getPagament$/;"	f	class:AssistitsController
+getTreeItemCategory	controllers/pgcs_controller.rb	/^  def getTreeItemCategory$/;"	f	class:PgcsController
+grid	controllers/moviments_controller.rb	/^  def grid$/;"	f	class:MovimentsController
+grupDest	models/brain.rb	/^  def self.grupDest(opckey)$/;"	F	class:Brain
+grupOri	models/brain.rb	/^  def self.grupOri(opckey)$/;"	F	class:Brain
+haver=	models/moviment.rb	/^  def haver=(import)$/;"	f	class:Moviment
+index	controllers/main_controller.rb	/^  def index $/;"	f	class:MainController
+index	controllers/pgcs_controller.rb	/^  def index$/;"	f	class:PgcsController
+javascript	helpers/application_helper.rb	/^  def javascript(*files)$/;"	f	class:ApplicationHelper
+json_tree	models/pgc.rb	/^  def self.json_tree(nodes)$/;"	F	class:Pgc
+loadDialog	assets/javascripts/pgc/pgc.js	/^function loadDialog(url, tag) {$/;"	f
+menuOptions	controllers/application_controller.rb	/^  def menuOptions$/;"	f	class:ApplicationController
+new	controllers/assentaments_controller.rb	/^  def new$/;"	f	class:AssentamentsController
+new	controllers/comptes_controller.rb	/^  def new$/;"	f	class:ComptesController
+new	controllers/pgcs_controller.rb	/^  def new$/;"	f	class:PgcsController
+refreshTreeButtonsState	assets/javascripts/pgc/pgc.js	/^function refreshTreeButtonsState(category, childCategories, childComptes) {$/;"	f
+set_num_compte=	models/moviment.rb	/^  def set_num_compte=(numCompte)$/;"	f	class:Moviment
+show	controllers/assentaments_controller.rb	/^  def show$/;"	f	class:AssentamentsController
+show	controllers/assistits_controller.rb	/^  def show$/;"	f	class:AssistitsController
+show	controllers/comptes_controller.rb	/^  def show$/;"	f	class:ComptesController
+show	controllers/moviments_controller.rb	/^  def show$/;"	f	class:MovimentsController
+showValidationErrors	assets/javascripts/pgc/pgc.js	/^function showValidationErrors(dialog, xhr) {$/;"	f
+source.datafields	assets/javascripts/pgc/pgc.js	/^    datafields: [$/;"	p
+source.datatype	assets/javascripts/pgc/pgc.js	/^    datatype: "json",$/;"	p
+tree	controllers/pgcs_controller.rb	/^  def tree$/;"	f	class:PgcsController
+update	controllers/comptes_controller.rb	/^  def update$/;"	f	class:ComptesController
+update	controllers/pgcs_controller.rb	/^  def update$/;"	f	class:PgcsController
+validarCompte	controllers/assentaments_controller.rb	/^  def validarCompte$/;"	f	class:AssentamentsController
+validationTitle	models/histgen.rb	/^  def self.validationTitle$/;"	F	class:Histgen
+validationTitle	models/histimp.rb	/^  def self.validationTitle$/;"	F	class:Histimp
+validationTitle	models/histpag.rb	/^  def validationTitle$/;"	f	class:Histpag

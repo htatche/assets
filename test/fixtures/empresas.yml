@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  empkey: 1
+  empnom: MyString
+  emppgc: 1
+  emploc: 1
+  emplos: 1
+  empdlo: MyString
+  empdli: MyString
+
+two:
+  empkey: 1
+  empnom: MyString
+  emppgc: 1
+  emploc: 1
+  emplos: 1
+  empdlo: MyString
+  empdli: MyString

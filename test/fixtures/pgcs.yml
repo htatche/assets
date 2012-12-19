@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  pgccla: 1
+  pgckey: 1
+  pgckpa: 1
+  pgccte: MyString
+  pgcdes: MyString
+  pgcind: MyString
+  pgcbas: 1
+
+two:
+  pgccla: 1
+  pgckey: 1
+  pgckpa: 1
+  pgccte: MyString
+  pgcdes: MyString
+  pgcind: MyString
+  pgcbas: 1

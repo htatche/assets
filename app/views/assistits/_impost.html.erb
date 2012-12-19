@@ -1,0 +1,20 @@
+<tr>
+  <td>
+    <%= select_tag 'imp['+@nrow+'][compte]',
+          options_from_collection_for_select(@comptes_impostos,
+                                             'ctcte',
+                                             'ctfullname'),
+          {:class => 'compte impost_compte',
+           :tabindex => 7} %> 
+  </td>
+  <td>
+    <%= text_field_tag 'imp['+@nrow+'][import]',
+                       '',
+                       {:class => 'import impost_import',
+                        :tabindex => 8} %> 
+    <div class='numeric'> </div>
+  </td>
+  <td class='destroy'>
+    <span class='ui-icon ui-icon-closethick'></span>
+  </td>
+</tr>
