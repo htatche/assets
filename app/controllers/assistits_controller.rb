@@ -156,7 +156,25 @@ class AssistitsController < ApplicationController
     if errors.any?
       render :json => errors.to_json, :status => :unprocessable_entity
     else
+
+      nassent = Moviment.getNewNumass
+
+      histmov = @historial.comptabilitzar (nassent)
+       
     
+      begin 
+        Moviment.comptabilitzar(@historial, 
+                                @apunts,
+                                @impostos,
+                                @pagaments)
+      rescue => e
+        errors << {:field => 'Comptabilitzar',
+                   :msg => 'Error'}
+        render :json => errors.to_json,
+               :status => :unprocessable_entity
+
+      end
+
       if @compte
         @compte.save
         ctkey = @compte.id
@@ -186,10 +204,6 @@ class AssistitsController < ApplicationController
           i.historial_id = @historial.id
           i.save
         } 
-      end
-
-      if @historial.comptabilitzar
-       
       end
 
       render :text => lits.lit15

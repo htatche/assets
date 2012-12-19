@@ -18,6 +18,57 @@ class Historial < ActiveRecord::Base
     end
   end
 
+  def comentari
+    if comdoc == ''
+      numdoc
+    else
+      numdoc + '/' + comdoc
+    end
+  end
+
+  def compta
+    nctclau = 0
+    nassent = Moviment.getNewNumass
+
+    if brain = Brain.find_by_brakey(self.brakey)
+      braini = brain.braini
+    else
+      raise 'Comptabilitzar Hist - Brain # #{brakey} inexistent'
+    end
+
+    if Compte.exists?(ctkey)
+      compte = Compte.find(ctkey)
+    else
+      raise 'Comptabilitzar Hist - Compte # #{ctkey} inexistent'
+    end
+
+    nctclau = nctclau + 1
+
+    #Assentament general
+    mov = { 
+      :ctkey => compte.id,
+      :ctdsis => Date.today,
+      :ctdcta => self.datdoc,
+      :ctclau => nctclau,
+      :ctpref => self.impdoc >= 0 ? 1 : -1,
+      :ctasse => self.id,
+      :numass => nassent,
+      :cttext => self.comentari,
+      :ctimp => self.impdoc
+    }
+    moviment = Moviment.new(mov)
+    moviment.save
+
+    histmov.valid?
+
+    if errors.any?
+      errors.messages.each { |e|
+        logger.debug e
+      } 
+    end
+
+  end
+
   def comptabilitzar
     nctclau = 0
     num_ass = Moviment.getNewNumass

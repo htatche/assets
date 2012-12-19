@@ -14,6 +14,10 @@ class Moviment < ActiveRecord::Base
     max.nil? ? 0 : max + 1
   end
 
+  def comptabilitzar
+
+  end
+
   def fire
     unless self.ctimp.nil? or self.ctpref.nil? then
       if (self.ctimp * self.ctpref) < 0 then
