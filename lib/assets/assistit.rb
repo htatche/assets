@@ -2,7 +2,7 @@ module Assistit
   def errorPresenter(index)
     err = []
 
-    valid?
+    save!
     if errors.any?
       errors.messages.each { |i|
         i[1].each { |j|

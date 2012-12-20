@@ -27,8 +27,6 @@ class AssistitsController < ApplicationController
 
     if menudet.opcfrm == 'frm_p3_altaXXXXXXX'
 
-      # Check impostos
-
       # Check pagaments
       if params[:pag]
         firstrow = params[:pag].first[1]['date'].strip
@@ -53,62 +51,31 @@ class AssistitsController < ApplicationController
 
 
     ass = Assentament.new(params)
-    ass.validateAll
-    ass.errors.flatten!
-
+    ass.validateInputs
     if ass.errors.any?
-      render :json => ass.errors.to_json,
-             :status => :unprocessable_entity
+    end
 
-    else
-      begin
-        transaction do
-          nassent = Moviment.getNewNumass
+    begin
+      Moviment.transaction do
+        nassent = Moviment.getNewNumass
+        ass.validateAll
+        ass.getCompte
 
-          if ass.compte.new_record?
-            compte.save
-          end
-
-          ass.general.ctkey = compte.id
-          ass.general.ctasse = nassent
-          ass.general.save
-
-          ass.contrapartida.historial_id = ass.general.id
-          ass.contrapartida.save
-          
+        if ass.compte.new_record?
+          ass.compte.save
         end
-      rescue ActiveRecord::StatementInvalid => error
-        logger.debug error.inspect
+        
       end
-
-      Assentament.comptabilitzarAll
-
-      @historial.ctkey = ctkey
-      @historial.save
-
-      if @apunts
-        @apunts.each { |i|
-          i.historial_id = @historial.id
-          i.save
-        } 
+    rescue ActiveRecord::ActiveRecordError => error
+      ass.errors.flatten!
+      if ass.errors.any?
+        render :json => ass.errors.to_json,
+               :status => :unprocessable_entity
       end
-
-      if @impostos
-        @impostos.each { |i|
-          i.historial_id = @historial.id
-          i.save
-        } 
-      end
-
-      if @pagaments
-        @pagaments.each { |i|
-          i.historial_id = @historial.id
-          i.save
-        } 
-      end
-
+    else
       render :text => lits.lit15
-   end 
+    end
+
   end
 
   def assistit

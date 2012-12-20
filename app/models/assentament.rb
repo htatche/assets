@@ -108,9 +108,12 @@ class Assentament
   end
 
   def validateNumdoc
-    if Historial.buscarFactura(@opckey, @numdoc, @ctcte)
-      return {:field => @lits.lit3, :msg => 'Factura duplicada'}
+    errors = {}
+    if Historial.buscarFactura(@opckey, @numdoc, @ctcte).present?
+      error = {:field => @lits.lit3, :msg => 'Factura duplicada'}
     end
+
+    return error
   end
 
   def validateAssGeneral
@@ -132,7 +135,7 @@ class Assentament
     })
     
 #@general.valid?
-    @general.valid?
+    @general.save!
     if @general.errors.any?
       errors_gen = @general.errors.messages
       errors_gen.each { |i|
@@ -193,22 +196,24 @@ class Assentament
     return errors
   end
 
-  def validateAll
-
+  def validateInputs
     errors = validateCompte
     errors_push(errors)
 
     errors = validateNumdoc
-    errors_push(errors)
+    errors_push(errors.to_a)
+  end
+
+  def validateAll
 
     errors = validateAssGeneral
     errors_push(errors)
 
-    errors = validateContrapartida
-    errors_push(errors)
+#    errors = validateContrapartida
+#    errors_push(errors)
 
-    errors = validateImpostos
-    errors_push(errors)
+#errors = validateImpostos
+#    errors_push(errors)
   end
 
   def comptabilitzarAll
