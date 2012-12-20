@@ -4,7 +4,7 @@ class Histimp < ActiveRecord::Base
   belongs_to :historial
 
   validates :historial_id,
-    :presence => true
+    :presence => true, :on => :save
   validates :hislin,
     :presence => true
   validates :ctkey,
@@ -13,7 +13,7 @@ class Histimp < ActiveRecord::Base
     :presence => true
   validates :impbas, :numericality => true, :if => :impbas
 
-  def self.validationTitle
+  def validationTitle
     'Impost'
   end
 

@@ -23,34 +23,11 @@ class AssistitsController < ApplicationController
 
     grup = menudet.brakey if menudet.present?
 
-    assistit = Assentament.new(params)
-    assistit.validateAll
-
-    compte = Compte.getCompte(assistit.ctcte)
-
     # Check apunts
 
     if menudet.opcfrm == 'frm_p3_altaXXXXXXX'
 
       # Check impostos
-      if params[:imp]
-        firstrow = params[:imp].first[1]['import']
-
-        # Comprovem que s'hagi omplert algun import
-        unless  params[:imp].length == 1 && firstrow.sanitizeCurrency.to_f == 0
-          @impostos = []
-          params[:imp].each_with_index { |i, index|
-            @impostos[index] = Histimp.new({
-              :historial_id => 0,
-              :hislin => index,
-              :ctkey => Compte.getCompteId(i[1][:compte]),
-              :impbas => i[1][:import].sanitizeCurrency
-            }) 
-
-            errors << @impostos[index].errorPresenter(index)
-          } 
-        end
-      end
 
       # Check pagaments
       if params[:pag]
@@ -74,21 +51,37 @@ class AssistitsController < ApplicationController
       end
     end
 
-#errors = errors.flatten
-    if assistit.errors.any?
-      render :json => assistiterrors.to_json,
+
+    ass = Assentament.new(params)
+    ass.validateAll
+    ass.errors.flatten!
+
+    if ass.errors.any?
+      render :json => ass.errors.to_json,
              :status => :unprocessable_entity
 
     else
+      begin
+        transaction do
+          nassent = Moviment.getNewNumass
 
-      nassent = Moviment.getNewNumass
+          if ass.compte.new_record?
+            compte.save
+          end
 
-      if @compte
-        @compte.save
-        ctkey = @compte.id
-      else
-        ctkey = Compte.getCompteId(fields[:ctcte])
+          ass.general.ctkey = compte.id
+          ass.general.ctasse = nassent
+          ass.general.save
+
+          ass.contrapartida.historial_id = ass.general.id
+          ass.contrapartida.save
+          
+        end
+      rescue ActiveRecord::StatementInvalid => error
+        logger.debug error.inspect
       end
+
+      Assentament.comptabilitzarAll
 
       @historial.ctkey = ctkey
       @historial.save
@@ -206,7 +199,7 @@ class AssistitsController < ApplicationController
         @compte.ctcte.nil? ? 0: @compte.ctcte
       end
     
-      @historial = buscarFactura(numdoc,ctcte,opckey)
+      @historial = Historial.buscarFactura(numdoc,ctcte,opckey)
 
       if @historial.present?
         render :partial => 'factura_duplicada'

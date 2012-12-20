@@ -45,6 +45,6 @@ module Mc
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
 
-    config.autoload_paths += Dir[File.join(Rails.root, "lib", "assets", "*.rb")].each {|l| require l }
+    config.autoload_paths += Dir[File.join(Rails.root, "lib/*/*.rb")].each {|l| require l }
   end
 end

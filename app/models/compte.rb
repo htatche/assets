@@ -17,25 +17,27 @@ class Compte < ActiveRecord::Base
     ctcte.to_s + ' - ' + ctdesc
   end
 
-  def self.getCompte(ctcte)
+  def self.find_by_ctcte_or_new(grup, ctcte, ctdesc)
     compte = find_by_ctcte(ctcte)
-    pgc = Pgc.where('pgccla = ? AND pgccte = ?', 1, grup)
-
-    raise 'No he trobat cap grup #{grup} dins del PGC'
 
     if compte.present?
-      compte.id
+      return compte
+
     else
-      compte = new({
-        :ctemp => 1,
-        :ctcte => @ctcte,
-        :ctdesc => @ctdesc,
-        :ctindi => '',
-        :pgc_id => pgc.first.id
-      })
-      compte.save
-      compte.id
+      pgc = Pgc.where('pgccla = ? AND pgccte = ?', 1, grup)
+
+      if pgc.present?
+        return compte = new({
+          :ctcte => ctcte,
+          :ctdesc => ctdesc,
+          :ctindi => '',
+          :pgc_id => pgc.first.id
+        })
+      else
+        raise 'No he trobat el grup #{grup} dins del PGC'
+      end
     end
+
   end
 
   def self.find_if_exists(id)
@@ -85,52 +87,6 @@ class Compte < ActiveRecord::Base
     end
 
     codi
-  end
-
-  def self.checkAssistitErrors(opckey, ctcte, ctdesc, auto)
-    grup = Brain.grupOri(opckey)
-    lits = Menulit.find_by_opckey(opckey)
-
-    errors = []
-
-    if !ctcte.empty? and !ctdesc.empty?
-      compte = Compte.where('ctcte = ?', ctcte)
-      if compte.present?
-        fields = {:ctcte => ctcte}
-      else
-        # Tenim que crear un nou compte
-        codi = completarCodi(grup, ctcte)
-
-        if codi == ''
-          errors << {:field => lits.lit4,
-                     :msg => 'te un format incorrecte'}
-        else
-          fields = {:ctcte => codi}
-        end
-      end
-    elsif !ctcte.empty? and ctdesc.empty?
-      compte = Compte.where('ctcte = ?', ctcte)
-      if compte.present?
-        fields = {:ctcte => ctcte}
-      else
-        errors << {:field => lits.lit5,
-                  :msg => 'no pot estar buit'}
-      end
-    elsif ctcte.empty? and !ctdesc.empty?
-      if auto
-        fields = {:ctcte => Compte.generarNou(grup)}
-      else
-        errors << {:field => lits.lit4,
-                   :msg => 'no pot estar buit'}
-      end
-    else
-      errors << {:field => lits.lit4,
-                 :msg => 'no pot estar buit'}
-      errors << {:field => lits.lit5,
-                 :msg => 'no pot estar buit'}
-    end
-
-    {:errors => errors, :fields => fields}
   end
 
 # Per ara el desactivem mentres programem els assistits
