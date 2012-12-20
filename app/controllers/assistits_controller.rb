@@ -12,6 +12,7 @@ class AssistitsController < ApplicationController
   end
 
   def create
+
     numdoc = params[:numdoc]
     ctcte = params[:ctekey]
     ctdesc = params[:ctdesc]
@@ -23,57 +24,18 @@ class AssistitsController < ApplicationController
 
     grup = menudet.brakey if menudet.present?
 
-    # Check apunts
-
-    if menudet.opcfrm == 'frm_p3_altaXXXXXXX'
-
-      # Check pagaments
-      if params[:pag]
-        firstrow = params[:pag].first[1]['date'].strip
-
-        unless params[:pag].length == 1 and firstrow.empty?
-          @pagaments = []
-          params[:pag].each_with_index { |i, index|
-    
-            @pagaments[index] = Histpag.new({
-              :historial_id => 0,
-              :hislin => index,
-              :fpkey => Compte.getCompteId(i[1][:compte]),
-              :import => i[1][:import].sanitizeCurrency,
-              :datven => i[1][:date],
-            }) 
-
-            errors << @pagaments[index].errorPresenter(index)
-          } 
-        end
-      end
-    end
-
-
     ass = Assentament.new(params)
-    ass.validateInputs
+    ass.validateAll
+
+    ass.errors.flatten!
     if ass.errors.any?
-    end
-
-    begin
-      Moviment.transaction do
-        nassent = Moviment.getNewNumass
-        ass.validateAll
-        ass.getCompte
-
-        if ass.compte.new_record?
-          ass.compte.save
-        end
-        
-      end
-    rescue ActiveRecord::ActiveRecordError => error
-      ass.errors.flatten!
-      if ass.errors.any?
-        render :json => ass.errors.to_json,
-               :status => :unprocessable_entity
-      end
+      render :json => ass.errors.to_json,
+             :status => :unprocessable_entity
     else
-      render :text => lits.lit15
+      ass.save
+      ass.comptabilitzar
+
+      render :text => 'ok'
     end
 
   end

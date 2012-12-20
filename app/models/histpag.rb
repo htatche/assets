@@ -4,7 +4,8 @@ class Histpag < ActiveRecord::Base
   belongs_to :historial
 
   validates :historial_id,
-    :presence => true
+    :presence => true,
+    :on => :save
   validates :hislin,
     :presence => true
   validates :fpkey,
@@ -13,6 +14,17 @@ class Histpag < ActiveRecord::Base
     :presence => true
   validates :import,
     :presence => true
+  validates :datven,
+    :presence => true
+  validate :datven_is_date, :if => :datven
+
+  def datven_is_date
+    if datven
+      if !datdven.is_a?(Date)
+        errors.add(:datven, 'no es una data correcta') 
+      end
+    end
+  end
 
   def validationTitle
     'Pagament'

@@ -4,7 +4,8 @@ class Histgen < ActiveRecord::Base
   belongs_to :historial
 
   validates :historial_id,
-    :presence => true
+    :presence => true,
+    :on => :save
   validates :hislin,
     :presence => true
   validates :ctkey,

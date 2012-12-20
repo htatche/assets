@@ -8,7 +8,7 @@ class Historial < ActiveRecord::Base
   validates :datdoc,
     :presence => true
   
-  validate :datdoc_is_date
+  validate :datdoc_is_date, :if => :datdoc
 
   def datdoc_is_date
     if datdoc
@@ -37,35 +37,29 @@ class Historial < ActiveRecord::Base
            .where('brakey = ?', grup)
            .where('numdoc = ?', numdoc)
            .where('ctkey = ?', ctkey)
-#.where('ctkey = ?', ctkey).first
     end
 
   end
 
-  def compta
-    nctclau = 0
-    nassent = Moviment.getNewNumass
-
+  def compta(nassent)
     if brain = Brain.find_by_brakey(self.brakey)
       braini = brain.braini
     else
       raise 'Comptabilitzar Hist - Brain # #{brakey} inexistent'
     end
 
-    if Compte.exists?(ctkey)
-      compte = Compte.find(ctkey)
+    if Compte.exists?(self.ctkey)
+      compte = Compte.find(self.ctkey)
     else
       raise 'Comptabilitzar Hist - Compte # #{ctkey} inexistent'
     end
-
-    nctclau = nctclau + 1
 
     #Assentament general
     mov = { 
       :ctkey => compte.id,
       :ctdsis => Date.today,
       :ctdcta => self.datdoc,
-      :ctclau => nctclau,
+      :ctclau => 0,
       :ctpref => self.impdoc >= 0 ? 1 : -1,
       :ctasse => self.id,
       :numass => nassent,
@@ -74,15 +68,6 @@ class Historial < ActiveRecord::Base
     }
     moviment = Moviment.new(mov)
     moviment.save
-
-    histmov.valid?
-
-    if errors.any?
-      errors.messages.each { |e|
-        logger.debug e
-      } 
-    end
-
   end
 
   def comptabilitzar

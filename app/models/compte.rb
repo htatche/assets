@@ -21,7 +21,7 @@ class Compte < ActiveRecord::Base
     compte = find_by_ctcte(ctcte)
 
     if compte.present?
-      return compte
+      return compte.first
 
     else
       pgc = Pgc.where('pgccla = ? AND pgccte = ?', 1, grup)

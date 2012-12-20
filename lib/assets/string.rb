@@ -5,6 +5,10 @@ class String
     Float(self) != nil rescue false
   end
 
+  def date?
+    self.is_a?(Date)
+  end
+
   def sanitizeCurrency
     self.delete('€').delete(' ').gsub(',','.')
   end

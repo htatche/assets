@@ -7,15 +7,21 @@ class Assentament
     @ctdesc = params[:ctdesc] || ''
     @numdoc = params[:numdoc] || ''
     @opckey = params[:opckey]
-    @import = params[:import].sanitizeCurrency
     @date = params[:date]
-    @comentari = params[:comentari] || ''
+    @comment = params[:comment] || ''
     @auto = params[:assignar_codi_auto] || true
 
-    @contrapartides_param = params[:apunts] || []
+    if params[:import]
+      @import = params[:import].sanitizeCurrency
+    else
+      @import = ''
+    end
+
+    @contrapartides_param = params[:apunt] || []
     @impostos_param = params[:imp] || []
     @pagaments_param = params[:pag] || []
 
+    @general = {}
     @contrapartides = []
     @impostos = []
     @pagaments = []
@@ -69,7 +75,8 @@ class Assentament
     if !@ctcte.empty? and !@ctdesc.empty?
       compte = Compte.where('ctcte = ?', @ctcte)
       if compte.present?
-        @numcompte = @ctcte
+        @numcompte = compte.first.ctcte
+
       else
         # Tenim que crear un nou compte
         codi = Compte.completarCodi(@grup, @ctcte)
@@ -91,7 +98,7 @@ class Assentament
       end
     elsif @ctcte.empty? and !@ctdesc.empty?
       if @auto
-        @ctcte = Compte.generarNou(@grup)
+        @numcompte = Compte.generarNou(@grup)
       else
         errors = [{:field => @lits.lit4,
                    :msg => 'no pot estar buit'}]
@@ -121,12 +128,11 @@ class Assentament
 
     @general = Historial.new({
       :brakey => @grup,
-#:ctkey => 0,
       :numdoc => @numdoc,
       :datdoc => @date,
       :datsis => Date.today,
       :impdoc => @import,
-      :comdoc => @comentari,
+      :comdoc => @comment,
       :optimp => 1,
       :optpag => 1,
       :optreb => 0,
@@ -134,8 +140,7 @@ class Assentament
       :datcom => ''
     })
     
-#@general.valid?
-    @general.save!
+    @general.valid?
     if @general.errors.any?
       errors_gen = @general.errors.messages
       errors_gen.each { |i|
@@ -152,12 +157,11 @@ class Assentament
   def validateContrapartida
     errors = []
 
-    if @contrapartides.present?
+    if @contrapartides_param.present?
 
-      @contrapartides.each_with_index{ |i, index|
+      @contrapartides_param.each_with_index{ |i, index|
 
         @contrapartides[index] = Histgen.new({
-#:historial_id => 0,
           :ctkey => Compte.getCompteId(i[1][:compte]),
           :hislin => index,
           :import => i[1][:import].sanitizeCurrency,
@@ -182,10 +186,9 @@ class Assentament
       unless  @impostos_param.length == 1 && firstrow.sanitizeCurrency.to_f == 0
         @impostos_param.each_with_index { |i, index|
           @impostos[index] = Histimp.new({
-#      :historial_id => 0,
             :hislin => index,
             :ctkey => Compte.getCompteId(i[1][:compte]),
-            :impbas => 'a' # i[1][:import].sanitizeCurrency
+            :impbas => i[1][:import].sanitizeCurrency
           }) 
 
           errors << @impostos[index].errorPresenter(index)
@@ -196,27 +199,102 @@ class Assentament
     return errors
   end
 
-  def validateInputs
+  def validatePagaments
+    errors = []
+
+    if @pagaments_param.present?
+      firstrow = @pagaments_param.first[1]['date'].strip
+
+      unless @pagaments_param.length == 1 and firstrow.empty?
+        Rails.logger.debug @pagaments_param.inspect
+        @pagaments_param.each_with_index { |i, index|
+    
+          @pagaments[index] = Histpag.new({
+            :hislin => index,
+            :fpkey => Compte.getCompteId(i[1][:compte]),
+            :import => i[1][:import].sanitizeCurrency,
+            :datven => i[1][:date],
+          }) 
+
+          errors << @pagaments[index].errorPresenter(index)
+        } 
+      end
+    end
+
+    return errors
+  end
+
+  def validateAll
     errors = validateCompte
     errors_push(errors)
 
     errors = validateNumdoc
     errors_push(errors.to_a)
-  end
-
-  def validateAll
 
     errors = validateAssGeneral
     errors_push(errors)
 
-#    errors = validateContrapartida
-#    errors_push(errors)
+    errors = validateContrapartida
+    errors_push(errors)
 
-#errors = validateImpostos
-#    errors_push(errors)
+    errors = validateImpostos
+    errors_push(errors)
+
+    errors = validatePagaments
+    errors_push(errors)
   end
 
-  def comptabilitzarAll
+  def save
+    Historial.transaction do
+      nassent = Moviment.getNewNumass
+
+      # Creem o obtenim compte
+      getCompte
+      if @compte.new_record?
+        @compte.save
+      end
+
+      # Guardem dins les taules hist* i moviments
+      @general.ctkey = @compte.id
+      @general.save
+
+      @contrapartides.each { |i|
+        i.historial_id = @general.id
+        i.save
+      }
+      @impostos.each { |i|
+        i.historial_id = @general.id
+        i.save
+      }
+      @pagaments.each { |i|
+        i.historial_id = @general.id
+        i.save
+      }
+      
+    end
+  end
+
+  def comptabilitzar
+    Moviment.transaction do
+      nassent = Moviment.getNewNumass
+
+      nctclau = 0
+      @general.save
+      @general.compta (nassent)
+
+#@contrapartides.each { |i|
+#       i.historial_id = @general.id
+#       i.save
+#     }
+#     @impostos.each { |i|
+#       i.historial_id = @general.id
+#       i.save
+#     }
+#     @pagaments.each { |i|
+#       i.historial_id = @general.id
+#       i.save
+#     }
+    end
       
   end
 
