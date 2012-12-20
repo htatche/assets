@@ -23,157 +23,65 @@ class AssistitsController < ApplicationController
 
     grup = menudet.brakey if menudet.present?
 
-    # Check compte / descripcio
-    checkcompte = Compte.checkAssistitErrors(opckey, ctcte, ctdesc, auto)
-    
-    errors = checkcompte[:errors]
-    fields = checkcompte[:fields]
-    
-    # Check compte si necessari
-    if errors.empty?
-      unless Compte.find_by_ctcte(fields[:ctcte]).present?
-        pgc = Pgc.where('pgccla = ? AND pgccte = ?', 1, grup)
-        pgckey = pgc.first.id
-          
-        compteparams = {
-          :ctemp => 1,
-          :ctcte => fields[:ctcte],
-          :ctdesc => params[:ctdesc],
-          :ctindi => '',
-          :pgc_id => pgckey
-        }
+    assistit = Assentament.new(params)
+    assistit.validateAll
 
-        @compte = Compte.new(compteparams)
-      end
+    compte = Compte.getCompte(assistit.ctcte)
 
-      # Check numdoc
-      if buscarFactura(numdoc, ctcte, opckey)
-        errors << {:field => lits.lit3, :msg => 'Factura duplicada'}
-      end
-    
-      # Parse import from input
-      if params[:import]
-        import = params[:import].sanitizeCurrency
-      else
-        import = ''
-      end
+    # Check apunts
 
-      histparams = {
-        :empkey => 1,
-        :brakey => grup,
-        :ctkey => 0,
-        :numdoc => numdoc,
-        :datdoc => params[:date],
-        :datsis => Date.today,
-        :impdoc => import,
-        :comdoc => params[:comment],
-        :optimp => 1,
-        :optpag => 1,
-        :optreb => 0,
-        :indcom => 0,
-        :datcom => '',
-        :ctasse => 0
-      }
+    if menudet.opcfrm == 'frm_p3_altaXXXXXXX'
 
-      @historial = Historial.new(histparams)
-    
-      # Check data, import via Historial
-      @historial.valid?
-      if @historial.errors.any?
-        histerrors = @historial.errors.messages
-        histerrors.each { |i|
-          i[1].each { |j|
-            errors << {:field => lits.lit7, :msg => j} if i[0] == :impdoc
-            errors << {:field => lits.lit6, :msg => j} if i[0] == :datdoc
-          }
-        }
-      end
+      # Check impostos
+      if params[:imp]
+        firstrow = params[:imp].first[1]['import']
 
-      # Check apunts
-      if params[:apunt]
-        @apunts = []
-        params[:apunt].each_with_index{ |i, index|
+        # Comprovem que s'hagi omplert algun import
+        unless  params[:imp].length == 1 && firstrow.sanitizeCurrency.to_f == 0
+          @impostos = []
+          params[:imp].each_with_index { |i, index|
+            @impostos[index] = Histimp.new({
+              :historial_id => 0,
+              :hislin => index,
+              :ctkey => Compte.getCompteId(i[1][:compte]),
+              :impbas => i[1][:import].sanitizeCurrency
+            }) 
 
-          @apunts[index] = Histgen.new({
-            :historial_id => 0,
-            :ctkey => Compte.getCompteId(i[1][:compte]),
-            :hislin => index,
-            :import => i[1][:import].sanitizeCurrency,
-            :comen => i[1][:comment]
-          }) 
-          
-          errors << @apunts[index].errorPresenter(index)
-        }
-      end
-
-      if menudet.opcfrm == 'frm_p3_alta'
-
-        # Check impostos
-        if params[:imp]
-          firstrow = params[:imp].first[1]['import']
-
-          # Comprovem que s'hagi omplert algun import
-          unless  params[:imp].length == 1 && firstrow.sanitizeCurrency.to_f == 0
-            @impostos = []
-            params[:imp].each_with_index { |i, index|
-              @impostos[index] = Histimp.new({
-                :historial_id => 0,
-                :hislin => index,
-                :ctkey => Compte.getCompteId(i[1][:compte]),
-                :impbas => i[1][:import].sanitizeCurrency
-              }) 
-
-              errors << @impostos[index].errorPresenter(index)
-            } 
-          end
-        end
-
-        # Check pagaments
-        if params[:pag]
-          firstrow = params[:pag].first[1]['date'].strip
-
-          unless params[:pag].length == 1 and firstrow.empty?
-            @pagaments = []
-            params[:pag].each_with_index { |i, index|
-      
-              @pagaments[index] = Histpag.new({
-                :historial_id => 0,
-                :hislin => index,
-                :fpkey => Compte.getCompteId(i[1][:compte]),
-                :import => i[1][:import].sanitizeCurrency,
-                :datven => i[1][:date],
-              }) 
-
-              errors << @pagaments[index].errorPresenter(index)
-            } 
-          end
+            errors << @impostos[index].errorPresenter(index)
+          } 
         end
       end
 
+      # Check pagaments
+      if params[:pag]
+        firstrow = params[:pag].first[1]['date'].strip
+
+        unless params[:pag].length == 1 and firstrow.empty?
+          @pagaments = []
+          params[:pag].each_with_index { |i, index|
+    
+            @pagaments[index] = Histpag.new({
+              :historial_id => 0,
+              :hislin => index,
+              :fpkey => Compte.getCompteId(i[1][:compte]),
+              :import => i[1][:import].sanitizeCurrency,
+              :datven => i[1][:date],
+            }) 
+
+            errors << @pagaments[index].errorPresenter(index)
+          } 
+        end
+      end
     end
 
-    errors = errors.flatten
-    if errors.any?
-      render :json => errors.to_json, :status => :unprocessable_entity
+#errors = errors.flatten
+    if assistit.errors.any?
+      render :json => assistiterrors.to_json,
+             :status => :unprocessable_entity
+
     else
 
       nassent = Moviment.getNewNumass
-
-      histmov = @historial.comptabilitzar (nassent)
-       
-    
-      begin 
-        Moviment.comptabilitzar(@historial, 
-                                @apunts,
-                                @impostos,
-                                @pagaments)
-      rescue => e
-        errors << {:field => 'Comptabilitzar',
-                   :msg => 'Error'}
-        render :json => errors.to_json,
-               :status => :unprocessable_entity
-
-      end
 
       if @compte
         @compte.save
@@ -207,8 +115,7 @@ class AssistitsController < ApplicationController
       end
 
       render :text => lits.lit15
-    end
-
+   end 
   end
 
   def assistit
@@ -282,20 +189,6 @@ class AssistitsController < ApplicationController
       render :text => 'Codi incorrecte', :status => 500
     end
 
-  end
-
-  def buscarFactura(numdoc, ctcte, opckey)
-    menudet = Menudet.find(opckey)
-    grup = menudet.brakey if menudet.present?
-
-    if numdoc and ctcte
-      ctkey = Compte.completarCodi(grup, ctcte)
-          
-      Historial.where('empkey = ?', 1)
-           .where('brakey = ?', grup)
-           .where('numdoc = ?', numdoc)
-           .where('ctkey = ?', ctkey).first
-    end
   end
 
   def getFacturaDuplicada

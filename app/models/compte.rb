@@ -17,6 +17,27 @@ class Compte < ActiveRecord::Base
     ctcte.to_s + ' - ' + ctdesc
   end
 
+  def self.getCompte(ctcte)
+    compte = find_by_ctcte(ctcte)
+    pgc = Pgc.where('pgccla = ? AND pgccte = ?', 1, grup)
+
+    raise 'No he trobat cap grup #{grup} dins del PGC'
+
+    if compte.present?
+      compte.id
+    else
+      compte = new({
+        :ctemp => 1,
+        :ctcte => @ctcte,
+        :ctdesc => @ctdesc,
+        :ctindi => '',
+        :pgc_id => pgc.first.id
+      })
+      compte.save
+      compte.id
+    end
+  end
+
   def self.find_if_exists(id)
     if Compte.exists?(id)
       Compte.find(id)
@@ -39,7 +60,7 @@ class Compte < ActiveRecord::Base
     comptes = where('ctcte LIKE "?%"', grup.to_i)
 
     if comptes.present?
-      noucompte = comptes.last.ctcte + 1
+      noucompte = comptes.last.ctcte.to_i + 1
     else
       raise 'No existeix cap compte amb aquest grup'
     end    
@@ -48,6 +69,7 @@ class Compte < ActiveRecord::Base
   def self.completarCodi(grup, ctcte)
     empresa = Empresa.find(1)
     grup = grup.to_s
+    ctcte = ctcte.to_s
 
     if ctcte.numeric?
       if ctcte.length == empresa.emploc

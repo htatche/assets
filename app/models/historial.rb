@@ -26,6 +26,22 @@ class Historial < ActiveRecord::Base
     end
   end
 
+  def self.buscarFactura(opckey, numdoc, ctcte)
+    menudet = Menudet.find(opckey)
+    grup = menudet.brakey if menudet.present?
+
+    if numdoc and ctcte
+      ctkey = Compte.completarCodi(grup, ctcte)
+          
+      Historial.where('empkey = ?', 1)
+           .where('brakey = ?', grup)
+           .where('numdoc = ?', numdoc)
+           .where('ctkey = ?', ctkey)
+#.where('ctkey = ?', ctkey).first
+    end
+
+  end
+
   def compta
     nctclau = 0
     nassent = Moviment.getNewNumass
