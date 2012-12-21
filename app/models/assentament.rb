@@ -282,10 +282,10 @@ class Assentament
       @general.save
       @general.compta (nassent)
 
-#@contrapartides.each { |i|
-#       i.historial_id = @general.id
-#       i.save
-#     }
+      @contrapartides.each { |i|
+        i.historial_id = @general.id
+        i.comptabilitzar(nassent, nctclau)
+      }
 #     @impostos.each { |i|
 #       i.historial_id = @general.id
 #       i.save

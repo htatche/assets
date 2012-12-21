@@ -17,4 +17,52 @@ class Histgen < ActiveRecord::Base
   def self.validationTitle
     'Apunt'
   end
+
+  def comentari
+    comment = comen.blank? ? '' : comen
+
+    if comment.blank?
+      comment = self.historial.comdoc
+    else
+      comment = self.historial.numdoc + '/' + comment
+    end
+  end
+
+  def comptabilitzar (nassent, nctclau)
+
+    if Compte.exists?(self.ctkey)
+      compte = Compte.find(self.ctkey)
+    else
+      raise 'Comptabilitzar Hist - Compte # "#{ctkey}" inexistent'
+    end
+
+    w = Brain.getDeureHaver(self.historial.brakey)
+
+    nctclau = nctclau + 1
+
+    sSql = 'brddes = Mid(' + compte.ctcte.to_s.strip
+    sSql = sSql + ', 1, Length(brddes))'
+    braindets = Braindet.where('brakey = ?', self.historial.brakey)
+                        .where(sSql)
+
+    if braindets.present?
+        brdpde = braindets.first.brdpde
+        w[2] = brdpde == 1 ? 'D' : 'H'
+    end
+
+    mov = Moviment.new ({ 
+      :ctkey => compte.id,
+      :ctdsis => Date.today,
+      :ctdcta => self.historial.datdoc,
+      :ctclau => nctclau,
+      :ctpref => w[2] == 'D' ? -1 : 1,
+      :ctasse => self.id,
+      :numass => nassent,
+      :cttext => comentari,
+      :ctimp => 'a' #import
+    })
+
+    mov.save
+  end
+
 end

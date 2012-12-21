@@ -6,7 +6,13 @@ class String
   end
 
   def date?
-    self.is_a?(Date)
+    begin
+      Date.parse(self)
+    rescue
+      false
+    else
+      true
+    end
   end
 
   def sanitizeCurrency

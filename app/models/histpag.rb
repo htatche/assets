@@ -19,10 +19,8 @@ class Histpag < ActiveRecord::Base
   validate :datven_is_date, :if => :datven
 
   def datven_is_date
-    if datven
-      if !datdven.is_a?(Date)
-        errors.add(:datven, 'no es una data correcta') 
-      end
+    if !datven.is_a?(Date)
+      errors.add(:datven, 'no es una data correcta') 
     end
   end
 

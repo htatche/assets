@@ -1,8 +1,28 @@
 class Moviment < ActiveRecord::Base
   belongs_to :compte
 
+  validates :ctkey,
+    :presence => true
+  validates :ctdsis,
+    :presence => true
+  validates :ctdcta,
+    :presence => true
+
+  validate do |mov|
+    errors.add(:base, 'No es una data') unless mov.ctdcta.to_s.date?
+  end
+
   after_initialize :fire
   attr_accessor :haver, :deure, :descrCompte
+
+
+  def datdoc_is_date
+    if datdoc
+      if !datdoc.is_a?(Date)
+        errors.add(:datdoc, 'no es una data correcta') 
+      end
+    end
+  end
 
   def descrCompte
     self.compte.ctdesc
@@ -12,10 +32,6 @@ class Moviment < ActiveRecord::Base
     max = maximum('numass')
 
     max.nil? ? 0 : max + 1
-  end
-
-  def comptabilitzar
-
   end
 
   def fire
