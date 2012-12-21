@@ -8,13 +8,10 @@ class Historial < ActiveRecord::Base
   validates :datdoc,
     :presence => true
   
-  validate :datdoc_is_date, :if => :datdoc
-
-  def datdoc_is_date
-    if datdoc
-      if !datdoc.is_a?(Date)
-        errors.add(:datdoc, 'no es una data correcta') 
-      end
+  validate do |f|
+    if f.datdoc
+#errors.add(:datdoc, 'No es una data') unless f.datdoc.date?
+      errors.add(:datdoc, 'No es una data') unless f.datdoc.is_a?(Date)
     end
   end
 

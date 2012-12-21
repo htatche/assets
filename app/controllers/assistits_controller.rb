@@ -32,8 +32,7 @@ class AssistitsController < ApplicationController
       render :json => ass.errors.to_json,
              :status => :unprocessable_entity
     else
-      ass.save
-      ass.comptabilitzar
+      ass.save_and_comptabilitzar
 
       render :text => 'ok'
     end

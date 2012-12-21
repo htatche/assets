@@ -18,17 +18,17 @@ class Histgen < ActiveRecord::Base
     'Apunt'
   end
 
-  def comentari
+  def setComentari (historial)
     comment = comen.blank? ? '' : comen
 
     if comment.blank?
-      comment = self.historial.comdoc
+      comment = historial.comdoc
     else
-      comment = self.historial.numdoc + '/' + comment
+      comment = historial.numdoc + '/' + comment
     end
   end
 
-  def comptabilitzar (nassent, nctclau)
+  def comptabilitzar (nassent, nctclau, historial)
 
     if Compte.exists?(self.ctkey)
       compte = Compte.find(self.ctkey)
@@ -36,13 +36,13 @@ class Histgen < ActiveRecord::Base
       raise 'Comptabilitzar Hist - Compte # "#{ctkey}" inexistent'
     end
 
-    w = Brain.getDeureHaver(self.historial.brakey)
+    w = Brain.getDeureHaver(historial.brakey)
 
     nctclau = nctclau + 1
 
     sSql = 'brddes = Mid(' + compte.ctcte.to_s.strip
     sSql = sSql + ', 1, Length(brddes))'
-    braindets = Braindet.where('brakey = ?', self.historial.brakey)
+    braindets = Braindet.where('brakey = ?', historial.brakey)
                         .where(sSql)
 
     if braindets.present?
@@ -53,13 +53,13 @@ class Histgen < ActiveRecord::Base
     mov = Moviment.new ({ 
       :ctkey => compte.id,
       :ctdsis => Date.today,
-      :ctdcta => self.historial.datdoc,
+      :ctdcta => historial.datdoc,
       :ctclau => nctclau,
       :ctpref => w[2] == 'D' ? -1 : 1,
       :ctasse => self.id,
       :numass => nassent,
-      :cttext => comentari,
-      :ctimp => 'a' #import
+      :cttext => setComentari(historial),
+      :ctimp => import
     })
 
     mov.save

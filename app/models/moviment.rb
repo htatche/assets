@@ -8,21 +8,35 @@ class Moviment < ActiveRecord::Base
   validates :ctdcta,
     :presence => true
 
-  validate do |mov|
-    errors.add(:base, 'No es una data') unless mov.ctdcta.to_s.date?
+  validate do |f|
+    errors.add(:base, 'No es una data') unless f.ctdcta.to_s.date?
   end
+
+  validate do |f|
+    errors.add(:base, 'No es una data') unless f.ctdsis.to_s.date?
+  end
+
+  validates :ctpref,
+    :presence => true
+
+  validate do |f|
+    if f.ctpref != 1 && f.ctpref != -1
+      errors.add(:base, 'El signe te que ser -1 o 1') 
+    end
+  end
+
+  validates :ctasse,
+    :presence => true
+
+  validates :ctimp,
+    :presence => true
+
+  validates :ctimp,
+    :numericality => true,
+    :if => :ctimp
 
   after_initialize :fire
   attr_accessor :haver, :deure, :descrCompte
-
-
-  def datdoc_is_date
-    if datdoc
-      if !datdoc.is_a?(Date)
-        errors.add(:datdoc, 'no es una data correcta') 
-      end
-    end
-  end
 
   def descrCompte
     self.compte.ctdesc

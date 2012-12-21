@@ -151,6 +151,7 @@ class Assentament
       }
     end
 
+
     return errors
   end
 
@@ -245,11 +246,11 @@ class Assentament
   end
 
   def save
-    Historial.transaction do
-      nassent = Moviment.getNewNumass
+    nassent = Moviment.getNewNumass
+    getCompte
 
-      # Creem o obtenim compte
-      getCompte
+    Historial.transaction do
+
       if @compte.new_record?
         @compte.save
       end
@@ -275,17 +276,17 @@ class Assentament
   end
 
   def comptabilitzar
-    Moviment.transaction do
-      nassent = Moviment.getNewNumass
+    nassent = Moviment.getNewNumass
+    nctclau = 0
 
-      nctclau = 0
-      @general.save
+    Historial.transaction do
       @general.compta (nassent)
 
       @contrapartides.each { |i|
         i.historial_id = @general.id
-        i.comptabilitzar(nassent, nctclau)
+        i.comptabilitzar(nassent, nctclau, @general)
       }
+
 #     @impostos.each { |i|
 #       i.historial_id = @general.id
 #       i.save
@@ -296,6 +297,12 @@ class Assentament
 #     }
     end
       
+  end
+
+  def save_and_comptabilitzar
+    Historial.transaction do
+      save
+    end
   end
 
   def errors_push(errors)
