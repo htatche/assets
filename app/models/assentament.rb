@@ -249,7 +249,6 @@ class Assentament
     nassent = Moviment.getNewNumass
     getCompte
 
-    Historial.transaction do
 
       if @compte.new_record?
         @compte.save
@@ -261,47 +260,80 @@ class Assentament
 
       @contrapartides.each { |i|
         i.historial_id = @general.id
-        i.save
+        i.save!
       }
       @impostos.each { |i|
         i.historial_id = @general.id
-        i.save
+        i.save!
       }
       @pagaments.each { |i|
         i.historial_id = @general.id
-        i.save
+        i.save!
       }
       
+  end
+
+  def buildCommentForMoviment
+
+    brain = Brain.find_by_brakey(@general.brakey)
+    braini = brain.braini
+
+    compte = Compte.find(@general.ctkey)
+
+    text_pra = @general.numdoc
+    comdoc = @general.comdoc
+
+    if text_pra != ''
+      if braini != ''
+        text_pra = braini + ':' + text_pra
+      end
     end
+
+    if comdoc == ''
+      if text_pra != ''
+        comdoc = text_pra + '/' + compte.ctcte + '-' + compte.ctdesc
+      else
+        comdoc = compte.ctcte + '-' + compte.ctdesc
+      end
+    else
+      if text_pra != ''
+        comdoc = text_pra + '/' + comdoc
+      end
+    end
+
+    @text_pra = text_pra
+    @comdoc = comdoc
+
   end
 
   def comptabilitzar
+    buildCommentForMoviment
     nassent = Moviment.getNewNumass
     nctclau = 0
 
-    Historial.transaction do
-      @general.compta (nassent)
+    @general.comptabilitzar (nassent)
 
-      @contrapartides.each { |i|
-        i.historial_id = @general.id
-        i.comptabilitzar(nassent, nctclau, @general)
-      }
+    @contrapartides.each { |i|
+      nctclau = nctclau + 1
+      i.comptabilitzar(nassent, nctclau, @comdoc, @text_pra)
+    }
 
-#     @impostos.each { |i|
-#       i.historial_id = @general.id
-#       i.save
-#     }
-#     @pagaments.each { |i|
-#       i.historial_id = @general.id
-#       i.save
-#     }
-    end
-      
+    @impostos.each { |i|
+      nctclau = nctclau + 1
+      i.comptabilitzar(nassent, nctclau)
+    }
+
+    @pagaments.each { |i|
+      nctclau = nctclau + 1
+      nctclau = i.comptabilitzar(nassent, nctclau, @comdoc, @text_pra)
+    }
+    
   end
 
   def save_and_comptabilitzar
     Historial.transaction do
       save
+      comptabilitzar
     end
   end
 

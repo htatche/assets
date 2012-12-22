@@ -9,11 +9,11 @@ class Moviment < ActiveRecord::Base
     :presence => true
 
   validate do |f|
-    errors.add(:base, 'No es una data') unless f.ctdcta.to_s.date?
+    errors.add(:ctdcta, 'No es una data') unless f.ctdcta.is_a?(Date)
   end
 
   validate do |f|
-    errors.add(:base, 'No es una data') unless f.ctdsis.to_s.date?
+    errors.add(:ctdsis, 'No es una data') unless f.ctdsis.is_a?(Date)
   end
 
   validates :ctpref,
@@ -21,7 +21,7 @@ class Moviment < ActiveRecord::Base
 
   validate do |f|
     if f.ctpref != 1 && f.ctpref != -1
-      errors.add(:base, 'El signe te que ser -1 o 1') 
+      errors.add(:ctpref, 'El signe te que ser -1 o 1') 
     end
   end
 
@@ -47,6 +47,7 @@ class Moviment < ActiveRecord::Base
 
     max.nil? ? 0 : max + 1
   end
+
 
   def fire
     unless self.ctimp.nil? or self.ctpref.nil? then

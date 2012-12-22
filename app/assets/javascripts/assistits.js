@@ -227,14 +227,10 @@ function Assistit(tab, el) {
 
   _this.fire = function() {
     el.jqxExpander({ showArrow: false, toggleMode: 'none' });
-    el.find('fieldset.main div.numeric').jqxNumberInput({ symbol: '€',
-                                            groupSeparator: '',
-                                            decimalSeparator: ',',
-                                            promptChar: ' ',
-                                            digits: '8',
-                                            symbolPosition: 'right',
-                                            width: '230px',
-                                            theme: theme });
+    inputToNumeric($('fieldset.main div.numeric'),
+                   $('fieldset.main input.import'),
+                   '230px',
+                   $('fieldset.main input.import').attr('height'));
     el.find('div.numeric').find('input').attr({tabindex: '5',
                                                name: 'import'});
 
