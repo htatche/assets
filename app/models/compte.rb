@@ -21,7 +21,7 @@ class Compte < ActiveRecord::Base
     compte = find_by_ctcte(ctcte)
 
     if compte.present?
-      return compte.first
+      return compte
 
     else
       pgc = Pgc.where('pgccla = ? AND pgccte = ?', 1, grup)
@@ -59,7 +59,7 @@ class Compte < ActiveRecord::Base
   end
 
   def self.generarNou(grup)
-    comptes = where('ctcte LIKE "?%"', grup.to_i)
+    comptes = where("ctcte LIKE '?%'", grup.to_i)
 
     if comptes.present?
       noucompte = comptes.last.ctcte.to_i + 1
@@ -69,6 +69,7 @@ class Compte < ActiveRecord::Base
   end
 
   def self.completarCodi(grup, ctcte)
+
     empresa = Empresa.find(1)
     grup = grup.to_s
     ctcte = ctcte.to_s

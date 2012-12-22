@@ -33,8 +33,8 @@ class Histgen < ActiveRecord::Base
     compte = Compte.find(self.ctkey)
     w = Brain.getDeureHaver(historial.brakey)
 
-    sSql = 'brddes = Mid(' + compte.ctcte.to_s.strip
-    sSql = sSql + ', 1, Length(brddes))'
+    sSql = "brddes = Substr('#{compte.ctcte.to_s.strip}'"
+    sSql = sSql + ", 1, Length(brddes))"
     braindets = Braindet.where('brakey = ?', historial.brakey)
                         .where(sSql)
 

@@ -13,12 +13,7 @@ class AssistitsController < ApplicationController
 
   def create
 
-    numdoc = params[:numdoc]
-    ctcte = params[:ctekey]
-    ctdesc = params[:ctdesc]
     opckey = params[:opckey]
-    auto = params[:assignar_codi_auto]
-
     lits = Menulit.find_by_opckey(opckey)
     menudet = Menudet.find(opckey)
 
@@ -55,10 +50,10 @@ class AssistitsController < ApplicationController
       @grupimpostos = @brain.braimp
       @gruppagaments = @brain.brapag
 
-      @comptes_impostos = Compte.where('ctemp = ? AND ctcte LIKE "?%"',
+      @comptes_impostos = Compte.where("ctemp = ? AND ctcte LIKE '?%'",
                                         1,
                                         @grupimpostos.to_i)
-      @comptes_pagaments = Compte.where('ctemp = ? AND ctcte LIKE "?%"',
+      @comptes_pagaments = Compte.where("ctemp = ? AND ctcte LIKE '?%'",
                                       1,
                                       @gruppagaments.to_i)
     end
@@ -82,12 +77,12 @@ class AssistitsController < ApplicationController
     if @brain.present?
       @brain = @brain.first
 
-      @grups_condition = 'ctcte LIKE "' + @brain.brades + '%"'
+      @grups_condition = "ctcte LIKE '#{@brain.brades}%'"
       @braindet = Braindet.where('brakey = ?', @grup_comptable.brakey)
                           .order('brdlin')
 
       @braindet.each{ |i| 
-        @grups_condition += ' OR ctcte LIKE "' + i.brddes + '%"' if i.brddes
+        @grups_condition += " OR ctcte LIKE '#{i.brddes}%'" if i.brddes
       }
     end
 
@@ -143,7 +138,7 @@ class AssistitsController < ApplicationController
 
     grup_comptable = Brain.grupOri(opckey)
     @comptes = Compte.select('ctcte, ctdesc')
-                     .where('ctemp = ? AND ctcte LIKE "?%"',
+                     .where("ctemp = ? AND ctcte LIKE '?%'",
                             1, grup_comptable.to_i)
 
     if @comptes.present?

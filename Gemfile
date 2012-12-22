@@ -19,6 +19,7 @@ group :assets do
   gem 'jquery-ui-rails'
   gem 'jquery-ui-rails'
   gem 'rake', '~> 10.0.3'
+  gem 'activerecord-postgresql-adapter'
 end
 
 gem 'jquery-rails'

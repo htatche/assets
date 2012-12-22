@@ -199,6 +199,8 @@ function Assistit(tab, el) {
                               'div.ctcte-combobox');
         }
       });
+
+
     });
 
     el.find('input[name=comment]').blur(function() {
@@ -250,6 +252,7 @@ function Assentament(el) {
   };
 
   _this.bindKeydown = function(fieldset) {
+    fieldset.find('input:last').unbind('keydown');
     fieldset.find('input:last').on('keydown', function(e) {
       if(e.which === 13) {
         fieldset = $(this).parents('fieldset');
@@ -294,7 +297,7 @@ function Assentament(el) {
       .click(function() {
         if (fieldset.find('table tbody tr').length > 1) {
           $(this).parents('tr').remove();
-          _this.bindDestoyIcon(fieldset);
+          //_this.bindDestoyIcon(fieldset);
           _this.bindKeydown(fieldset);
           _this.setTabindexes();
         }

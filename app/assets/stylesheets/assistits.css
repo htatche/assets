@@ -109,7 +109,7 @@ div.assistit h3 {
   padding: 5px;
 }
 
-.frm_new_p1 input[type=submit] {
+.frm_new_p1 input[type=submit], button[type=reset] {
   float: right;
   width: auto;
   margin: 10px;
@@ -144,6 +144,3 @@ div.assistit h3 {
   width: 20px;
 }
 
-.frm_new_p1 button {
-  margin-top: 20px;
-}

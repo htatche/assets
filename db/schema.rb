@@ -181,9 +181,9 @@ ActiveRecord::Schema.define(:version => 20121217111638) do
     t.datetime "updated_at"
   end
 
-  create_table "pgcs", :id => false, :force => true do |t|
+  create_table "pgcs", :force => true do |t|
     t.integer  "pgccla"
-    t.integer  "id"
+    t.integer  "pgckey"
     t.integer  "parent_id"
     t.string   "pgccte"
     t.string   "pgcdes"

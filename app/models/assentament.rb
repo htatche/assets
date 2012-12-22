@@ -3,7 +3,7 @@ class Assentament
   def initialize(params)
     @errors = []
     
-    @ctcte = params[:ctcte] || ''
+    @ctcte = params[:ctekey] || ''
     @ctdesc = params[:ctdesc] || ''
     @numdoc = params[:numdoc] || ''
     @opckey = params[:opckey]

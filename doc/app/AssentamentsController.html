@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+<title>class AssentamentsController - Rails Application Documentation</title>
+
+<link type="text/css" media="screen" href="./rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="./js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="./js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="./index.html">Home</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/assentaments_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="ApplicationController.html">ApplicationController</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-fillCtcteInput">#fillCtcteInput</a>
+    
+    <li><a href="#method-i-new">#new</a>
+    
+    <li><a href="#method-i-show">#show</a>
+    
+    <li><a href="#method-i-validarCompte">#validarCompte</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="./doc/README_FOR_APP.html">README_FOR_APP</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="./ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="./ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="./Assentament.html">Assentament</a>
+  
+    <li><a href="./AssentamentsController.html">AssentamentsController</a>
+  
+    <li><a href="./AssentamentsHelper.html">AssentamentsHelper</a>
+  
+    <li><a href="./Assistit.html">Assistit</a>
+  
+    <li><a href="./AssistitsController.html">AssistitsController</a>
+  
+    <li><a href="./AssistitsHelper.html">AssistitsHelper</a>
+  
+    <li><a href="./Brain.html">Brain</a>
+  
+    <li><a href="./Braindet.html">Braindet</a>
+  
+    <li><a href="./Compte.html">Compte</a>
+  
+    <li><a href="./ComptesController.html">ComptesController</a>
+  
+    <li><a href="./ComptesHelper.html">ComptesHelper</a>
+  
+    <li><a href="./Empresa.html">Empresa</a>
+  
+    <li><a href="./Histgen.html">Histgen</a>
+  
+    <li><a href="./Histimp.html">Histimp</a>
+  
+    <li><a href="./Historial.html">Historial</a>
+  
+    <li><a href="./Histpag.html">Histpag</a>
+  
+    <li><a href="./MainController.html">MainController</a>
+  
+    <li><a href="./MainHelper.html">MainHelper</a>
+  
+    <li><a href="./Menu.html">Menu</a>
+  
+    <li><a href="./MenuController.html">MenuController</a>
+  
+    <li><a href="./MenuHelper.html">MenuHelper</a>
+  
+    <li><a href="./Menudet.html">Menudet</a>
+  
+    <li><a href="./Menulit.html">Menulit</a>
+  
+    <li><a href="./Moviment.html">Moviment</a>
+  
+    <li><a href="./MovimentsController.html">MovimentsController</a>
+  
+    <li><a href="./MovimentsHelper.html">MovimentsHelper</a>
+  
+    <li><a href="./Object.html">Object</a>
+  
+    <li><a href="./Pgc.html">Pgc</a>
+  
+    <li><a href="./PgcHelper.html">PgcHelper</a>
+  
+    <li><a href="./PgcsController.html">PgcsController</a>
+  
+    <li><a href="./String.html">String</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class AssentamentsController</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-fillCtcteInput" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">fillCtcteInput</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="fillCtcteInput-source">
+            <pre><span class="ruby-comment"># File app/controllers/assentaments_controller.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">fillCtcteInput</span>
+  <span class="ruby-ivar">@input</span> = <span class="ruby-constant">Compte</span>.<span class="ruby-identifier">autoCompleteCtcte</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:numCompte</span>])
+  <span class="ruby-ivar">@compte</span> = <span class="ruby-constant">Compte</span>.<span class="ruby-identifier">find_by_ctcte</span>(<span class="ruby-ivar">@input</span>)
+ 
+  <span class="ruby-identifier">respond_with</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-keyword">do</span>
+      <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> {<span class="ruby-value">:ctcte</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@compte</span>.<span class="ruby-identifier">ctcte</span>, <span class="ruby-value">:ctdesc</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@compte</span>.<span class="ruby-identifier">ctdesc</span> }
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- fillCtcteInput-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- fillCtcteInput-method -->
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/assentaments_controller.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+  <span class="ruby-comment">#Creem un moviment (apunt)</span>
+
+  <span class="ruby-ivar">@apunt</span> = <span class="ruby-constant">Moviment</span>.<span class="ruby-identifier">new</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-i-show" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">show</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="show-source">
+            <pre><span class="ruby-comment"># File app/controllers/assentaments_controller.rb, line 5</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
+  <span class="ruby-ivar">@moviments</span> = <span class="ruby-constant">Moviment</span>.<span class="ruby-identifier">all</span>
+  <span class="ruby-identifier">render</span> <span class="ruby-value">:json</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@moviments</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- show-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- show-method -->
+
+    
+      <div id="method-i-validarCompte" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">validarCompte</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>NO SUTILITZA</p>
+
+<pre>NEW CODE</pre>
+          
+
+          
+          <div class="method-source-code" id="validarCompte-source">
+            <pre><span class="ruby-comment"># File app/controllers/assentaments_controller.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">validarCompte</span>
+  <span class="ruby-ivar">@ctcte</span> = <span class="ruby-identifier">params</span>[<span class="ruby-value">:numCompte</span>]
+  <span class="ruby-ivar">@empresa</span> = <span class="ruby-constant">Empresa</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:mpKey</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">empKey</span>).<span class="ruby-identifier">first</span>
+
+  <span class="ruby-ivar">@retorn</span> = {<span class="ruby-string">&quot;err&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span>,
+             <span class="ruby-string">&quot;errmsg&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&quot;</span>,
+             <span class="ruby-string">&quot;ctcte&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&quot;</span>,
+             <span class="ruby-string">&quot;ctdesc&quot;</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-string">&quot;&quot;</span>
+            }
+
+  <span class="ruby-keyword">if</span> <span class="ruby-keyword">not</span> <span class="ruby-constant">Compte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:ctcte</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">numCompte</span>).<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">then</span>
+    <span class="ruby-comment"># El compte ja existeix</span>
+    <span class="ruby-comment"># -&gt; Pintem de verd el cuadre</span>
+    <span class="ruby-ivar">@retorn</span>[<span class="ruby-string">&quot;err&quot;</span>] = <span class="ruby-value">0</span>
+    <span class="ruby-ivar">@retorn</span>[<span class="ruby-string">&quot;ctdesc&quot;</span>] = <span class="ruby-constant">Compte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:ctcte</span> <span class="ruby-operator">&gt;</span> <span class="ruby-identifier">numCompte</span>).<span class="ruby-identifier">ctdesc</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># El compte no existeix</span>
+
+    <span class="ruby-comment"># Verifiquem si el format es correcte</span>
+    <span class="ruby-keyword">if</span> (<span class="ruby-identifier">numCompte</span> <span class="ruby-operator">=~</span> <span class="ruby-regexp">%r^[0-9]+[.][0-9]+$/</span>) <span class="ruby-keyword">and</span> <span class="ruby-identifier">numCompte</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">emploc</span> <span class="ruby-keyword">then</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-ivar">@parts_numCompte</span> = <span class="ruby-identifier">numCompte</span>.<span class="ruby-identifier">split</span>(<span class="ruby-string">&quot;.&quot;</span>) <span class="ruby-keyword">then</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-constant">Pgc</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:pgccte</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@parts_numCompte</span>[<span class="ruby-value">0</span>]).<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">then</span>
+          <span class="ruby-ivar">@retorn</span>[<span class="ruby-string">&quot;err&quot;</span>] = <span class="ruby-value">2</span>
+          <span class="ruby-ivar">@retorn</span>[<span class="ruby-string">&quot;errmsg&quot;</span>] = <span class="ruby-string">&quot;Compte erroni&quot;</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-comment"># El format es correcte i el prefix PGC també, podem formatejar el numero</span>
+
+          <span class="ruby-comment"># Omplenem amb els zeros que faltin</span>
+          <span class="ruby-ivar">@tamany_numCompte</span> = <span class="ruby-ivar">@parts_numCompte</span>[<span class="ruby-value">0</span>].<span class="ruby-identifier">length</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@parts_numCompte</span>[<span class="ruby-value">1</span>].<span class="ruby-identifier">length</span>
+          <span class="ruby-ivar">@restant</span> = <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">emploc</span> <span class="ruby-operator">-</span> <span class="ruby-ivar">@tamany_numCompte</span>
+
+          <span class="ruby-keyword">if</span> <span class="ruby-ivar">@tamany_numCompte</span> <span class="ruby-operator">&lt;</span> <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">emploc</span> <span class="ruby-keyword">then</span>
+              <span class="ruby-ivar">@compte</span> = <span class="ruby-ivar">@parts_numCompte</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">+</span> <span class="ruby-string">&quot;0&quot;</span> * <span class="ruby-ivar">@restant</span> <span class="ruby-operator">+</span> <span class="ruby-ivar">@parts_numCompte</span>[<span class="ruby-value">1</span>]
+          <span class="ruby-keyword">end</span>
+
+          <span class="ruby-comment"># Un cop el tenim formatejat correctament, mirem si existeix o no</span>
+          <span class="ruby-keyword">if</span> <span class="ruby-constant">Compte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:ctcte</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@compte</span>).<span class="ruby-identifier">empty?</span> <span class="ruby-keyword">then</span>
+            <span class="ruby-ivar">@retorn</span>[<span class="ruby-string">&quot;err&quot;</span>] = <span class="ruby-value">1</span>
+            <span class="ruby-ivar">@retorn</span>[<span class="ruby-string">&quot;errmsg&quot;</span>] = <span class="ruby-string">&quot;Nou compte&quot;</span>
+          <span class="ruby-keyword">else</span>
+            <span class="ruby-ivar">@retorn</span>[<span class="ruby-string">&quot;err&quot;</span>] = <span class="ruby-value">0</span>
+            <span class="ruby-ivar">@retorn</span>[<span class="ruby-string">&quot;ctdesc&quot;</span>] = <span class="ruby-constant">Compte</span>.<span class="ruby-identifier">where</span>(<span class="ruby-value">:ctcte</span> <span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@compte</span>).<span class="ruby-identifier">ctdesc</span>
+          <span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">elsif</span> <span class="ruby-identifier">ctcte</span>[<span class="ruby-value">0</span>, <span class="ruby-ivar">@empresa</span>.<span class="ruby-identifier">emppgc</span>]  
+      <span class="ruby-comment"># Aqui cal posar un else if abans, on es chequeji que no hagi posat el compte</span>
+      <span class="ruby-comment"># en format normal 70000010 pero que el compte sigui nou i no estigui a la taula</span>
+      
+
+      
+
+      <span class="ruby-ivar">@response</span> = <span class="ruby-string">&quot;Aquest compte es erroni !&quot;</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- validarCompte-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- validarCompte-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
