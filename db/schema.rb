@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121217111638) do
+ActiveRecord::Schema.define(:version => 20121223131816) do
 
   create_table "braindets", :force => true do |t|
     t.integer  "brdlin"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(:version => 20121217111638) do
     t.string   "empdli"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "database_name"
   end
 
   create_table "histgens", :force => true do |t|
@@ -195,5 +196,22 @@ ActiveRecord::Schema.define(:version => 20121217111638) do
   end
 
   add_index "pgcs", ["ancestry"], :name => "index_pgcs_on_ancestry"
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password"
+    t.string   "nom"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "username"
+    t.string   "cognoms"
+    t.string   "salt"
+    t.string   "encrypted_password"
+  end
+
+  create_table "usuaris_empresas", :id => false, :force => true do |t|
+    t.integer "user_id"
+    t.integer "empresa_id"
+  end
 
 end

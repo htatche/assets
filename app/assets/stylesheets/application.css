@@ -18,12 +18,18 @@
 body {
   padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-weight: normal;
 }
 
 h1 {
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   color: #333;
   font-size: 2.6em;
+}
+
+a {
+  font-weight: normal;
+  color: gray;
 }
 
 #appContainer {

@@ -1,7 +1,6 @@
 Mc::Application.routes.draw do
 
   get "assistits/show"
-
   get "main/index"
 
   match 'pgcs/new/:id' => 'pgcs#new'
@@ -31,7 +30,18 @@ Mc::Application.routes.draw do
   resources :assistits
   resources :menu
 
-  root :to => 'main#index'
+  match "signup", :to => "users#new"
+  resources :users
+  match "login", :to => "sessions#login"
+  post 'sessions/login_attempt'
+  match "logout", :to => "sessions#logout"
+  match "profile", :to => "sessions#profile"
+  match "setting", :to => "sessions#setting"
+
+  resources :home
+
+  root :to => 'home#index'
+#root :to => 'main#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

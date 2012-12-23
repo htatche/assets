@@ -20,6 +20,8 @@ group :assets do
   gem 'jquery-ui-rails'
   gem 'rake', '~> 10.0.3'
   gem 'activerecord-postgresql-adapter'
+  gem 'apartment'
+  gem 'bcrypt-ruby', :require => 'bcrypt'
 end
 
 gem 'jquery-rails'

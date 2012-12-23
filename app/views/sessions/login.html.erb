@@ -1,0 +1,29 @@
+<div class='sign-form'>
+  <h1>Login</h1>
+  <hr>
+
+  <%= form_tag(:action => 'login_attempt') do %>
+
+    <% if flash[:notice] %>
+      <div class="errors ui-state-error ui-corner-all">
+        <%= flash[:notice] %>
+      </div>
+    <% end %>
+
+    <fieldset>
+      <ol>
+        <li>
+          <label> Usuari o Email </label>
+          <%= text_field_tag :username_or_email %>
+        </li>
+        <li>
+          <label> Contrasenya </label>
+          <%= password_field_tag :login_password %>
+        </li>
+      </ol>
+    </fieldset>
+
+    <%= submit_tag 'Entrar' %>
+    <%= link_to 'Vols crear un compte gratuitament ?', '/signup' %>
+  <% end %>
+</div>

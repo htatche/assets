@@ -10,14 +10,20 @@
 <body>
 
   <div id="appContainer">
-
 		<div id="appTabs">
       <ul>
+        <% if @current_user %>
+          <li style='padding: 5px; font-size: 14px; border: none; background: transparent;' hasclosebutton='false'><a href='logout'>Desconectar</a></li>
+        <% end %>
           <li style='padding: 5px; font-size: 14px; border: none; background: transparent;' hasclosebutton='false'><a href='#tabMenu'>Inici</a></li>
       </ul>
       <div id="tabMenu">
         <%= yield %>
       </div>
+      <% if @current_user %>
+        <div id='logout'>
+        </div>
+      <% end %>
 	  </div>
 	</div>
 
