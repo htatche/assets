@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
     :if => :email
 
   validates :password,
-    :confirmation => true #password_confirmation attr
+    :presence => true
 
   validates_length_of :password,
     :in => 6..20,

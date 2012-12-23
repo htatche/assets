@@ -7,8 +7,7 @@ class Compte < ActiveRecord::Base
   validates :ctcte,
     :presence => true,
     :numericality => { :only_integer => true },
-    :uniqueness => true,
-    :length => { :maximum => Empresa.first.emploc }
+    :uniqueness => true
 
   validates :ctdesc,
     :presence => true
