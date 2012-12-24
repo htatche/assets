@@ -1,5 +1,5 @@
 <div class="tab-container">
-  <h1 class='welcome'> Benvingut a Assets, <%= @current_user.nom %> </h1>
+  <h1 class='welcome'> Benvingut a Assets, <%= @current_user.nom if @current_user %> </h1>
 
   <div class='menu-container'>
     <div class='menuOptions'>

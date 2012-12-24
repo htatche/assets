@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_and_belongs_to_many :empresas
   attr_accessor :password
-  attr_accessible :nom, :cognoms, :username, :email, :password, :password_confirmation
+  attr_accessible :nom, :cognoms, :username, :email, :password
 
   EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i
 
@@ -31,6 +31,7 @@ class User < ActiveRecord::Base
 
   validates_length_of :password,
     :in => 6..20,
+    :confirmation => true,
     :on => :create,
     :if => :password
 

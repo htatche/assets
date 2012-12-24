@@ -1,14 +1,17 @@
 /* Sign */
-form div.errors {
-  margin: 20px 0 20px 15px;
-  padding: 10px;
-  border: 1px solid;
-}
-
 .sign-form {
   margin: 0;
   width: 400px;
   margin-left: 300px;
+}
+
+.sign-form form div.errors {
+  /* No hereda de div.errors */
+  display: block;
+  width: auto;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid;
 }
 
 .sign-form h1 {
