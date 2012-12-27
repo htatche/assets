@@ -11,6 +11,7 @@ gem 'rake'
 gem 'activerecord-postgresql-adapter'
 gem 'apartment'
 gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'mail'
 
 group :development, :test do
   gem 'rspec-rails'

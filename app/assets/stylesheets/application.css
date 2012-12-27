@@ -27,6 +27,11 @@ h1 {
   font-size: 2.6em;
 }
 
+h2 {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #333;
+}
+
 a {
   font-weight: normal;
   color: gray;

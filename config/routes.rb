@@ -1,5 +1,11 @@
 Mc::Application.routes.draw do
 
+  get "empreses/home"
+
+  get "empreses/admin"
+
+  get "empreses/auth"
+
   get "assistits/show"
   get "main/index"
 
@@ -39,6 +45,8 @@ Mc::Application.routes.draw do
   match "setting", :to => "sessions#setting"
 
   resources :home
+
+  match 'users/:id/confirm/:code', :to => 'users#confirm'
 
   root :to => 'home#index'
 #root :to => 'main#index'

@@ -1,8 +1,8 @@
 <div class='sign-form'>
-  <h1>Login</h1>
+  <h1>Identificació Empresa</h1>
   <hr>
 
-  <%= form_tag(:action => 'login_attempt') do %>
+  <%= form_tag(:action => 'auth_attempt') do %>
 
     <% if flash[:notice] %>
       <div class="notice ui-state-highlight ui-corner-all">
@@ -18,17 +18,16 @@
     <fieldset>
       <ol>
         <li>
-          <label> Usuari o Email </label>
-          <%= text_field_tag :username_or_email %>
+          <label> Usuari </label>
+          <%= text_field_tag :username %>
         </li>
         <li>
           <label> Contrasenya </label>
-          <%= password_field_tag :login_password %>
+          <%= password_field_tag :password %>
         </li>
       </ol>
     </fieldset>
 
-    <%= submit_tag 'Entrar' %>
-    <%= link_to 'Vols crear un compte gratuitament ?', '/signup' %>
+    <%= submit_tag 'Validar' %>
   <% end %>
 </div>

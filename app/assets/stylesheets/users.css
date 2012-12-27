@@ -5,13 +5,19 @@
   margin-left: 300px;
 }
 
-.sign-form form div.errors {
+.sign-form form div.error {
   /* No hereda de div.errors */
   display: block;
   width: auto;
   margin: 0;
   padding: 10px;
   border: 1px solid;
+}
+.sign-form form div.notice {
+  display: block;
+  width: auto;
+  margin: 0;
+  padding: 10px;
 }
 
 .sign-form h1 {
@@ -68,4 +74,8 @@
   width: auto;
   margin: 10px;
   font-size: 2em;
+}
+
+.check_mail {
+  padding: 20px;
 }

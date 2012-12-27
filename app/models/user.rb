@@ -27,7 +27,8 @@ class User < ActiveRecord::Base
     :if => :email
 
   validates :password,
-    :presence => true
+    :presence => true,
+    :on => :create
 
   validates_length_of :password,
     :in => 6..20,
@@ -35,8 +36,11 @@ class User < ActiveRecord::Base
     :on => :create,
     :if => :password
 
-  before_save :encrypt_password
-  after_save :clear_password
+  before_create :generate_confirmation_code
+  before_save :encrypt_password#, :only => [:create, :update]
+  after_save :clear_password#, :only => [:create, :update]
+
+  scope :certified, where(:confirmed => true)
 
   def encrypt_password
      if password.present?
@@ -51,12 +55,12 @@ class User < ActiveRecord::Base
 
   def self.authenticate(username_or_email="", login_password="")
     if EMAIL_REGEX.match(username_or_email)    
-      user = User.find_by_email(username_or_email)
+      user = certified.find_by_email(username_or_email)
     else
-      user = User.find_by_username(username_or_email)
+      user = certified.find_by_username(username_or_email)
     end
 
-    if user && user.match_password(login_password)
+    if user && user.match_password(login_password) 
       return user
     else
       return false
@@ -65,5 +69,22 @@ class User < ActiveRecord::Base
 
   def match_password(login_password="")
     encrypted_password == BCrypt::Engine.hash_secret(login_password, salt)
+  end
+
+  def generate_confirmation_code
+    self.confirmation_code = Digest::SHA1.hexdigest([Time.now, rand].join)
+    self.confirmed = 0
+  end
+
+  def match_confirmation_code(code)
+    if confirmation_code == code
+      self.confirmation_code = nil
+      self.confirmed = true
+
+      return true
+    else
+      return false
+    end
+
   end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121223131816) do
+ActiveRecord::Schema.define(:version => 20121224152237) do
 
   create_table "braindets", :force => true do |t|
     t.integer  "brdlin"
@@ -207,6 +207,8 @@ ActiveRecord::Schema.define(:version => 20121223131816) do
     t.string   "cognoms"
     t.string   "salt"
     t.string   "encrypted_password"
+    t.string   "confirmation_code"
+    t.boolean  "confirmed"
   end
 
   create_table "usuaris_empresas", :id => false, :force => true do |t|

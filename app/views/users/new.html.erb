@@ -4,13 +4,13 @@
 
   <%= form_for(:user, :url => {:controller => :users, :action => :create}) do |f| %>
 
-    <% if flash[:notice] %>
-      <div class="errors ui-state-error ui-corner-all">
-        <%= flash[:notice] %>
+    <% if flash[:error] %>
+      <div class="error ui-state-error ui-corner-all">
+        <%= flash[:error] %>
         <% if @user.errors.any? %>
           <ul class='sign-form-errors'>
             <% for message_error in @user.errors.full_messages %>
-            <li>* <%= message_error %></li>
+            <li><%= message_error %></li>
             <% end %>
           </ul>
         <% end %>

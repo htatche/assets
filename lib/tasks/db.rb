@@ -5,3 +5,7 @@ task :cleandb  => [:environment] do
   Histpag.all.each { |i| i.destroy }
   Moviment.all.each { |i| i.destroy }
 end
+
+task :cleanusers  => [:environment] do
+  User.all.each { |i| i.destroy }
+end

@@ -11,8 +11,7 @@ class SessionsController < ApplicationController
      session[:user_id] = authorized_user.id
      redirect_to('/home')
    else
-     flash[:notice] = "Usuari o contrasenya invalids"
-     flash[:color]= "invalid"
+     flash[:error] = "Usuari o contrasenya invalids"
      render "login"  
    end
  end
