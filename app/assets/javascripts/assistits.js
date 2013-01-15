@@ -252,8 +252,8 @@ function Assentament(el) {
   };
 
   _this.bindKeydown = function(fieldset) {
-    fieldset.find('input:last').unbind('keydown');
-    fieldset.find('input:last').on('keydown', function(e) {
+    fieldset.find('input:last').unbind('keydown.newrow');
+    fieldset.find('input:last').on('keydown.newrow', function(e) {
       if(e.which === 13) {
         fieldset = $(this).parents('fieldset');
         _this.getRow(fieldset);

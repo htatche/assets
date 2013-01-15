@@ -4,14 +4,12 @@
           options_from_collection_for_select(@comptes_impostos,
                                              'ctcte',
                                              'ctfullname'),
-          {:class => 'compte impost_compte',
-           :tabindex => 7} %> 
+          {:class => 'compte'} %> 
   </td>
   <td>
     <%= text_field_tag 'imp['+@nrow+'][import]',
                        '',
-                       {:class => 'import impost_import',
-                        :tabindex => 8} %> 
+                       {:class => 'import'} %> 
     <div class='numeric'> </div>
   </td>
   <td class='destroy'>

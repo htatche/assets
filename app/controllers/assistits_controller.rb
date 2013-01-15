@@ -176,7 +176,7 @@ class AssistitsController < ApplicationController
 
     @brain = Brain.find_by_brakey(@assistit.brakey)
     @grupimpostos = @brain.braimp.to_i
-    @comptes_impostos = Compte.where('ctcte LIKE "?%"',
+    @comptes_impostos = Compte.where("ctcte LIKE '?%'",
                                       @grupimpostos)
     
     render :partial => 'assistits/impost'
@@ -191,7 +191,7 @@ class AssistitsController < ApplicationController
 
     @brain = Brain.find_by_brakey(@assistit.brakey)
     @gruppagaments = @brain.brapag.to_i
-    @comptes_pagaments = Compte.where('ctcte LIKE "?%"',
+    @comptes_pagaments = Compte.where("ctcte LIKE '?%'",
                                       @gruppagaments)
     
     render :partial => 'assistits/pagament'
