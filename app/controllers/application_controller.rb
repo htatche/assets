@@ -4,10 +4,6 @@ class ApplicationController < ActionController::Base
   prepend_before_filter :load_schema
   before_filter :authenticate_user
 
-  def menuOptions
-    Menu.all
-  end
-
 protected 
 
   def authenticate_user

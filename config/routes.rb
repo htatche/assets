@@ -44,6 +44,9 @@ Mc::Application.routes.draw do
   match "profile", :to => "sessions#profile"
   match "setting", :to => "sessions#setting"
 
+  #resources :historials
+  match 'consulta/:mnukey', :to => 'historials#consulta'
+
   resources :home
 
   match 'users/:id/confirm/:code', :to => 'users#confirm'

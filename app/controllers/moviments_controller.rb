@@ -1,6 +1,10 @@
 class MovimentsController < ApplicationController
   respond_to :html, :xml, :json
 
+  def search
+
+  end
+
   def grid
     @moviments = Moviment.all
     render :json => @moviments

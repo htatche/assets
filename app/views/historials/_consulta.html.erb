@@ -1,0 +1,75 @@
+<div class='consulta' id=<%= opckey %>>
+  <div> <h3> <%= frmLabels.lit1 %> </h3> </div>
+  <div> 
+
+    <%= form_tag '/historials',
+                 {:remote => true,
+                  :class => 'frm_new_p1'} do |f| %>
+      <%= hidden_field_tag :opckey, opckey %>
+
+      <div class='errors'>
+      </div>
+
+      <div class='notice'>
+      </div>
+
+      <fieldset>
+        <legend> <%= frmLabels.lit2 %> </legend>
+        <hr>
+        <ol>
+          <li>
+            <label><%= frmLabels.lit3 %> </label>
+            <%= text_field_tag :numdoc, '', :tabindex => 1 %>
+          </li>
+          <li class='ctcte'>
+            <label><%= frmLabels.lit4 %></label>
+            <div class='ctcte-combobox'></div>
+          </li>
+          <li>
+            <label><%= frmLabels.lit5 %></label>
+            <%= text_field_tag :ctdesc, '', :tabindex => 3 %>
+          </li>
+          <li>
+            <label><%= frmLabels.lit6 %></label>
+            <%= text_field_tag :date, '', {:tabindex => 4, :type => 'date'} %>
+          </li>
+          <li class='import'>
+            <label><%= frmLabels.lit7 %></label>
+            <div class='numeric'></div>
+          </li>
+          <li>
+            <label><%= frmLabels.lit8 %></label>
+            <%= text_field_tag :comment, '', :tabindex => 6 %>
+          </li>
+        </ol>
+      </fieldset>
+
+      <fieldset class='assentaments'>
+        <legend> <%= frmLabels.lit9 %> </legend>
+        <hr>
+
+        <table>
+          <thead>
+          <tr>
+            <td>
+              Compte
+            </td>
+            <td>
+              Import
+            </td>
+            <td>
+              Comentari
+            </td>
+          </tr>
+          </thead>
+          <tbody>
+            <%= render :partial => 'assistits/assentament' %> 
+          </tbody>
+        </table>
+      </fieldset>
+      
+      <%= submit_tag('Guardar') %>
+
+    <% end %>
+  </div>
+</div>

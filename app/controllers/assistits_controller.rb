@@ -3,6 +3,7 @@ class AssistitsController < ApplicationController
 
   def show
     @menuOptions = Menudet.where('mnukey = ?', params[:option])
+    @mnukey = params[:option]
 
     if @menuOptions.present? 
       render :partial => 'show',
