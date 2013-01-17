@@ -1,75 +1,47 @@
 <div class='consulta' id=<%= opckey %>>
-  <div> <h3> <%= frmLabels.lit1 %> </h3> </div>
+  <div> <h3> <%= @mnulabel %> </h3> </div>
   <div> 
 
-    <%= form_tag '/historials',
-                 {:remote => true,
-                  :class => 'frm_new_p1'} do |f| %>
-      <%= hidden_field_tag :opckey, opckey %>
+    <div class='consulta-frm'>
+      <%= form_tag '/historials/search',
+                   {:remote => true,
+                    :class => 'consulta'} do |f| %>
+        <%= hidden_field_tag :mnukey, @mnukey %>
 
-      <div class='errors'>
-      </div>
+        <div class='errors'>
+        </div>
 
-      <div class='notice'>
-      </div>
+        <div class='notice'>
+        </div>
 
-      <fieldset>
-        <legend> <%= frmLabels.lit2 %> </legend>
-        <hr>
-        <ol>
-          <li>
-            <label><%= frmLabels.lit3 %> </label>
-            <%= text_field_tag :numdoc, '', :tabindex => 1 %>
-          </li>
-          <li class='ctcte'>
-            <label><%= frmLabels.lit4 %></label>
-            <div class='ctcte-combobox'></div>
-          </li>
-          <li>
-            <label><%= frmLabels.lit5 %></label>
-            <%= text_field_tag :ctdesc, '', :tabindex => 3 %>
-          </li>
-          <li>
-            <label><%= frmLabels.lit6 %></label>
-            <%= text_field_tag :date, '', {:tabindex => 4, :type => 'date'} %>
-          </li>
-          <li class='import'>
-            <label><%= frmLabels.lit7 %></label>
-            <div class='numeric'></div>
-          </li>
-          <li>
-            <label><%= frmLabels.lit8 %></label>
-            <%= text_field_tag :comment, '', :tabindex => 6 %>
-          </li>
-        </ol>
-      </fieldset>
+        <div class='p1'>
+          <ol>
+            <li>
+              <label>Client </label>
+              <%= select_tag 'compte',
+                  options_from_collection_for_select(@comptes,
+                                                     'ctcte',
+                                                     'ctfullname'),
+                  {:class => 'compte',
+                   :tabindex => 1} %> 
+            </li>
+          </ol>
+          
+        </div>
+        <div class='p2'>
 
-      <fieldset class='assentaments'>
-        <legend> <%= frmLabels.lit9 %> </legend>
-        <hr>
+        </div>
+        <div class='p3'>
 
-        <table>
-          <thead>
-          <tr>
-            <td>
-              Compte
-            </td>
-            <td>
-              Import
-            </td>
-            <td>
-              Comentari
-            </td>
-          </tr>
-          </thead>
-          <tbody>
-            <%= render :partial => 'assistits/assentament' %> 
-          </tbody>
-        </table>
-      </fieldset>
-      
-      <%= submit_tag('Guardar') %>
+        </div>
+        <div class='p4'>
+          <%= submit_tag('Buscar') %>
+        </div>
+      <% end %>
+    </div>
 
-    <% end %>
+    <div class='consulta-grid'>
+
+    </div>
   </div>
 </div>
