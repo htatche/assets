@@ -19,9 +19,9 @@ nmap <silent> nn :NERDTreeToggle
 noremap <silent> q :q
 nmap sQ :mksession! ~/vim/Session.vim:wqa
 noremap <silent> s :update
-map <F5> :TlistToggle</f5></cr>
-map <F4> \be
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#NetrwBrowseX(expand("<cWORD>"),0)
+map <F4> \be
+map <F5> :TlistToggle</f5></cr>
 map <silent> î :cn 
 map <silent> ð :cp 
 let &cpo=s:cpo_save
@@ -42,6 +42,7 @@ set helplang=en
 set incsearch
 set iskeyword=@,48-57,_,192-255,$
 set laststatus=2
+set omnifunc=javascriptcomplete#CompleteJS
 set pastetoggle=<F6>
 set printoptions=paper:letter
 set ruler
@@ -53,6 +54,7 @@ set suffixes=.bak,~,.swp,.o,.info,.aux,.log,.dvi,.bbl,.blg,.brf,.cb,.ind,.idx,.i
 set tabstop=2
 set tags=~/dev/mc/app/tags
 set timeoutlen=250
+set window=58
 let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -85,9 +87,12 @@ badd +1 app/helpers/application_helper.rb
 badd +1 app/helpers/assistits_helper.rb
 badd +19 app/views/historials/_show.html.erb
 badd +5 app/views/assistits/_consulta.html.erb
-badd +42 app/views/historials/_consulta.html.erb
+badd +1 app/views/historials/_consulta.html.erb
 badd +3 app/views/assistits/_impost.html.erb
-badd +0 app/views/assentaments/index.html.erb
+badd +1 app/views/assentaments/index.html.erb
+badd +24 app/views/assistits/frm_p1/_assentament.html.erb
+badd +13 app/assets/javascripts/api/assistit.js
+badd +16 app/assets/javascripts/assistits.js
 silent! argdel *
 edit app/controllers/historials_controller.rb
 set splitbelow splitright
@@ -99,8 +104,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 84 + 84) / 168)
-exe 'vert 2resize ' . ((&columns * 83 + 84) / 168)
+exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
+exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
@@ -220,7 +225,7 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 15 - ((14 * winheight(0) + 20) / 41)
+let s:l = 15 - ((14 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -347,15 +352,15 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 46 - ((13 * winheight(0) + 20) / 41)
+let s:l = 46 - ((18 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 46
 normal! 0
 wincmd w
-exe 'vert 1resize ' . ((&columns * 84 + 84) / 168)
-exe 'vert 2resize ' . ((&columns * 83 + 84) / 168)
+exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
+exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
 tabedit app/views/historials/_consulta.html.erb
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -366,8 +371,8 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe 'vert 1resize ' . ((&columns * 84 + 84) / 168)
-exe 'vert 2resize ' . ((&columns * 83 + 84) / 168)
+exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
+exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
@@ -487,7 +492,7 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 42 - ((19 * winheight(0) + 20) / 41)
+let s:l = 42 - ((26 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -614,16 +619,141 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 12 - ((11 * winheight(0) + 20) / 41)
+let s:l = 8 - ((7 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-12
-normal! 034l
+8
+normal! 024l
 wincmd w
-2wincmd w
-exe 'vert 1resize ' . ((&columns * 84 + 84) / 168)
-exe 'vert 2resize ' . ((&columns * 83 + 84) / 168)
+exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
+exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
+tabnew
+set splitbelow splitright
+set nosplitbelow
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+enew
+file NERD_tree_2
+let s:cpo_save=&cpo
+set cpo&vim
+nmap <buffer> gf <Plug>RailsTabFind
+nmap <buffer> f <Plug>RailsSplitFind
+nmap <buffer> [f <Plug>RailsAlternate
+nmap <buffer> ]f <Plug>RailsRelated
+nmap <buffer> gf <Plug>RailsFind
+nnoremap <buffer> <silent> <Plug>RailsTabFind :RTfind
+nnoremap <buffer> <silent> <Plug>RailsVSplitFind :RVfind
+nnoremap <buffer> <silent> <Plug>RailsSplitFind :RSfind
+nnoremap <buffer> <silent> <Plug>RailsFind :REfind
+nnoremap <buffer> <silent> <Plug>RailsRelated :R
+nnoremap <buffer> <silent> <Plug>RailsAlternate :A
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal nobuflisted
+setlocal buftype=nofile
+setlocal cindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=:0,p0,t0
+setlocal cinwords=if,else,while,do,for,switch,case
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal cursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'nerdtree'
+setlocal filetype=nerdtree
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcqr
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=RailsIncludeexpr()
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255,$
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal nomodifiable
+setlocal nrformats=octal,hex
+set number
+setlocal nonumber
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=%{exists('b:NERDTreeRoot')?b:NERDTreeRoot.path.str():''}
+setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.slim
+setlocal noswapfile
+setlocal synmaxcol=3000
+if &syntax != 'nerdtree'
+setlocal syntax=nerdtree
+endif
+setlocal tabstop=2
+setlocal tags=~/dev/assets/tmp/tags,~/dev/mc/app/tags,~/dev/assets/tags
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal winfixwidth
+set nowrap
+setlocal nowrap
+setlocal wrapmargin=0
 tabedit config/routes.rb
 set splitbelow splitright
 set nosplitbelow
@@ -749,14 +879,13 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 48 - ((34 * winheight(0) + 20) / 41)
+let s:l = 48 - ((47 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
 48
 normal! 055l
-2wincmd w
-tabnext 2
+tabnext 3
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif

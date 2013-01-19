@@ -297,7 +297,6 @@ function Assentament(el) {
       .click(function() {
         if (fieldset.find('table tbody tr').length > 1) {
           $(this).parents('tr').remove();
-          //_this.bindDestoyIcon(fieldset);
           _this.bindKeydown(fieldset);
           _this.setTabindexes();
         }
