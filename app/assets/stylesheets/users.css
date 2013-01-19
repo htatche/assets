@@ -58,7 +58,7 @@
   color: #333
 }
 
-.sign-form fieldset input:not([type=submit]), select {
+.sign-form fieldset input:not([type=submit]) {
   float: left;
   border: 1px solid #aaa;
   -moz-border-radius: 3px;

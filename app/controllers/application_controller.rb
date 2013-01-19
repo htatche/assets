@@ -30,4 +30,27 @@ protected
     #Apartment::Database.switch('muesliinc')
   end
 
+  def buscarGrupComptable(opckey)
+    @grups_condition = ''
+    @grup_comptable = Menudet.find(opckey)
+
+    if @grup_comptable.present?
+      @brain = Brain.where('brakey = ?', @grup_comptable.brakey)
+    end
+
+    if @brain.present?
+      @brain = @brain.first
+
+      @grups_condition = "ctcte LIKE '#{@brain.brades}%' "
+      @braindet = Braindet.where('brakey = ?', @grup_comptable.brakey)
+                          .order('brdlin')
+
+      @braindet.each{ |i| 
+        @grups_condition += ' OR ctcte LIKE "' + i.brddes + '%"' if i.brddes
+      }
+    end
+
+    @grups_condition
+  end
+
 end

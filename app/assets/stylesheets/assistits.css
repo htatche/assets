@@ -11,7 +11,6 @@ div.assistit h3 {
   margin: 10px 0 0 5px;
 }
 
-
 .frm_new_p1 .input-validation-error {
   display: none;
   float: left;
@@ -98,7 +97,8 @@ div.assistit h3 {
   width: 220px;
 }
 
-.frm_new_p1 fieldset input:not([type=submit]), select {
+.frm_new_p1 fieldset input:not([type=submit]),
+.frm_new_p1 fieldset select {
   float: left;
   border: 1px solid #aaa;
   -moz-border-radius: 3px;

@@ -1,11 +1,10 @@
-<div class='consulta' id=<%= opckey %>>
-  <div> <h3> <%= @mnulabel %> </h3> </div>
+<div class='consulta' id=<%= @mnukey %>>
+  <div> <h3> Consulta de <%= @mnulabel %> </h3> </div>
   <div> 
 
     <div class='consulta-frm'>
       <%= form_tag '/historials/search',
-                   {:remote => true,
-                    :class => 'consulta'} do |f| %>
+                   {:remote => true} do |f| %>
         <%= hidden_field_tag :mnukey, @mnukey %>
 
         <div class='errors'>
@@ -17,13 +16,22 @@
         <div class='p1'>
           <ol>
             <li>
+              <label>Consulta </label>
+              <%= select_tag 'tipus',
+                  options_from_collection_for_select(@consultes,
+                                                     'id',
+                                                     'opcdes'),
+                  {:class => 'compte',
+                   :tabindex => 1} %> 
+            </li>
+            <li>
               <label>Client </label>
               <%= select_tag 'compte',
                   options_from_collection_for_select(@comptes,
                                                      'ctcte',
                                                      'ctfullname'),
                   {:class => 'compte',
-                   :tabindex => 1} %> 
+                   :tabindex => 2} %> 
             </li>
           </ol>
           
@@ -40,7 +48,7 @@
       <% end %>
     </div>
 
-    <div class='consulta-grid'>
+    <div class='consulta-grid' id='histgrid'>
 
     </div>
   </div>

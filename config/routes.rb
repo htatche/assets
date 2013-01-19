@@ -45,6 +45,7 @@ Mc::Application.routes.draw do
   match "setting", :to => "sessions#setting"
 
   #resources :historials
+  get 'historials/search'
   match 'consulta/:mnukey', :to => 'historials#consulta'
 
   resources :home

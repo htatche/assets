@@ -2,8 +2,10 @@ class AssistitsController < ApplicationController
   respond_to :html, :json
 
   def show
-    @menuOptions = Menudet.where('mnukey = ?', params[:option])
     @mnukey = params[:option]
+    @menuOptions = Menudet.where('mnukey = ? AND opcmodul = ?',
+                                 @mnukey,
+                                 'assistit')
 
     if @menuOptions.present? 
       render :partial => 'show',

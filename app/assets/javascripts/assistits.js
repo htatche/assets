@@ -1,24 +1,3 @@
-function Tab (tabIndex) {
-  _this = this;
-  _this.tab = $('#tabs-'+tabIndex);
-  _this.index = tabIndex;
-
-  _this.fire = function() {
-    menu = _this.tab.find('.jqx-menu').jqxMenu({ width: 'auto'});
-    menu.bind('itemclick', function(event) {
-      route = $(event.args).attr('id');
-
-      $.get(route, function (data) {
-        _this.tab.find('.content').html(data);
-
-        assistit = _this.tab.find('.assistit');
-        _this.assistit = new Assistit(_this.tab, assistit);
-        _this.assistit.fire();
-      });
-    });
-  };
-}
-
 function Assistit(tab, el) {
   var _this = this;
   var  _tNumdoc,

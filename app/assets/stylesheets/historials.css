@@ -1,0 +1,17 @@
+div.consulta {
+  margin-top: 10px;
+}
+
+div.consulta h3 {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #333;
+}
+
+div.consulta form ol {
+  padding: 0;
+}
+div.consulta form ol li {
+  line-height: 30px;
+  list-style: none;
+  margin-bottom: 2px;
+}
