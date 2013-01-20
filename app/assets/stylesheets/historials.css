@@ -82,3 +82,7 @@ div.consulta form input[type=submit] {
   margin: 50px 0 0 20px;
   font-size: 2em;
 }
+
+div.consulta div#histgrid {
+  margin-top:10px;
+}

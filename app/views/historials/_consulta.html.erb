@@ -20,7 +20,7 @@
             <ol>
               <li>
                 <label>Consulta </label>
-                <%= select_tag 'tipus',
+                <%= select_tag 'tipusConsulta',
                     options_from_collection_for_select(@consultes,
                                                        'id',
                                                        'opcdes'),
@@ -28,11 +28,12 @@
               </li>
               <li>
                 <label>Client </label>
-                <%= select_tag 'compte',
+                <%= select_tag 'client',
+                    options_for_select([['Tots', 'all']]) + 
                     options_from_collection_for_select(@comptes,
-                                                       'ctcte',
-                                                       'ctfullname'),
-                    {:tabindex => 2} %> 
+                                                       'id',
+                                                       'ctfullname')
+                %> 
               </li>
             </ol>
             
@@ -46,23 +47,23 @@
                         true %>
 
                   Des de
-                  <%= text_field_tag :date,
-                        1.week.ago.strftime('%d/%m/%y').to_s,
+                  <%= text_field_tag :dateFrom,
+                        1.week.ago.strftime('%d/%m/%Y').to_s,
                         {:id => 'dateFrom'} %>
                   Fins
-                  <%= text_field_tag :date,
-                        Date.today.strftime('%d/%m/%y'),
+                  <%= text_field_tag :dateTo,
+                        Date.today.strftime('%d/%m/%Y'),
                         {:id => 'dateTo'} %>
               </li>
               <li>
                 <label> </label>
                   <%= radio_button_tag 'dateMode',
-                        'defined',
+                        'predefined',
                         true,
                         {:style => 'float: left;'}
                   %>
 
-                  <%= select_tag 'compte',
+                  <%= select_tag 'date',
                         '<option value="last_month"> Últim mes </option>
                          <option value="last_3_months"> Últims 3 mesos </option>
                          <option value="last_6_months"> Últims 6 mesos </option>
@@ -80,7 +81,7 @@
       <fieldset class='results'>
         <legend> Resultats </legend>
         <hr>
-          <div class='consulta-grid' id='histgrid'>
+          <div id='histgrid'>
 
           </div>
       </fieldset>

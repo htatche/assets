@@ -19,26 +19,41 @@ function Consulta (tab, el) {
   var dataAdapter = new $.jqx.dataAdapter(source);
 
   _this.mnukey = el.attr('id');
+  _this.tipusConsulta = el.find('#tipusConsulta');
 
-  _this.grid = $("#histgrid").jqxGrid({
-      width: '800px',
+  _this.loadGrid = function() {
+    $.getJSON(
+      '/consulta/getGridTitles',
+      {opckey: _this.tipusConsulta.val()},
+      function(data) {
+        _this.startGrid(data);
+      }
+    );
+  };
+
+  _this.startGrid = function(gridTitles) {
+    tit = gridTitles;
+
+    _this.grid = el.find("#histgrid").jqxGrid({
+      width: '900px',
       source: dataAdapter,
       theme: theme,
       columnsresize: true,
       columns: [
-        { text: 'Data compra', datafield: 'datdoc', width: 100 },
-        { text: 'Nº Factura', datafield: 'numdoc', width: 100 },
-        { text: 'Codi proveidor', datafield: 'ctcte', width: 100 },
-        { text: 'Proveidor', datafield: 'ctdesc', width: 100 },
+        { text: tit.lit5, datafield: 'datdoc', width: 100 },
+        { text: tit.lit2, datafield: 'numdoc', width: 100 },
+        { text: tit.lit3, datafield: 'ctcte', width: 100 },
+        { text: tit.lit4, datafield: 'ctdesc', width: 150 },
         { text: 'Data entrada', datafield: 'datsis', width: 100 },
-        { text: 'Import', datafield: 'impdoc', width: 50, cellsformat: 'C' },
-        { text: 'Comentari', datafield: 'comdoc', width: 200 }
+        { text: 'Import', datafield: 'impdoc', width: 100, cellsformat: 'C' },
+        { text: 'Comentari', datafield: 'comdoc', width: 250 }
       ]
-    });
+      });
+  };
 
   _this.search = function () {
     $.getJSON('/historials/search',
-      {mnukey: _this.mnukey},
+      params = el.find('form').serialize(),
       function(data) {
         _this.update (data);
     })
@@ -47,11 +62,12 @@ function Consulta (tab, el) {
     .complete(function() {
     });
 
-  }
+  };
 
   _this.update = function(data) {
+    //$('#grid').jqxGrid('setcolumnproperty', 'firstname', 'width', 100);
     source.localdata = data;
-    $("#histgrid").jqxGrid('updatebounddata');
+    el.find('#histgrid').jqxGrid('updatebounddata');
   }
   
   _this.fire = function() {
@@ -59,8 +75,10 @@ function Consulta (tab, el) {
 
     el.find('#dateFrom').datepicker();
     el.find('#dateTo').datepicker();
-
+  
     _this.setBindings();
+
+    _this.loadGrid();
   };
 
   _this.setBindings = function() {

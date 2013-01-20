@@ -51,6 +51,7 @@ Mc::Application.routes.draw do
 
   #resources :historials
   get 'historials/search'
+  match 'consulta/getGridTitles', :to => 'historials#getGridTitles'
   match 'consulta/:mnukey', :to => 'historials#consulta'
 
   match 'comptabilitat/:option' => 'comptabilitat#show'
