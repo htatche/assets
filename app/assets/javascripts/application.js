@@ -7,6 +7,7 @@
 //= require jquery.ui.datepicker-ca
 //= require ../../../vendor/assets/javascripts/underscore-min.js
 //= require ../../../vendor/assets/javascripts/backbone-min.js
+//= require ../../../vendor/assets/javascripts/jqwidgets/globalization/jquery.global.js
 //= require_tree ../../../vendor/assets/javascripts/
 //= require_tree .
 

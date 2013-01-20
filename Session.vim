@@ -73,8 +73,8 @@ badd +33 app/controllers/application_controller.rb
 badd +1 app/controllers/sessions_controller.rb
 badd +20 app/controllers/assentaments_controller.rb
 badd +95 app/views/assistits/_frm_p1_alta.html.erb
-badd +7 app/views/assistits/_show.html.erb
-badd +12 app/controllers/historials_controller.rb
+badd +2 app/views/assistits/_show.html.erb
+badd +24 app/controllers/historials_controller.rb
 badd +1 app/views/historials/index.html.erb
 badd +1 app/views/historials/_index.html.erb
 badd +1 config/routes.rb
@@ -85,44 +85,180 @@ badd +1 app/helpers/application_helper.rb
 badd +1 app/helpers/assistits_helper.rb
 badd +19 app/views/historials/_show.html.erb
 badd +5 app/views/assistits/_consulta.html.erb
-badd +1 app/views/historials/_consulta.html.erb
+badd +84 app/views/historials/_consulta.html.erb
 badd +3 app/views/assistits/_impost.html.erb
 badd +8 app/views/assentaments/index.html.erb
 badd +24 app/views/assistits/frm_p1/_assentament.html.erb
 badd +13 app/assets/javascripts/api/assistit.js
-badd +55 app/assets/javascripts/assistits.js
-badd +41 app/assets/javascripts/historials.js
-badd +38 app/views/assistits/_frm_p3_alta.html.erb
-badd +43 app/assets/javascripts/application.js
-badd +29 app/assets/javascripts/tabs.js
+badd +117 app/assets/javascripts/assistits.js
+badd +80 app/assets/javascripts/historials.js
+badd +45 app/views/assistits/_frm_p3_alta.html.erb
+badd +10 app/assets/javascripts/application.js
+badd +26 app/assets/javascripts/tabs.js
 badd +100 app/assets/stylesheets/assistits.css
-badd +1 app/assets/stylesheets/historials.css
+badd +55 app/assets/stylesheets/historials.css
 badd +29 app/models/assentament.rb
-badd +90 app/models/compte.rb
+badd +4 app/models/compte.rb
 badd +41 app/assets/stylesheets/users.css
 badd +226 ~/dev/mc/app/controllers/assistits_controller.rb
 badd +35 app/models/brain.rb
 badd +13 app/views/comptabilitat/_show.html.erb
 badd +287 app/assets/javascripts/pgc/pgc.js
-badd +61 app/controllers/pgcs_controller.rb
+badd +118 app/controllers/pgcs_controller.rb
 badd +5 app/controllers/comptabilitat_controller.rb
 badd +28 app/models/pgc.rb
 badd +17 app/views/pgcs/_index.html.erb
 badd +23 app/views/comptes/_form.html.erb
+badd +23 app/assets/stylesheets/assentaments.css
+badd +2 app/models/historial.rb
 silent! argdel *
-edit app/controllers/historials_controller.rb
+edit app/controllers/application_controller.rb
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
 1wincmd h
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
 wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
+exe '1resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 1resize ' . ((&columns * 88 + 78) / 157)
-exe 'vert 2resize ' . ((&columns * 68 + 78) / 157)
+exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe 'vert 2resize ' . ((&columns * 88 + 78) / 157)
+exe 'vert 3resize ' . ((&columns * 68 + 78) / 157)
 argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+nmap <buffer> gf <Plug>RailsTabFind
+nmap <buffer> f <Plug>RailsSplitFind
+nmap <buffer> [f <Plug>RailsAlternate
+nmap <buffer> ]f <Plug>RailsRelated
+nmap <buffer> gf <Plug>RailsFind
+nnoremap <buffer> <silent> <Plug>RailsTabFind :RTfind
+nnoremap <buffer> <silent> <Plug>RailsVSplitFind :RVfind
+nnoremap <buffer> <silent> <Plug>RailsSplitFind :RSfind
+nnoremap <buffer> <silent> <Plug>RailsFind :REfind
+nnoremap <buffer> <silent> <Plug>RailsRelated :R
+nnoremap <buffer> <silent> <Plug>RailsAlternate :A
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=:0,p0,t0
+setlocal cinwords=if,else,while,do,for,switch,case
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=syntaxcomplete#Complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=^\\s*def\\s\\+\\(self\\.\\)\\=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'ruby'
+setlocal filetype=ruby
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcqr
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=RailsIncludeexpr()
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255,$
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=javascriptcomplete#CompleteJS
+setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/application,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.slim
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'ruby'
+setlocal syntax=ruby
+endif
+setlocal tabstop=2
+setlocal tags=~/dev/assets/tmp/tags,~/dev/mc/app/tags,~/dev/assets/tags
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+set nowrap
+setlocal nowrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 75 - ((22 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+75
+normal! 06l
+wincmd w
+argglobal
+edit app/controllers/historials_controller.rb
 let s:cpo_save=&cpo
 set cpo&vim
 nmap <buffer> gf <Plug>RailsTabFind
@@ -241,11 +377,11 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 16 - ((15 * winheight(0) + 28) / 56)
+let s:l = 6 - ((4 * winheight(0) + 13) / 27)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-16
+6
 normal! 0
 wincmd w
 argglobal
@@ -368,27 +504,37 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 76 - ((8 * winheight(0) + 28) / 56)
+let s:l = 45 - ((44 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-76
-normal! 028l
+45
+normal! 0
 wincmd w
+exe '1resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 1resize ' . ((&columns * 88 + 78) / 157)
-exe 'vert 2resize ' . ((&columns * 68 + 78) / 157)
-tabedit app/views/historials/_consulta.html.erb
+exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe 'vert 2resize ' . ((&columns * 88 + 78) / 157)
+exe 'vert 3resize ' . ((&columns * 68 + 78) / 157)
+tabedit app/views/home/index.html.erb
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
 1wincmd h
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
 wincmd w
 set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
+exe '1resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
+exe '2resize ' . ((&lines * 27 + 29) / 59)
 exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
+exe 'vert 3resize ' . ((&columns * 78 + 78) / 157)
 argglobal
 let s:cpo_save=&cpo
 set cpo&vim
@@ -472,8 +618,8 @@ setlocal nrformats=octal,hex
 set number
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/historials,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include,
+setlocal omnifunc=javascriptcomplete#CompleteJS
+setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/home,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -485,7 +631,7 @@ setlocal noscrollbind
 setlocal shiftwidth=2
 setlocal noshortname
 setlocal nosmartindent
-setlocal softtabstop=0
+setlocal softtabstop=2
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
@@ -508,15 +654,142 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 21 - ((20 * winheight(0) + 28) / 56)
+let s:l = 1 - ((0 * winheight(0) + 14) / 28)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-21
-normal! 023l
+1
+normal! 0
 wincmd w
 argglobal
-edit app/views/assistits/_show.html.erb
+edit app/views/historials/_consulta.html.erb
+let s:cpo_save=&cpo
+set cpo&vim
+nmap <buffer> gf <Plug>RailsTabFind
+nmap <buffer> f <Plug>RailsSplitFind
+nmap <buffer> [f <Plug>RailsAlternate
+nmap <buffer> ]f <Plug>RailsRelated
+nmap <buffer> gf <Plug>RailsFind
+nnoremap <buffer> <silent> <Plug>RailsTabFind :RTfind
+nnoremap <buffer> <silent> <Plug>RailsVSplitFind :RVfind
+nnoremap <buffer> <silent> <Plug>RailsSplitFind :RSfind
+nnoremap <buffer> <silent> <Plug>RailsFind :REfind
+nnoremap <buffer> <silent> <Plug>RailsRelated :R
+nnoremap <buffer> <silent> <Plug>RailsAlternate :A
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal noautoindent
+setlocal balloonexpr=
+setlocal nobinary
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),:,0#,!^F,o,O,e
+setlocal cinoptions=:0,p0,t0
+setlocal cinwords=if,else,while,do,for,switch,case
+setlocal colorcolumn=
+setlocal comments=s1:/*,mb:*,ex:*/,://,b:#,:%,:XCOMM,n:>,fb:-
+setlocal commentstring=/*%s*/
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=syntaxcomplete#Complete
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal nocursorline
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'eruby'
+setlocal filetype=eruby
+endif
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=0
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=manual
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcqr
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal grepprg=
+setlocal iminsert=2
+setlocal imsearch=2
+setlocal include=
+setlocal includeexpr=RailsIncludeexpr()
+setlocal indentexpr=
+setlocal indentkeys=0{,0},:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255,$
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal nolist
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=octal,hex
+set number
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/historials,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal norelativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal shiftwidth=2
+setlocal noshortname
+setlocal nosmartindent
+setlocal softtabstop=2
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal statusline=
+setlocal suffixesadd=.rb,.rhtml,.erb,.rxml,.builder,.rjs,.mab,.liquid,.haml,.dryml,.mn,.slim
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'eruby'
+setlocal syntax=eruby
+endif
+setlocal tabstop=2
+setlocal tags=~/dev/assets/tmp/tags,~/dev/mc/app/tags,~/dev/assets/tags
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal noundofile
+setlocal nowinfixheight
+setlocal nowinfixwidth
+set nowrap
+setlocal nowrap
+setlocal wrapmargin=0
+silent! normal! zE
+let s:l = 84 - ((14 * winheight(0) + 13) / 27)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+84
+normal! 015l
+wincmd w
+argglobal
+edit app/views/assistits/_frm_p3_alta.html.erb
 let s:cpo_save=&cpo
 set cpo&vim
 nmap <buffer> gf <Plug>RailsTabFind
@@ -635,15 +908,18 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 1 - ((0 * winheight(0) + 28) / 56)
+let s:l = 136 - ((55 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-1
+136
 normal! 0
 wincmd w
+exe '1resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
+exe '2resize ' . ((&lines * 27 + 29) / 59)
 exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
+exe 'vert 3resize ' . ((&columns * 78 + 78) / 157)
 tabedit app/assets/stylesheets/historials.css
 set splitbelow splitright
 wincmd _ | wincmd |
@@ -775,12 +1051,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 11 - ((10 * winheight(0) + 28) / 56)
+let s:l = 88 - ((33 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-11
-normal! 012l
+88
+normal! 0
 wincmd w
 argglobal
 edit app/assets/stylesheets/assistits.css
@@ -902,11 +1178,11 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 57 - ((55 * winheight(0) + 28) / 56)
+let s:l = 103 - ((28 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-57
+103
 normal! 0
 wincmd w
 exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
@@ -1042,12 +1318,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 49 - ((27 * winheight(0) + 28) / 56)
+let s:l = 193 - ((22 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-49
-normal! 012l
+193
+normal! 059l
 wincmd w
 argglobal
 edit app/assets/javascripts/historials.js
@@ -1169,12 +1445,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 48 - ((47 * winheight(0) + 28) / 56)
+let s:l = 79 - ((21 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-48
-normal! 0
+79
+normal! 053l
 wincmd w
 exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
 exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
@@ -1303,13 +1579,13 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 59 - ((50 * winheight(0) + 28) / 56)
+let s:l = 54 - ((45 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-59
-normal! 0
-tabnext 5
+54
+normal! 06l
+tabnext 2
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf
 endif
