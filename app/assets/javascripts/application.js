@@ -1,6 +1,9 @@
 //= require jquery
+// UJS desactivat perque tarda massa en carregar en entorn dev
 //= require jquery_ujs
-//= require jquery.ui.all
+//= require jquery.ui.button
+//= require jquery.ui.dialog
+//= require jquery.effects.all
 //= require jquery.ui.datepicker-ca
 //= require ../../../vendor/assets/javascripts/underscore-min.js
 //= require ../../../vendor/assets/javascripts/backbone-min.js

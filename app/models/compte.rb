@@ -1,6 +1,7 @@
 class Compte < ActiveRecord::Base
   belongs_to :pgc
   has_many :moviments
+  has_many :historials, :foreign_key => 'ctkey'
 
   #before_validation :formatCtcte, :on => :create
 

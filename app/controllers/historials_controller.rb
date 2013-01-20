@@ -7,7 +7,6 @@ class HistorialsController < ApplicationController
     @consultes = Menudet.where('mnukey = ? AND opcmodul = ?',
                                @mnukey,
                                'consulta')
-    #grup_comptable = Brain.grupOri(@mnukey)
 
     @brakey = Menudet.find_by_mnukey(@mnukey).brakey
 
@@ -22,7 +21,16 @@ class HistorialsController < ApplicationController
   end
 
   def search
-    @moviments = Historial.select('datdoc, numdoc')
+    @moviments = Historial.all
+    @moviments = @moviments.map do |i| { 
+      :datdoc => i.datdoc,
+      :numdoc => i.numdoc,
+      :ctcte => i.compte.ctcte,
+      :ctdesc => i.compte.ctdesc,
+      :datsis => i.datsis,
+      :impdoc => i.impdoc,
+      :comdoc => i.comdoc
+    } end
 
     respond_to do |format|
       format.json { render :json => @moviments }

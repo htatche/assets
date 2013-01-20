@@ -17,11 +17,6 @@ label {
   width: 120px;
 }
 
-input {
-  float: right;
-  width: 200px;
-}
-
 #submitButton {
   margin: 5px;
   width: 80px;

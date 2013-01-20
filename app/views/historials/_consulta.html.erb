@@ -2,54 +2,89 @@
   <div> <h3> Consulta de <%= @mnulabel %> </h3> </div>
   <div> 
 
-    <div class='consulta-frm'>
-      <%= form_tag '/historials/search',
-                   {:remote => true} do |f| %>
-        <%= hidden_field_tag :mnukey, @mnukey %>
+    <%= form_tag '/historials/search',
+                 {:remote => true} do |f| %>
+      <%= hidden_field_tag :mnukey, @mnukey %>
 
-        <div class='errors'>
+      <div class='errors'>
+      </div>
+
+      <div class='notice'>
+      </div>
+
+      <fieldset class='filtre'>
+        <legend> Filtrar </legend>
+        <hr>
+        <div class='container'>
+          <div class='p1'>
+            <ol>
+              <li>
+                <label>Consulta </label>
+                <%= select_tag 'tipus',
+                    options_from_collection_for_select(@consultes,
+                                                       'id',
+                                                       'opcdes'),
+                    {:tabindex => 1} %> 
+              </li>
+              <li>
+                <label>Client </label>
+                <%= select_tag 'compte',
+                    options_from_collection_for_select(@comptes,
+                                                       'ctcte',
+                                                       'ctfullname'),
+                    {:tabindex => 2} %> 
+              </li>
+            </ol>
+            
+          </div>
+          <div class='p2'>
+            <ol>
+              <li>
+                <label> Periode </label>
+                  <%= radio_button_tag 'dateMode',
+                        'period',
+                        true %>
+
+                  Des de
+                  <%= text_field_tag :date,
+                        1.week.ago.strftime('%d/%m/%y').to_s,
+                        {:id => 'dateFrom'} %>
+                  Fins
+                  <%= text_field_tag :date,
+                        Date.today.strftime('%d/%m/%y'),
+                        {:id => 'dateTo'} %>
+              </li>
+              <li>
+                <label> </label>
+                  <%= radio_button_tag 'dateMode',
+                        'defined',
+                        true,
+                        {:style => 'float: left;'}
+                  %>
+
+                  <%= select_tag 'compte',
+                        '<option value="last_month"> Últim mes </option>
+                         <option value="last_3_months"> Últims 3 mesos </option>
+                         <option value="last_6_months"> Últims 6 mesos </option>
+                         <option value="last_year"> Últim any </option>'.html_safe
+                  %>
+              </li>
+            </ol>
+
+          </div>
+          <div class='p3'>
+            <%= submit_tag('Buscar') %>
+          </div>
         </div>
+      </fieldset>
+      <fieldset class='results'>
+        <legend> Resultats </legend>
+        <hr>
+          <div class='consulta-grid' id='histgrid'>
 
-        <div class='notice'>
-        </div>
+          </div>
+      </fieldset>
+    <% end %>
 
-        <div class='p1'>
-          <ol>
-            <li>
-              <label>Consulta </label>
-              <%= select_tag 'tipus',
-                  options_from_collection_for_select(@consultes,
-                                                     'id',
-                                                     'opcdes'),
-                  {:class => 'compte',
-                   :tabindex => 1} %> 
-            </li>
-            <li>
-              <label>Client </label>
-              <%= select_tag 'compte',
-                  options_from_collection_for_select(@comptes,
-                                                     'ctcte',
-                                                     'ctfullname'),
-                  {:class => 'compte',
-                   :tabindex => 2} %> 
-            </li>
-          </ol>
-          
-        </div>
-        <div class='p2'>
-
-        </div>
-        <div class='p3'>
-
-        </div>
-        <div class='p4'>
-          <%= submit_tag('Buscar') %>
-        </div>
-      <% end %>
-    </div>
-
-    <div class='consulta-grid' id='histgrid'>
-
-    </div>
   </div>
 </div>

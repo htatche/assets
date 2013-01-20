@@ -1,4 +1,5 @@
 class Historial < ActiveRecord::Base
+  belongs_to :compte, :foreign_key => 'ctkey'
   has_many :histgens
 
   validates :impdoc,
@@ -20,6 +21,10 @@ class Historial < ActiveRecord::Base
     else
       numdoc + '/' + comdoc
     end
+  end
+
+  def ctcte
+    compte.ctcte
   end
 
   def self.buscarFactura(opckey, numdoc, ctcte)
