@@ -45,19 +45,16 @@ class AssistitsController < ApplicationController
     @frmLabels = Menulit.getFormLabels(@opckey)
 
     @grups_condition = buscarGrupComptable(@opckey)
-    @comptes_desti = Compte.where('ctemp = ?', 1)
-                           .where(@grups_condition)
+    @comptes_desti = Compte.where(@grups_condition)
 
     if @assistit.opcfrm == 'frm_p3_alta'
       @brain = Brain.find_by_brakey(@assistit.brakey)
       @grupimpostos = @brain.braimp
       @gruppagaments = @brain.brapag
 
-      @comptes_impostos = Compte.where("ctemp = ? AND ctcte LIKE '?%'",
-                                        1,
+      @comptes_impostos = Compte.where("ctcte LIKE '?%'",
                                         @grupimpostos.to_i)
-      @comptes_pagaments = Compte.where("ctemp = ? AND ctcte LIKE '?%'",
-                                      1,
+      @comptes_pagaments = Compte.where("ctcte LIKE '?%'",
                                       @gruppagaments.to_i)
     end
 
@@ -69,29 +66,6 @@ class AssistitsController < ApplicationController
  
   end
 
-  def buscarGrupComptable(opckey)
-    @grups_condition = ''
-    @grup_comptable = Menudet.find(opckey)
-
-    if @grup_comptable.present?
-      @brain = Brain.where('brakey = ?', @grup_comptable.brakey)
-    end
-
-    if @brain.present?
-      @brain = @brain.first
-
-      @grups_condition = "ctcte LIKE '#{@brain.brades}%'"
-      @braindet = Braindet.where('brakey = ?', @grup_comptable.brakey)
-                          .order('brdlin')
-
-      @braindet.each{ |i| 
-        @grups_condition += " OR ctcte LIKE '#{i.brddes}%'" if i.brddes
-      }
-    end
-
-    @grups_condition
-  end
-
   def getCodiCompte
     opckey = params[:opckey]
     ctcte = params[:ctcte]
@@ -100,7 +74,8 @@ class AssistitsController < ApplicationController
     codi = Compte.completarCodi(grup_comptable, ctcte)
 
     @compte = Compte.select('ctcte, ctdesc')
-                    .where('ctemp = ? AND ctcte = ?', 1, codi)
+                    .where('ctcte = ?', codi)
+    logger.debug @compte.inspect
 
     if @compte.present?
       render :json => @compte.first.to_json
@@ -134,27 +109,6 @@ class AssistitsController < ApplicationController
       end
     end
 
-  end
-
-  def getComptes
-    opckey = params[:opckey]
-
-    grup_comptable = Brain.grupOri(opckey)
-    @comptes = Compte.select('ctcte, ctdesc')
-                     .where("ctemp = ? AND ctcte LIKE '?%'",
-                            1, grup_comptable.to_i)
-
-    if @comptes.present?
-      @json = []
-      @comptes.each{ |i|
-        html = i.ctcte.to_s + ' - ' + i.ctdesc
-        @json << {html: html, title: i.ctcte.to_s}  
-      }
-
-      render :json => @json
-    else
-      render :json => {}
-    end
   end
 
   def getAssentament

@@ -1,11 +1,6 @@
 class ComptesController < ApplicationController
   respond_to :html, :json
 
-  # La guardem perque pot ser util, no la utilitzem
-  def show
-    Compte.all.each { |x| x.update_attribute('pgc_id', '1' + x.pgc_id.to_s[1,3]) }
-  end
-
   def new
     @empresa = Empresa.first
     @compte = Compte.new
@@ -39,8 +34,13 @@ class ComptesController < ApplicationController
   end
 
   def create
+    grup = Pgc.find(params[:compte][:pgc_id]).pgccte
+    ctcte = params[:compte][:ctcte]
+
+    full_ctcte = Compte.completarCodi(grup, ctcte)
 
     @compte = Compte.new(params[:compte])
+    @compte.ctcte = full_ctcte
 
     if @compte.save
       respond_with do |format|

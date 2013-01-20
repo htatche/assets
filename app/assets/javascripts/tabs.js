@@ -25,6 +25,9 @@ function Tab (tabIndex) {
           case 'consulta':
             obj = new Consulta(_this.tab, objContent);
             break;
+          case 'pgcs':
+            obj = new Pgc(_this.tab, objContent);
+            break;
         }
 
         obj.fire();

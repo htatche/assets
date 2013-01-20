@@ -26,7 +26,9 @@ class Assentament
     @impostos = []
     @pagaments = []
 
-    @grup = Brain.grupOri(@opckey)
+    @brakey = Menudet.find(@opckey).brakey
+    @grup = @brakey
+
     @lits = Menulit.find_by_opckey(@opckey)
 
     @numcompte = ''
@@ -251,6 +253,7 @@ class Assentament
 
 
       if @compte.new_record?
+        Rails.logger.debug @compte.inspect
         @compte.save
       end
 

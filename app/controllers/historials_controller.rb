@@ -7,10 +7,16 @@ class HistorialsController < ApplicationController
     @consultes = Menudet.where('mnukey = ? AND opcmodul = ?',
                                @mnukey,
                                'consulta')
-    @grups_condition = buscarGrupComptable(@mnukey)
-    logger.debug @grups_condition
-    exit
-    @comptes = Compte.where(@grups_condition)
+    #grup_comptable = Brain.grupOri(@mnukey)
+
+    @brakey = Menudet.find_by_mnukey(@mnukey).brakey
+
+    @grup = Brain.find_by_brakey(@brakey)
+    @grup = @grup.braori.nil? ? '' : @grup.braori
+
+    @comptes = Compte.select('ctcte, ctdesc')
+                     .where("ctcte LIKE '?%'",
+                            @grup.to_i)
 
     render :partial => 'historials/consulta'
   end

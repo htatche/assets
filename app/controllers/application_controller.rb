@@ -30,6 +30,8 @@ protected
     #Apartment::Database.switch('muesliinc')
   end
 
+public
+
   def buscarGrupComptable(opckey)
     @grups_condition = ''
     @grup_comptable = Menudet.find(opckey)
@@ -52,5 +54,27 @@ protected
 
     @grups_condition
   end
+
+  def getComptes
+    opckey = params[:opckey]
+
+    grup_comptable = Brain.grupOri(opckey)
+    @comptes = Compte.select('ctcte, ctdesc')
+                     .where("ctcte LIKE '?%'",
+                            grup_comptable.to_i)
+
+    if @comptes.present?
+      @json = []
+      @comptes.each{ |i|
+        html = i.ctcte.to_s + ' - ' + i.ctdesc
+        @json << {html: html, title: i.ctcte.to_s}  
+      }
+
+      render :json => @json
+    else
+      render :json => {}
+    end
+  end
+
 
 end

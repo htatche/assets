@@ -46,7 +46,7 @@ function Assistit(tab, el) {
   };
 
   _this.getComptes = function() {
-    $.get('/assistits/getComptes',
+    $.get('/getComptes',
           {opckey: _opckey},
           function(data) {
             combobox = el.find('div.ctcte-combobox').jqxComboBox({

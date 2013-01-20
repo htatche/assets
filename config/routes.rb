@@ -26,7 +26,6 @@ Mc::Application.routes.draw do
   resources :moviments
 
   match 'assistits/getFacturaDuplicada' => 'assistits#getFacturaDuplicada'
-  match 'assistits/getComptes' => 'assistits#getComptes'
   match 'assistits/getCodiCompte' => 'assistits#getCodiCompte'
   match 'assistits/getAssentament' => 'assistits#getAssentament'
   match 'assistits/getImpost' => 'assistits#getImpost'
@@ -44,16 +43,19 @@ Mc::Application.routes.draw do
   match "profile", :to => "sessions#profile"
   match "setting", :to => "sessions#setting"
 
-  #resources :historials
-  get 'historials/search'
-  match 'consulta/:mnukey', :to => 'historials#consulta'
-
   resources :home
 
   match 'users/:id/confirm/:code', :to => 'users#confirm'
 
   root :to => 'home#index'
-#root :to => 'main#index'
+
+  #resources :historials
+  get 'historials/search'
+  match 'consulta/:mnukey', :to => 'historials#consulta'
+
+  match 'comptabilitat/:option' => 'comptabilitat#show'
+
+  match 'getComptes' => 'application#getComptes'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
