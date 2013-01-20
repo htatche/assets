@@ -1,6 +1,10 @@
 function Consulta (tab, el) {
   var _this = this;
 
+  _this.mnukey = el.attr('id');
+  _this.tipusConsulta = el.find('#tipusConsulta');
+  _this.tab = tab;
+
   var data = '',
       source = {
         datatype: "json",
@@ -17,9 +21,6 @@ function Consulta (tab, el) {
       };
 
   var dataAdapter = new $.jqx.dataAdapter(source);
-
-  _this.mnukey = el.attr('id');
-  _this.tipusConsulta = el.find('#tipusConsulta');
 
   _this.loadGrid = function() {
     $.getJSON(
@@ -112,6 +113,35 @@ function Consulta (tab, el) {
     _this.updateGridTitles();
   };
   
+  _this.loadEditDialog = function() {
+    var tag = jQuery('<div/>', {
+                id: 'editDialog',
+                class: 'editDialog',
+                title: 'Modificar moviment' });
+
+    $.ajax({
+      url: '/assistit/10',
+      success: function(data) {
+        tag.html(data).dialog({
+          autoOpen: false,
+          height: "auto",
+          width: "auto",
+          autoResize:true,
+          resizable: false,
+          modal: true,
+          close: function() {
+        }
+        }).dialog('open');
+
+        objContent = tag.find('.assistit');
+        console.log(objContent);
+
+        obj = new Assistit(_this.tab, objContent);
+        obj.fire();
+      }
+    });
+  };
+
   _this.fire = function() {
     el.jqxExpander({ showArrow: false, toggleMode: 'none' });
 
@@ -119,9 +149,7 @@ function Consulta (tab, el) {
     el.find('#dateTo').datepicker();
   
     _this.setBindings();
-
     _this.loadGrid();
-
   };
 
   _this.setBindings = function() {
@@ -131,5 +159,13 @@ function Consulta (tab, el) {
       /* Cancel primary submit action (.preventDefault()) */
       return false;
     });
+
+    el.find('#histgrid').bind('rowdoubleclick', function (e) 
+    {
+      _this.loadEditDialog();
+      var args = e.args;
+      var row = args.rowindex;
+    });
+
   };
 }

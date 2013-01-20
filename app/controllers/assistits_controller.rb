@@ -58,12 +58,14 @@ class AssistitsController < ApplicationController
                                       @gruppagaments.to_i)
     end
 
-    if @assistit.present? 
-      render :partial => 'assistits/'+@assistit.opcfrm,
-             :locals => {:frmLabels => @frmLabels,
-                         :opckey => @opckey.to_s}
-    end
- 
+    render :partial => 'assistits/new',
+           :locals => {:frmLabels => @frmLabels,
+                       :opckey => @opckey.to_s}
+
+  end
+
+  def edit
+
   end
 
   def getCodiCompte

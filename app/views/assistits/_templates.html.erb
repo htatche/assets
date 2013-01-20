@@ -1,0 +1,37 @@
+<script type='text/template' class='tpl-error-1'>
+  <div class='error-compte input-validation-error'>
+   Es creara automaticament: <BR/>
+   <%%- ctcte %> - <%%- ctdesc %>
+  </div>
+</script>
+
+<script type='text/template' class='tpl-error-2'>
+  <div class='error-compte input-validation-error'>
+   Inserta un nom per crear el <BR/>
+   compte automaticament
+  </div>
+</script>
+
+<script type='text/template' class='tpl-error-3'>
+  <div class='error-compte input-validation-error'>
+  <span>
+   Assignar automaticament un codi <BR/>
+   al banc ? <%= check_box_tag :assignar_codi_auto, '', true %>
+  </span>
+  </div>
+</script>
+
+<script type='text/template' class='tpl-assistit-errors'>
+  <span class='ui-icon ui-icon-alert'
+        style='float: left; margin-right: .3em;'></span>
+ 
+  Verifiqui els seguents errors:
+
+  <ul>
+    <%% _.each(rc.errors, function(i) { %>
+      <li>
+        <%%- i.field %>: <%%- i.msg %> 
+      </li>
+    <%% }); %>
+  </ul>
+</script>

@@ -208,10 +208,10 @@ function Assistit(tab, el) {
 
   _this.fire = function() {
     el.jqxExpander({ showArrow: false, toggleMode: 'none' });
-    inputToNumeric($('fieldset.main div.numeric'),
-                   $('fieldset.main input.import'),
+    inputToNumeric(el.find('fieldset.main div.numeric'),
+                   el.find('fieldset.main input.import'),
                    '230px',
-                   $('fieldset.main input.import').attr('height'));
+                   el.find('fieldset.main input.import').attr('height'));
     el.find('div.numeric').find('input').attr({tabindex: '5',
                                                name: 'import'});
 

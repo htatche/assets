@@ -112,10 +112,6 @@ a {
   width: 200px;
 }
 
-div.ui-datepicker{
-   font-size:10px;
-}
-
 /* New code */
 
 #container {
@@ -160,3 +156,7 @@ form div.notice {
   text-align: left;
   padding-left: 2.5em;
 };
+
+div.ui-datepicker{
+  font-size:10px;
+}
