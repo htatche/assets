@@ -74,7 +74,7 @@
           <tbody>
             <% histGens.each { |i| %>
               <% nrow = 0 %>
-              <%= render :partial => 'assistits/assentament_edit',
+              <%= render :partial => 'assistits/edit/assentament',
                          :locals => {:nrow => nrow.to_s,
                                      :histGen => i,
                                      :comptesDesti => comptesDesti} %>
@@ -84,7 +84,7 @@
         </table>
       </fieldset>
 
-      <% if frmName == 'frm_p3_alta' %>
+      <% if frmName == 'frm_p3_modi' %>
       
         <fieldset id='impostos' class='desglossat'>
           <legend> Impostos </legend>
@@ -102,7 +102,20 @@
             </tr>
             </thead>
             <tbody>
-              <%= render :partial => 'assistits/impost' %> 
+              <% if histImps.any? %>
+                <% histImps.each { |i| %>
+                  <% nrow = 0 %>
+                  <%= render :partial => 'assistits/edit/impost',
+                        :locals => {:nrow => nrow,
+                                    :histImp => i,
+                                    :comptesImpostos => comptesImpostos} %>
+                  <% nrow = nrow + 1 %>
+                <% } %>
+              <% else %>
+                  <%= render :partial => 'assistits/impost',
+                        :locals => {:nrow => 0,
+                                    :comptesImpostos => comptesImpostos} %>
+              <% end %>
             </tbody>
           </table>
         </fieldset>
@@ -129,7 +142,20 @@
             </tr>
             </thead>
             <tbody>
-              <%= render :partial => 'assistits/pagament' %> 
+              <% if histPags.any? %>
+                <% histPags.each { |i| %>
+                  <% nrow = 0 %>
+                  <%= render :partial => 'assistits/edit/pagament',
+                        :locals => {:nrow => nrow,
+                                    :histPag => i,
+                                    :comptesPagaments => comptesPagaments} %>
+                  <% nrow = nrow + 1 %>
+                <% } %>
+              <% else %>
+                  <%= render :partial => 'assistits/pagament',
+                        :locals => {:nrow => 0,
+                                    :comptesPagaments => comptesPagaments} %>
+              <% end %>
             </tbody>
           </table>
         </fieldset>

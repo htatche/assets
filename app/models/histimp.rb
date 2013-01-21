@@ -2,6 +2,7 @@ class Histimp < ActiveRecord::Base
   include Assistit
 
   belongs_to :historial
+  belongs_to :compte, :foreign_key => 'ctkey'
 
   validates :historial_id,
     :presence => true, :on => :save

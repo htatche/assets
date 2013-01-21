@@ -87,7 +87,9 @@
             </tr>
             </thead>
             <tbody>
-              <%= render :partial => 'assistits/impost' %> 
+              <%= render :partial => 'assistits/impost',
+                    :locals => {:nrow => 0,
+                                :comptesImpostos => comptesImpostos} %>
             </tbody>
           </table>
         </fieldset>
@@ -114,7 +116,9 @@
             </tr>
             </thead>
             <tbody>
-              <%= render :partial => 'assistits/pagament' %> 
+              <%= render :partial => 'assistits/pagament',
+                    :locals => {:nrow => 0,
+                                :comptesPagaments => comptesPagaments} %>
             </tbody>
           </table>
         </fieldset>

@@ -48,19 +48,18 @@ class AssistitsController < ApplicationController
     @comptes_desti = Compte.where(@grups_condition)
 
     if @assistit.opcfrm == 'frm_p3_alta'
-      @brain = Brain.find_by_brakey(@assistit.brakey)
-      @grupimpostos = @brain.braimp
-      @gruppagaments = @brain.brapag
-
-      @comptes_impostos = Compte.where("ctcte LIKE '?%'",
-                                        @grupimpostos.to_i)
-      @comptes_pagaments = Compte.where("ctcte LIKE '?%'",
-                                      @gruppagaments.to_i)
+      brain = Brain.find_by_brakey(@assistit.brakey)
+      comptesImpostos = Compte.where("ctcte LIKE '?%'",
+                                     brain.braimp.to_i)
+      comptesPagaments = Compte.where("ctcte LIKE '?%'",
+                                      brain.brapag.to_i)
     end
 
     render :partial => 'assistits/new',
            :locals => {:frmLabels => @frmLabels,
-                       :opckey => @opckey.to_s}
+                       :opckey => @opckey.to_s,
+                       :comptesImpostos => comptesImpostos,
+                       :comptesPagaments => comptesPagaments}
 
   end
 
@@ -69,23 +68,24 @@ class AssistitsController < ApplicationController
     assistit = Menudet.find(mnusec)
     frmLabels = Menulit.getFormLabels(assistit.id)
 
-    histMov = Historial.find(params[:id])
-    histGens = histMov.histgens
-
     grupOrigen = Brain.grupOri(assistit.id)
     comptesOrigen = Compte.select('ctcte, ctdesc')
                           .where("ctcte LIKE '?%'", grupOrigen.to_i)
-
     grups_condition = buscarGrupComptable(assistit.id)
     comptesDesti = Compte.where(grups_condition)
 
-    if assistit.opcfrm == 'frm_p3_alta'
-      brain = Brain.find_by_brakey(assistit.brakey)
+    histMov = Historial.find(params[:id])
+    histGens = histMov.histgens
 
-      @comptes_impostos = Compte.where("ctcte LIKE '?%'",
-                                       brain.braimp)
-      @comptes_pagaments = Compte.where("ctcte LIKE '?%'",
-                                        brain.brapag)
+    if assistit.opcfrm == 'frm_p3_modi'
+      brain = Brain.find_by_brakey(assistit.brakey)
+      comptesImpostos = Compte.where("ctcte LIKE '?%'",
+                                     brain.braimp.to_i)
+      comptesPagaments = Compte.where("ctcte LIKE '?%'",
+                                      brain.brapag.to_i)
+
+      histImps = histMov.histimps
+      histPags = histMov.histpags
     end
 
     render :partial => 'assistits/edit',
@@ -94,8 +94,12 @@ class AssistitsController < ApplicationController
                        :frmId => assistit.id,
                        :histMov => histMov,
                        :histGens => histGens,
+                       :histImps => histImps,
+                       :histPags => histPags,
                        :comptesOrigen => comptesOrigen,
-                       :comptesDesti => comptesDesti}
+                       :comptesDesti => comptesDesti,
+                       :comptesImpostos => comptesImpostos,
+                       :comptesPagaments => comptesPagaments}
   end
 
   def getCodiCompte

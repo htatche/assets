@@ -3,6 +3,8 @@ class Compte < ActiveRecord::Base
   has_many :moviments
   has_many :historials, :foreign_key => 'ctkey'
   has_many :histgens, :foreign_key => 'ctkey'
+  has_many :histimps, :foreign_key => 'ctkey'
+  has_many :histpags, :foreign_key => 'fpkey'
 
   #before_validation :formatCtcte, :on => :create
 

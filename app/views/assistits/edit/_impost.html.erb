@@ -1,14 +1,16 @@
 <tr>
   <td>
     <%= select_tag "imp[#{nrow}][compte]",
-          options_from_collection_for_select(comptesImpostos,
-                                             'ctcte',
-                                             'ctfullname'),
+          options_from_collection_for_select(
+            comptesImpostos,
+            'ctcte',
+            'ctfullname',
+            histImp.compte.ctcte),
           {:class => 'compte'} %> 
   </td>
   <td>
     <%= text_field_tag "imp[#{nrow}][import]",
-                       '',
+                       histImp.impbas,
                        {:class => 'import'} %> 
     <div class='numeric'> </div>
   </td>
