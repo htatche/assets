@@ -5,4 +5,8 @@ class HomeController < ApplicationController
     @menuOptions = Menu.all
   end
 
+  def home
+    render :partial => 'home/home'
+  end
+
 end

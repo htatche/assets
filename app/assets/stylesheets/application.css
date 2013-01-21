@@ -42,7 +42,14 @@ a {
   margin: auto;
 }
 
-/* Inside TAB */
+/* Tabs */
+#appTabs li.start {
+  padding: 5px;
+  font-size: 14px;
+  border: none;
+  background: transparent;
+}
+
 .tab-container {
   margin: 5px;
   width: auto;

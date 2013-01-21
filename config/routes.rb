@@ -44,6 +44,7 @@ Mc::Application.routes.draw do
   match "profile", :to => "sessions#profile"
   match "setting", :to => "sessions#setting"
 
+  get 'home/home'
   resources :home
 
   match 'users/:id/confirm/:code', :to => 'users#confirm'
