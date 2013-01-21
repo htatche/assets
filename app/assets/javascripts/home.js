@@ -33,6 +33,12 @@ $(document).ready(function() {
     }
   );
 
+  // Prevent text and menu icons from being selected
+  $('div.menuOptions').live('selectstart dragstart', function(evt) {
+    evt.preventDefault();
+    return false;
+  });
+
   var route = 'home/home';
   var pageIndex = $('#appTabs').jqxTabs('length') + 1;
   var title = 'Inici';
