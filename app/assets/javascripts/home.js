@@ -19,11 +19,20 @@ $(document).ready(function() {
     });
   }
 
-  $('div.option').click(function() {
+  $('div.menuOptions').find('div.option').dblclick(function() {
     var route = $(this).attr('id');
     var pageIndex = $('#appTabs').jqxTabs('length') + 1;
     var title = $(this).attr('name');
 
     var html = loadPage(route, pageIndex, title);
   });
+
+  $('div.menuOptions').find('div.option').hover(
+    function() {
+      $(this).addClass('hover');
+    },
+    function() {
+      $(this).removeClass('hover');
+    }
+  );
 });

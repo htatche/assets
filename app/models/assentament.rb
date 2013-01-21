@@ -209,7 +209,6 @@ class Assentament
       firstrow = @pagaments_param.first[1]['date'].strip
 
       unless @pagaments_param.length == 1 and firstrow.empty?
-        Rails.logger.debug @pagaments_param.inspect
         @pagaments_param.each_with_index { |i, index|
     
           @pagaments[index] = Histpag.new({
@@ -253,11 +252,9 @@ class Assentament
 
 
       if @compte.new_record?
-        Rails.logger.debug @compte.inspect
         @compte.save
       end
 
-      # Guardem dins les taules hist* i moviments
       @general.ctkey = @compte.id
       @general.save
 

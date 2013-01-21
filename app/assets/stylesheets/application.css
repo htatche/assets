@@ -42,31 +42,6 @@ a {
   margin: auto;
 }
 
-/* Icones del menu general */
-.menuOptions {
-  width: 600px;
-  margin-left: 200px;
-  display: inline-block;
-}
-
-.menuOptions div.option {
-  float: left;
-  width: 100px;
-  height: 110px;
-  overflow: hidden;
-  text-align: center;
-}
-
-.menuOptions div.option img {
-  top: -100px;
-  z-index: -1;
-}
-
-.menuOptions div.option div.text {
-  vertical-align: middle;
-  margin: 5px;
-}
-
 /* Inside TAB */
 .tab-container {
   margin: 5px;
