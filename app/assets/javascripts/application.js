@@ -10,8 +10,8 @@
 //= require ../../../vendor/assets/javascripts/jqwidgets/globalization/jquery.global.js
 //= require_tree ../../../vendor/assets/javascripts/
 //= require_tree .
-
 // jquery-ui defaults
+
 $.datepicker.setDefaults( $.datepicker.regional['ca'] );
 
 $(document).ready(function() {
@@ -34,11 +34,12 @@ $(document).ready(function() {
                              height: height,
                              theme: theme });
 
-    numeric
-      .find('input')
+    numeric.find('input')
       .attr({name: input.attr('name'),
              class: input.attr('class'),
              tabindex: input.attr('tabindex')});
+
+    numeric.jqxNumberInput('val', input.val());
 
     numeric.show();
     input.remove();

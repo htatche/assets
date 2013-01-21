@@ -56,8 +56,9 @@ function Assistit(tab, el) {
               dropDownWidth: '300px',
               theme: theme });
 
-            combobox.find('input').attr({tabindex: '2', name: 'ctekey'});
+            combobox.find('input').attr({name: 'ctekey'});
             combobox.find('input').css({padding: '2px'});
+
             _tNumdoc = el.find('input[name=numdoc]');
             _tCtekey = el.find('input[name=ctekey]');
             _this.setBindings();
@@ -250,10 +251,12 @@ function Assentament(el) {
     });
 
     el.find('fieldset:not(.main)').each(function() {
-      inputToNumeric($(this).find('div.numeric'),
-                     $(this).find('input.import:last'),
-                     '100px',
-                     '28px');
+      $(this).find('div.numeric').each(function() {
+        inputToNumeric($(this),
+                       $(this).prev('input.import'),
+                       '100px',
+                       '28px');
+      });
     });
     el.find('fieldset:not(.main)').each(function() {
       _this.bindKeydown($(this));

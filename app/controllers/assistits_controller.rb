@@ -65,7 +65,37 @@ class AssistitsController < ApplicationController
   end
 
   def edit
+    mnusec = Menudet.find(params[:consultaId]).mnusec
+    assistit = Menudet.find(mnusec)
+    frmLabels = Menulit.getFormLabels(assistit.id)
 
+    histMov = Historial.find(params[:id])
+    histGens = histMov.histgens
+
+    grupOrigen = Brain.grupOri(assistit.id)
+    comptesOrigen = Compte.select('ctcte, ctdesc')
+                          .where("ctcte LIKE '?%'", grupOrigen.to_i)
+
+    grups_condition = buscarGrupComptable(assistit.id)
+    comptesDesti = Compte.where(grups_condition)
+
+    if assistit.opcfrm == 'frm_p3_alta'
+      brain = Brain.find_by_brakey(assistit.brakey)
+
+      @comptes_impostos = Compte.where("ctcte LIKE '?%'",
+                                       brain.braimp)
+      @comptes_pagaments = Compte.where("ctcte LIKE '?%'",
+                                        brain.brapag)
+    end
+
+    render :partial => 'assistits/edit',
+           :locals => {:frmLabels => frmLabels,
+                       :frmName => assistit.opcfrm,
+                       :frmId => assistit.id,
+                       :histMov => histMov,
+                       :histGens => histGens,
+                       :comptesOrigen => comptesOrigen,
+                       :comptesDesti => comptesDesti}
   end
 
   def getCodiCompte

@@ -7,11 +7,11 @@ div.assistit h3 {
   color: #333;
 }
 
-.frm_new_p1 {
+div.assistit form {
   margin: 10px 0 0 5px;
 }
 
-.frm_new_p1 .input-validation-error {
+div.assistit form .input-validation-error {
   display: none;
   float: left;
   line-height: 14px;
@@ -21,7 +21,7 @@ div.assistit h3 {
   background-color: #FFAAAA;
 }
 
-.frm_new_p1 .input-validation-error::before {
+div.assistit form .input-validation-error::before {
   content: "\25C0"; /* left point triangle in escaped unicode */
   color: #d45252;
   position: relative;
@@ -29,76 +29,77 @@ div.assistit h3 {
   left: -15px;
 }
 
-.frm_new_p1 fieldset {
+div.assistit form fieldset {
   width: auto;
   border: 0;
 }
 
-.frm_new_p1 fieldset legend {
+div.assistit form fieldset legend {
   color: #333;
   font-size: 14px;
   margin-bottom: 5px;
 }
 
-.frm_new_p1 fieldset ol {
+div.assistit form fieldset ol {
   padding: 0;
 }
-.frm_new_p1 fieldset ol li {
+div.assistit form fieldset ol li {
   line-height: 30px;
   list-style: none;
   margin-bottom: 2px;
 }
 
-.frm_new_p1 fieldset ol li.ctcte input {
+div.assistit form fieldset ol li.ctcte input {
   width: 150px;
 }
-.frm_new_p1 fieldset ol li.ctcte input[type=checkbox] {
+div.assistit form fieldset ol li.ctcte input[type=checkbox] {
   float: none;
   width: 20px;
 }
-.frm_new_p1 fieldset ol li.ctcte span.ui-icon-search {
+div.assistit form fieldset ol li.ctcte span.ui-icon-search {
   float:left;
   margin: 7px;
 }
-.frm_new_p1 fieldset ol li.import {
+div.assistit form fieldset ol li.import {
   line-height: 50px;
 }
 
-.frm_new_p1 fieldset.main div.ctcte-combobox,
-                          div.numeric {
-  width: 220px;
+div.assistit form fieldset.main select.compte, /* Edit */
+div.assistit form fieldset.main div.ctcte-combobox, /* New */
+div.assistit form fieldset.main div.numeric {
+  width: 230px;
   float:left;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
   -khtml-border-radius: 3px;
   border-radius: 3px;
 }
-.frm_new_p1 fieldset.main div.numeric input {
+div.assistit form fieldset.main div.numeric input {
   font-size: 1.4em;
 }
 
-.frm_new_p1 fieldset label {
+div.assistit form fieldset label {
   width: 150px;
   float: left;
   padding-bottom: 10px;
   color: #333
 }
 
-.frm_new_p1 fieldset input[name=numdoc] {
+div.assistit form fieldset input[name=numdoc] {
   width: 60px;
 }
-.frm_new_p1 fieldset input[name=ctdesc] {
+div.assistit form fieldset input[name=ctdesc] {
   width: 220px;
 }
-.frm_new_p1 fieldset input[name=date] {
+div.assistit form fieldset input[name=date] {
   width: 220px;
 }
-.frm_new_p1 fieldset input[name=comment] {
+div.assistit form fieldset input[name=comment] {
   width: 220px;
 }
 
-.frm_new_p1 fieldset input:not([type=submit]),
-.frm_new_p1 fieldset select {
+div.assistit form fieldset input:not([type=submit]),
+div.assistit form fieldset select {
   float: left;
   border: 1px solid #aaa;
   -moz-border-radius: 3px;
@@ -109,38 +110,38 @@ div.assistit h3 {
   padding: 5px;
 }
 
-.frm_new_p1 input[type=submit], button[type=reset] {
+div.assistit form input[type=submit], button[type=reset] {
   float: right;
   width: auto;
   margin: 10px;
   font-size: 2em;
 }
 
-.frm_new_p1 fieldset.desglossat td {
+div.assistit form fieldset.desglossat td {
   padding-right: 10px;
 }
 
-.frm_new_p1 fieldset.desglossat select.compte {
+div.assistit form fieldset.desglossat select.compte {
   width: 250px;
 }
 
-.frm_new_p1 fieldset.desglossat input.import {
+div.assistit form fieldset.desglossat input.import {
   width: 100px;
 }
-.frm_new_p1 fieldset.desglossat div.numeric {
+div.assistit form fieldset.desglossat div.numeric {
   display: none;
   width: 100px;
 }
 
-.frm_new_p1 fieldset.desglossat input.comment {
+div.assistit form fieldset.desglossat input.comment {
   width: 300px;
 }
 
-.frm_new_p1 fieldset.desglossat input.date {
+div.assistit form fieldset.desglossat input.date {
   width: 120px;
 }
 
-.frm_new_p1 fieldset.desglossat td.delete {
+div.assistit form fieldset.desglossat td.delete {
   width: 20px;
 }
 

@@ -1,12 +1,11 @@
 <%= render :partial => 'assistits/templates' %> 
 
-<div class='assistit' id=<%= opckey %>>
+<div class='assistit' id=<%= frmId %>>
   <div> <h3> <%= frmLabels.lit1 %> </h3> </div>
   <div> 
-    <%= form_tag '/assistits',
-                 {:remote => true,
-                  :class => 'frm_new_p1'} do |f| %>
-      <%= hidden_field_tag :opckey, opckey %>
+    <%= form_tag '/assistits', {:remote => true} do |f| %>
+
+      <%= hidden_field_tag :opckey, frmId %>
 
       <div class='errors'>
       </div>
@@ -20,27 +19,36 @@
         <ol>
           <li>
             <label><%= frmLabels.lit3 %> </label>
-            <%= text_field_tag :numdoc, '', :tabindex => 1 %>
+            <%= text_field_tag :numdoc, histMov.numdoc %>
           </li>
           <li class='ctcte'>
             <label><%= frmLabels.lit4 %></label>
-            <div class='ctcte-combobox'></div>
+            <%= select_tag :compte,
+                  options_from_collection_for_select(
+                    comptesOrigen,
+                    'ctcte',
+                    'ctfullname',
+                    histMov.compte.ctcte),
+                  {:class => 'compte'} %> 
           </li>
           <li>
             <label><%= frmLabels.lit5 %></label>
-            <%= text_field_tag :ctdesc, '', :tabindex => 3 %>
+            <%= text_field_tag :ctdesc, histMov.compte.ctdesc %>
           </li>
           <li>
             <label><%= frmLabels.lit6 %></label>
-            <%= text_field_tag :date, '', {:tabindex => 4, :type => 'date'} %>
+            <%= text_field_tag :date, histMov.datdoc, {:type => 'date'} %>
           </li>
           <li class='import'>
             <label><%= frmLabels.lit7 %></label>
+            <%= text_field_tag :impdoc,
+                               histMov.impdoc,
+                               {:class => 'import'} %> 
             <div class='numeric'></div>
           </li>
           <li>
             <label><%= frmLabels.lit8 %></label>
-            <%= text_field_tag :comment, '', :tabindex => 6 %>
+            <%= text_field_tag :comment, histMov.comdoc %>
           </li>
         </ol>
       </fieldset>
@@ -64,12 +72,19 @@
           </tr>
           </thead>
           <tbody>
-            <%= render :partial => 'assistits/assentament' %> 
+            <% histGens.each { |i| %>
+              <% nrow = 0 %>
+              <%= render :partial => 'assistits/assentament_edit',
+                         :locals => {:nrow => nrow.to_s,
+                                     :histGen => i,
+                                     :comptesDesti => comptesDesti} %>
+              <% nrow = nrow + 1 %>
+            <% } %>
           </tbody>
         </table>
       </fieldset>
 
-      <% if @assistit.opcfrm == 'frm_p3_alta' %>
+      <% if frmName == 'frm_p3_alta' %>
       
         <fieldset id='impostos' class='desglossat'>
           <legend> Impostos </legend>

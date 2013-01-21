@@ -57,6 +57,7 @@ class HistorialsController < ApplicationController
     @moviments = Historial.where(cond)
 
     @moviments = @moviments.map do |i| { 
+      :id => i.id,
       :datdoc => i.datdoc,
       :numdoc => i.numdoc,
       :ctcte => i.compte.ctcte,

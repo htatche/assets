@@ -9,6 +9,7 @@ function Consulta (tab, el) {
       source = {
         datatype: "json",
         datafields: [
+          { name: 'id', type: 'integer' },
           { name: 'datdoc', type: 'string' },
           { name: 'numdoc', type: 'integer' },
           { name: 'ctcte', type: 'string' },
@@ -43,6 +44,7 @@ function Consulta (tab, el) {
       sortable: true,
       pageable: true,
       columns: [
+        { datafield: 'id', hidden: true },
         { text: lits.lit5, datafield: 'datdoc', width: 100 },
         { text: lits.lit2, datafield: 'numdoc', width: 100 },
         { text: lits.lit3, datafield: 'ctcte', width: 100 },
@@ -113,14 +115,16 @@ function Consulta (tab, el) {
     _this.updateGridTitles();
   };
   
-  _this.loadEditDialog = function() {
+  _this.loadEditDialog = function(id) {
     var tag = jQuery('<div/>', {
                 id: 'editDialog',
                 class: 'editDialog',
                 title: 'Modificar moviment' });
 
+    var consultaId = _this.getSelectedTipusConsulta();
+
     $.ajax({
-      url: '/assistit/10',
+      url: '/assistits/'+consultaId+'/edit/'+id,
       success: function(data) {
         tag.html(data).dialog({
           autoOpen: false,
@@ -134,13 +138,16 @@ function Consulta (tab, el) {
         }).dialog('open');
 
         objContent = tag.find('.assistit');
-        console.log(objContent);
 
         obj = new Assistit(_this.tab, objContent);
         obj.fire();
       }
     });
   };
+
+  _this.getSelectedTipusConsulta = function() {
+    return el.find('select[name=tipusConsulta]').val()
+  }
 
   _this.fire = function() {
     el.jqxExpander({ showArrow: false, toggleMode: 'none' });
@@ -162,9 +169,10 @@ function Consulta (tab, el) {
 
     el.find('#histgrid').bind('rowdoubleclick', function (e) 
     {
-      _this.loadEditDialog();
-      var args = e.args;
-      var row = args.rowindex;
+      var row = e.args.rowindex;
+      var datarow = _this.grid.jqxGrid('getrowdata', args.rowindex);
+
+      _this.loadEditDialog(datarow.id);
     });
 
   };

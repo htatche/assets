@@ -1,0 +1,24 @@
+<tr>
+  <td>
+    <%= select_tag 'apunt['+nrow+'][compte]',
+          options_from_collection_for_select(comptesDesti,
+                                             'ctcte',
+                                             'ctfullname',
+                                              histGen.compte.ctcte),
+          {:class => 'compte'} %> 
+  </td>
+  <td>
+    <%= text_field_tag 'apunt['+nrow+'][import]',
+                       histGen.import,
+                       {:class => 'import'} %> 
+    <div class='numeric'> </div>
+  </td>
+  <td>
+    <%= text_field_tag 'apunt['+nrow+'][comment]',
+                       histGen.comen,
+                       {:class => 'comment'} %> 
+  </td>
+  <td class='destroy'>
+    <span class='ui-icon ui-icon-closethick'></span>
+  </td>
+</tr>
