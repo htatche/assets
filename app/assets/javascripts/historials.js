@@ -18,6 +18,8 @@ function Consulta (tab, el) {
           { name: 'impdoc', type: 'float' },
           { name: 'comdoc', type: 'string' }
         ],
+        sortcolumn: 'datdoc',
+        sortdirection: 'asc',
         localdata: data
       };
 
@@ -60,13 +62,12 @@ function Consulta (tab, el) {
     $.getJSON('/historials/search',
       params = el.find('form').serialize(),
       function(data) {
-        _this.update (data);
+        _this.update(data);
     })
     .error(function() {
     })
     .complete(function() {
     });
-
   };
 
   _this.localizeGrid = function() {
@@ -126,7 +127,7 @@ function Consulta (tab, el) {
     $.ajax({
       url: '/assistits/'+consultaId+'/edit/'+id,
       success: function(data) {
-        tag.html(data).dialog({
+        dialog = tag.html(data).dialog({
           autoOpen: false,
           height: "auto",
           width: "auto",
@@ -139,7 +140,7 @@ function Consulta (tab, el) {
 
         objContent = tag.find('.assistit');
 
-        obj = new Assistit(_this.tab, objContent, 'edit');
+        obj = new Assistit(_this.tab, objContent, 'edit', dialog);
         obj.fire();
       }
     });

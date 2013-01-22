@@ -1,8 +1,9 @@
-function Assistit(tab, el, frmView) {
+function Assistit(tab, el, frmView, dialog) {
   var _this = this;
   var  _tNumdoc,
        _tCtekey,
        _tCtdesc = el.find('input[name=ctdesc]');
+  var _this.tab = tab;
 
   _opckey = el.attr('id');
 
@@ -101,9 +102,9 @@ function Assistit(tab, el, frmView) {
 
   _this.reload = function() {
     $.get('/assistit/' + _opckey, function (data) {
-      tab.find('.content').html(data);
-        assistit = tab.find('.assistit');
-        _this.assistit = new Assistit(tab, assistit);
+      tab.tabDiv.find('.content').html(data);
+        assistit = tab.tabDiv.find('.assistit');
+        _this.assistit = new Assistit(tab, assistit, frmView, dialog);
         _this.assistit.fire();
     });
   };
@@ -139,7 +140,9 @@ function Assistit(tab, el, frmView) {
         if (frmView === 'new') {
           _this.reload();
         } else {
-          
+          dialog.dialog('close');
+          console.log(_tab);
+          _tab.consulta.search();
         }
       },
 
@@ -160,34 +163,6 @@ function Assistit(tab, el, frmView) {
         el.find('form div.errors').fadeIn('fast');
       }
     });
-
-    /*
-    $.post(
-      '/assistits',
-      params = el.find('form').serialize(),
-      function(data) {
-        tab.find('content');
-        _this.reload();
-      }
-    ).error(function(err) {
-      var errors = jQuery.parseJSON(err.responseText);
-
-      _.templateSettings.variable = "rc";
-
-      var template = _.template(
-        $('script.tpl-assistit-errors').html() 
-      );
-
-      var tpldata = {errors: errors};
-      
-      el.find('form div.errors')
-        .html(template(tpldata))
-        .addClass('ui-state-error ui-corner-all')
-        .effect('highlight', {color: '#FFAAAA'}, 500);
-
-      el.find('form div.errors').fadeIn('fast');
-    });
-    */
   };
 
   _this.setTabindexes = function() {

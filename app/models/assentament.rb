@@ -228,7 +228,12 @@ class Assentament
 
   def validateAll
     errors = validateCompte
-    errors_push(errors)
+
+    # No permet que es continuin executant les
+    # validacions si el compte es incorrecte
+    if errors.any?
+      return errors_push(errors)
+    end
 
     errors = validateNumdoc
     errors_push(errors.to_a)

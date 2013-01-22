@@ -1,36 +1,36 @@
 function Tab (tabIndex) {
   _this = this;
-  _this.tab = $('#tabs-'+tabIndex);
-  _this.index = tabIndex;
+  _this.tabDiv = $('#tabs-'+tabIndex);
 
   _this.fire = function() {
-    menu = _this.tab.find('.jqx-menu').jqxMenu({ width: 'auto'});
+    menu = _this.tabDiv.find('.jqx-menu').jqxMenu({ width: 'auto'});
     menu.bind('itemclick', function(event) {
       route = $(event.args).attr('id');
 
       $.get(route, function (data) {
-        _this.tab.find('.content').html(data);
+        _this.tabDiv.find('.content').html(data);
 
-        objContent = _this.tab.find('.content')
+        objContent = _this.tabDiv.find('.content')
                           .find('div')
                           .first()
 
         objClass = objContent.attr('class')
-                              .split(' ')[0]
+                             .split(' ')[0]
 
         switch (objClass) {
           case 'assistit':
-            obj = new Assistit(_this.tab, objContent, 'new');
+            _this.assistit = new Assistit(_this, objContent, 'new');
+            _this.assistit.fire();
             break;
           case 'consulta':
-            obj = new Consulta(_this.tab, objContent);
+            _this.consulta = new Consulta(_this.tab, objContent);
+            _this.consulta.fire();
             break;
           case 'pgcs':
-            obj = new Pgc(_this.tab, objContent);
+            _this.pgc = new Pgc(_this.tab, objContent);
+            _this.pgc.fire();
             break;
         }
-
-        obj.fire();
       });
     });
   };
