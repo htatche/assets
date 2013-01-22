@@ -3,7 +3,7 @@ class Assentament
   def initialize(params)
     @errors = []
     
-    @ctcte = params[:ctekey] || ''
+    @ctcte = params[:ctekey] || params[:compte] || ''
     @ctdesc = params[:ctdesc] || ''
     @numdoc = params[:numdoc] || ''
     @opckey = params[:opckey]
@@ -250,26 +250,25 @@ class Assentament
     nassent = Moviment.getNewNumass
     getCompte
 
+    if @compte.new_record?
+      @compte.save
+    end
 
-      if @compte.new_record?
-        @compte.save
-      end
+    @general.ctkey = @compte.id
+    @general.save
 
-      @general.ctkey = @compte.id
-      @general.save
-
-      @contrapartides.each { |i|
-        i.historial_id = @general.id
-        i.save!
-      }
-      @impostos.each { |i|
-        i.historial_id = @general.id
-        i.save!
-      }
-      @pagaments.each { |i|
-        i.historial_id = @general.id
-        i.save!
-      }
+    @contrapartides.each { |i|
+      i.historial_id = @general.id
+      i.save!
+    }
+    @impostos.each { |i|
+      i.historial_id = @general.id
+      i.save!
+    }
+    @pagaments.each { |i|
+      i.historial_id = @general.id
+      i.save!
+    }
       
   end
 

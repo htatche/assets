@@ -1,4 +1,4 @@
-function Assistit(tab, el) {
+function Assistit(tab, el, frmView) {
   var _this = this;
   var  _tNumdoc,
        _tCtekey,
@@ -108,23 +108,65 @@ function Assistit(tab, el) {
     });
   };
 
+  _this.create = function() {
+
+  };
+
+  _this.update = function() {
+
+  };
+
   _this.submit = function() {
     el.find('form div.errors')
            .html('')
            .hide();
 
+    if (frmView === 'new') {
+      reqType = 'POST';
+      reqUrl = '/assistits';
+    } else {
+      reqType = 'PUT';
+      id = el.find('input[name="id"]').val();
+      reqUrl = '/assistits/'+id;
+    }
+
+    $.ajax({
+      url: reqUrl,
+      type: reqType,
+      data: el.find('form').serialize(),
+
+      success: function(data) {
+        if (frmView === 'new') {
+          _this.reload();
+        } else {
+          
+        }
+      },
+
+      error: function(data) {
+        _.templateSettings.variable = "rc";
+
+        var errors = jQuery.parseJSON(data.responseText);
+        var template = _.template(
+          $('script.tpl-assistit-errors').html() 
+        );
+        var tpldata = {errors: errors};
+        
+        el.find('form div.errors')
+          .html(template(tpldata))
+          .addClass('ui-state-error ui-corner-all')
+          .effect('highlight', {color: '#FFAAAA'}, 500);
+
+        el.find('form div.errors').fadeIn('fast');
+      }
+    });
+
+    /*
     $.post(
       '/assistits',
       params = el.find('form').serialize(),
       function(data) {
         tab.find('content');
-/*
-        el.find('form div.notice')
-          .html(data)
-          .fadeIn(1000)
-          .fadeOut(1000);
-*/
-
         _this.reload();
       }
     ).error(function(err) {
@@ -145,6 +187,7 @@ function Assistit(tab, el) {
 
       el.find('form div.errors').fadeIn('fast');
     });
+    */
   };
 
   _this.setTabindexes = function() {

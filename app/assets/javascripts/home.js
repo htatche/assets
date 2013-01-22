@@ -43,5 +43,5 @@ $(document).ready(function() {
   var pageIndex = $('#appTabs').jqxTabs('length') + 1;
   var title = 'Inici';
 
-  var html = loadPage(route, pageIndex, title);
+  //var html = loadPage(route, pageIndex, title);
 });

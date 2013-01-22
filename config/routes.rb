@@ -30,7 +30,7 @@ Mc::Application.routes.draw do
   match 'assistits/getAssentament' => 'assistits#getAssentament'
   match 'assistits/getImpost' => 'assistits#getImpost'
   match 'assistits/getPagament' => 'assistits#getPagament'
-  match 'assistits/:option' => 'assistits#show'
+  get 'assistits/:option' => 'assistits#show'
   match 'assistits/:consultaId/edit/:id' => 'assistits#edit'
   match 'assistit/:assistit' => 'assistits#assistit'
   resources :assistits

@@ -16,11 +16,10 @@
           <a href='#tabMenu'> Inici </a>
         </li>
       </ul>
-      <% if @current_user %>
         <div>
-          <%= render :partial => 'home/home' %>
+          <%#= yield %>
+          <%= render :partial => '/home/home' %>
         </div>
-      <% end %>
 	  </div>
 	</div>
 

@@ -139,7 +139,7 @@ function Consulta (tab, el) {
 
         objContent = tag.find('.assistit');
 
-        obj = new Assistit(_this.tab, objContent);
+        obj = new Assistit(_this.tab, objContent, 'edit');
         obj.fire();
       }
     });

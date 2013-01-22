@@ -37,6 +37,29 @@ class AssistitsController < ApplicationController
 
   end
 
+  def update
+    opckey = params[:opckey]
+    lits = Menulit.find_by_opckey(opckey)
+    menudet = Menudet.find(opckey)
+
+    grup = menudet.brakey
+
+    ass = Assentament.new(params)
+    ass.validateAll
+
+    ass.errors.flatten!
+    if ass.errors.any?
+      render :json => ass.errors.to_json,
+             :status => :unprocessable_entity
+    else
+      ass.save_and_comptabilitzar
+      Historial.find(params[:id]).destroy
+
+      render :text => 'ok'
+    end
+
+  end
+
   def assistit
     @opckey = params[:assistit].to_i
     @nrow = '0'

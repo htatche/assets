@@ -20,7 +20,7 @@ function Tab (tabIndex) {
 
         switch (objClass) {
           case 'assistit':
-            obj = new Assistit(_this.tab, objContent);
+            obj = new Assistit(_this.tab, objContent, 'new');
             break;
           case 'consulta':
             obj = new Consulta(_this.tab, objContent);
