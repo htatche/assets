@@ -3,7 +3,6 @@ function Assistit(tab, el, frmView, dialog) {
   var  _tNumdoc,
        _tCtekey,
        _tCtdesc = el.find('input[name=ctdesc]');
-  var _this.tab = tab;
 
   _opckey = el.attr('id');
 
@@ -141,8 +140,8 @@ function Assistit(tab, el, frmView, dialog) {
           _this.reload();
         } else {
           dialog.dialog('close');
-          console.log(_tab);
-          _tab.consulta.search();
+          console.log(tab);
+          tab.consulta.search();
         }
       },
 

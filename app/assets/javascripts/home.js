@@ -9,10 +9,11 @@ $(document).ready(function() {
         html = '<div id="tabs-' + tabIndex + '"><div class="tab-container">' + data + '</div></div>';
         $('#appTabs').jqxTabs('addLast', name, html);
 
-        tabs.push({tab: new Tab(tabIndex)});
+        tab = new Tab(tabIndex);
+        tabs.push(tab);
 
         arrayIndex = tabs.length - 1;
-        tabs[arrayIndex].tab.fire();
+        tabs[arrayIndex].fire();
     });
   }
 
@@ -39,9 +40,4 @@ $(document).ready(function() {
     return false;
   });
 
-  var route = 'home/home';
-  var pageIndex = $('#appTabs').jqxTabs('length') + 1;
-  var title = 'Inici';
-
-  //var html = loadPage(route, pageIndex, title);
 });

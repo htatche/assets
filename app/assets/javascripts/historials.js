@@ -3,7 +3,6 @@ function Consulta (tab, el) {
 
   _this.mnukey = el.attr('id');
   _this.tipusConsulta = el.find('#tipusConsulta');
-  _this.tab = tab;
 
   var data = '',
       source = {
@@ -140,7 +139,7 @@ function Consulta (tab, el) {
 
         objContent = tag.find('.assistit');
 
-        obj = new Assistit(_this.tab, objContent, 'edit', dialog);
+        obj = new Assistit(tab, objContent, 'edit', dialog);
         obj.fire();
       }
     });
