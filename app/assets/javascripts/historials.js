@@ -129,6 +129,7 @@ function Consulta (tab, el) {
     $.ajax({
       url: '/assistits/'+consultaId+'/edit/'+id,
       success: function(data) {
+
         _this.editDialog = tag.html(data).dialog({
           autoOpen: false,
           height: "auto",
@@ -137,13 +138,16 @@ function Consulta (tab, el) {
           resizable: false,
           modal: true,
           close: function() {
+            $(this).remove();
             delete tab.assistit;
-        }
+          },
+          open: function( event, ui ) {
+            tab.assistit = new Assistit(tab, 'edit');
+            tab.assistit.fire();
+          }
         }).dialog('open');
 
 
-        tab.assistit = new Assistit(tab, 'edit');
-        tab.assistit.fire();
       }
     });
   };

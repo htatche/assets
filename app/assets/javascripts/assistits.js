@@ -1,21 +1,19 @@
 function Assistit(tab, frmView) {
-  var _this = this;
-  var moduleName = 'assistit';
-
-  if (frmView === 'new') {
-    var htmlDiv = tab.htmlDiv.find('div.' + moduleName);
-  } else {
-    var htmlDiv = $('#editDialog').find('div.' + moduleName);
-  }
-
-  var tNumDoc,
-      tCtekey,
+  var _this      = this;
+      moduleName = 'assistit',
+      /* El div del dialog de jquery-ui es cree fora */
+      context    = (frmView === 'new') ? tab.htmlDiv : $('#editDialog'),
+      htmlDiv    = context.find('div.' + moduleName),
+      assistitId = htmlDiv.attr('id'),
       tCtdesc    = htmlDiv.find('input[name=ctdesc]'),
-      assistitId = htmlDiv.attr('id');
+      tNumDoc    = htmlDiv.find('input[name=numdoc]'),
+      tCtekey    = htmlDiv.find('input[name=ctekey]');
+
+  _this.htmlDiv = htmlDiv;
 
   _this.getFacturaDuplicada = function(numdoc, ctekey, opckey) {
     if (tNumDoc.val() && tCtekey.val()) {
-      htmlDiv.find('#factura-duplicada').remove();
+      _this.htmlDiv.find('#factura-duplicada').remove();
       $.get('/assistits/getFacturaDuplicada',
             { numdoc: numdoc,
               ctcte: ctekey,
@@ -30,10 +28,10 @@ function Assistit(tab, frmView) {
             errmsg += 'Aquesta factura ja existeix, <a href="#"> Mostrar </a>';
             errmsg += '</div>';
             
-            htmlDiv.find('#factura-duplicada').remove();
-            htmlDiv.find('input[name=numdoc]').after(errmsg);
-            htmlDiv.find('#factura-duplicada').fadeIn('fast');
-            htmlDiv.find('#factura-duplicada a').click(function() {
+            _this.htmlDiv.find('#factura-duplicada').remove();
+            _this.htmlDiv.find('input[name=numdoc]').after(errmsg);
+            _this.htmlDiv.find('#factura-duplicada').fadeIn('fast');
+            _this.htmlDiv.find('#factura-duplicada a').click(function() {
               $(dialog).dialog({
                 autoOpen: false,
                 height: "auto",
@@ -46,7 +44,7 @@ function Assistit(tab, frmView) {
               }).dialog('open');
             });
           } else {
-            htmlDiv.find('#factura-duplicada').remove();
+            _this.htmlDiv.find('#factura-duplicada').remove();
           }
         });
     }
@@ -56,7 +54,7 @@ function Assistit(tab, frmView) {
     $.get('/getComptes',
           {opckey: assistitId},
           function(data) {
-            combobox = htmlDiv.find('div.ctcte-combobox').jqxComboBox({
+            combobox = _this.htmlDiv.find('div.ctcte-combobox').jqxComboBox({
               source: data,
               width: '230px',
               height: '25px',
@@ -66,15 +64,15 @@ function Assistit(tab, frmView) {
             combobox.find('input').attr({name: 'ctekey'});
             combobox.find('input').css({padding: '2px'});
 
-            tNumDoc = htmlDiv.find('input[name=numdoc]');
-            tCtekey = htmlDiv.find('input[name=ctekey]');
+            tNumDoc = _this.htmlDiv.find('input[name=numdoc]');
+            tCtekey = _this.htmlDiv.find('input[name=ctekey]');
             _this.setBindings();
             _this.setTabindexes();
     });
   };
 
   _this.getCodiCompte = function(ctcte, errtpl, input) {
-    htmlDiv.find('.error-compte').remove();
+    _this.htmlDiv.find('.error-compte').remove();
 
     $.getJSON('/assistits/getCodiCompte',
       {opckey: assistitId,
@@ -82,89 +80,102 @@ function Assistit(tab, frmView) {
       function(data) {
         tCtekey.val(data.ctcte);
         tCtdesc.val(data.ctdesc);
-    })
-    .error(function() {
-      var template = _.template(
-        $(errtpl).html() 
-      );
+    }).error(function() {
+        var template = _.template($(errtpl).html()),
+            tpldata  = {
+              ctcte: tCtekey.val(),
+              ctdesc: tCtdesc.val()
+            };
 
-      var tpldata = {
-        ctcte: tCtekey.val(),
-        ctdesc: tCtdesc.val()
-      };
-      
-      htmlDiv.find(input).after(
-        template(tpldata)
-      );
+        _this.htmlDiv.find(input).after(
+          template(tpldata)
+        );
 
-      htmlDiv.find('.error-compte').fadeIn('fast');
-    })
-    .complete(function() {
+        _this.htmlDiv.find('.error-compte').fadeIn('fast');
+      })
+      .complete(function() {
         _this.getFacturaDuplicada(tNumDoc.val(),
                                   tCtekey.val(),
                                   assistitId);
-    });
+      });
   };
 
   _this.reload = function() {
-    $.get('/assistit/' + assistitId, function (data) {
-      tab.htmlDiv.find('.content').html(data);
-      
-      tab.loadModule(moduleName);
-    });
+    tab.getContent('/assistit/' + assistitId, 'assistit');
   };
 
-  _this.submit = function() {
-    var dialog = htmlDiv.prev('ui-dialog'); ////
+  _this.showErrorsTemplate = function() {
+    _.templateSettings.variable = "rc";
 
-    htmlDiv.find('form div.errors')
-           .html('')
-           .hide();
-
-    if (frmView === 'new') {
-      reqType = 'POST';
-      reqUrl = '/assistits';
-    } else {
-      reqType = 'PUT';
-      id = htmlDiv.find('input[name="id"]').val();
-      reqUrl = '/assistits/'+id;
-    }
-
-    $.ajax({
-      url: reqUrl,
-      type: reqType,
-      data: htmlDiv.find('form').serialize(),
-
-      success: function(data) {
-        if (frmView === 'new') {
-          _this.reload();
-        } else {
-          tab.consulta.editDialog.dialog('close');
-          tab.consulta.search();
-        }
-      },
-
-      error: function(data) {
-        _.templateSettings.variable = "rc";
-
-        var errors = jQuery.parseJSON(data.responseText);
-        var template = _.template(
+     var errors   = jQuery.parseJSON(data.responseText),
+         tpldata  = {errors: errors},
+         template = _.template(
           $('script.tpl-assistit-errors').html() 
-        );
-        var tpldata = {errors: errors};
-        
-        htmlDiv.find('form div.errors')
+         );
+     
+     _this.htmlDiv
+          .find('form div.errors')
           .html(template(tpldata))
           .addClass('ui-state-error ui-corner-all')
           .effect('highlight', {color: '#FFAAAA'}, 500);
 
-        htmlDiv.find('form div.errors').fadeIn('fast');
-      }
+     _this.htmlDiv
+          .find('form div.errors')
+          .fadeIn('fast');
+  }
+
+  _this.create = function() {
+
+    var reqType = 'POST',
+        reqUrl  = '/assistits';
+
+    $.ajax({
+      url:  reqUrl,
+      type: reqType,
+      data: _this.htmlDiv.find('form').serialize(),
+
+      success: function(data) {  _this.reload(); },
+      error:   _this.showErrorsTemplate()
     });
+
+  };
+
+  _this.update = function() {
+
+    var reqType = 'PUT',
+        id      = _this.htmlDiv.find('input[name="id"]').val(),
+        reqUrl  = '/assistits/'+id;
+
+    $.ajax({
+      url:  reqUrl,
+      type: reqType,
+      data: _this.htmlDiv.find('form').serialize(),
+
+      success: function(data) {
+                 tab.consulta.editDialog.dialog('close');
+                 tab.consulta.search();
+               },
+      error:  _this.showErrorsTemplate()
+    });
+
+  };
+
+  _this.submit = function() {
+
+    _this.htmlDiv.find('form div.errors')
+           .html('')
+           .hide();
+
+    if (frmView === 'new') {
+      _this.create();
+    } else {
+      _this.update();
+    }
+    
   };
 
   _this.setTabindexes = function() {
-    htmlDiv.find('form input,select').each(function(index) {
+    _this.htmlDiv.find('form input,select').each(function(index) {
       $(this).attr('tabindex', index);
     });
   };
@@ -179,7 +190,7 @@ function Assistit(tab, frmView) {
 
     $.each([tCtekey, tCtdesc], function() {
       this.blur(function() {
-        htmlDiv.find('.error-compte').remove();
+        _this.htmlDiv.find('.error-compte').remove();
 
         if (tCtekey.val() && tCtdesc.val()) {
           _this.getCodiCompte(tCtekey.val(),
@@ -199,23 +210,23 @@ function Assistit(tab, frmView) {
 
     });
 
-    htmlDiv.find('input[name=comment]').blur(function() {
-      fieldset = htmlDiv.find('fieldset#assentaments');
+    _this.htmlDiv.find('input[name=comment]').blur(function() {
+      fieldset = _this.htmlDiv.find('fieldset#assentaments');
       var nrows = _this.assentament.nrows(fieldset);
 
       if (nrows == 1) {
         fieldset.find('input.import')
-          .val(htmlDiv.find('fieldset.main input[name=import]').val());
+          .val(_this.htmlDiv.find('fieldset.main input[name=import]').val());
         fieldset.find('input.comment')
-          .val(htmlDiv.find('fieldset.main input[name=comment]').val());
+          .val(_this.htmlDiv.find('fieldset.main input[name=comment]').val());
       }
     });
 
-    htmlDiv.find('div.ctcte-combobox').bind('select', function() {
+    _this.htmlDiv.find('div.ctcte-combobox').bind('select', function() {
         _this.getCodiCompte(tCtekey.val());
     });
 
-    htmlDiv.find('form').submit(function() {
+    _this.htmlDiv.find('form').submit(function() {
       _this.submit();
       
       /* Cancel primary submit action (.preventDefault()) */
@@ -224,16 +235,15 @@ function Assistit(tab, frmView) {
   };
 
   _this.fire = function() {
-    htmlDiv.jqxExpander({ showArrow: false, toggleMode: 'none' });
-    inputToNumeric(htmlDiv.find('fieldset.main div.numeric'),
-                   htmlDiv.find('fieldset.main input.import'),
+    _this.htmlDiv.jqxExpander({ showArrow: false, toggleMode: 'none' });
+    inputToNumeric(_this.htmlDiv.find('fieldset.main div.numeric'),
+                   _this.htmlDiv.find('fieldset.main input.import'),
                    '230px',
-                   htmlDiv.find('fieldset.main input.import').attr('height'));
-    htmlDiv.find('div.numeric').find('input').attr({tabindex: '5',
+                   _this.htmlDiv.find('fieldset.main input.import').attr('height'));
+    _this.htmlDiv.find('div.numeric').find('input').attr({tabindex: '5',
                                                name: 'import'});
 
-    _this.assentament = new Assentament(htmlDiv);
-
+    _this.assentament = new Assentament(_this.htmlDiv);
     _this.getComptes();
   };
   

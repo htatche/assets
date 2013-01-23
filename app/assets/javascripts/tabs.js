@@ -1,5 +1,7 @@
 function Tab (tabIndex) {
-  var _this = this;
+  var _this = this,
+      content,
+      menu;
 
   _this.htmlDiv = $('#tabs-'+tabIndex);
 
@@ -21,24 +23,25 @@ function Tab (tabIndex) {
     }
   }
 
-  _this.getContent = function(route) {
+  _this.getContent = function(route, moduleName) {
+
     $.get(route, function (data) {
-      content = _this.htmlDiv.find('.content');
-      content.html(data);
-
-      var moduleName = content.find('div').first()
-                              .attr('class').split(' ')[0];
-
+      content    = _this.htmlDiv.find('.content').html(data),
+      moduleName = moduleName || content.find('div').first()
+                                 .attr('class').split(' ')[0]
       _this.loadModule(moduleName);
     });
   }
 
   _this.loadMenu = function() {
-    menu = _this.htmlDiv.find('.jqx-menu').jqxMenu({ width: 'auto'});
+    menu = _this.htmlDiv.find('.jqx-menu');
+
+    menu.jqxMenu({ width: 'auto'});
 
     menu.bind('itemclick', function(event) {
-      route = $(event.args).attr('id');
-      _this.getContent(route);
+      var route = $(event.args).attr('id');
+
+      _this.getContent(route, null);
     });
   };
 
