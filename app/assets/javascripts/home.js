@@ -2,27 +2,31 @@ $(document).ready(function() {
 
   tabs = [];
 
-  loadPage = function (route, tabIndex, name) {
+  loadTab = function (route, name) {
+
+    var index = $('#appTabs').jqxTabs('length') + 1,
+        ntabs = tabs.length - 1;
 
     $.get(route, function (data) {
     
-        html = '<div id="tabs-' + tabIndex + '"><div class="tab-container">' + data + '</div></div>';
+        html = '<div id="tabs-' + index + '">'
+        html = html + '<div class="tab-container">' + data + '</div>'
+        html = html + '</div>';
+
         $('#appTabs').jqxTabs('addLast', name, html);
 
-        tab = new Tab(tabIndex);
-        tabs.push(tab);
+        var tab = new Tab(index);
 
-        arrayIndex = tabs.length - 1;
-        tabs[arrayIndex].fire();
+        tabs.push(tab);
+        tab.fire();
     });
   }
 
   $('div.menuOptions').find('div.option').dblclick(function() {
     var route = $(this).attr('id');
-    var pageIndex = $('#appTabs').jqxTabs('length') + 1;
     var title = $(this).attr('name');
 
-    var html = loadPage(route, pageIndex, title);
+    loadTab(route, title);
   });
 
   $('div.menuOptions').find('div.option').hover(

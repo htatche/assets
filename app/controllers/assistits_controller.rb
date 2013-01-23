@@ -27,8 +27,6 @@ class AssistitsController < ApplicationController
 
     ass.errors.flatten!
     if ass.errors.any?
-      Rails.logger.debug ass.errors.inspect
-      exit
       render :json => ass.errors.to_json,
              :status => :unprocessable_entity
     else

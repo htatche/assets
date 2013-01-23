@@ -1,14 +1,21 @@
-function Assistit(tab, el, frmView, dialog) {
+function Assistit(tab, frmView) {
   var _this = this;
-  var  _tNumdoc,
-       _tCtekey,
-       _tCtdesc = el.find('input[name=ctdesc]');
+  var moduleName = 'assistit';
 
-  _opckey = el.attr('id');
+  if (frmView === 'new') {
+    var htmlDiv = tab.htmlDiv.find('div.' + moduleName);
+  } else {
+    var htmlDiv = $('#editDialog').find('div.' + moduleName);
+  }
+
+  var tNumDoc,
+      tCtekey,
+      tCtdesc    = htmlDiv.find('input[name=ctdesc]'),
+      assistitId = htmlDiv.attr('id');
 
   _this.getFacturaDuplicada = function(numdoc, ctekey, opckey) {
-    if (_tNumdoc.val() && _tCtekey.val()) {
-      el.find('#factura-duplicada').remove();
+    if (tNumDoc.val() && tCtekey.val()) {
+      htmlDiv.find('#factura-duplicada').remove();
       $.get('/assistits/getFacturaDuplicada',
             { numdoc: numdoc,
               ctcte: ctekey,
@@ -23,10 +30,10 @@ function Assistit(tab, el, frmView, dialog) {
             errmsg += 'Aquesta factura ja existeix, <a href="#"> Mostrar </a>';
             errmsg += '</div>';
             
-            el.find('#factura-duplicada').remove();
-            el.find('input[name=numdoc]').after(errmsg);
-            el.find('#factura-duplicada').fadeIn('fast');
-            el.find('#factura-duplicada a').click(function() {
+            htmlDiv.find('#factura-duplicada').remove();
+            htmlDiv.find('input[name=numdoc]').after(errmsg);
+            htmlDiv.find('#factura-duplicada').fadeIn('fast');
+            htmlDiv.find('#factura-duplicada a').click(function() {
               $(dialog).dialog({
                 autoOpen: false,
                 height: "auto",
@@ -39,7 +46,7 @@ function Assistit(tab, el, frmView, dialog) {
               }).dialog('open');
             });
           } else {
-            el.find('#factura-duplicada').remove();
+            htmlDiv.find('#factura-duplicada').remove();
           }
         });
     }
@@ -47,9 +54,9 @@ function Assistit(tab, el, frmView, dialog) {
 
   _this.getComptes = function() {
     $.get('/getComptes',
-          {opckey: _opckey},
+          {opckey: assistitId},
           function(data) {
-            combobox = el.find('div.ctcte-combobox').jqxComboBox({
+            combobox = htmlDiv.find('div.ctcte-combobox').jqxComboBox({
               source: data,
               width: '230px',
               height: '25px',
@@ -59,22 +66,22 @@ function Assistit(tab, el, frmView, dialog) {
             combobox.find('input').attr({name: 'ctekey'});
             combobox.find('input').css({padding: '2px'});
 
-            _tNumdoc = el.find('input[name=numdoc]');
-            _tCtekey = el.find('input[name=ctekey]');
+            tNumDoc = htmlDiv.find('input[name=numdoc]');
+            tCtekey = htmlDiv.find('input[name=ctekey]');
             _this.setBindings();
             _this.setTabindexes();
     });
   };
 
   _this.getCodiCompte = function(ctcte, errtpl, input) {
-    el.find('.error-compte').remove();
+    htmlDiv.find('.error-compte').remove();
 
     $.getJSON('/assistits/getCodiCompte',
-      {opckey: _opckey,
+      {opckey: assistitId,
        ctcte: ctcte},
       function(data) {
-        _tCtekey.val(data.ctcte);
-        _tCtdesc.val(data.ctdesc);
+        tCtekey.val(data.ctcte);
+        tCtdesc.val(data.ctdesc);
     })
     .error(function() {
       var template = _.template(
@@ -82,42 +89,35 @@ function Assistit(tab, el, frmView, dialog) {
       );
 
       var tpldata = {
-        ctcte: _tCtekey.val(),
-        ctdesc: _tCtdesc.val()
+        ctcte: tCtekey.val(),
+        ctdesc: tCtdesc.val()
       };
       
-      el.find(input).after(
+      htmlDiv.find(input).after(
         template(tpldata)
       );
 
-      el.find('.error-compte').fadeIn('fast');
+      htmlDiv.find('.error-compte').fadeIn('fast');
     })
     .complete(function() {
-        _this.getFacturaDuplicada(_tNumdoc.val(),
-                                  _tCtekey.val(),
-                                  _opckey);
+        _this.getFacturaDuplicada(tNumDoc.val(),
+                                  tCtekey.val(),
+                                  assistitId);
     });
   };
 
   _this.reload = function() {
-    $.get('/assistit/' + _opckey, function (data) {
-      tab.tabDiv.find('.content').html(data);
-        assistit = tab.tabDiv.find('.assistit');
-        _this.assistit = new Assistit(tab, assistit, frmView, dialog);
-        _this.assistit.fire();
+    $.get('/assistit/' + assistitId, function (data) {
+      tab.htmlDiv.find('.content').html(data);
+      
+      tab.loadModule(moduleName);
     });
   };
 
-  _this.create = function() {
-
-  };
-
-  _this.update = function() {
-
-  };
-
   _this.submit = function() {
-    el.find('form div.errors')
+    var dialog = htmlDiv.prev('ui-dialog'); ////
+
+    htmlDiv.find('form div.errors')
            .html('')
            .hide();
 
@@ -126,21 +126,20 @@ function Assistit(tab, el, frmView, dialog) {
       reqUrl = '/assistits';
     } else {
       reqType = 'PUT';
-      id = el.find('input[name="id"]').val();
+      id = htmlDiv.find('input[name="id"]').val();
       reqUrl = '/assistits/'+id;
     }
 
     $.ajax({
       url: reqUrl,
       type: reqType,
-      data: el.find('form').serialize(),
+      data: htmlDiv.find('form').serialize(),
 
       success: function(data) {
         if (frmView === 'new') {
           _this.reload();
         } else {
-          dialog.dialog('close');
-          console.log(tab);
+          tab.consulta.editDialog.dialog('close');
           tab.consulta.search();
         }
       },
@@ -154,44 +153,44 @@ function Assistit(tab, el, frmView, dialog) {
         );
         var tpldata = {errors: errors};
         
-        el.find('form div.errors')
+        htmlDiv.find('form div.errors')
           .html(template(tpldata))
           .addClass('ui-state-error ui-corner-all')
           .effect('highlight', {color: '#FFAAAA'}, 500);
 
-        el.find('form div.errors').fadeIn('fast');
+        htmlDiv.find('form div.errors').fadeIn('fast');
       }
     });
   };
 
   _this.setTabindexes = function() {
-    el.find('form input,select').each(function(index) {
+    htmlDiv.find('form input,select').each(function(index) {
       $(this).attr('tabindex', index);
     });
   };
 
   _this.setBindings = function() {
 
-    _tNumdoc.blur(function() {
-        items = _this.getFacturaDuplicada(_tNumdoc.val(),
-                                          _tCtekey.val(),
-                                          _opckey);
+    tNumDoc.blur(function() {
+        items = _this.getFacturaDuplicada(tNumDoc.val(),
+                                          tCtekey.val(),
+                                          assistitId);
     });
 
-    $.each([_tCtekey, _tCtdesc], function() {
+    $.each([tCtekey, tCtdesc], function() {
       this.blur(function() {
-        el.find('.error-compte').remove();
+        htmlDiv.find('.error-compte').remove();
 
-        if (_tCtekey.val() && _tCtdesc.val()) {
-          _this.getCodiCompte(_tCtekey.val(),
+        if (tCtekey.val() && tCtdesc.val()) {
+          _this.getCodiCompte(tCtekey.val(),
                               'script.tpl-error-1',
                               'div.ctcte-combobox');
-        } else if (_tCtekey.val() && _tCtdesc.val() === '') {
-          _this.getCodiCompte(_tCtekey.val(),
+        } else if (tCtekey.val() && tCtdesc.val() === '') {
+          _this.getCodiCompte(tCtekey.val(),
                               'script.tpl-error-2',
                               'input[name=ctdesc]');
-        } else if (_tCtekey.val() === '' && _tCtdesc.val()) {
-          _this.getCodiCompte(_tCtekey.val(),
+        } else if (tCtekey.val() === '' && tCtdesc.val()) {
+          _this.getCodiCompte(tCtekey.val(),
                               'script.tpl-error-3',
                               'div.ctcte-combobox');
         }
@@ -200,23 +199,23 @@ function Assistit(tab, el, frmView, dialog) {
 
     });
 
-    el.find('input[name=comment]').blur(function() {
-      fieldset = el.find('fieldset#assentaments');
+    htmlDiv.find('input[name=comment]').blur(function() {
+      fieldset = htmlDiv.find('fieldset#assentaments');
       var nrows = _this.assentament.nrows(fieldset);
 
       if (nrows == 1) {
         fieldset.find('input.import')
-          .val(el.find('fieldset.main input[name=import]').val());
+          .val(htmlDiv.find('fieldset.main input[name=import]').val());
         fieldset.find('input.comment')
-          .val(el.find('fieldset.main input[name=comment]').val());
+          .val(htmlDiv.find('fieldset.main input[name=comment]').val());
       }
     });
 
-    el.find('div.ctcte-combobox').bind('select', function() {
-        _this.getCodiCompte(_tCtekey.val());
+    htmlDiv.find('div.ctcte-combobox').bind('select', function() {
+        _this.getCodiCompte(tCtekey.val());
     });
 
-    el.find('form').submit(function() {
+    htmlDiv.find('form').submit(function() {
       _this.submit();
       
       /* Cancel primary submit action (.preventDefault()) */
@@ -225,24 +224,24 @@ function Assistit(tab, el, frmView, dialog) {
   };
 
   _this.fire = function() {
-    el.jqxExpander({ showArrow: false, toggleMode: 'none' });
-    inputToNumeric(el.find('fieldset.main div.numeric'),
-                   el.find('fieldset.main input.import'),
+    htmlDiv.jqxExpander({ showArrow: false, toggleMode: 'none' });
+    inputToNumeric(htmlDiv.find('fieldset.main div.numeric'),
+                   htmlDiv.find('fieldset.main input.import'),
                    '230px',
-                   el.find('fieldset.main input.import').attr('height'));
-    el.find('div.numeric').find('input').attr({tabindex: '5',
+                   htmlDiv.find('fieldset.main input.import').attr('height'));
+    htmlDiv.find('div.numeric').find('input').attr({tabindex: '5',
                                                name: 'import'});
 
-    _this.assentament = new Assentament(el);
+    _this.assentament = new Assentament(htmlDiv);
 
     _this.getComptes();
   };
   
 }
 
-function Assentament(el) {
+function Assentament(parentHtmlDiv) {
   var _this = this;
-  _opckey = el.attr('id');
+  assistitId = parentHtmlDiv.attr('id');
 
   _this.initialize = function() {
     _this.bindings();
@@ -263,11 +262,11 @@ function Assentament(el) {
 
   _this.bindings = function() {
   
-    el.find('fieldset:not(.main)').each(function() {
+    parentHtmlDiv.find('fieldset:not(.main)').each(function() {
       _this.bindDestoyIcon($(this));
     });
 
-    el.find('fieldset:not(.main)').each(function() {
+    parentHtmlDiv.find('fieldset:not(.main)').each(function() {
       $(this).find('div.numeric').each(function() {
         inputToNumeric($(this),
                        $(this).prev('input.import'),
@@ -275,7 +274,7 @@ function Assentament(el) {
                        '28px');
       });
     });
-    el.find('fieldset:not(.main)').each(function() {
+    parentHtmlDiv.find('fieldset:not(.main)').each(function() {
       _this.bindKeydown($(this));
     });
 
@@ -286,7 +285,7 @@ function Assentament(el) {
   };
 
   _this.setTabindexes = function() {
-    el.find('form input,select').each(function(index) {
+    parentHtmlDiv.find('form input,select').each(function(index) {
       $(this).attr('tabindex', index);
     });
   };
@@ -317,7 +316,7 @@ function Assentament(el) {
 
     $.get(
       '/assistits/' + action,
-      {opckey: _opckey,
+      {opckey: assistitId,
        nrows: _this.nrows(fieldset)},
       function(data) {
         _this.setRow(fieldset, data);

@@ -1,8 +1,11 @@
 function Consulta (tab, el) {
   var _this = this;
 
-  _this.mnukey = el.attr('id');
-  _this.tipusConsulta = el.find('#tipusConsulta');
+  var moduleName = 'consulta',
+      htmlDiv    = tab.htmlDiv.find('div.' + moduleName);
+
+  _this.mnukey = htmlDiv.attr('id');
+  _this.tipusConsulta = htmlDiv.find('#tipusConsulta');
 
   var data = '',
       source = {
@@ -37,7 +40,7 @@ function Consulta (tab, el) {
   _this.startGrid = function(gridTitles) {
     lits = gridTitles;
 
-    _this.grid = el.find("#histgrid").jqxGrid({
+    _this.grid = htmlDiv.find("#histgrid").jqxGrid({
       width: '900px',
       source: dataAdapter,
       theme: theme,
@@ -59,7 +62,7 @@ function Consulta (tab, el) {
 
   _this.search = function () {
     $.getJSON('/historials/search',
-      params = el.find('form').serialize(),
+      params = htmlDiv.find('form').serialize(),
       function(data) {
         _this.update(data);
     })
@@ -85,7 +88,7 @@ function Consulta (tab, el) {
     localizationobj.decimalseparator = ",";
     localizationobj.thousandsseparator = ".";
 
-    el.find('#histgrid').jqxGrid('localizestrings', localizationobj);
+    htmlDiv.find('#histgrid').jqxGrid('localizestrings', localizationobj);
   };
 
   _this.updateGridTitles = function() {
@@ -109,7 +112,7 @@ function Consulta (tab, el) {
 
   _this.update = function(data) {
     source.localdata = data;
-    el.find('#histgrid').jqxGrid('updatebounddata');
+    htmlDiv.find('#histgrid').jqxGrid('updatebounddata');
 
     _this.localizeGrid();
     _this.updateGridTitles();
@@ -126,7 +129,7 @@ function Consulta (tab, el) {
     $.ajax({
       url: '/assistits/'+consultaId+'/edit/'+id,
       success: function(data) {
-        dialog = tag.html(data).dialog({
+        _this.editDialog = tag.html(data).dialog({
           autoOpen: false,
           height: "auto",
           width: "auto",
@@ -134,40 +137,40 @@ function Consulta (tab, el) {
           resizable: false,
           modal: true,
           close: function() {
+            delete tab.assistit;
         }
         }).dialog('open');
 
-        objContent = tag.find('.assistit');
 
-        obj = new Assistit(tab, objContent, 'edit', dialog);
-        obj.fire();
+        tab.assistit = new Assistit(tab, 'edit');
+        tab.assistit.fire();
       }
     });
   };
 
   _this.getSelectedTipusConsulta = function() {
-    return el.find('select[name=tipusConsulta]').val()
+    return htmlDiv.find('select[name=tipusConsulta]').val()
   }
 
   _this.fire = function() {
-    el.jqxExpander({ showArrow: false, toggleMode: 'none' });
+    htmlDiv.jqxExpander({ showArrow: false, toggleMode: 'none' });
 
-    el.find('#dateFrom').datepicker();
-    el.find('#dateTo').datepicker();
+    htmlDiv.find('#dateFrom').datepicker();
+    htmlDiv.find('#dateTo').datepicker();
   
     _this.setBindings();
     _this.loadGrid();
   };
 
   _this.setBindings = function() {
-    el.find('form').submit(function() {
+    htmlDiv.find('form').submit(function() {
       _this.search();
       
       /* Cancel primary submit action (.preventDefault()) */
       return false;
     });
 
-    el.find('#histgrid').bind('rowdoubleclick', function (e) 
+    htmlDiv.find('#histgrid').bind('rowdoubleclick', function (e) 
     {
       var row = e.args.rowindex;
       var datarow = _this.grid.jqxGrid('getrowdata', args.rowindex);
