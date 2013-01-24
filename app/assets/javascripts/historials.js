@@ -12,7 +12,7 @@ function Consulta (tab, el) {
         datatype: "json",
         datafields: [
           { name: 'id', type: 'integer' },
-          { name: 'datdoc', type: 'string' },
+          { name: 'datdoc', type: 'date' },
           { name: 'numdoc', type: 'integer' },
           { name: 'ctcte', type: 'string' },
           { name: 'ctdesc', type: 'string' },
@@ -20,8 +20,6 @@ function Consulta (tab, el) {
           { name: 'impdoc', type: 'float' },
           { name: 'comdoc', type: 'string' }
         ],
-        sortcolumn: 'datdoc',
-        sortdirection: 'asc',
         localdata: data
       };
 
@@ -44,7 +42,6 @@ function Consulta (tab, el) {
       width: '900px',
       source: dataAdapter,
       theme: theme,
-      columnsresize: true,
       sortable: true,
       pageable: true,
       columns: [

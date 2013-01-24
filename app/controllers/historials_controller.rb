@@ -54,7 +54,7 @@ class HistorialsController < ApplicationController
 
     cond[:datsis] = dateFrom..dateTo
 
-    @moviments = Historial.where(cond)
+    @moviments = Historial.where(cond).order('datdoc ASC')
 
     @moviments = @moviments.map do |i| { 
       :id => i.id,

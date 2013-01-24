@@ -1,24 +1,24 @@
 <tr>
   <td>
-    <%= select_tag 'pag[#{nrow}][compte]',
+    <%= select_tag "pag[#{nrow}][compte]",
           options_from_collection_for_select(comptesPagaments,
                                              'ctcte',
                                              'ctfullname'),
           {:class => 'compte'} %> 
   </td>
   <td>
-    <%= text_field_tag 'pag[#{nrow}][import]',
+    <%= text_field_tag "pag[#{nrow}][import]",
                        '',
                        {:class => 'import'} %> 
     <div class='numeric'> </div>
   </td>
   <td>
-    <%= text_field_tag 'pag[#{nrow}][comment]',
+    <%= text_field_tag "pag[#{nrow}][comment]",
                        '',
                        {:class => 'comment'} %> 
   </td>
   <td>
-    <%= text_field_tag 'pag[#{nrow}][date]',
+    <%= text_field_tag "pag[#{nrow}][date]",
                        '',
                        {:class => 'date',
                         :type => 'date'} %> 

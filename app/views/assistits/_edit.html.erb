@@ -73,10 +73,10 @@
           </tr>
           </thead>
           <tbody>
-            <% histGens.each { |i| %>
+            <% histGens.each_with_index { |i| %>
               <% nrow = 0 %>
               <%= render :partial => 'assistits/edit/assentament',
-                         :locals => {:nrow => nrow.to_s,
+                         :locals => {:nrow => i,
                                      :histGen => i,
                                      :comptesDesti => comptesDesti} %>
               <% nrow = nrow + 1 %>
@@ -104,10 +104,10 @@
             </thead>
             <tbody>
               <% if histImps.any? %>
-                <% histImps.each { |i| %>
+                <% histImps.each_with_index { |i, index| %>
                   <% nrow = 0 %>
                   <%= render :partial => 'assistits/edit/impost',
-                        :locals => {:nrow => nrow,
+                        :locals => {:nrow => index,
                                     :histImp => i,
                                     :comptesImpostos => comptesImpostos} %>
                   <% nrow = nrow + 1 %>
@@ -144,13 +144,11 @@
             </thead>
             <tbody>
               <% if histPags.any? %>
-                <% histPags.each { |i| %>
-                  <% nrow = 0 %>
+                <% histPags.each_with_index { |i, index| %>
                   <%= render :partial => 'assistits/edit/pagament',
-                        :locals => {:nrow => nrow,
+                        :locals => {:nrow => index,
                                     :histPag => i,
                                     :comptesPagaments => comptesPagaments} %>
-                  <% nrow = nrow + 1 %>
                 <% } %>
               <% else %>
                   <%= render :partial => 'assistits/pagament',
