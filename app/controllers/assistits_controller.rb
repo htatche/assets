@@ -171,45 +171,48 @@ class AssistitsController < ApplicationController
   end
 
   def getAssentament
-    @opckey = params[:opckey].to_i
-    @nrow = params[:nrows]
+    nrow = params[:nrows]
+    opckey = params[:opckey].to_i
 
-    @assistit = Menudet.find(@opckey)
-    @frmLabels = Menulit.getFormLabels(@opckey)
+    assistit = Menudet.find(opckey)
 
-    @grups_condition = buscarGrupComptable(@opckey)
-    @comptes_desti = Compte.where(@grups_condition)
+    grups_condition = buscarGrupComptable(opckey)
+    comptesDesti = Compte.where(grups_condition)
     
-    render :partial => 'assistits/assentament'
+    render :partial => 'assistits/assentament',
+           :locals  => {:nrow => nrow,
+                        :comptesDesti => comptesDesti}
   end
 
   def getImpost
-    @opckey = params[:opckey].to_i
-    @nrow = params[:nrows]
+    nrow   = params[:nrows]
+    opckey = params[:opckey].to_i
 
-    @assistit = Menudet.find(@opckey)
-    @frmLabels = Menulit.getFormLabels(@opckey)
+    assistit = Menudet.find(opckey)
+    brain    = Brain.find_by_brakey(assistit.brakey)
 
-    @brain = Brain.find_by_brakey(@assistit.brakey)
-    @grupimpostos = @brain.braimp.to_i
-    @comptes_impostos = Compte.where("ctcte LIKE '?%'",
-                                      @grupimpostos)
+    grupimpostos    = brain.braimp.to_i
+    comptesImpostos = Compte.where("ctcte LIKE '?%'",
+                                   grupimpostos)
     
-    render :partial => 'assistits/impost'
+    render :partial => 'assistits/impost',
+           :locals  => {:nrow => nrow,
+                        :comptesImpostos => comptesImpostos}
   end
 
   def getPagament
-    @opckey = params[:opckey].to_i
-    @nrow = params[:nrows]
+    nrow = params[:nrows]
+    opckey = params[:opckey].to_i
 
-    @assistit = Menudet.find(@opckey)
-    @frmLabels = Menulit.getFormLabels(@opckey)
+    assistit = Menudet.find(opckey)
 
-    @brain = Brain.find_by_brakey(@assistit.brakey)
-    @gruppagaments = @brain.brapag.to_i
-    @comptes_pagaments = Compte.where("ctcte LIKE '?%'",
-                                      @gruppagaments)
+    brain = Brain.find_by_brakey(assistit.brakey)
+    gruppagaments = brain.brapag.to_i
+    comptesPagaments = Compte.where("ctcte LIKE '?%'",
+                                      gruppagaments)
     
-    render :partial => 'assistits/pagament'
+    render :partial => 'assistits/pagament',
+           :locals  => {:nrow => nrow,
+                        :comptesPagaments => comptesPagaments}
   end
 end

@@ -17,7 +17,7 @@ function Tab (tabIndex) {
         _this.consulta.fire();
         break;
       case 'pgcs':
-        _this.pgc = new Pgc(_this.tab, objContent);
+        _this.pgc = new Pgc(_this);
         _this.pgc.fire();
         break;
     }

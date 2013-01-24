@@ -62,7 +62,7 @@ endif
 set shortmess=aoO
 badd +55 app/models/user.rb
 badd +23 app/controllers/users_controller.rb
-badd +60 app/controllers/assistits_controller.rb
+badd +30 app/controllers/assistits_controller.rb
 badd +44 app/controllers/comptes_controller.rb
 badd +5 app/controllers/moviments_controller.rb
 badd +1 app/views/users/confirmed.html.erb
@@ -73,7 +73,7 @@ badd +10 app/controllers/sessions_controller.rb
 badd +20 app/controllers/assentaments_controller.rb
 badd +106 app/views/assistits/_frm_p1_alta.html.erb
 badd +1 app/views/assistits/_show.html.erb
-badd +1 app/controllers/historials_controller.rb
+badd +57 app/controllers/historials_controller.rb
 badd +1 app/views/historials/index.html.erb
 badd +1 app/views/historials/_index.html.erb
 badd +1 config/routes.rb
@@ -90,10 +90,10 @@ badd +1 app/views/assentaments/index.html.erb
 badd +24 app/views/assistits/frm_p1/_assentament.html.erb
 badd +13 app/assets/javascripts/api/assistit.js
 badd +143 app/assets/javascripts/assistits.js
-badd +66 app/assets/javascripts/historials.js
+badd +140 app/assets/javascripts/historials.js
 badd +3 app/views/assistits/_frm_p3_alta.html.erb
 badd +48 app/assets/javascripts/application.js
-badd +23 app/assets/javascripts/tabs.js
+badd +1 app/assets/javascripts/tabs.js
 badd +100 app/assets/stylesheets/assistits.css
 badd +61 app/assets/stylesheets/historials.css
 badd +80 app/models/assentament.rb
@@ -115,7 +115,7 @@ badd +49 app/assets/stylesheets/application.css
 badd +8 app/assets/javascripts/assentaments.js
 badd +24 app/assets/javascripts/pgc.js
 badd +6 app/views/assistits/_new.html.erb
-badd +147 app/views/assistits/_edit.html.erb
+badd +30 app/views/assistits/_edit.html.erb
 badd +37 app/views/assistits/_templates.html.erb
 badd +2 app/views/assistits/_assentament.html.erb
 badd +8 app/views/assistits/_assentament_edit.html.erb
@@ -129,13 +129,13 @@ badd +14 app/views/assistits/edit/_pagament.html.erb
 badd +1 app/assets/javascripts/menu.js
 badd +11 app/assets/stylesheets/menu.css
 badd +16 app/assets/javascripts/home.js
-badd +4 app/views/home/_home.html.erb
+badd +1 app/views/home/_home.html.erb
 badd +22 app/views/layouts/application.html.erb
 badd +1 app/assets/stylesheets/home.css.scss
 badd +1 app/views/sessions/login.html.erb
 badd +55 app/models/moviment.rb
 silent! argdel *
-edit app/controllers/historials_controller.rb
+edit app/controllers/application_controller.rb
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -149,9 +149,9 @@ set nosplitbelow
 set nosplitright
 wincmd t
 set winheight=1 winwidth=1
-exe '1resize ' . ((&lines * 29 + 29) / 59)
+exe '1resize ' . ((&lines * 30 + 29) / 59)
 exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
-exe '2resize ' . ((&lines * 26 + 29) / 59)
+exe '2resize ' . ((&lines * 25 + 29) / 59)
 exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
 exe 'vert 3resize ' . ((&columns * 78 + 78) / 157)
 argglobal
@@ -237,8 +237,8 @@ setlocal nrformats=octal,hex
 set number
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=csscomplete#CompleteCSS
-setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/historials,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include,
+setlocal omnifunc=javascriptcomplete#CompleteJS
+setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/application,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include,
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -273,12 +273,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 57 - ((7 * winheight(0) + 14) / 29)
+let s:l = 12 - ((11 * winheight(0) + 15) / 30)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-57
-normal! 037l
+12
+normal! 011l
 wincmd w
 argglobal
 edit app/models/assentament.rb
@@ -400,7 +400,7 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 233 - ((7 * winheight(0) + 13) / 26)
+let s:l = 233 - ((7 * winheight(0) + 12) / 25)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
@@ -408,7 +408,7 @@ normal! zt
 normal! 043l
 wincmd w
 argglobal
-edit app/controllers/assistits_controller.rb
+edit app/controllers/home_controller.rb
 let s:cpo_save=&cpo
 set cpo&vim
 nmap <buffer> gf <Plug>RailsTabFind
@@ -491,8 +491,8 @@ setlocal nrformats=octal,hex
 set number
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=
-setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/assistits,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include
+setlocal omnifunc=javascriptcomplete#CompleteJS
+setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/home,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include,
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -504,7 +504,7 @@ setlocal noscrollbind
 setlocal shiftwidth=2
 setlocal noshortname
 setlocal nosmartindent
-setlocal softtabstop=0
+setlocal softtabstop=2
 setlocal nospell
 setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
 setlocal spellfile=
@@ -527,19 +527,19 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 30 - ((28 * winheight(0) + 28) / 56)
+let s:l = 9 - ((8 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-30
-normal! 034l
+9
+normal! 0
 wincmd w
-exe '1resize ' . ((&lines * 29 + 29) / 59)
+exe '1resize ' . ((&lines * 30 + 29) / 59)
 exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
-exe '2resize ' . ((&lines * 26 + 29) / 59)
+exe '2resize ' . ((&lines * 25 + 29) / 59)
 exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
 exe 'vert 3resize ' . ((&columns * 78 + 78) / 157)
-tabedit app/views/historials/_consulta.html.erb
+tabedit app/views/home/index.html.erb
 set splitbelow splitright
 wincmd _ | wincmd |
 vsplit
@@ -641,8 +641,8 @@ setlocal nrformats=octal,hex
 set number
 setlocal number
 setlocal numberwidth=4
-setlocal omnifunc=csscomplete#CompleteCSS
-setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/historials,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include,
+setlocal omnifunc=javascriptcomplete#CompleteJS
+setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/home,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -812,7 +812,7 @@ normal! zt
 normal! 0
 wincmd w
 argglobal
-edit app/views/assistits/_edit.html.erb
+edit app/views/layouts/application.html.erb
 let s:cpo_save=&cpo
 set cpo&vim
 nmap <buffer> gf <Plug>RailsTabFind
@@ -896,7 +896,7 @@ set number
 setlocal number
 setlocal numberwidth=4
 setlocal omnifunc=javascriptcomplete#CompleteJS
-setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/assistits,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include,
+setlocal path=.,~/dev/assets,~/dev/assets/app,~/dev/assets/app/models,~/dev/assets/app/controllers,~/dev/assets/app/helpers,~/dev/assets/config,~/dev/assets/lib,~/dev/assets/app/views,~/dev/assets/app/views/application,~/dev/assets/public,~/dev/assets/test,~/dev/assets/test/unit,~/dev/assets/test/functional,~/dev/assets/test/integration,~/dev/assets/spec,~/dev/assets/spec/models,~/dev/assets/spec/controllers,~/dev/assets/spec/helpers,~/dev/assets/spec/views,~/dev/assets/spec/lib,~/dev/assets/spec/requests,~/dev/assets/spec/integration,~/dev/assets/app/*,~/dev/assets/vendor,~/dev/assets/vendor/plugins/*/lib,~/dev/assets/vendor/plugins/*/test,~/dev/assets/vendor/rails/*/lib,~/dev/assets/vendor/rails/*/test,/usr/include,
 setlocal nopreserveindent
 setlocal nopreviewwindow
 setlocal quoteescape=\\
@@ -931,12 +931,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 30 - ((29 * winheight(0) + 28) / 56)
+let s:l = 21 - ((20 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-30
-normal! 026l
+21
+normal! 08l
 wincmd w
 exe '1resize ' . ((&lines * 28 + 29) / 59)
 exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
@@ -1225,9 +1225,9 @@ set nosplitright
 wincmd t
 set winheight=1 winwidth=1
 exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
-exe '2resize ' . ((&lines * 28 + 29) / 59)
+exe '2resize ' . ((&lines * 37 + 29) / 59)
 exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
-exe '3resize ' . ((&lines * 27 + 29) / 59)
+exe '3resize ' . ((&lines * 18 + 29) / 59)
 exe 'vert 3resize ' . ((&columns * 78 + 78) / 157)
 argglobal
 let s:cpo_save=&cpo
@@ -1348,12 +1348,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 43 - ((42 * winheight(0) + 28) / 56)
+let s:l = 1 - ((0 * winheight(0) + 28) / 56)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-43
-normal! 04l
+1
+normal! 09l
 wincmd w
 argglobal
 edit app/assets/javascripts/assistits.js
@@ -1475,12 +1475,12 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 144 - ((14 * winheight(0) + 14) / 28)
+let s:l = 134 - ((28 * winheight(0) + 18) / 37)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-144
-normal! 010l
+134
+normal! 015l
 wincmd w
 argglobal
 edit app/assets/javascripts/historials.js
@@ -1602,17 +1602,18 @@ set nowrap
 setlocal nowrap
 setlocal wrapmargin=0
 silent! normal! zE
-let s:l = 17 - ((16 * winheight(0) + 13) / 27)
+let s:l = 7 - ((6 * winheight(0) + 9) / 18)
 if s:l < 1 | let s:l = 1 | endif
 exe s:l
 normal! zt
-17
-normal! 038l
+7
+normal! 02l
 wincmd w
+2wincmd w
 exe 'vert 1resize ' . ((&columns * 78 + 78) / 157)
-exe '2resize ' . ((&lines * 28 + 29) / 59)
+exe '2resize ' . ((&lines * 37 + 29) / 59)
 exe 'vert 2resize ' . ((&columns * 78 + 78) / 157)
-exe '3resize ' . ((&lines * 27 + 29) / 59)
+exe '3resize ' . ((&lines * 18 + 29) / 59)
 exe 'vert 3resize ' . ((&columns * 78 + 78) / 157)
 tabedit config/routes.rb
 set splitbelow splitright
@@ -1745,6 +1746,7 @@ exe s:l
 normal! zt
 33
 normal! 04l
+2wincmd w
 tabnext 4
 if exists('s:wipebuf')
   silent exe 'bwipe ' . s:wipebuf

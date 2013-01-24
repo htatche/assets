@@ -104,7 +104,7 @@ function Assistit(tab, frmView) {
     tab.getContent('/assistit/' + assistitId, 'assistit');
   };
 
-  _this.showErrorsTemplate = function() {
+  _this.showErrorsTemplate = function(data) {
     _.templateSettings.variable = "rc";
 
      var errors   = jQuery.parseJSON(data.responseText),
@@ -135,7 +135,7 @@ function Assistit(tab, frmView) {
       data: _this.htmlDiv.find('form').serialize(),
 
       success: function(data) {  _this.reload(); },
-      error:   _this.showErrorsTemplate()
+      error:   function(data) { _this.showErrorsTemplate(data); }
     });
 
   };
@@ -155,7 +155,7 @@ function Assistit(tab, frmView) {
                  tab.consulta.editDialog.dialog('close');
                  tab.consulta.search();
                },
-      error:  _this.showErrorsTemplate()
+      error:   function(data) { _this.showErrorsTemplate(data); }
     });
 
   };

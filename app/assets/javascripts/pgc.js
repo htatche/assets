@@ -1,4 +1,4 @@
-function Pgc (tab, el) {
+function Pgc (tab) {
   var _this = this;
 
   var source
@@ -9,6 +9,11 @@ function Pgc (tab, el) {
       ,bAddCompte
       ,bEdit
       ,bRemove 
+
+  var moduleName = 'pgcs',
+      htmlDiv    = tab.htmlDiv.find('div.' + moduleName);
+
+  _this.htmlDiv = htmlDiv;
 
   _this.cleanFormErrorState = function(frm) {
     frm.find("div.validation-error")
@@ -129,7 +134,7 @@ function Pgc (tab, el) {
     });
 
     /* Create jqxExpander */
-    el.jqxExpander({ showArrow: false, toggleMode: 'none' });
+    _this.htmlDiv.jqxExpander({ showArrow: false, toggleMode: 'none' });
 
     /* Load jqxTree for PGC */
     $("#pgcTreeLoading").show();

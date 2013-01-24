@@ -12,13 +12,22 @@
   <div id="appContainer">
 		<div id="appTabs">
       <ul>
+        <% if @current_user %>
+          <li class='start' hasclosebutton='false'>
+            <a href='#tabMenu'> <%= @current_user.nom %> </a>
+          </li>
+        <% end %>
         <li class='start' hasclosebutton='false'>
           <a href='#tabMenu'> Inici </a>
         </li>
       </ul>
+        <% if @current_user %>
+          <div>
+            Hola ! 
+          </div>
+        <% end %>
         <div>
-          <%#= yield %>
-          <%= render :partial => '/home/home' %>
+          <%= yield %>
         </div>
 	  </div>
 	</div>
