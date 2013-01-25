@@ -37,12 +37,4 @@ class Pgc < ActiveRecord::Base
     end
   end
 
-  ## Codi no utilitzat
-  def self.json_tree(nodes)
-    nodes.map do |node, sub_nodes|
-          {:name => node.pgcdes, :id => node.id, :children => json_tree(sub_nodes).compact}
-    end
-  end
-  ##
-
 end

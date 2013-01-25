@@ -17,20 +17,6 @@ $(document).ready(function () {
       });
     }
   });
-  /*
-  $('#numCompte').keypress(function(evt) {
-    if (evt.which == 0) {
-      $.ajax({
-        url: '/assentaments/tbNumCompte_fill',
-        data: 'numCompte='+$(this).val(),
-        success: function(data) {
-          $('#numCompte').val(data["compte"]);
-          $('#frmErrors').html(data["frmErrors"]);
-        }
-      });
-    }
-  });
-  */
 
   $('#dataApunt').datepicker();
 });
