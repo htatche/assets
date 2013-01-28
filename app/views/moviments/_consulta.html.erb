@@ -1,0 +1,91 @@
+<div class='consulta'>
+  <div> <h3> Consulta de assentaments </h3> </div>
+  <div> 
+
+    <%= form_tag '/moviments/search',
+                 {:remote => true} do |f| %>
+      <%= hidden_field_tag :mnukey, @mnukey %>
+
+      <div class='errors'>
+      </div>
+
+      <div class='notice'>
+      </div>
+
+      <fieldset class='filtre'>
+        <legend> Filtrar </legend>
+        <hr>
+        <div class='container'>
+          <div class='p1'>
+            <ol>
+              <li>
+                <label>Consulta </label>
+                <%= select_tag 'tipusConsulta',
+                    options_from_collection_for_select(@consultes,
+                                                       'id',
+                                                       'opcdes'),
+                    {:tabindex => 1} %> 
+              </li>
+              <li>
+                <label>Client </label>
+                <%= select_tag 'client',
+                    options_for_select([['Tots', 'all']]) + 
+                    options_from_collection_for_select(@comptes,
+                                                       'id',
+                                                       'ctfullname')
+                %> 
+              </li>
+            </ol>
+            
+          </div>
+          <div class='p2'>
+            <ol>
+              <li>
+                <label> Periode </label>
+                  <%= radio_button_tag 'dateMode',
+                        'period',
+                        true %>
+
+                  Des de
+                  <%= text_field_tag :dateFrom,
+                        1.week.ago.strftime('%d/%m/%Y').to_s,
+                        {:id => 'dateFrom'} %>
+                  Fins
+                  <%= text_field_tag :dateTo,
+                        Date.today.strftime('%d/%m/%Y'),
+                        {:id => 'dateTo'} %>
+              </li>
+              <li>
+                <label> </label>
+                  <%= radio_button_tag 'dateMode',
+                        'predefined',
+                        true,
+                        {:style => 'float: left;'}
+                  %>
+
+                  <%= select_tag 'date',
+                        '<option value="last_month"> Últim mes </option>
+                         <option value="last_3_months"> Últims 3 mesos </option>
+                         <option value="last_6_months"> Últims 6 mesos </option>
+                         <option value="last_year"> Últim any </option>'.html_safe
+                  %>
+              </li>
+            </ol>
+
+          </div>
+          <div class='p3'>
+            <%= submit_tag('Buscar') %>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class='results'>
+        <legend> Resultats </legend>
+        <hr>
+          <div id='histgrid'>
+
+          </div>
+      </fieldset>
+    <% end %>
+
+  </div>
+</div>
