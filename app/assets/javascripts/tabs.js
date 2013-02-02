@@ -20,6 +20,10 @@ function Tab (tabIndex) {
         _this.pgc = new Pgc(_this);
         _this.pgc.fire();
         break;
+      case 'assentament':
+        _this.assentament = new AssentamentForm(_this);
+        _this.assentament.fire();
+        break;
     }
   }
 

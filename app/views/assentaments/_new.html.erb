@@ -1,0 +1,69 @@
+<div class='assentament'>
+  <div> <h3> Entrada d'assentaments </h3> </div>
+  <div> 
+    <%= form_tag '/assentaments',
+                 {:remote => true} do |f| %>
+
+      <fieldset class='dades-assentament'>
+        <legend> Dades assentament </legend>
+        <hr>
+        <div class='container'>
+          <div class='p1'>
+            <label>Nº Assentament</label>
+            <%= text_field_tag :numass, '' %>
+          </div>
+          <div class='p2'>
+            <label>Comentari general</label>
+            <%= text_field_tag :cttext, '' %>
+          </div>
+        </div>
+      </fieldset>
+
+      <fieldset class='dades-apunt'>
+        <legend> Dades apunt </legend>
+        <hr>
+        <div>
+          <div class='up'>
+            <div class='container'>
+              <div class='compte'>
+                <label>Nº Compte</label>
+                <%= text_field_tag :ctcte, '' %>
+              </div>
+              <div class='descripcio'>
+                <label>Descripció compte</label>
+                <%= text_field_tag :ctdesc, '' %>
+              </div>
+              <div class='deure'>
+                <label>Deure</label>
+                <%= text_field_tag :deure, '' %>
+              </div>
+              <div class='haver'>
+                <label>Haver</label>
+                <%= text_field_tag :haver, '' %>
+              </div>
+            </div>
+          </div>
+          <div class='down'>
+            <div class='container'>
+              <div class='data-apunt'>
+                <label>Data</label>
+                <%= text_field_tag :data_apunt, '' %>
+              </div>
+              <div class='com-apunt'>
+                <label>Comentari de l'apunt</label>
+                <%= text_field_tag :com_apunt, '' %>
+              </div>
+                <div class="add-apunt ui-state-default ui-corner-all">
+                  <span class='ui-icon ui-icon-plusthick'></span>
+                </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <%= submit_tag('Guardar') %>
+      <button type='reset' class='reset'> Netejar  </button>
+
+    <% end %>
+  </div>
+</div>

@@ -2,6 +2,12 @@ class AssentamentsController < ApplicationController
   
   respond_to :html, :json
 
+  def new
+    render :partial => 'assentaments/new',
+           :locals => {}
+
+  end
+
   def fillCtcteInput
     @input = Compte.autoCompleteCtcte(params[:numCompte])
     @compte = Compte.find_by_ctcte(@input)

@@ -1,33 +1,126 @@
-h3 {
-  display: inline-block;
-  margin: 0px;
+div.assentament {
+  margin-top: 10px;
 }
 
-fieldset {
-  overflow: hidden;
-  width: 400px;
-  border: 1px solid gray;
-  margin: 4px;
+div.assentament h3 {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #333;
 }
 
-label {
-  clear: both;
-  float: left;
-  padding-right: 10px;
-  width: 120px;
+div.assentament form {
+  margin: 10px 0 0 5px;
 }
 
-#submitButton {
-  margin: 5px;
-  width: 80px;
-  float: left;;
+div.assentament form fieldset {
+  width: auto;
+  border: 0;
 }
 
-#nou_assentament {
+div.assentament form fieldset.dades-assentament {
   margin-bottom: 10px;
 }
 
-#frmErrors {
-  color: red;
-  margin: 5px;
+div.assentament fieldset div.container {
+  float: left;
+  clear: none; 
+  width: 100%;
+}
+div.assentament fieldset.dades-assentament div.p1 {
+  float: left;
+  width: 120px;
+  text-align: center;
+}
+
+div.assentament fieldset.dades-assentament div.p2 {
+  float: left;
+  width: 500px;
+  margin: 0px 0 0 20px;
+}
+
+div.assentament form fieldset.dades-assentament div.p1 label,
+div.assentament form fieldset.dades-assentament div.p2 label {
+  display: block;
+  margin-bottom: 10px;
+}
+div.assentament form fieldset.dades-assentament div.p1 input[name=numass] {
+  float: none;
+  width: 100px;
+  height: 40px;
+  background-color: #FAFFBD;
+  text-align: center;
+  font-size: 24px;
+}
+
+div.assentament form fieldset.dades-assentament div.p2 input[name=cttext] {
+  width: 100%;
+  margin-top: 10px;
+}
+
+div.assentament fieldset.dades-apunt div {
+  float: left;
+  margin-right: 20px;
+}
+div.assentament fieldset.dades-apunt div.compte {
+  width: 120px;
+}
+
+div.assentament fieldset.dades-apunt div.descripcio {
+  width: 400px;
+}
+
+div.assentament fieldset.dades-apunt div.deure {
+  width: 100px;
+}
+
+div.assentament fieldset.dades-apunt div.haver {
+  width: 100px;
+}
+
+div.assentament fieldset.dades-apunt div.data-apunt {
+  width: 120px;
+}
+
+div.assentament fieldset.dades-apunt div.com-apunt {
+  width: 400px;
+}
+
+div.assentament fieldset.dades-apunt div.add-apunt {
+  padding: 5px;
+  margin: 17px 0 0 20px;
+}
+
+div.assentament form fieldset legend {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+div.assentament form fieldset ol {
+  padding: 0;
+}
+div.assentament form fieldset ol li {
+  line-height: 30px;
+  list-style: none;
+  margin-bottom: 2px;
+}
+
+div.assistit form fieldset label {
+  clear: both;
+  width: 150px;
+  float: left;
+  padding-bottom: 10px;
+  color: #333
+}
+
+div.assentament form fieldset input:not([type=submit]),
+div.assentament form fieldset select {
+  float: left;
+  width: 100%;
+  border: 1px solid #aaa;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  outline: none;
+  padding: 5px;
 }

@@ -142,3 +142,10 @@ form div.notice {
 div.ui-datepicker{
   font-size:10px;
 }
+
+/* jqwidgets */
+
+div.jqx-expander div.jqx-expander-header-content h3 {
+  display: inline-block;
+  margin: 0;
+}

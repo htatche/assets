@@ -1,29 +1,27 @@
-<div class="tab-container">
-  <div class='menu'>
-    <div class='jqx-menu'>
-      <ul>
-        <li> Menu
-          <ul>
-            <% menuOptions.each{ |i| %>
-              <% unless i.opcmodul == 'consulta' %>
-                <li id='<%= i.opcmodul %>'><%= i.opcdes %></li>
-              <% end %>
-            <% } %>
-          </ul>
-        </li>
-        <li> Consultes
-          <ul>
-            <% menuOptions.each{ |i| %>
-              <% if i.opcmodul == 'consulta' %>
-                <li id='consulta/<%= i.id %>'><%= i.opcdes %></li>
-              <% end %>
-            <% } %>
-          </ul>
-        </li>
-      </ul>
-    </div>
+<div class='menu'>
+  <div class='jqx-menu'>
+    <ul>
+      <li> Menu
+        <ul>
+          <% menuOptions.each{ |i| %>
+            <% unless i.opcmodul == 'consulta' %>
+              <li id='<%= i.opcmodul %>'><%= i.opcdes %></li>
+            <% end %>
+          <% } %>
+        </ul>
+      </li>
+      <li> Consultes
+        <ul>
+          <% menuOptions.each{ |i| %>
+            <% if i.opcmodul == 'consulta' %>
+              <li id='consulta/<%= i.id %>'><%= i.opcdes %></li>
+            <% end %>
+          <% } %>
+        </ul>
+      </li>
+    </ul>
   </div>
+</div>
 
-  <div class='content'>
-  </div>
+<div class='content'>
 </div>

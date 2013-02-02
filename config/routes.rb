@@ -18,7 +18,7 @@ Mc::Application.routes.draw do
   get 'comptes/delete'
   resources :comptes
 
-  get 'assentaments/grid'
+  #get 'assentaments/grid'
   get 'assentaments/fillCtcteInput'
   resources :assentaments
 

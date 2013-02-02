@@ -1,3 +1,4 @@
+/*
 $(document).ready(function () {
   $("#nou_assentament").jqxExpander({ showArrow: false, toggleMode: 'none' });
 
@@ -20,3 +21,18 @@ $(document).ready(function () {
 
   $('#dataApunt').datepicker();
 });
+
+*/
+
+function AssentamentForm (tab) {
+  var _this = this;
+
+  var moduleName = 'assentament',
+      htmlDiv    = tab.htmlDiv.find('div.' + moduleName);
+
+
+  _this.fire = function() {
+    htmlDiv.jqxExpander({ showArrow: false, toggleMode: 'none' });
+  };
+
+}

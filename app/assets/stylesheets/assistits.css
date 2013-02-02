@@ -79,6 +79,7 @@ div.assistit form fieldset.main div.numeric input {
 }
 
 div.assistit form fieldset label {
+  clear: both;
   width: 150px;
   float: left;
   padding-bottom: 10px;
