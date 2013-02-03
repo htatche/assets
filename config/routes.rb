@@ -16,6 +16,7 @@ Mc::Application.routes.draw do
   resources :pgcs
 
   get 'comptes/delete'
+  get 'comptes/exists'
   resources :comptes
 
   #get 'assentaments/grid'

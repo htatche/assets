@@ -3,8 +3,10 @@ class AssentamentsController < ApplicationController
   respond_to :html, :json
 
   def new
+    newNumass = Moviment.getNewNumass
+
     render :partial => 'assentaments/new',
-           :locals => {}
+           :locals => {:newNumAss => newNumass}
 
   end
 

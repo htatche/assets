@@ -44,10 +44,25 @@ $(document).ready(function() {
     numeric.show();
     input.remove();
   };
+  
+  isInteger = function(n) {
+    return n===+n && n===(n|0);
+  };
+
+  isFloat = function(n) {
+    return n===+n && n!==(n|0);
+  };
 
   isNumber = function(n) {
-    return ((n===+n && n===(n|0)) || (n===+n && n!==(n|0)))
-    //return typeof n === 'number';
-  }
+    return isInteger(n) || isFloat(n);
+  };
 
+  currentDate = function() {
+    var today = new Date(),
+        day = today.getDate(),
+        month = today.getMonth() + 1,
+        year = today.getFullYear();
+
+    return day + '/' + month + '/' + year;
+  };
 });

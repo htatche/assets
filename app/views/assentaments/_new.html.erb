@@ -56,7 +56,6 @@ Verifica els seguents errors: <BR/>
   <fieldset class='dades-apunt' id='editApunt'>
     <legend> Modificar apunt nº {{index}} </legend>
     <hr>
-    <div class='errors'> </div>
     <div>
       <div class='up'>
         <div class='container'>
@@ -111,7 +110,7 @@ Verifica els seguents errors: <BR/>
         <div class='container'>
           <div class='p1'>
             <label>Nº Assentament</label>
-            <%= text_field_tag :numass, '' %>
+            <%= text_field_tag :numass, newNumAss %>
           </div>
           <div class='p2'>
             <label>Comentari general</label>

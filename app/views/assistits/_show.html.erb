@@ -1,19 +1,17 @@
-<div class="tab-container">
-  <div class='menu'>
-    <div class='jqx-menu'>
-      <ul>
-        <li> Assistits
-          <ul>
-            <% menuOptions.each{ |i| %>
-              <li id='assistit/<%= i.id %>'><%= i.opcdes %></li>
-            <% } %>
-          </ul>
-        </li>
-        <li id='consulta/<%= @mnukey %>'> Consulta </li>
-      </ul>
-    </div>
+<div class='menu'>
+  <div class='jqx-menu'>
+    <ul>
+      <li> Assistits
+        <ul>
+          <% menuOptions.each{ |i| %>
+            <li id='assistit/<%= i.id %>'><%= i.opcdes %></li>
+          <% } %>
+        </ul>
+      </li>
+      <li id='consulta/<%= @mnukey %>'> Consulta </li>
+    </ul>
   </div>
+</div>
 
-  <div class='content'>
-  </div>
+<div class='content'>
 </div>

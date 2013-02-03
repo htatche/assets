@@ -111,7 +111,8 @@ div.assistit form fieldset select {
   padding: 5px;
 }
 
-div.assistit form input[type=submit], button[type=reset] {
+div.assistit form input[type=submit],
+div.assistit form button[type=reset] {
   float: right;
   width: auto;
   margin: 10px;

@@ -132,3 +132,11 @@ div.assentament form fieldset select {
   outline: none;
   padding: 5px;
 }
+
+div.assentament form input[type=submit],
+div.assentament form button[type=reset] {
+  float: right;
+  width: auto;
+  margin: 10px;
+  font-size: 2em;
+}

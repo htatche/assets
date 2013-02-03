@@ -37,18 +37,18 @@ function AssentamentForm (tab) {
 
     var dataAdapter = new $.jqx.dataAdapter(gridSource);
     var grid = _this.htmlGrid.jqxGrid({
-      width: '900px',
+      width: '100%',
       source: dataAdapter,
       theme: theme,
       sortable: true,
       pageable: true,
       columns: [
-        { text: 'Data', datafield: 'data_apunt', width: 100 },
+        { text: 'Data', datafield: 'data', width: 100 },
         { text: 'Compte', datafield: 'ctcte', width: 100 },
-        { text: 'Descripcio', datafield: 'ctdesc', width: 150 },
+        { text: 'Descripcio', datafield: 'ctdesc', width: 250 },
         { text: 'Deure', datafield: 'deure', width: 100, cellsformat: 'C' },
         { text: 'Haver', datafield: 'haver', width: 100, cellsformat: 'C' },
-        { text: 'Comentari', datafield: 'com_apunt', width: 250 }
+        { text: 'Comentari', datafield: 'com', width: 310 }
       ]
       });
 
@@ -111,6 +111,10 @@ function ApuntForm(tab) {
         }
       });
     });
+
+    /* Default data */
+
+    _this.htmlDiv.find('input[name=data_apunt]').val(currentDate());
 
     /* Bindings */
 
@@ -208,20 +212,32 @@ function ApuntForm(tab) {
         ctdesc: 'Descripcio compte',
         deure: 'Deure',
         haver: 'Haver',
-        deure_haver: 'Deure / Haver'
+        deure_haver: 'Deure / Haver',
+        data: 'Data'
       },
 
       lit: {
         blank: 'No pot estar buit',
-        numeric: 'No es valor numeric'
+        numeric: 'No es valor numeric',
+        exist: 'No existeix'
       }
     };
   
-    if (apunt.ctcte == '')
+    /* Compte */
+
+    if (apunt.ctcte == '') {
       errors.push({
         field: apuntError.field.ctcte,
         lit:   apuntError.lit.blank
       });
+    } else {
+      if (!isInteger(parseInt(apunt.ctcte)))
+        errors.push({
+          field: apuntError.field.ctcte,
+          lit:   apuntError.lit.numeric
+        });
+    }
+
     if (apunt.ctdesc == '')
       errors.push({
         field: apuntError.field.ctdesc,
@@ -252,6 +268,14 @@ function ApuntForm(tab) {
           lit:   apuntError.lit.numeric
         });
     }
+
+    /* Data */
+
+    if (apunt.data == '')
+      errors.push({
+        field: apuntError.field.data,
+        lit:   apuntError.lit.blank
+      });
 
     if (errors.length > 0) {
       showErrorsTpl(errors);
