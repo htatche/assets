@@ -56,6 +56,10 @@ div.assentament form fieldset.dades-assentament div.p2 input[name=cttext] {
   margin-top: 10px;
 }
 
+div.assentament div.apunt-errors {
+  margin: 0 0 20px 10px;
+}
+
 div.assentament fieldset.dades-apunt div {
   float: left;
   margin-right: 20px;
@@ -84,9 +88,13 @@ div.assentament fieldset.dades-apunt div.com-apunt {
   width: 400px;
 }
 
-div.assentament fieldset.dades-apunt div.add-apunt {
+div.assentament fieldset.dades-apunt div.save-apunt {
   padding: 5px;
-  margin: 17px 0 0 20px;
+  margin: 17px 0 0 0px;
+}
+div.assentament fieldset.dades-apunt div.destroy-apunt {
+  padding: 5px;
+  margin: 17px 0 0 10px;
 }
 
 div.assentament form fieldset legend {

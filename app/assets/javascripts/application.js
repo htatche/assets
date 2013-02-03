@@ -45,4 +45,9 @@ $(document).ready(function() {
     input.remove();
   };
 
+  isNumber = function(n) {
+    return ((n===+n && n===(n|0)) || (n===+n && n!==(n|0)))
+    //return typeof n === 'number';
+  }
+
 });

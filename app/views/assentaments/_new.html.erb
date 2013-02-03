@@ -1,8 +1,109 @@
+<script id="tplApuntErrors" type="text/x-handlebars-template">
+Verifica els seguents errors: <BR/>
+
+<ul class="errors-list">
+  {{#each errors}}
+    <li>{{this.field}}: {{this.lit}}</li>
+  {{/each}}
+</ul>
+</script>
+
+<script id="tplAddApunt" type="text/x-handlebars-template">
+  <fieldset class='dades-apunt' id='addApunt'>
+    <legend> Dades apunt </legend>
+    <hr>
+    <div>
+      <div class='up'>
+        <div class='container'>
+          <div class='compte'>
+            <label>Nº Compte</label>
+            <%= text_field_tag :ctcte, '' %>
+          </div>
+          <div class='descripcio'>
+            <label>Descripció compte</label>
+            <%= text_field_tag :ctdesc, '' %>
+          </div>
+          <div class='deure'>
+            <label>Deure</label>
+            <%= text_field_tag :deure, '' %>
+          </div>
+          <div class='haver'>
+            <label>Haver</label>
+            <%= text_field_tag :haver, '' %>
+          </div>
+        </div>
+      </div>
+      <div class='down'>
+        <div class='container'>
+          <div class='data-apunt'>
+            <label>Data</label>
+            <%= text_field_tag :data_apunt, '' %>
+          </div>
+          <div class='com-apunt'>
+            <label>Comentari de l'apunt</label>
+            <%= text_field_tag :com_apunt, '' %>
+          </div>
+            <div class="save-apunt ui-state-default ui-corner-all">
+              <span class='ui-icon ui-icon-plusthick'></span>
+            </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</script>
+
+<script id="tplEditApunt" type="text/x-handlebars-template">
+  <fieldset class='dades-apunt' id='editApunt'>
+    <legend> Modificar apunt nº {{index}} </legend>
+    <hr>
+    <div class='errors'> </div>
+    <div>
+      <div class='up'>
+        <div class='container'>
+          <div class='compte'>
+            <label>Nº Compte</label>
+            <%= text_field_tag :ctcte, '{{ctcte}}' %>
+          </div>
+          <div class='descripcio'>
+            <label>Descripció compte</label>
+            <%= text_field_tag :ctdesc, '{{ctdesc}}' %>
+          </div>
+          <div class='deure'>
+            <label>Deure</label>
+            <%= text_field_tag :deure, '{{deure}}' %>
+          </div>
+          <div class='haver'>
+            <label>Haver</label>
+            <%= text_field_tag :haver, '{{haver}}' %>
+          </div>
+        </div>
+      </div>
+      <div class='down'>
+        <div class='container'>
+          <div class='data-apunt'>
+            <label>Data</label>
+            <%= text_field_tag :data_apunt, '{{data}}' %>
+          </div>
+          <div class='com-apunt'>
+            <label>Comentari de l'apunt</label>
+            <%= text_field_tag :com_apunt, '{{com}}' %>
+          </div>
+          <div class="save-apunt ui-state-default ui-corner-all">
+            <span class='ui-icon ui-icon-check'></span>
+          </div>
+          <div class="destroy-apunt ui-state-default ui-corner-all">
+            <span class='ui-icon ui-icon-minusthick'></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</script>
+
 <div class='assentament'>
   <div> <h3> Entrada d'assentaments </h3> </div>
   <div> 
-    <%= form_tag '/assentaments',
-                 {:remote => true} do |f| %>
+    <%= form_tag '' do |f| %>
 
       <fieldset class='dades-assentament'>
         <legend> Dades assentament </legend>
@@ -19,45 +120,16 @@
         </div>
       </fieldset>
 
-      <fieldset class='dades-apunt'>
-        <legend> Dades apunt </legend>
+      <div class='fieldset-apunt'>
+      </div>
+      <div class='apunt-errors errors ui-state-error ui-corner-all'>
+      </div>
+
+      <fieldset class='grid-apunts'>
+        <legend> Apunts </legend>
         <hr>
-        <div>
-          <div class='up'>
-            <div class='container'>
-              <div class='compte'>
-                <label>Nº Compte</label>
-                <%= text_field_tag :ctcte, '' %>
-              </div>
-              <div class='descripcio'>
-                <label>Descripció compte</label>
-                <%= text_field_tag :ctdesc, '' %>
-              </div>
-              <div class='deure'>
-                <label>Deure</label>
-                <%= text_field_tag :deure, '' %>
-              </div>
-              <div class='haver'>
-                <label>Haver</label>
-                <%= text_field_tag :haver, '' %>
-              </div>
-            </div>
-          </div>
-          <div class='down'>
-            <div class='container'>
-              <div class='data-apunt'>
-                <label>Data</label>
-                <%= text_field_tag :data_apunt, '' %>
-              </div>
-              <div class='com-apunt'>
-                <label>Comentari de l'apunt</label>
-                <%= text_field_tag :com_apunt, '' %>
-              </div>
-                <div class="add-apunt ui-state-default ui-corner-all">
-                  <span class='ui-icon ui-icon-plusthick'></span>
-                </div>
-            </div>
-          </div>
+        <div id='apuntsGrid'>
+
         </div>
       </fieldset>
 

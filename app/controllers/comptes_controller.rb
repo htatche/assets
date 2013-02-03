@@ -95,4 +95,12 @@ class ComptesController < ApplicationController
 
   end
 
+  def exists
+    if Compte.exists?(params[:ctcte])
+      render :json => {:exists => true }
+    else
+      render :json => {:exists => false }
+    end
+  end
+
 end
