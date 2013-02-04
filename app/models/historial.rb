@@ -1,9 +1,9 @@
 class Historial < ActiveRecord::Base
   belongs_to :compte, :foreign_key => 'ctkey'
   with_options :dependent => :destroy do |assoc|
-    has_many :histgens
-    has_many :histimps
-    has_many :histpags
+    assoc.has_many :histgens
+    assoc.has_many :histimps
+    assoc.has_many :histpags
   end
 
   validates :impdoc,

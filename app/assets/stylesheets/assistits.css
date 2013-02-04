@@ -120,6 +120,17 @@ div.assistit form button[type=reset] {
   font-size: 2em;
 }
 
+div.assistit div.col-compte {
+  clear: both;
+}
+div.assistit div.col-compte div.title {
+  float:left;
+  margin-right: 10px;
+}
+div.assistit div.col-compte div#newConcepte {
+  float:left;
+}
+
 div.assistit form fieldset.desglossat td {
   padding-right: 10px;
 }

@@ -70,13 +70,12 @@ class AssistitsController < ApplicationController
 
   def assistit
     @opckey = params[:assistit].to_i
-    @nrow = '0'
 
     @assistit = Menudet.find(@opckey)
     @frmLabels = Menulit.getFormLabels(@opckey)
 
     @grups_condition = buscarGrupComptable(@opckey)
-    @comptes_desti = Compte.where(@grups_condition)
+    comptesDesti = Compte.where(@grups_condition)
 
     if @assistit.opcfrm == 'frm_p3_alta'
       brain = Brain.find_by_brakey(@assistit.brakey)
@@ -89,6 +88,7 @@ class AssistitsController < ApplicationController
     render :partial => 'assistits/new',
            :locals => {:frmLabels => @frmLabels,
                        :opckey => @opckey.to_s,
+                       :comptesDesti => comptesDesti,
                        :comptesImpostos => comptesImpostos,
                        :comptesPagaments => comptesPagaments}
 

@@ -1,24 +1,21 @@
 <tr>
   <td>
-    <%= select_tag 'apunt['+@nrow+'][compte]',
-          options_from_collection_for_select(@comptes_desti,
+    <%= select_tag "apunt[#{nrow}][compte]",
+          options_from_collection_for_select(comptesDesti,
                                              'ctcte',
                                              'ctfullname'),
           {:class => 'compte'} %> 
   </td>
   <td>
-    <div id='newConcepte' class='ui-state-default ui-corner-all'>
-      <span class='ui-icon ui-icon-plusthick'></span>
-    </div>
   </td>
   <td>
-    <%= text_field_tag 'apunt['+@nrow+'][import]',
+    <%= text_field_tag "apunt[#{nrow}][import]",
                        '',
                        {:class => 'import'} %> 
     <div class='numeric'> </div>
   </td>
   <td>
-    <%= text_field_tag 'apunt['+@nrow+'][comment]',
+    <%= text_field_tag "apunt[#{nrow}][comment]",
                        '',
                        {:class => 'comment'} %> 
   </td>
