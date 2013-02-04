@@ -40,7 +40,11 @@ function Tab (tabIndex) {
   _this.loadMenu = function() {
     menu = _this.htmlDiv.find('.jqx-menu');
 
-    menu.jqxMenu({ width: 'auto'});
+    menu.jqxMenu({
+      width: 'auto',
+      animationShowDuration: 0,
+      animationHideDuration: 0
+    });
 
     menu.bind('itemclick', function(event) {
       var route = $(event.args).attr('id');

@@ -11,6 +11,7 @@ Mc::Application.routes.draw do
 
   match 'pgcs/new/:id' => 'pgcs#new'
   get 'pgcs/tree'
+  match 'pgcs/tree/:subgrup' => 'pgcs#tree'
   get 'pgcs/delete'
   get 'pgcs/getTreeItemCategory'
   resources :pgcs
@@ -31,6 +32,7 @@ Mc::Application.routes.draw do
   match 'assistits/getAssentament' => 'assistits#getAssentament'
   match 'assistits/getImpost' => 'assistits#getImpost'
   match 'assistits/getPagament' => 'assistits#getPagament'
+  match 'assistits/newConcepte/:mnukey' => 'assistits#newConcepte'
   get 'assistits/:option' => 'assistits#show'
   match 'assistits/:consultaId/edit/:id' => 'assistits#edit'
   match 'assistit/:assistit' => 'assistits#assistit'

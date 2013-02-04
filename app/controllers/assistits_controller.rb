@@ -215,4 +215,13 @@ class AssistitsController < ApplicationController
            :locals  => {:nrow => nrow,
                         :comptesPagaments => comptesPagaments}
   end
+
+  def newConcepte
+    mnukey = params[:mnukey]
+    brakey = Menudet.find(mnukey).brakey
+    subgrup = Brain.find_by_brakey(brakey).brades
+
+    render :partial => 'assistits/newconcepte',
+           :locals  => {:subgrup => subgrup}
+  end
 end

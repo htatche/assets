@@ -50,6 +50,7 @@ div.consulta form ol li {
 }
 
 div.consulta form label {
+  clear: both;
   width: 80px;
   float: left;
   padding-bottom: 10px;

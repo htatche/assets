@@ -109,17 +109,25 @@ class PgcsController < ApplicationController
     # No utilitzem directament un Pgc.select("id, parent_id, pgcdes")
     # perque com que fem servir el gem Ancestry, si demanem el parent_id
     # a través del ActiveRecord ens retorna NULL. Cal fer aquest pas:
-    @categories = Pgc.where("pgccla = 1").all
+
+    if params[:subgrup]
+      subgrup = params[:subgrup].to_i
+
+      @categories = Pgc.where("pgccla = ? AND pgccte LIKE '?%'", 1, subgrup)
+      @comptes = Compte.where("ctcte LIKE '?%'", subgrup)
+    else
+      @categories = Pgc.where("pgccla = ?", '1')
+      @comptes = Compte.all
+    end
+
     @categories_list = @categories.map do |c| {
       :id => c.id, :parent_id => c.parent_id, :pgcdes => "<span name='grup'>" + c.pgccte.to_s + " - " + c.pgcdes + "</span>" }
     end
-
-    @comptes = Compte.all
     @comptes_list = @comptes.map do |c| {
       :id => c.ctcte, :parent_id => c.pgc_id, :pgcdes => "<span name='compte'>" + c.ctcte.to_s + " - " + c.ctdesc + "</span>" }
     end
 
-    # Unify both arrays for to consolidate the PGC tree
+    # Merge arrays to build the PGC tree
     @categories_list += @comptes_list
 
     render :json => @categories_list.to_json

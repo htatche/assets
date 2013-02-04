@@ -23,11 +23,42 @@ function AssentamentForm (tab) {
 
   var apunt = new ApuntForm(tab);
 
+  var create = function() {
+
+    var reqType = 'POST',
+        reqUrl  = '/assentaments';
+
+    var cttext = _this.htmlDiv.find('input[name=cttext]').val();
+    var data = {
+      cttext: cttext,
+      apunts: assentament
+    }
+
+    $.ajax({
+      url:  reqUrl,
+      type: reqType,
+      data: data,
+
+      success: function(data) {  },
+      error:   function(data) { }
+    });
+
+  };
+
+  var submit = function() {
+    create();
+  }
+
   var setBindings = function() {
     _this.htmlGrid.bind('rowdoubleclick', function (e) {
       var rowIndex = e.args.rowindex;
 
       apunt.editForm(rowIndex);
+    });
+
+    _this.htmlDiv.find('form').submit(function() {
+      submit();
+      return false;
     });
   };
 

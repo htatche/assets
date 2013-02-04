@@ -1,4 +1,11 @@
-function Pgc (tab) {
+/* PGC module 
+   
+   params:
+    tab (parent tab widget)
+    subgrup (subgrup root) Optional
+*/
+
+function Pgc (tab, subgrup) {
   var _this = this;
 
   var source
@@ -9,6 +16,7 @@ function Pgc (tab) {
       ,bAddCompte
       ,bEdit
       ,bRemove 
+      ,treeRoute = '/pgcs/tree'
 
   var moduleName = 'pgcs',
       htmlDiv    = tab.htmlDiv.find('div.' + moduleName);
@@ -112,6 +120,9 @@ function Pgc (tab) {
     bEdit = $('#bEditItemFromTree');
     bRemove = $('#bRemoveFromTree');
 
+    if (subgrup)
+      treeRoute = treeRoute+'/'+subgrup;
+
     source =
     {
       datatype: "json",
@@ -120,18 +131,32 @@ function Pgc (tab) {
           { name: 'parent_id' },
           { name: 'pgcdes' }
       ],
-      url: '/pgcs/tree',
+      url: treeRoute,
     };
-    dataAdapter = new $.jqx.dataAdapter(source, { loadComplete: function() {
-      var records = dataAdapter.getRecordsHierarchy('id', 'parent_id', 'items', [{ name: 'pgcdes', map: 'label'}]);
 
-      pgcTree.jqxTree({ source: records, height: '400px', width: '700px' });
-      pgcTree.jqxTree('selectItem', pgcTree.find('li:first')[0]);
+    dataAdapter = new $.jqx.dataAdapter(
+        source,
+        { loadComplete: function() {
+            var records = dataAdapter.getRecordsHierarchy(
+              'id',
+              'parent_id',
+              'items',
+              [{ name: 'pgcdes', map: 'label'}]
+            );
 
-      $("#pgcTreeLoading").hide();
-      pgcTree.show();
-      }
-    });
+            pgcTree.jqxTree({
+              source: records,
+              height: '400px',
+              width: '700px'
+            });
+
+            pgcTree.jqxTree('selectItem', pgcTree.find('li:first')[0]);
+
+            $("#pgcTreeLoading").hide();
+            pgcTree.show();
+          }
+        }
+    );
 
     /* Create jqxExpander */
     _this.htmlDiv.jqxExpander({ showArrow: false, toggleMode: 'none' });

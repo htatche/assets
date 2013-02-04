@@ -120,7 +120,8 @@ div.assistit form fieldset label {
   color: #333
 }
 
-div.assentament form fieldset input:not([type=submit]),
+div.assentament form fieldset.dades-assentament input:not([type=submit]),
+div.assentament form fieldset.dades-apunt input:not([type=submit]),
 div.assentament form fieldset select {
   float: left;
   width: 100%;

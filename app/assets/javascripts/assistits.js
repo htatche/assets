@@ -52,7 +52,7 @@ function Assistit(tab, frmView) {
 
   _this.getComptes = function() {
     $.get('/getComptes',
-          {opckey: assistitId},
+          {mnukey: assistitId},
           function(data) {
             combobox = _this.htmlDiv.find('div.ctcte-combobox').jqxComboBox({
               source: data,
@@ -243,13 +243,13 @@ function Assistit(tab, frmView) {
     _this.htmlDiv.find('div.numeric').find('input').attr({tabindex: '5',
                                                name: 'import'});
 
-    _this.assentament = new Assentament(_this.htmlDiv);
+    _this.assentament = new Assentament(tab, _this.htmlDiv);
     _this.getComptes();
   };
   
 }
 
-function Assentament(parentHtmlDiv) {
+function Assentament(tab, parentHtmlDiv) {
   var _this = this;
   assistitId = parentHtmlDiv.attr('id');
 
@@ -284,10 +284,42 @@ function Assentament(parentHtmlDiv) {
                        '28px');
       });
     });
+
     parentHtmlDiv.find('fieldset:not(.main)').each(function() {
       _this.bindKeydown($(this));
     });
 
+    parentHtmlDiv.find('div#newConcepte').click(function() {
+      var tag = jQuery('<div/>', {
+                  id: 'newconcepteDialog',
+                  class: 'newconcepteDialog',
+                  title: 'Crear un nou concepte' });
+      $.ajax({
+        url: '/assistits/newConcepte/'+assistitId,
+        success: function(data) {
+
+          _this.editDialog = tag.html(data).dialog({
+            autoOpen: false,
+            height: "auto",
+            width: "auto",
+            autoResize:true,
+            resizable: false,
+            modal: true,
+            close: function() {
+              $(this).remove();
+              delete tab.pgc;
+            },
+            open: function( event, ui ) {
+              var subgrup = tag.find('div.pgcs').attr('id');
+
+              tab.pgc = new Pgc(tab, subgrup);
+              tab.pgc.fire();
+            }
+          }).dialog('open');
+        }
+      });
+      
+    });
   };
 
   _this.nrows = function(fieldset) {

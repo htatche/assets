@@ -52,6 +52,7 @@
 }
 
 .sign-form fieldset label {
+  clear: both;
   width: 150px;
   float: left;
   padding-bottom: 10px;

@@ -43,11 +43,14 @@
   width: 340px;
 }
 .pgcDialog fieldset label {
+  clear: both;
+  float: left;
   padding-bottom: 10px;
   padding-top: 5px;
 }
 
 .pgcDialog input {
+  float: right;
   width: 200px;
 }
 .pgcDialog input[type="submit"] {

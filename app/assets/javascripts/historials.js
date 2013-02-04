@@ -143,8 +143,6 @@ function Consulta (tab, el) {
             tab.assistit.fire();
           }
         }).dialog('open');
-
-
       }
     });
   };

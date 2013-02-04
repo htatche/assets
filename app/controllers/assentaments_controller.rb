@@ -10,6 +10,14 @@ class AssentamentsController < ApplicationController
 
   end
 
+  def create
+    logger.debug params[:cttext].inspect
+
+    params[:apunts].each { |apunt|
+      logger.debug apunt.inspect
+    }
+  end
+
   def fillCtcteInput
     @input = Compte.autoCompleteCtcte(params[:numCompte])
     @compte = Compte.find_by_ctcte(@input)
