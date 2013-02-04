@@ -160,6 +160,52 @@ function Assistit(tab, frmView) {
 
   };
 
+  var _delete = function() {
+    var tpl = Handlebars.compile($('#tplDeleteAssentament').html()),
+        div = jQuery(
+                '<div/>',
+                {
+                  id: 'dialog',
+                  class: 'dialog',
+                  title: 'Eliminar assentament'
+                }
+              );
+
+    div.html(tpl()).dialog({
+      autoOpen: false,
+      height: "auto",
+      width: "auto",
+      autoResize:true,
+      resizable: false,
+      modal: true,
+      buttons:
+      {
+        "Eliminar": function() {
+          destroy($(this));
+        },
+        "Cancelar": function() {
+          $(this).dialog('close');
+        }
+      }    
+    }).dialog('open');
+  }
+
+  var destroy = function(dialog) {
+    var reqType = 'DELETE',
+        id      = _this.htmlDiv.find('input[name="id"]').val(),
+        reqUrl  = '/assistits/'+id;
+
+    $.ajax({
+      url:  reqUrl,
+      type: reqType,
+      success: function(data) {
+        dialog.dialog('close');
+        tab.consulta.editDialog.dialog('close');
+        tab.consulta.search();
+      }
+    });
+  };
+
   _this.submit = function() {
 
     _this.htmlDiv.find('form div.errors')
@@ -206,8 +252,6 @@ function Assistit(tab, frmView) {
                               'div.ctcte-combobox');
         }
       });
-
-
     });
 
     _this.htmlDiv.find('input[name=comment]').blur(function() {
@@ -228,9 +272,11 @@ function Assistit(tab, frmView) {
 
     _this.htmlDiv.find('form').submit(function() {
       _this.submit();
-      
-      /* Cancel primary submit action (.preventDefault()) */
       return false;
+    });
+
+    _this.htmlDiv.find('button.delete').click(function() {
+      _delete();  
     });
   };
 
@@ -290,37 +336,40 @@ function Assentament(tab, parentHtmlDiv) {
     });
 
     parentHtmlDiv.find('div#newConcepte').click(function() {
-      var tag = jQuery('<div/>', {
-                  id: 'newconcepteDialog',
-                  class: 'newconcepteDialog',
-                  title: 'Crear un nou concepte' });
-      $.ajax({
-        url: '/assistits/newConcepte/'+assistitId,
-        success: function(data) {
-
-          _this.editDialog = tag.html(data).dialog({
-            autoOpen: false,
-            height: "auto",
-            width: "auto",
-            autoResize:true,
-            resizable: false,
-            modal: true,
-            close: function() {
-              $(this).remove();
-              delete tab.pgc;
-            },
-            open: function( event, ui ) {
-              var subgrup = tag.find('div.pgcs').attr('id');
-
-              tab.pgc = new Pgc(tab, subgrup);
-              tab.pgc.fire();
-            }
-          }).dialog('open');
-        }
-      });
-      
+      _this.newConcepte();
     });
   };
+
+  _this.newConcepte = function() {
+    var tag = jQuery('<div/>', {
+                id: 'newconcepteDialog',
+                class: 'newconcepteDialog',
+                title: 'Crear un nou concepte' });
+    $.ajax({
+      url: '/assistits/newConcepte/'+assistitId,
+      success: function(data) {
+
+        _this.editDialog = tag.html(data).dialog({
+          autoOpen: false,
+          height: "auto",
+          width: "auto",
+          autoResize:true,
+          resizable: false,
+          modal: true,
+          close: function() {
+            $(this).remove();
+            delete tab.pgc;
+          },
+          open: function( event, ui ) {
+            var subgrup = tag.find('div.pgcs').attr('id');
+
+            tab.pgc = new Pgc(tab, subgrup);
+            tab.pgc.fire();
+          }
+        }).dialog('open');
+      }
+    });
+  }
 
   _this.nrows = function(fieldset) {
     return fieldset.find('table>tbody>tr').length;

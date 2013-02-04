@@ -15,7 +15,6 @@ class AssistitsController < ApplicationController
   end
 
   def create
-
     opckey = params[:opckey]
     lits = Menulit.find_by_opckey(opckey)
     menudet = Menudet.find(opckey)
@@ -34,7 +33,16 @@ class AssistitsController < ApplicationController
 
       render :text => 'ok'
     end
+  end
 
+  def destroy
+    historial = Historial.find(params[:id])
+
+    if historial.destroy
+      render :json => historial, :status => :ok
+    else
+      render :status => :internal_server_error
+    end
   end
 
   def update

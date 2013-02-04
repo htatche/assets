@@ -112,6 +112,7 @@ div.assistit form fieldset select {
 }
 
 div.assistit form input[type=submit],
+div.assistit form button.delete,
 div.assistit form button[type=reset] {
   float: right;
   width: auto;
