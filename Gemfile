@@ -11,6 +11,12 @@ gem 'activerecord-postgresql-adapter'
 gem 'apartment'
 gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'mail'
+gem 'sass-rails',   '~> 3.1.5'
+gem 'coffee-rails', '~> 3.1.1'
+gem 'uglifier', '>= 1.0.3'
+gem 'therubyracer'
+gem 'jquery-ui-rails'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -28,12 +34,6 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.1.5'
-  gem 'coffee-rails', '~> 3.1.1'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'therubyracer'
-  gem 'jquery-ui-rails'
-  gem 'jquery-rails'
 end
 
 # Use unicorn as the web server
