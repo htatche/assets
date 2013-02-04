@@ -1,8 +1,17 @@
+div.pgcs {
+  margin-top: 10px;
+}
+
+div.pgcs h3 {
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+  color: #333;
+}
+
 /* PGC Tree */
 
 #pgcTreeContainer {
   width: 720px;
-  margin: 10px 0 0 15px;
+  margin: 10px 0 10px 15px;
 }
 #pgcTreeLoading {
   display: none;

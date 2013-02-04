@@ -146,7 +146,7 @@ function Pgc (tab, subgrup) {
 
             pgcTree.jqxTree({
               source: records,
-              height: '400px',
+              height: 'auto',
               width: '700px'
             });
 

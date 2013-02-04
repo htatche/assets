@@ -56,7 +56,7 @@ public
   end
 
   def getComptes
-    opckey = params[:opckey]
+    opckey = params[:mnukey]
 
     grup_comptable = Brain.grupOri(opckey)
     @comptes = Compte.select('ctcte, ctdesc')
