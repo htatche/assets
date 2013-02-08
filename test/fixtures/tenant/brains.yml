@@ -1,0 +1,664 @@
+---
+brains_001:
+  id: '1'
+  brakey: '63'
+  bracon: Pagament a la CASS
+  braori: '476'
+  brapor: '1'
+  brades: '57'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_002:
+  id: '2'
+  brakey: '40'
+  bracon: Ingrès a banc
+  braori: '572'
+  brapor: '1'
+  brades: '57'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_003:
+  id: '3'
+  brakey: '41'
+  bracon: Reintegrament de banc
+  braori: '572'
+  brapor: '-1'
+  brades: '57'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_004:
+  id: '4'
+  brakey: '43'
+  bracon: Constitució prèstec a curt termini (< 1 any)
+  braori: '520'
+  brapor: '-1'
+  brades: '57'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_005:
+  id: '5'
+  brakey: '42'
+  bracon: Constitució prèstec a llarg termini (> 1 any)
+  braori: '170'
+  brapor: '-1'
+  brades: '57'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_006:
+  id: '6'
+  brakey: '13'
+  bracon: Passar Client a Client Duptós Cobrament
+  braori: '430'
+  brapor: '-1'
+  brades: '436'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_007:
+  id: '7'
+  brakey: '73'
+  bracon: Amortització Intangible
+  braori: '680'
+  brapor: '1'
+  brades: '280'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_008:
+  id: '8'
+  brakey: '72'
+  bracon: Amortització Material
+  braori: '681'
+  brapor: '1'
+  brades: '281'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_009:
+  id: '9'
+  brakey: '51'
+  bracon: Aportació Socis o Propietaris
+  braori: '118'
+  brapor: '-1'
+  brades: '57'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_010:
+  id: '10'
+  brakey: '70'
+  bracon: Adquisició Immobilitzat Material
+  braori: '41'
+  brapor: '-1'
+  brades: '21'
+  brapde: '1'
+  braimp: '472'
+  braipr: '1'
+  brapag: '57'
+  braipa: '-1'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_011:
+  id: '11'
+  brakey: '71'
+  bracon: Adquisició Immobilitzat Intangible
+  braori: '41'
+  brapor: '-1'
+  brades: '20'
+  brapde: '1'
+  braimp: '472'
+  braipr: '1'
+  brapag: '57'
+  braipa: '-1'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_012:
+  id: '12'
+  brakey: '31'
+  bracon: Pagament Creditor Efectiu o Banc
+  braori: '41'
+  brapor: '1'
+  brades: '57'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_013:
+  id: '13'
+  brakey: '21'
+  bracon: Pagament Proveïdor Efectiu o Banc
+  braori: '40'
+  brapor: '1'
+  brades: '57'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_014:
+  id: '14'
+  brakey: '44'
+  bracon: Pagament quota prèstec
+  braori: '57'
+  brapor: '-1'
+  brades: '520'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_015:
+  id: '15'
+  brakey: '11'
+  bracon: Cobrament Client Efectiu o Banc
+  braori: '430'
+  brapor: '-1'
+  brades: '57'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: COB
+  created_at: 
+  updated_at: 
+brains_016:
+  id: '16'
+  brakey: '20'
+  bracon: Compres
+  braori: '40'
+  brapor: '-1'
+  brades: '60'
+  brapde: '1'
+  braimp: '472'
+  braipr: '1'
+  brapag: '57'
+  braipa: '-1'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_017:
+  id: '17'
+  brakey: '30'
+  bracon: Despeses per altres serveis
+  braori: '41'
+  brapor: '-1'
+  brades: '62'
+  brapde: '1'
+  braimp: '472'
+  braipr: '1'
+  brapag: '57'
+  braipa: '-1'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_018:
+  id: '18'
+  brakey: '45'
+  bracon: Traspàs Prèstec LT a CT
+  braori: '170'
+  brapor: '1'
+  brades: '520'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_019:
+  id: '19'
+  brakey: '92'
+  bracon: Tributs Administracions Públiques
+  braori: '475'
+  brapor: '-1'
+  brades: '63'
+  brapde: '1'
+  braimp: '477'
+  braipr: '-1'
+  brapag: '57'
+  braipa: '-1'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_020:
+  id: '20'
+  brakey: '10'
+  bracon: Vendes
+  braori: '430'
+  brapor: '1'
+  brades: '70'
+  brapde: '-1'
+  braimp: '477'
+  braipr: '-1'
+  brapag: '57'
+  braipa: '1'
+  brareb: ''
+  braire: '0'
+  braini: FRA
+  created_at: 
+  updated_at: 
+brains_021:
+  id: '21'
+  brakey: '14'
+  bracon: Passar Client Duptós Cobrament a Incobrable
+  braori: '436'
+  brapor: '-1'
+  brades: '694'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_022:
+  id: '22'
+  brakey: '15'
+  bracon: Cobrar Incobrables
+  braori: '57'
+  brapor: '1'
+  brades: '794'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_023:
+  id: '23'
+  brakey: '46'
+  bracon: Abonament REMESA / VISA
+  braori: '57'
+  brapor: '-1'
+  brades: '572'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_024:
+  id: '24'
+  brakey: '47'
+  bracon: Càrrec de XECS
+  braori: '57'
+  brapor: '1'
+  brades: '572'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_025:
+  id: '25'
+  brakey: '140'
+  bracon: Pagament de COMISSIONS
+  braori: '572'
+  brapor: '-1'
+  brades: '626'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_026:
+  id: '26'
+  brakey: '141'
+  bracon: Interessos a FAVOR
+  braori: '572'
+  brapor: '1'
+  brades: '769'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_027:
+  id: '27'
+  brakey: '142'
+  bracon: Interessos en CONTRA
+  braori: '572'
+  brapor: '-1'
+  brades: '6623'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_028:
+  id: '28'
+  brakey: '74'
+  bracon: Baixa Immobilitzat Material
+  braori: '21'
+  brapor: '-1'
+  brades: '671'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_029:
+  id: '29'
+  brakey: '81'
+  bracon: Pas 2 Regular EXISTENCIES - FINALS
+  braori: '30'
+  brapor: '1'
+  brades: '61'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_030:
+  id: '30'
+  brakey: '80'
+  bracon: Pas 1 Regular EXISTENCIES - INICIALS
+  braori: '30'
+  brapor: '-1'
+  brades: '61'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_031:
+  id: '31'
+  brakey: '52'
+  bracon: Diners deixats a l´empresa
+  braori: '550'
+  brapor: '-1'
+  brades: '57'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_032:
+  id: '32'
+  brakey: '53'
+  bracon: Diners tornats a tercers
+  braori: '550'
+  brapor: '1'
+  brades: '57'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_033:
+  id: '33'
+  brakey: '91'
+  bracon: Pagament ISI declarat
+  braori: '477'
+  brapor: '1'
+  brades: '57'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_034:
+  id: '34'
+  brakey: '90'
+  bracon: Pagament ISI mòduls
+  braori: '631'
+  brapor: '1'
+  brades: '57'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_035:
+  id: '35'
+  brakey: '50'
+  bracon: Dividends
+  braori: '557'
+  brapor: '1'
+  brades: '57'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_036:
+  id: '36'
+  brakey: '12'
+  bracon: Retorn Rebut Client
+  braori: '43'
+  brapor: '1'
+  brades: '572'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_037:
+  id: '37'
+  brakey: '60'
+  bracon: Meritació SALARI BRUT
+  braori: '465'
+  brapor: '-1'
+  brades: '640'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_038:
+  id: '38'
+  brakey: '61'
+  bracon: CASS Empresa i Retencions
+  braori: '476'
+  brapor: '-1'
+  brades: '642'
+  brapde: '1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 
+brains_039:
+  id: '39'
+  brakey: '62'
+  bracon: Pagament NET NÒMINA
+  braori: '465'
+  brapor: '1'
+  brades: '57'
+  brapde: '-1'
+  braimp: ''
+  braipr: '0'
+  brapag: ''
+  braipa: '0'
+  brareb: ''
+  braire: '0'
+  braini: ''
+  created_at: 
+  updated_at: 

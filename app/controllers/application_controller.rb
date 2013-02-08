@@ -27,7 +27,7 @@ protected
   end
 
   def load_schema
-    #Apartment::Database.switch('muesliinc')
+#Apartment::Database.switch('brossa')
   end
 
 public

@@ -9,3 +9,10 @@ end
 task :cleanusers  => [:environment] do
   User.all.each { |i| i.destroy }
 end
+
+task :createbrossa => [:environment] do
+  Apartment::Database.create('brossa')
+  Apartment::Database.process('brossa') do 
+    Apartment::Database.seed
+  end
+end

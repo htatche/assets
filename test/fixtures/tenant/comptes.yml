@@ -1,0 +1,793 @@
+---
+comptes_001:
+  id: '1'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '10000001'
+  ctdesc: Capital Social
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1003'
+  created_at: 
+  updated_at: '2012-10-29 18:32:51'
+comptes_002:
+  id: '2'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '11400001'
+  ctdesc: Reserves Voluntàries
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1012'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_003:
+  id: '3'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '11800001'
+  ctdesc: Aportacions Socis / Propietaris
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1015'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_004:
+  id: '4'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '12000001'
+  ctdesc: Romanent
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1018'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_005:
+  id: '5'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '12100001'
+  ctdesc: Resultats negatius d´exercicis anteriors
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1019'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_006:
+  id: '6'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '12900001'
+  ctdesc: Resultat de l´exercici
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1020'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_007:
+  id: '7'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '17000001'
+  ctdesc: Préstec LT Banc
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1037'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_008:
+  id: '8'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '21600001'
+  ctdesc: Mobiliari
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1071'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_009:
+  id: '9'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '21700001'
+  ctdesc: Ordinadors
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1072'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_010:
+  id: '10'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '26000001'
+  ctdesc: Fiança lloguer local comercial
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1098'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_011:
+  id: '11'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '41000001'
+  ctdesc: FEDA
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1189'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_012:
+  id: '12'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '41000002'
+  ctdesc: Andorra Telecom
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1189'
+  created_at: 
+  updated_at: '2012-10-29 18:32:52'
+comptes_013:
+  id: '13'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '41000003'
+  ctdesc: G3 ControlDigital (MicroCompta)
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1189'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_014:
+  id: '14'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '41000004'
+  ctdesc: Propietari del local comercial
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1189'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_015:
+  id: '15'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '47200001'
+  ctdesc: ISI suportat
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1217'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_016:
+  id: '16'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '47500001'
+  ctdesc: Andorra Govern
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1219'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_017:
+  id: '17'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '47500002'
+  ctdesc: Comú Parroquia
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1219'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_018:
+  id: '18'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '47600001'
+  ctdesc: ! 'CASS '
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1220'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_019:
+  id: '19'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '47700001'
+  ctdesc: ISI repercutit
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1221'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_020:
+  id: '20'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '52000001'
+  ctdesc: Préstec CT Banc
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1242'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_021:
+  id: '21'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '57000001'
+  ctdesc: Caixa, efectiu
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1281'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_022:
+  id: '22'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '57200001'
+  ctdesc: C/C Banc
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1284'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_023:
+  id: '23'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '57250001'
+  ctdesc: Pòlissa de crèdit CT Banc
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1285'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_024:
+  id: '25'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '62100001'
+  ctdesc: Lloguer local comercial
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1324'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_025:
+  id: '26'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '62200001'
+  ctdesc: Reparació / conservació local comercial
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1325'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_026:
+  id: '27'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '62300001'
+  ctdesc: Serveis d´economistes
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1326'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_027:
+  id: '28'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '62300002'
+  ctdesc: Serveis d´advocats
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1326'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_028:
+  id: '29'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '62400001'
+  ctdesc: Transports de mercaderies venudes
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1327'
+  created_at: 
+  updated_at: '2012-10-29 18:32:53'
+comptes_029:
+  id: '30'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '62400002'
+  ctdesc: Missatgeria
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1327'
+  created_at: 
+  updated_at: '2012-10-29 18:32:54'
+comptes_030:
+  id: '31'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '57200009'
+  ctdesc: Banco Alcalà
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-11 18:58:25'
+  updated_at: '2012-12-11 18:58:25'
+comptes_031:
+  id: '32'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '57200010'
+  ctdesc: Banc d'Escaldes
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-11 19:06:36'
+  updated_at: '2012-12-11 19:06:36'
+comptes_032:
+  id: '33'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '57200111'
+  ctdesc: CACA
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-11 19:07:14'
+  updated_at: '2012-12-11 19:07:14'
+comptes_033:
+  id: '34'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '57208888'
+  ctdesc: HOLA
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-11 19:09:12'
+  updated_at: '2012-12-11 19:09:12'
+comptes_034:
+  id: '35'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '40000001'
+  ctdesc: '1'
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1051'
+  created_at: '2012-12-13 21:24:37'
+  updated_at: '2012-12-13 21:24:37'
+comptes_035:
+  id: '36'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '40000010'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1051'
+  created_at: '2012-12-13 21:43:24'
+  updated_at: '2012-12-13 21:43:24'
+comptes_036:
+  id: '37'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '40000011'
+  ctdesc: Burguer KIng
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1051'
+  created_at: '2012-12-13 21:46:33'
+  updated_at: '2012-12-13 21:46:33'
+comptes_037:
+  id: '38'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '40000012'
+  ctdesc: Pizza Hut
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1051'
+  created_at: '2012-12-13 21:50:55'
+  updated_at: '2012-12-13 21:50:55'
+comptes_038:
+  id: '40'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '40000014'
+  ctdesc: Angelo
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1051'
+  created_at: '2012-12-13 22:44:28'
+  updated_at: '2012-12-13 22:44:28'
+comptes_039:
+  id: '41'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '40000015'
+  ctdesc: ABC
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1051'
+  created_at: '2012-12-14 00:09:30'
+  updated_at: '2012-12-14 00:09:30'
+comptes_040:
+  id: '42'
+  ctemp: '1'
+  ctkey: 
+  ctcte: '40000101'
+  ctdesc: ABC
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1051'
+  created_at: '2012-12-14 00:28:08'
+  updated_at: '2012-12-14 00:28:08'
+comptes_041:
+  id: '43'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000102'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-20 22:44:18'
+  updated_at: '2012-12-20 22:44:18'
+comptes_042:
+  id: '44'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000103'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-20 22:49:16'
+  updated_at: '2012-12-20 22:49:16'
+comptes_043:
+  id: '45'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000104'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-20 22:50:12'
+  updated_at: '2012-12-20 22:50:12'
+comptes_044:
+  id: '46'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000105'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-20 22:50:28'
+  updated_at: '2012-12-20 22:50:28'
+comptes_045:
+  id: '47'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000106'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-20 22:53:13'
+  updated_at: '2012-12-20 22:53:13'
+comptes_046:
+  id: '48'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000107'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-20 22:53:36'
+  updated_at: '2012-12-20 22:53:36'
+comptes_047:
+  id: '49'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000108'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-20 22:54:03'
+  updated_at: '2012-12-20 22:54:03'
+comptes_048:
+  id: '50'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000109'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-20 22:58:06'
+  updated_at: '2012-12-20 22:58:06'
+comptes_049:
+  id: '51'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000110'
+  ctdesc: Burguer KIng
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 02:03:27'
+  updated_at: '2012-12-22 02:03:27'
+comptes_050:
+  id: '52'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000111'
+  ctdesc: Burguer KIng
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 02:06:28'
+  updated_at: '2012-12-22 02:06:28'
+comptes_051:
+  id: '56'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000112'
+  ctdesc: '1'
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 02:18:16'
+  updated_at: '2012-12-22 02:18:16'
+comptes_052:
+  id: '57'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000113'
+  ctdesc: Burguer KIng
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 02:19:23'
+  updated_at: '2012-12-22 02:19:23'
+comptes_053:
+  id: '58'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000114'
+  ctdesc: Burguer KIng
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 02:21:21'
+  updated_at: '2012-12-22 02:21:21'
+comptes_054:
+  id: '61'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000115'
+  ctdesc: '1'
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 02:27:15'
+  updated_at: '2012-12-22 02:27:15'
+comptes_055:
+  id: '62'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000116'
+  ctdesc: Burguer KIng
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 02:29:10'
+  updated_at: '2012-12-22 02:29:10'
+comptes_056:
+  id: '64'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000117'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 02:34:52'
+  updated_at: '2012-12-22 02:34:52'
+comptes_057:
+  id: '65'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000118'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 02:38:24'
+  updated_at: '2012-12-22 02:38:24'
+comptes_058:
+  id: '66'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000119'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 02:39:55'
+  updated_at: '2012-12-22 02:39:55'
+comptes_059:
+  id: '70'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000122'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 08:26:11'
+  updated_at: '2012-12-22 08:26:11'
+comptes_060:
+  id: '71'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000123'
+  ctdesc: Burguer KIng
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 08:46:55'
+  updated_at: '2012-12-22 08:46:55'
+comptes_061:
+  id: '73'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000124'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 09:36:17'
+  updated_at: '2012-12-22 09:36:17'
+comptes_062:
+  id: '88'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000125'
+  ctdesc: Burguer KIng
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 12:32:53'
+  updated_at: '2012-12-22 12:32:53'
+comptes_063:
+  id: '90'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000126'
+  ctdesc: Burguer KIng
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 12:41:29'
+  updated_at: '2012-12-22 12:41:29'
+comptes_064:
+  id: '91'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000127'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 12:45:11'
+  updated_at: '2012-12-22 12:45:11'
+comptes_065:
+  id: '93'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000128'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 12:46:53'
+  updated_at: '2012-12-22 12:46:53'
+comptes_066:
+  id: '94'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000129'
+  ctdesc: Burguer KIng
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 12:48:49'
+  updated_at: '2012-12-22 12:48:49'
+comptes_067:
+  id: '95'
+  ctemp: 
+  ctkey: 
+  ctcte: '40000130'
+  ctdesc: Macdonalds
+  ctdesa: 
+  ctindi: ''
+  pgc_id: '1152'
+  created_at: '2012-12-22 12:52:17'
+  updated_at: '2012-12-22 12:52:17'
+comptes_068:
+  id: '96'
+  ctemp: 
+  ctkey: 
+  ctcte: '10000002'
+  ctdesc: ASD
+  ctdesa: 
+  ctindi: 
+  pgc_id: '1003'
+  created_at: '2013-02-03 15:43:41.340054'
+  updated_at: '2013-02-03 15:43:41.340054'
+comptes_069:
+  id: '97'
+  ctemp: 
+  ctkey: 
+  ctcte: '10000004'
+  ctdesc: ASD2
+  ctdesa: 
+  ctindi: 
+  pgc_id: '1003'
+  created_at: '2013-02-03 15:46:36.370659'
+  updated_at: '2013-02-03 15:46:36.370659'
+comptes_070:
+  id: '98'
+  ctemp: 
+  ctkey: 
+  ctcte: '60000001'
+  ctdesc: Prova - compres
+  ctdesa: 
+  ctindi: 
+  pgc_id: '1271'
+  created_at: '2013-02-04 09:09:00.131728'
+  updated_at: '2013-02-04 09:09:00.131728'
+comptes_071:
+  id: '99'
+  ctemp: 
+  ctkey: 
+  ctcte: '60100001'
+  ctdesc: Prova 2 - Materies primes
+  ctdesa: 
+  ctindi: 
+  pgc_id: '1272'
+  created_at: '2013-02-04 09:23:01.596334'
+  updated_at: '2013-02-04 09:23:01.596334'
+comptes_072:
+  id: '101'
+  ctemp: 
+  ctkey: 
+  ctcte: '60000003'
+  ctdesc: Prova 3
+  ctdesa: 
+  ctindi: 
+  pgc_id: '1271'
+  created_at: '2013-02-04 15:25:40.143039'
+  updated_at: '2013-02-04 15:25:40.143039'

@@ -1,0 +1,31 @@
+---
+histgens_001:
+  id: '63'
+  hislin: '0'
+  ctkey: '98'
+  import: '100'
+  comen: Comentari general
+  created_at: '2013-02-04 15:10:36.498172'
+  updated_at: '2013-02-04 15:10:36.498172'
+  hiskey: 
+  historial_id: '62'
+histgens_002:
+  id: '64'
+  hislin: '1'
+  ctkey: '99'
+  import: '100'
+  comen: Comentari 2
+  created_at: '2013-02-04 15:10:36.501906'
+  updated_at: '2013-02-04 15:10:36.501906'
+  hiskey: 
+  historial_id: '62'
+histgens_003:
+  id: '65'
+  hislin: '0'
+  ctkey: '98'
+  import: '100'
+  comen: Comment
+  created_at: '2013-02-06 02:00:54.678627'
+  updated_at: '2013-02-06 02:00:54.678627'
+  hiskey: 
+  historial_id: '63'

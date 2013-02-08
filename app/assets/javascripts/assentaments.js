@@ -189,7 +189,6 @@ function ApuntForm(tab) {
     );
 
     /* Update events */
-
     _this.htmlDiv.find('fieldset#editApunt div.save-apunt')
                  .click(function() {
                    update(rowIndex);

@@ -4,6 +4,9 @@ ca:
       blank: 'no pot estar buit'
       not_a_number: 'no te un format correcte'
   activerecord:
+    habilitacio:
+      one: 'Habilitacio'
+      other: 'Habilitacions'
     attributes: 
       histgen:
         ctkey: 'Compte'

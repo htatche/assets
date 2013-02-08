@@ -38,6 +38,4 @@ class MovimentsController < ApplicationController
       "Error amb el BRAIN"
     end
   end
-
-  
 end

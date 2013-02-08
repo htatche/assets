@@ -1,10 +1,8 @@
 Mc::Application.routes.draw do
 
   get "empreses/home"
-
   get "empreses/admin"
-
-  get "empreses/auth"
+  resources :empreses
 
   get "assistits/show"
   get "main/index"

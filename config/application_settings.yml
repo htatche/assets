@@ -1,0 +1,14 @@
+# application_settings.yml
+# ========================
+# This file is used to setup an application wide hash that can
+# easily enable or disable specific feature sets. Any settings declared
+# in this YAML file should be directly available in the ApplicationSettings class.
+
+development:
+  api_key: 79b6f3fced5a460300f4a04476f80bb7fca0c3a8
+
+test:
+  api_key: 79b6f3fced5a460300f4a04476f80bb7fca0c3a8
+
+production:
+  api_key: 79b6f3fced5a460300f4a04476f80bb7fca0c3a8

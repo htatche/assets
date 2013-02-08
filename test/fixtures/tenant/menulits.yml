@@ -1,0 +1,2201 @@
+---
+menulits_001:
+  id: '1'
+  opckey: '94'
+  lit1: Traspàs Prèstec LT a CT
+  lit2: Prèstec LT
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: Prèstec CT
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_002:
+  id: '2'
+  opckey: '97'
+  lit1: Abonament REMESA - VISA
+  lit2: COMPTE PONT
+  lit3: Nº Document
+  lit4: Codi compte (10 o 20)
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: Destí operació
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_003:
+  id: '3'
+  opckey: '98'
+  lit1: Consulta Abonaments REMESA - VISA
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_004:
+  id: '4'
+  opckey: '100'
+  lit1: Càrrec de XECS
+  lit2: COMPTE PONT
+  lit3: Nº Document
+  lit4: Codi compte (30)
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: BANC
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_005:
+  id: '5'
+  opckey: '63'
+  lit1: Consulta Pagament Dividends a Compte
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Soci
+  lit5: Data
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_006:
+  id: '6'
+  opckey: '62'
+  lit1: Pag. Dividends a Compte
+  lit2: SOCI / PROPIETARI
+  lit3: Nº Document
+  lit4: Codi Soci
+  lit5: Nom del soci
+  lit6: Data
+  lit7: Import
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Una sola forma
+  lit11: Varies formes
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_007:
+  id: '7'
+  opckey: '103'
+  lit1: Aportació Socis o Propietaris
+  lit2: SOCI / PROPIETARI
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_008:
+  id: '8'
+  opckey: '104'
+  lit1: Consulta Aportacions Socis o Propietaris
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_009:
+  id: '9'
+  opckey: '106'
+  lit1: Diners deixats a l´Empresa
+  lit2: TERCERES PERSONES
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_010:
+  id: '10'
+  opckey: '107'
+  lit1: Consulta Diners deixats a l´Empresa
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_011:
+  id: '11'
+  opckey: '109'
+  lit1: Diners tornats a tercers
+  lit2: TERCERES PERSONES
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_012:
+  id: '12'
+  opckey: '112'
+  lit1: Meritació SALARI BRUT
+  lit2: EMPLEAT
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: DESPESA SALARIAL
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_013:
+  id: '13'
+  opckey: '113'
+  lit1: Consulta Meritació SALARI BRUT
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_014:
+  id: '14'
+  opckey: '115'
+  lit1: CASS Empresa i Retencions
+  lit2: CASS
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: CASS EMPRESA / RETENCIONS
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_015:
+  id: '15'
+  opckey: '116'
+  lit1: Consulta CASS Empresa i Retencions
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_016:
+  id: '16'
+  opckey: '118'
+  lit1: Pagament NET NÒMINA
+  lit2: EMPLEAT
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_017:
+  id: '17'
+  opckey: '119'
+  lit1: Consulta Pagaments NET NÒMINA
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_018:
+  id: '18'
+  opckey: '124'
+  lit1: Adquisició Immob. Material
+  lit2: CREDITOR D´IMMOBILITZAT MATERIAL
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: IMMOBILITZAT MATERIAL
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_019:
+  id: '19'
+  opckey: '127'
+  lit1: Adquisició Immob. Intangible
+  lit2: CREDITOR IMMOBILITZAT INTANGIBLE
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: IMMOBILITZAT INTANGIBLE
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_020:
+  id: '20'
+  opckey: '128'
+  lit1: Consulta Adquisicions Immob. Intangible
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_021:
+  id: '21'
+  opckey: '125'
+  lit1: Consulta Adquis. Immob. Material
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_022:
+  id: '22'
+  opckey: '131'
+  lit1: Consulta Amortitzacions Imm. Material
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_023:
+  id: '23'
+  opckey: '130'
+  lit1: Amortització Imm. Material
+  lit2: DOTACIÓ PER  AMORTITZACIÓ
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: ! 'AMORTITZACIÓ ACUMULADA '
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_024:
+  id: '24'
+  opckey: '133'
+  lit1: Amortitzacions Imm. Intangible
+  lit2: DOTACIÓ PER AMORTITZACIÓ
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: AMORTITZACIÓ ACUMULADA
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_025:
+  id: '25'
+  opckey: '136'
+  lit1: Baixa Immobilitzat Material
+  lit2: IMMOBILITZAT MATERIAL
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: PÈRDUA PER BAIXA D´IMMOBILITZAT
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_026:
+  id: '26'
+  opckey: '137'
+  lit1: Consulta Baixes Immobilitzat Material
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_027:
+  id: '27'
+  opckey: '139'
+  lit1: 1 Regular Exist. INICIALS
+  lit2: EXISTÈNCIES INICIALS
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: VARIACIÓ EXISTÈNCIES
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_028:
+  id: '28'
+  opckey: '140'
+  lit1: Consulta 1 Regularitzacions Exist. INICIALS
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_029:
+  id: '29'
+  opckey: '142'
+  lit1: Pas 2 Reg. Existènc. FINALS
+  lit2: EXISTÈNCIES FINALS
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: VARIACIÓ D´EXISTÈNCIES
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_030:
+  id: '30'
+  opckey: '143'
+  lit1: Consulta 2 Regularització Existènc. FINALS
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_031:
+  id: '31'
+  opckey: '35'
+  lit1: Pagament ISI mòduls
+  lit2: TRIBUT PER ISI MÒDULS
+  lit3: Nº Document
+  lit4: Codi Compte
+  lit5: Descripció Compte
+  lit6: Data pagament
+  lit7: Import ISI
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Pagament creat
+  lit16: Asignar codi automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_032:
+  id: '32'
+  opckey: '34'
+  lit1: Pagament ISI declarat
+  lit2: I.S.I. Repercutit
+  lit3: Nº Document
+  lit4: Codi Compte
+  lit5: Descripció Compte
+  lit6: Data pagament
+  lit7: Import ISI
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Unica
+  lit11: Varies maneres
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Pagament creat
+  lit16: Asignar codi automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_033:
+  id: '33'
+  opckey: '145'
+  lit1: Pagament de COMISSIONS
+  lit2: BANC
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: TIPUS COMISSIONS
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_034:
+  id: '34'
+  opckey: '151'
+  lit1: Interessos en CONTRA
+  lit2: BANC
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: INTERESSOS
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_035:
+  id: '35'
+  opckey: '152'
+  lit1: Consulta Interessos en CONTRA
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_036:
+  id: '36'
+  opckey: '4'
+  lit1: Cobrament factura client
+  lit2: CLIENT
+  lit3: Nº Factura
+  lit4: Codi client
+  lit5: Client
+  lit6: Data cobrament
+  lit7: Import cobrament
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Unica forma
+  lit11: Varies formes
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Cobrament creat
+  lit16: Client nou. Asignar automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_037:
+  id: '37'
+  opckey: '1'
+  lit1: Nova venda
+  lit2: Dades Factura
+  lit3: Nº Factura
+  lit4: Codi client
+  lit5: Client
+  lit6: Data factura
+  lit7: Import factura
+  lit8: Comentari
+  lit9: Destí operació
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Venda Creada
+  lit16: Client nou. Asignar codi automàticament
+  lit17: Crear venda
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_038:
+  id: '38'
+  opckey: '2'
+  lit1: Consulta historial vendes
+  lit2: Nº Factura
+  lit3: Codi client
+  lit4: Client
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import factura
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_039:
+  id: '39'
+  opckey: '3'
+  lit1: Modificar venda
+  lit2: Dades Factura
+  lit3: Nº Factura
+  lit4: Codi Client
+  lit5: Client
+  lit6: Data factura
+  lit7: Import factura
+  lit8: Comentari
+  lit9: Destí operació
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_040:
+  id: '40'
+  opckey: '6'
+  lit1: Modificar cobrament factura
+  lit2: Dades cobrament
+  lit3: Nº Factura
+  lit4: Codi client
+  lit5: Client
+  lit6: Data cobrament
+  lit7: Import cobrament
+  lit8: Comentari
+  lit9: Destí operació
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_041:
+  id: '41'
+  opckey: '7'
+  lit1: Compra a proveïdor
+  lit2: Dades factura
+  lit3: Nº Factura
+  lit4: Codi proveïdor
+  lit5: Proveïdor
+  lit6: Data factura
+  lit7: Import factura
+  lit8: Comentari
+  lit9: Motiu de la compra
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Compra Creada
+  lit16: Proveïdor nou. Asignar codi automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_042:
+  id: '42'
+  opckey: '8'
+  lit1: Consulta compres a proveïdors
+  lit2: Nº Factura
+  lit3: Codi proveïdor
+  lit4: Proveïdor
+  lit5: Data compra
+  lit6: Data entrada
+  lit7: Import compra
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_043:
+  id: '43'
+  opckey: '9'
+  lit1: Modificar compra a proveïdor
+  lit2: Dades compra
+  lit3: Nº Factura
+  lit4: Codi proveïdor
+  lit5: Proveïdor
+  lit6: Data compra
+  lit7: Import compra
+  lit8: Comentari
+  lit9: Compra destinada a
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_044:
+  id: '44'
+  opckey: '12'
+  lit1: Consulta pagaments proveïdors
+  lit2: Nº Factura
+  lit3: Codi proveïdor
+  lit4: Proveïdor
+  lit5: Data pagament
+  lit6: Data entrada
+  lit7: Import pagament
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_045:
+  id: '45'
+  opckey: '13'
+  lit1: Consulta pagaments creditors
+  lit2: Nº Factura
+  lit3: Codi creditor
+  lit4: Creditor
+  lit5: Data pagament
+  lit6: Data entrada
+  lit7: Import pagament
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_046:
+  id: '46'
+  opckey: '14'
+  lit1: Modificar pagament a proveïdor
+  lit2: Dades pagament
+  lit3: Nº Factura
+  lit4: Codi proveïdor
+  lit5: Proveïdor
+  lit6: Data pagament
+  lit7: Import pagament
+  lit8: Comentari
+  lit9: Forma pagametn
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_047:
+  id: '47'
+  opckey: '15'
+  lit1: Modificar pagament a creditor
+  lit2: Dades pagament
+  lit3: Nº Factura
+  lit4: Codi creditor
+  lit5: Creditor
+  lit6: Data pagament
+  lit7: Import pagament
+  lit8: Comentari
+  lit9: Forma pagametn
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_048:
+  id: '48'
+  opckey: '17'
+  lit1: Consulta despeses
+  lit2: Nº Factura
+  lit3: Codi creditor
+  lit4: Creditor
+  lit5: Data despesa
+  lit6: Data entrada
+  lit7: Import despesa
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_049:
+  id: '49'
+  opckey: '5'
+  lit1: Consulta cobraments factures clients
+  lit2: Nº Factura
+  lit3: Codi client
+  lit4: Client
+  lit5: Data cobrament
+  lit6: Data entrada
+  lit7: Import factura
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_050:
+  id: '50'
+  opckey: '10'
+  lit1: Pagament a proveïdor
+  lit2: PROVEÏDOR
+  lit3: Nº Factura
+  lit4: Codi proveïdor
+  lit5: Proveïdor
+  lit6: Data pagament
+  lit7: Import pagament
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Una manera
+  lit11: Varies maneres
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Pagament creat
+  lit16: Proveïdor nou. Asignar codi automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_051:
+  id: '51'
+  opckey: '11'
+  lit1: Pagament a creditors (No proveïdors)
+  lit2: CREDITOR
+  lit3: Nº Factura
+  lit4: Codi creditor
+  lit5: Creditor
+  lit6: Data pagament
+  lit7: Import pagament
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Un sol apunt
+  lit11: Diversos apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Pagament creat
+  lit16: Creditor nou. Asignar codi automàticament.
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_052:
+  id: '52'
+  opckey: '16'
+  lit1: Entrar una despesa
+  lit2: Dades despesa
+  lit3: Nº Factura
+  lit4: Codi creditor
+  lit5: Creditor
+  lit6: Data despesa
+  lit7: Import despesa
+  lit8: Comentari
+  lit9: Tipus despesa
+  lit10: Un sol tipus
+  lit11: Diversos tipus
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_053:
+  id: '53'
+  opckey: '18'
+  lit1: Modificar despesa
+  lit2: Dades despesa
+  lit3: Nº Factura
+  lit4: Codi creditor
+  lit5: Creditor
+  lit6: Data despesa
+  lit7: Import despesa
+  lit8: Comentari
+  lit9: Tipus despesa
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_054:
+  id: '54'
+  opckey: '21'
+  lit1: Consulta ingressos
+  lit2: Nº document
+  lit3: Codi banc
+  lit4: Banc
+  lit5: Data ingrès
+  lit6: Data entrada
+  lit7: Import ingrès
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_055:
+  id: '55'
+  opckey: '22'
+  lit1: Consulta reintegraments
+  lit2: Nº document
+  lit3: Codi banc
+  lit4: Banc
+  lit5: Data reintegrament
+  lit6: Data entrada
+  lit7: Import reintegrament
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_056:
+  id: '56'
+  opckey: '23'
+  lit1: Modificar un ingrès
+  lit2: Dades ingrès
+  lit3: Nº Document
+  lit4: Codi banc
+  lit5: Banc
+  lit6: Data ingrès
+  lit7: Import ingrès
+  lit8: Comentari
+  lit9: Origen ingrès
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_057:
+  id: '57'
+  opckey: '24'
+  lit1: Modificar un reintegrament
+  lit2: Dades reintegrament
+  lit3: Nº Document
+  lit4: Codi banc
+  lit5: Banc
+  lit6: Data reintegro
+  lit7: Import reintegrament
+  lit8: Comentari
+  lit9: Destí reintegrament
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_058:
+  id: '58'
+  opckey: '27'
+  lit1: Pagament quota prèstec
+  lit2: Dades pagament
+  lit3: Nº prèstec
+  lit4: Codi banc
+  lit5: Banc
+  lit6: Data pagament
+  lit7: Import quota
+  lit8: Comentari
+  lit9: Forma pagament
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Quota prèstec creada
+  lit16: Banc nou. Asignar codi automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_059:
+  id: '59'
+  opckey: '19'
+  lit1: Ingrès a banc
+  lit2: BANC
+  lit3: Nº Document
+  lit4: Codi banc
+  lit5: Banc
+  lit6: Data ingrès
+  lit7: Import ingrès
+  lit8: Comentari
+  lit9: EFECTIU / BANC
+  lit10: Des d´1 manera
+  lit11: Varies maneres
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Ingrès creat.
+  lit16: Banc nou. Asignar codi automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_060:
+  id: '60'
+  opckey: '77'
+  lit1: Consulta Prèstecs Constituits LT
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_061:
+  id: '61'
+  opckey: '83'
+  lit1: Consulta Retorn Rebut Client
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_062:
+  id: '62'
+  opckey: '20'
+  lit1: Reintegrament de banc
+  lit2: BANC
+  lit3: Nº Document
+  lit4: Codi banc
+  lit5: Banc
+  lit6: Data reintegro
+  lit7: Import reintegrament
+  lit8: Comentari
+  lit9: EFECTIU / BANC DESTÍ
+  lit10: D´un sol lloc
+  lit11: De varis llocs
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Reintegrament creat.
+  lit16: Banc nou. Asignar codi automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_063:
+  id: '63'
+  opckey: '69'
+  lit1: Pagament Quota Prèstec
+  lit2: BANC
+  lit3: Nº Document
+  lit4: Codi
+  lit5: Compte càrrec
+  lit6: Data pagament
+  lit7: Import pagament
+  lit8: Comentari
+  lit9: CAPITAL AMORTITZAT / INTERESSOS
+  lit10: Un sol banc
+  lit11: Varis bancs+Int.
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment cret
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_064:
+  id: '64'
+  opckey: '70'
+  lit1: Consulta pagaments quotes prèstecs
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte càrrec
+  lit5: Data pagament
+  lit6: Data entrada
+  lit7: Import pagament
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_065:
+  id: '65'
+  opckey: '76'
+  lit1: Constitució Prèstec LT
+  lit2: Prèstec LT
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: BANC
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_066:
+  id: '66'
+  opckey: '79'
+  lit1: Constitució Prèstec a CT
+  lit2: Prèstec CT
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: BANC
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_067:
+  id: '67'
+  opckey: '80'
+  lit1: Consulta Constitucions Prèstecs a CT
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_068:
+  id: '68'
+  opckey: '82'
+  lit1: Retorn Rebut Client
+  lit2: CLIENT
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: BANC / COMISSIONS
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_069:
+  id: '69'
+  opckey: '85'
+  lit1: Passar Client a Duptós Cob.
+  lit2: CLIENT
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: CLIENT DUBTÓS COBRAMENT
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_070:
+  id: '70'
+  opckey: '36'
+  lit1: Consulta ISI declarat
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Administració
+  lit5: Data pagament
+  lit6: Data entrada
+  lit7: Import ISI
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_071:
+  id: '71'
+  opckey: '37'
+  lit1: Modificació ISI declarat
+  lit2: Dades pagament
+  lit3: Nº document
+  lit4: Codi
+  lit5: Administració
+  lit6: Data pagament
+  lit7: Import ISI
+  lit8: Comentari
+  lit9: Forma pagament
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_072:
+  id: '72'
+  opckey: '38'
+  lit1: Consulta ISI mòduls
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Administració
+  lit5: Data pagament
+  lit6: Data entrada
+  lit7: Import ISI
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_073:
+  id: '73'
+  opckey: '39'
+  lit1: Modificació ISI per mòduls
+  lit2: Dades pagament
+  lit3: Nº document
+  lit4: Codi
+  lit5: Administració
+  lit6: Data pagament
+  lit7: Import ISI
+  lit8: Comentari
+  lit9: Forma pagament
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_074:
+  id: '74'
+  opckey: '46'
+  lit1: Consulta de moviments generals
+  lit2: Nº Document
+  lit3: Compte
+  lit4: Descripció
+  lit5: Data pagament
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_075:
+  id: '75'
+  opckey: '53'
+  lit1: Consulta moviments especials
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_076:
+  id: '76'
+  opckey: '64'
+  lit1: Modificació pagament dividend
+  lit2: Dades pagament
+  lit3: Nº Document
+  lit4: Codi Soci
+  lit5: Soci
+  lit6: Data
+  lit7: Import
+  lit8: Comentari
+  lit9: Forma pagament
+  lit10: Una sola forma
+  lit11: Varies maneres
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_077:
+  id: '77'
+  opckey: '65'
+  lit1: Pagament tribut
+  lit2: Dades administració pública
+  lit3: Nº Document
+  lit4: Codi administració
+  lit5: Adm. Pública
+  lit6: Data
+  lit7: Import
+  lit8: Comentari
+  lit9: Tipus tribut
+  lit10: Un sol tribut
+  lit11: Varis tributs
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Tribut entrat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_078:
+  id: '78'
+  opckey: '66'
+  lit1: Consulta pagament tributs
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Administració
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_079:
+  id: '79'
+  opckey: '67'
+  lit1: Modificar tribut
+  lit2: Dades pagament
+  lit3: Nº Document
+  lit4: Codi
+  lit5: Administració
+  lit6: Data
+  lit7: Import
+  lit8: Comentari
+  lit9: Tipus tribut
+  lit10: Un sol tribut
+  lit11: Varis tributs
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: Modificar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_080:
+  id: '80'
+  opckey: '86'
+  lit1: Consulta Clients de dubtós cobrament
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_081:
+  id: '81'
+  opckey: '88'
+  lit1: Pas Client dubtós a Incobrable
+  lit2: CLIENT DUBTÓS
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: DESPESA PER INCOBRABLE
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_082:
+  id: '82'
+  opckey: '91'
+  lit1: Cobrament de Incobrables
+  lit2: BANC / EFECTIU
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: INGRESSOS D´INCOBRABLES
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_083:
+  id: '83'
+  opckey: '92'
+  lit1: Consulta Cobraments de Incobrables
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_084:
+  id: '84'
+  opckey: '121'
+  lit1: Pagament a la CASS
+  lit2: CASS
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: BANC / EFECTIU
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_085:
+  id: '85'
+  opckey: '122'
+  lit1: Consulta Pagaments a la CASS
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_086:
+  id: '86'
+  opckey: '146'
+  lit1: Consulta Pagaments COMISSIONS
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_087:
+  id: '87'
+  opckey: '148'
+  lit1: Interessos a FAVOR
+  lit2: BANC
+  lit3: Nº Document
+  lit4: Codi compte
+  lit5: Descripció compte
+  lit6: Data apunt
+  lit7: Import apunt
+  lit8: Comentari
+  lit9: INTERESSOS
+  lit10: Un sol apunt
+  lit11: Varis apunts
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: Moviment creat
+  lit16: Codi nou. Crear automàticament
+  lit17: Guardar
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 
+menulits_088:
+  id: '88'
+  opckey: '149'
+  lit1: Consulta Interessos a FAVOR
+  lit2: Nº Document
+  lit3: Codi
+  lit4: Compte
+  lit5: Data factura
+  lit6: Data entrada
+  lit7: Import
+  lit8: Moneda
+  lit9: Comentari
+  lit10: ''
+  lit11: ''
+  lit12: ''
+  lit13: ''
+  lit14: ''
+  lit15: ''
+  lit16: ''
+  lit17: ''
+  lit18: ''
+  lit19: ''
+  lit20: ''
+  created_at: 
+  updated_at: 

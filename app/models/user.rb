@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  has_and_belongs_to_many :empresas
+  has_many :empresas, :through => :habilitacions
   attr_accessor :password
   attr_accessible :nom, :cognoms, :username, :email, :password
 
@@ -12,7 +12,8 @@ class User < ActiveRecord::Base
     :presence => true
 
   validates :username,
-    :presence => true
+    :presence => true,
+    :unless => :email
 
   validates :username,
     :uniqueness => true,
@@ -37,6 +38,7 @@ class User < ActiveRecord::Base
     :if => :password
 
   before_create :generate_confirmation_code
+  before_create :generate_password_auto, :unless => :password
   before_save :encrypt_password#, :only => [:create, :update]
   after_save :clear_password#, :only => [:create, :update]
 
@@ -69,6 +71,11 @@ class User < ActiveRecord::Base
 
   def match_password(login_password="")
     encrypted_password == BCrypt::Engine.hash_secret(login_password, salt)
+  end
+
+  def generate_password_auto
+    self.password = Digest::SHA1.hexdigest([email, Time.now, rand].join)[0,6]
+    self.password_confirmation = Digest::SHA1.hexdigest([email, Time.now, rand].join)[0,6]
   end
 
   def generate_confirmation_code

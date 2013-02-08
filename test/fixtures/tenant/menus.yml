@@ -1,0 +1,136 @@
+---
+menus_001:
+  id: '2'
+  mnuord: '10'
+  mnutit: Vendes
+  mnuico: calculator.png
+  mnugrp: '1'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_002:
+  id: '3'
+  mnuord: '20'
+  mnutit: Cobraments Clients
+  mnuico: euro_currency_sign.png
+  mnugrp: '2'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_003:
+  id: '4'
+  mnuord: '30'
+  mnutit: Compres
+  mnuico: address_book.png
+  mnugrp: '1'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_004:
+  id: '5'
+  mnuord: '40'
+  mnutit: Pagaments Proveïdor / Creditor
+  mnuico: address_book.png
+  mnugrp: '2'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_005:
+  id: '6'
+  mnuord: '50'
+  mnutit: Despeses generals
+  mnuico: book.png
+  mnugrp: '1'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_006:
+  id: '7'
+  mnuord: '60'
+  mnutit: Bancs
+  mnuico: database.png
+  mnugrp: '1'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_007:
+  id: '8'
+  mnuord: '70'
+  mnutit: Caixa (Tresoreria)
+  mnuico: address_book.png
+  mnugrp: '2'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_008:
+  id: '9'
+  mnuord: '80'
+  mnutit: Nòmines
+  mnuico: folder.png
+  mnugrp: '1'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_009:
+  id: '10'
+  mnuord: '90'
+  mnutit: Inversions / Amortitzacions
+  mnuico: address_book.png
+  mnugrp: '2'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_010:
+  id: '11'
+  mnuord: '100'
+  mnutit: Existencies
+  mnuico: address_book.png
+  mnugrp: '2'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_011:
+  id: '12'
+  mnuord: '110'
+  mnutit: Impostos
+  mnuico: address_book.png
+  mnugrp: '2'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_012:
+  id: '13'
+  mnuord: '120'
+  mnutit: Llistats
+  mnuico: bar_chart.png
+  mnugrp: '4'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_013:
+  id: '14'
+  mnuord: '130'
+  mnutit: Altres
+  mnuico: address_book.png
+  mnugrp: '3'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_014:
+  id: '15'
+  mnuord: '140'
+  mnutit: Configuració
+  mnuico: magic_wand.png
+  mnugrp: '3'
+  created_at: 
+  updated_at: 
+  route: assistits
+menus_015:
+  id: '1'
+  mnuord: '5'
+  mnutit: Comptabilitat
+  mnuico: address_book.png
+  mnugrp: '3'
+  created_at: 
+  updated_at: 
+  route: comptabilitat

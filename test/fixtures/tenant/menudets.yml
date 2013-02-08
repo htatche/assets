@@ -1,0 +1,2116 @@
+---
+menudets_001:
+  id: '5'
+  mnukey: '3'
+  opcord: '20'
+  opcdes: Consulta cobraments factures
+  opcdbo: Consulta cobros
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '11'
+  pantip: '0'
+  mnusec: '6'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.752771'
+  opcmodul: consulta
+menudets_002:
+  id: '8'
+  mnukey: '4'
+  opcord: '20'
+  opcdes: Consulta compres proveïdors
+  opcdbo: Consulta compra
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '20'
+  pantip: '0'
+  mnusec: '9'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.76355'
+  opcmodul: consulta
+menudets_003:
+  id: '12'
+  mnukey: '5'
+  opcord: '20'
+  opcdes: Consulta pagaments proveïdors
+  opcdbo: Con.Pagos prov
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '21'
+  pantip: '0'
+  mnusec: '14'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.77507'
+  opcmodul: consulta
+menudets_004:
+  id: '17'
+  mnukey: '6'
+  opcord: '20'
+  opcdes: Consulta despeses entrades
+  opcdbo: Con.despeses
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '30'
+  pantip: '0'
+  mnusec: '18'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.797124'
+  opcmodul: consulta
+menudets_005:
+  id: '21'
+  mnukey: '7'
+  opcord: '11'
+  opcdes: Consulta ingressos
+  opcdbo: Con.Ingressos
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '40'
+  pantip: '0'
+  mnusec: '23'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.808367'
+  opcmodul: consulta
+menudets_006:
+  id: '22'
+  mnukey: '7'
+  opcord: '40'
+  opcdes: Consulta Reintegraments
+  opcdbo: Con.Reintegros
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '41'
+  pantip: '0'
+  mnusec: '24'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.819446'
+  opcmodul: consulta
+menudets_007:
+  id: '36'
+  mnukey: '12'
+  opcord: '20'
+  opcdes: Consulta ISI declarat
+  opcdbo: Consulta ISI
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '91'
+  pantip: '0'
+  mnusec: '37'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.830487'
+  opcmodul: consulta
+menudets_008:
+  id: '38'
+  mnukey: '12'
+  opcord: '40'
+  opcdes: Consulta ISI mòduls
+  opcdbo: Consulta ISI m.
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '90'
+  pantip: '0'
+  mnusec: '39'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.841718'
+  opcmodul: consulta
+menudets_009:
+  id: '46'
+  mnukey: '1'
+  opcord: '20'
+  opcdes: Consulta General de moviments
+  opcdbo: Consulta Mov.
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '2'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.852725'
+  opcmodul: consulta
+menudets_010:
+  id: '55'
+  mnukey: '1'
+  opcord: '25'
+  opcdes: Consulta General d´assentaments
+  opcdbo: Assentaments
+  opcfrm: frm_consulta_general_assentaments
+  opcind: '1'
+  opcbot: '1'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.875006'
+  opcmodul: consulta
+menudets_011:
+  id: '63'
+  mnukey: '8'
+  opcord: '20'
+  opcdes: Consulta Dividends a Compte
+  opcdbo: ! 'Consulta '
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '50'
+  pantip: '0'
+  mnusec: '64'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.885808'
+  opcmodul: consulta
+menudets_012:
+  id: '66'
+  mnukey: '12'
+  opcord: '60'
+  opcdes: Consulta pagament tributs
+  opcdbo: Consulta pagame
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '92'
+  pantip: '0'
+  mnusec: '67'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.897109'
+  opcmodul: consulta
+menudets_013:
+  id: '70'
+  mnukey: '7'
+  opcord: '80'
+  opcdes: Consulta Pagaments quota prèstec
+  opcdbo: Consulta Pagame
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '44'
+  pantip: '0'
+  mnusec: '71'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.907869'
+  opcmodul: consulta
+menudets_014:
+  id: '75'
+  mnukey: '1'
+  opcord: '80'
+  opcdes: Consulta Saldos Comptes
+  opcdbo: Saldos Comptes
+  opcfrm: frm_consulta_saldos_comptes
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.919757'
+  opcmodul: consulta
+menudets_015:
+  id: '1'
+  mnukey: '2'
+  opcord: '10'
+  opcdes: Vendes a clients
+  opcdbo: Vendes clients
+  opcfrm: frm_p3_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '10'
+  pantip: '3'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.764282'
+  opcmodul: assistit
+menudets_016:
+  id: '3'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar una venda
+  opcdbo: Modificar venda
+  opcfrm: frm_p3_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '10'
+  pantip: '3'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.795954'
+  opcmodul: assistit
+menudets_017:
+  id: '4'
+  mnukey: '3'
+  opcord: '10'
+  opcdes: Cobrament factura client
+  opcdbo: Cobrar factura
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '11'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.806329'
+  opcmodul: assistit
+menudets_018:
+  id: '6'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar un cobrament
+  opcdbo: Modificar cobro
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '11'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.817528'
+  opcmodul: assistit
+menudets_019:
+  id: '7'
+  mnukey: '4'
+  opcord: '10'
+  opcdes: Compra a proveïdors
+  opcdbo: Compra prov.
+  opcfrm: frm_p3_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '20'
+  pantip: '3'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.828661'
+  opcmodul: assistit
+menudets_020:
+  id: '9'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar una compra
+  opcdbo: Mod. Compra
+  opcfrm: frm_p3_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '20'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.839808'
+  opcmodul: assistit
+menudets_021:
+  id: '10'
+  mnukey: '5'
+  opcord: '10'
+  opcdes: Pagament a proveïdor
+  opcdbo: Pago Proveïdor
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '21'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.850974'
+  opcmodul: assistit
+menudets_022:
+  id: '11'
+  mnukey: '5'
+  opcord: '30'
+  opcdes: Pagament a creditors
+  opcdbo: Pago creditor
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '31'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.862112'
+  opcmodul: assistit
+menudets_023:
+  id: '15'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar pagament creditor
+  opcdbo: Mod.Pagament
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '31'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.884401'
+  opcmodul: assistit
+menudets_024:
+  id: '16'
+  mnukey: '6'
+  opcord: '10'
+  opcdes: Entrar despeses (Lloguer, llum, etc.)
+  opcdbo: Entrar despeses
+  opcfrm: frm_p3_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '30'
+  pantip: '3'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.895576'
+  opcmodul: assistit
+menudets_025:
+  id: '18'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar despesa
+  opcdbo: Mod.despesa
+  opcfrm: frm_p3_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '30'
+  pantip: '3'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.907082'
+  opcmodul: assistit
+menudets_026:
+  id: '19'
+  mnukey: '7'
+  opcord: '10'
+  opcdes: Ingrès a Banc
+  opcdbo: Ingrès a Banc
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '40'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.917797'
+  opcmodul: assistit
+menudets_027:
+  id: '23'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar un ingrès
+  opcdbo: Modi.ingrès
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '40'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.939976'
+  opcmodul: assistit
+menudets_028:
+  id: '24'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar un reintegrament
+  opcdbo: Mod.Reintegro
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '41'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.950941'
+  opcmodul: assistit
+menudets_029:
+  id: '34'
+  mnukey: '12'
+  opcord: '10'
+  opcdes: Pagament ISI declarat
+  opcdbo: Pag. ISI
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '91'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.962107'
+  opcmodul: assistit
+menudets_030:
+  id: '35'
+  mnukey: '12'
+  opcord: '30'
+  opcdes: Pagament ISI mòduls
+  opcdbo: Pag. ISI Mod.
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '90'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.973107'
+  opcmodul: assistit
+menudets_031:
+  id: '37'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació ISI declarat
+  opcdbo: Mod. ISI
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '91'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.984325'
+  opcmodul: assistit
+menudets_032:
+  id: '41'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Configuració Braindet
+  opcdbo: Braindet
+  opcfrm: frm_start_up
+  opcind: '0'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.017648'
+  opcmodul: assistit
+menudets_033:
+  id: '42'
+  mnukey: '13'
+  opcord: '10'
+  opcdes: Llistat de balanç
+  opcdbo: Balanç
+  opcfrm: frm_lst_bal
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.028742'
+  opcmodul: assistit
+menudets_034:
+  id: '43'
+  mnukey: '13'
+  opcord: '20'
+  opcdes: Llistat de diari
+  opcdbo: Llistat diari
+  opcfrm: frm_lst_diari
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.03986'
+  opcmodul: assistit
+menudets_035:
+  id: '44'
+  mnukey: '13'
+  opcord: '30'
+  opcdes: Llistat de major
+  opcdbo: Llistat Major
+  opcfrm: frm_lst_major
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.051107'
+  opcmodul: assistit
+menudets_036:
+  id: '47'
+  mnukey: '1'
+  opcord: '30'
+  opcdes: Comptabilitzar
+  opcdbo: Comptabilitzar
+  opcfrm: frm_comptabilitzar
+  opcind: '0'
+  opcbot: '3'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.073015'
+  opcmodul: assistit
+menudets_037:
+  id: '51'
+  mnukey: '14'
+  opcord: '10'
+  opcdes: Anotacions
+  opcdbo: Anotacions
+  opcfrm: frm_notes
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.084291'
+  opcmodul: assistit
+menudets_038:
+  id: '54'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar moviment especial
+  opcdbo: Modi. Moviment
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '99999'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.106399'
+  opcmodul: assistit
+menudets_039:
+  id: '56'
+  mnukey: '15'
+  opcord: '10'
+  opcdes: Manteniment Menús
+  opcdbo: Mant. Menús
+  opcfrm: frm_mant_menus
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.117696'
+  opcmodul: assistit
+menudets_040:
+  id: '58'
+  mnukey: '15'
+  opcord: '30'
+  opcdes: Manteniment General
+  opcdbo: Mant. Empreses
+  opcfrm: frm_mant_empreses
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.139978'
+  opcmodul: assistit
+menudets_041:
+  id: '59'
+  mnukey: '15'
+  opcord: '40'
+  opcdes: Creació de Comptes per defecte
+  opcdbo: Crear comptes
+  opcfrm: frm_crear_comptes
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.151092'
+  opcmodul: assistit
+menudets_042:
+  id: '60'
+  mnukey: '9'
+  opcord: '10'
+  opcdes: Captura de Nòmines
+  opcdbo: Captura Nòmina
+  opcfrm: frm_excel_nomina
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.162097'
+  opcmodul: assistit
+menudets_043:
+  id: '61'
+  mnukey: '9'
+  opcord: '20'
+  opcdes: Comptes cotització
+  opcdbo: Ctes. cotitza.
+  opcfrm: frm_mant_emp_cte
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.173355'
+  opcmodul: assistit
+menudets_044:
+  id: '62'
+  mnukey: '8'
+  opcord: '10'
+  opcdes: Dividends a Compte
+  opcdbo: Dividends
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '50'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.184408'
+  opcmodul: assistit
+menudets_045:
+  id: '65'
+  mnukey: '12'
+  opcord: '50'
+  opcdes: Pagament tributs
+  opcdbo: Pag. Tributs
+  opcfrm: frm_p3_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '92'
+  pantip: '3'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.206665'
+  opcmodul: assistit
+menudets_046:
+  id: '67'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació pag. tribut
+  opcdbo: Modificació pag
+  opcfrm: frm_p3_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '92'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.21821'
+  opcmodul: assistit
+menudets_047:
+  id: '68'
+  mnukey: '14'
+  opcord: '20'
+  opcdes: Estadístiques
+  opcdbo: Estadística
+  opcfrm: frm_estadis_1
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.228836'
+  opcmodul: assistit
+menudets_048:
+  id: '69'
+  mnukey: '7'
+  opcord: '70'
+  opcdes: Pagament quota prèstec
+  opcdbo: Pag. Quota Pres
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '44'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.240086'
+  opcmodul: assistit
+menudets_049:
+  id: '72'
+  mnukey: '2'
+  opcord: '30'
+  opcdes: Tractar factures importades
+  opcdbo: Factures impor.
+  opcfrm: frm_consulta_factures
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.262383'
+  opcmodul: assistit
+menudets_050:
+  id: '73'
+  mnukey: '2'
+  opcord: '40'
+  opcdes: Manteniment relació impostos
+  opcdbo: Mant.impost fac
+  opcfrm: frm_mant_relimp
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.273425'
+  opcmodul: assistit
+menudets_051:
+  id: '74'
+  mnukey: '1'
+  opcord: '70'
+  opcdes: Renumerar Assentaments
+  opcdbo: Renum Asse.
+  opcfrm: frm_renumerar_ass
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.284564'
+  opcmodul: assistit
+menudets_052:
+  id: '76'
+  mnukey: '7'
+  opcord: '90'
+  opcdes: Constitució Prèstec a Llarg Termini > 1any
+  opcdbo: Prèstec>1any
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '42'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.295684'
+  opcmodul: assistit
+menudets_053:
+  id: '78'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Constitució Prèstec LT
+  opcdbo: Modificació Con
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '42'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.306549'
+  opcmodul: assistit
+menudets_054:
+  id: '40'
+  mnukey: '1'
+  opcord: '10'
+  opcdes: Pla general de comptabilitat
+  opcdbo: PGC
+  opcfrm: frm_pgc
+  opcind: '1'
+  opcbot: '5'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.006553'
+  opcmodul: pgcs
+menudets_055:
+  id: '83'
+  mnukey: '2'
+  opcord: '60'
+  opcdes: Consulta Retorn Rebut Client
+  opcdbo: Consulta Retorn
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '12'
+  pantip: '0'
+  mnusec: '1008'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.952816'
+  opcmodul: consulta
+menudets_056:
+  id: '89'
+  mnukey: '2'
+  opcord: '100'
+  opcdes: Consulta Incobrables
+  opcdbo: Incobrables
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '14'
+  pantip: '0'
+  mnusec: '1005'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.975064'
+  opcmodul: consulta
+menudets_057:
+  id: '92'
+  mnukey: '2'
+  opcord: '120'
+  opcdes: Consulta Cobraments a Incobrables
+  opcdbo: Consulta Cobram
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '15'
+  pantip: '0'
+  mnusec: '1002'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.986411'
+  opcmodul: consulta
+menudets_058:
+  id: '95'
+  mnukey: '7'
+  opcord: '140'
+  opcdes: Consulta Pas Prèstec LT a CT
+  opcdbo: Consulta Pas Pr
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '45'
+  pantip: '0'
+  mnusec: '1005'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.997153'
+  opcmodul: consulta
+menudets_059:
+  id: '98'
+  mnukey: '7'
+  opcord: '160'
+  opcdes: Consulta Abonament REMESA/VISA
+  opcdbo: Consulta Abonam
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '46'
+  pantip: '0'
+  mnusec: '1008'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.008549'
+  opcmodul: consulta
+menudets_060:
+  id: '101'
+  mnukey: '7'
+  opcord: '180'
+  opcdes: Consulta Càrrec de XECS
+  opcdbo: Consulta Càrrec
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '47'
+  pantip: '0'
+  mnusec: '1011'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.019206'
+  opcmodul: consulta
+menudets_061:
+  id: '104'
+  mnukey: '8'
+  opcord: '40'
+  opcdes: Consulta Aportació Socis o Propietaris
+  opcdbo: Consulta Aporta
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '51'
+  pantip: '0'
+  mnusec: '1002'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.030362'
+  opcmodul: consulta
+menudets_062:
+  id: '110'
+  mnukey: '8'
+  opcord: '80'
+  opcdes: Consulta Diners tornats a tercers
+  opcdbo: Consulta Diners
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '53'
+  pantip: '0'
+  mnusec: '1008'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.052888'
+  opcmodul: consulta
+menudets_063:
+  id: '113'
+  mnukey: '9'
+  opcord: '40'
+  opcdes: Consulta Meritació SALARI BRUT
+  opcdbo: Consulta Merita
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '60'
+  pantip: '0'
+  mnusec: '1002'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.064'
+  opcmodul: consulta
+menudets_064:
+  id: '116'
+  mnukey: '9'
+  opcord: '60'
+  opcdes: Consulta CASS Empresa i Retencions
+  opcdbo: Consulta CASS E
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '61'
+  pantip: '0'
+  mnusec: '1005'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.075098'
+  opcmodul: consulta
+menudets_065:
+  id: '119'
+  mnukey: '9'
+  opcord: '80'
+  opcdes: Consulta Pagament NET NÒMINA
+  opcdbo: Consulta Pagame
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '62'
+  pantip: '0'
+  mnusec: '1008'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.086039'
+  opcmodul: consulta
+menudets_066:
+  id: '122'
+  mnukey: '9'
+  opcord: '100'
+  opcdes: Consulta Pagament a la CASS
+  opcdbo: Consulta Pagame
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '63'
+  pantip: '0'
+  mnusec: '1011'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.097481'
+  opcmodul: consulta
+menudets_067:
+  id: '125'
+  mnukey: '10'
+  opcord: '20'
+  opcdes: Consulta Adquisició Immobilitzat Material
+  opcdbo: Consulta Adquis
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '70'
+  pantip: '0'
+  mnusec: '1002'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.108359'
+  opcmodul: consulta
+menudets_068:
+  id: '131'
+  mnukey: '10'
+  opcord: '60'
+  opcdes: Consulta Amortitzacions Imm. Material
+  opcdbo: Consulta Amorti
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '72'
+  pantip: '0'
+  mnusec: '1008'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.130636'
+  opcmodul: consulta
+menudets_069:
+  id: '134'
+  mnukey: '10'
+  opcord: '80'
+  opcdes: Consulta Amortitzacions Imm. Intangible
+  opcdbo: Consulta Amorti
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '73'
+  pantip: '0'
+  mnusec: '1011'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.141701'
+  opcmodul: consulta
+menudets_070:
+  id: '137'
+  mnukey: '10'
+  opcord: '100'
+  opcdes: Consulta Baixa Immobilitzat Material
+  opcdbo: ! 'Consulta Baixa '
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '74'
+  pantip: '0'
+  mnusec: '1014'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.152741'
+  opcmodul: consulta
+menudets_071:
+  id: '79'
+  mnukey: '7'
+  opcord: '110'
+  opcdes: Constitució Prèstec a Curt Termini > 1any
+  opcdbo: Prèstec<1any
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '43'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.317833'
+  opcmodul: assistit
+menudets_072:
+  id: '81'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Constitució Prèstec CT
+  opcdbo: Modificació Con
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '43'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.328908'
+  opcmodul: assistit
+menudets_073:
+  id: '82'
+  mnukey: '2'
+  opcord: '50'
+  opcdes: Retorn Rebut Client
+  opcdbo: Retorn Client
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '12'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.340384'
+  opcmodul: assistit
+menudets_074:
+  id: '84'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Retorn Rebut Client
+  opcdbo: Modificació Ret
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '12'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.351122'
+  opcmodul: assistit
+menudets_075:
+  id: '87'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Passar Client a Client Duptós Cobrament
+  opcdbo: Modificació Pas
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '13'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.373288'
+  opcmodul: assistit
+menudets_076:
+  id: '88'
+  mnukey: '2'
+  opcord: '90'
+  opcdes: Pas Duptós Cobrament a Incobrable
+  opcdbo: Dubtós a Incobr
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '14'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.384303'
+  opcmodul: assistit
+menudets_077:
+  id: '90'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Passar Duptós Cobrament a Incobrable
+  opcdbo: Modificació Pas
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '14'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.395771'
+  opcmodul: assistit
+menudets_078:
+  id: '91'
+  mnukey: '2'
+  opcord: '110'
+  opcdes: Cobrament a Incobrables
+  opcdbo: Cob. a Incob.
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '15'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.406569'
+  opcmodul: assistit
+menudets_079:
+  id: '93'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Cobraments a Incobrables
+  opcdbo: Modificació Cob
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '15'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.418265'
+  opcmodul: assistit
+menudets_080:
+  id: '94'
+  mnukey: '7'
+  opcord: '130'
+  opcdes: Traspàs Prèstec LT a CT
+  opcdbo: Prèstec LT a CT
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '45'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.42925'
+  opcmodul: assistit
+menudets_081:
+  id: '97'
+  mnukey: '7'
+  opcord: '150'
+  opcdes: Abonament REMESA/VISA
+  opcdbo: Abon.REM/VISA
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '46'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.451279'
+  opcmodul: assistit
+menudets_082:
+  id: '99'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Abonament REMESA/VISA
+  opcdbo: Modificació Abo
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '46'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.462444'
+  opcmodul: assistit
+menudets_083:
+  id: '100'
+  mnukey: '7'
+  opcord: '170'
+  opcdes: Càrrec de XECS
+  opcdbo: Càrrec XECS
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '47'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.473472'
+  opcmodul: assistit
+menudets_084:
+  id: '102'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Càrrec de XECS
+  opcdbo: Modificació Càr
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '47'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.484527'
+  opcmodul: assistit
+menudets_085:
+  id: '103'
+  mnukey: '8'
+  opcord: '30'
+  opcdes: Aportació Socis o Propietaris
+  opcdbo: Aportació Socis
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '51'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.495839'
+  opcmodul: assistit
+menudets_086:
+  id: '106'
+  mnukey: '8'
+  opcord: '50'
+  opcdes: Diners deixats a l´Empresa
+  opcdbo: ! 'Diners deixats '
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '52'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.517861'
+  opcmodul: assistit
+menudets_087:
+  id: '108'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Diners deixats a l´Empresa
+  opcdbo: Modificació Din
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '52'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.528853'
+  opcmodul: assistit
+menudets_088:
+  id: '109'
+  mnukey: '8'
+  opcord: '70'
+  opcdes: Diners tornats a tercers
+  opcdbo: Diners tornats
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '53'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.539941'
+  opcmodul: assistit
+menudets_089:
+  id: '111'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Diners tornats a tercers
+  opcdbo: Modificació Din
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '53'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.55127'
+  opcmodul: assistit
+menudets_090:
+  id: '112'
+  mnukey: '9'
+  opcord: '30'
+  opcdes: Meritació SALARI BRUT
+  opcdbo: SALARI BRUT
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '60'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.562283'
+  opcmodul: assistit
+menudets_091:
+  id: '115'
+  mnukey: '9'
+  opcord: '50'
+  opcdes: CASS Empresa i Retencions
+  opcdbo: CASS i Reten.
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '61'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.584345'
+  opcmodul: assistit
+menudets_092:
+  id: '117'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació CASS Empresa i Retencions
+  opcdbo: Modificació CAS
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '61'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.595858'
+  opcmodul: assistit
+menudets_093:
+  id: '118'
+  mnukey: '9'
+  opcord: '70'
+  opcdes: Pagament NET NÒMINA
+  opcdbo: Pag. NET NÒMINA
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '62'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.606547'
+  opcmodul: assistit
+menudets_094:
+  id: '120'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Pagament NET NÒMINA
+  opcdbo: Modificació Pag
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '62'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.617801'
+  opcmodul: assistit
+menudets_095:
+  id: '121'
+  mnukey: '9'
+  opcord: '90'
+  opcdes: Pagament a la CASS
+  opcdbo: Pagament CASS
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '63'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.628934'
+  opcmodul: assistit
+menudets_096:
+  id: '124'
+  mnukey: '10'
+  opcord: '10'
+  opcdes: Adquisició Immobilitzat Material
+  opcdbo: Adq. Imm. Mat.
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '70'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.651123'
+  opcmodul: assistit
+menudets_097:
+  id: '126'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Adquisició Immobilitzat Material
+  opcdbo: Modificació Adq
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '70'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.662393'
+  opcmodul: assistit
+menudets_098:
+  id: '127'
+  mnukey: '10'
+  opcord: '30'
+  opcdes: Adquisició Immob. Intangible
+  opcdbo: Adq. Im. Intang
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '71'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.673506'
+  opcmodul: assistit
+menudets_099:
+  id: '129'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Adquisició Immobilitzat Intangible
+  opcdbo: Modificació Adq
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '71'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.684501'
+  opcmodul: assistit
+menudets_100:
+  id: '130'
+  mnukey: '10'
+  opcord: '50'
+  opcdes: Amortització Imm. Material
+  opcdbo: Amort. Imm. Mat
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '72'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.695735'
+  opcmodul: assistit
+menudets_101:
+  id: '133'
+  mnukey: '10'
+  opcord: '70'
+  opcdes: Amortitzacions Imm. Intangible
+  opcdbo: Amort. Intangib
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '73'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.718048'
+  opcmodul: assistit
+menudets_102:
+  id: '135'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Amortitzacions Imm. Intangible
+  opcdbo: Modificació Amo
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '73'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.737781'
+  opcmodul: assistit
+menudets_103:
+  id: '136'
+  mnukey: '10'
+  opcord: '90'
+  opcdes: Baixa Immobilitzat Material
+  opcdbo: Baixa Imm. Mat.
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '74'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.750874'
+  opcmodul: assistit
+menudets_104:
+  id: '138'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Baixa Immobilitzat Material
+  opcdbo: Modificació Bai
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '74'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.762308'
+  opcmodul: assistit
+menudets_105:
+  id: '139'
+  mnukey: '11'
+  opcord: '10'
+  opcdes: Pas 1 Regular Existències INICIALS
+  opcdbo: 1-Exist.INICIAL
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '80'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.773765'
+  opcmodul: assistit
+menudets_106:
+  id: '2'
+  mnukey: '2'
+  opcord: '20'
+  opcdes: Consulta historial vendes
+  opcdbo: Consulta vendes
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '10'
+  pantip: '0'
+  mnusec: '3'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.583191'
+  opcmodul: consulta
+menudets_107:
+  id: '13'
+  mnukey: '5'
+  opcord: '40'
+  opcdes: Consulta pagaments creditors
+  opcdbo: Con.Pagos cre
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '31'
+  pantip: '0'
+  mnusec: '15'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.785986'
+  opcmodul: consulta
+menudets_108:
+  id: '53'
+  mnukey: '1'
+  opcord: '60'
+  opcdes: Consulta moviments especials
+  opcdbo: Cons. Moviments
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '99999'
+  pantip: '0'
+  mnusec: '54'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.863826'
+  opcmodul: consulta
+menudets_109:
+  id: '77'
+  mnukey: '7'
+  opcord: '100'
+  opcdes: Consulta Constitució Prèstec LT
+  opcdbo: Consulta Consti
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '42'
+  pantip: '0'
+  mnusec: '1002'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.930644'
+  opcmodul: consulta
+menudets_110:
+  id: '80'
+  mnukey: '7'
+  opcord: '120'
+  opcdes: Consulta Constitució Prèstec CT
+  opcdbo: Consulta Consti
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '43'
+  pantip: '0'
+  mnusec: '1005'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.941658'
+  opcmodul: consulta
+menudets_111:
+  id: '86'
+  mnukey: '2'
+  opcord: '80'
+  opcdes: Consulta Clients Duptós Cobrament
+  opcdbo: Consulta Duptós
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '13'
+  pantip: '0'
+  mnusec: '1002'
+  created_at: 
+  updated_at: '2013-01-19 14:03:42.964105'
+  opcmodul: consulta
+menudets_112:
+  id: '107'
+  mnukey: '8'
+  opcord: '60'
+  opcdes: Consulta Diners deixats a l´Empresa
+  opcdbo: Consulta Diners
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '52'
+  pantip: '0'
+  mnusec: '1005'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.041794'
+  opcmodul: consulta
+menudets_113:
+  id: '128'
+  mnukey: '10'
+  opcord: '40'
+  opcdes: Consulta Adquisició Immobilitzat Intangible
+  opcdbo: Consulta Adquis
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '71'
+  pantip: '0'
+  mnusec: '1005'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.119557'
+  opcmodul: consulta
+menudets_114:
+  id: '140'
+  mnukey: '11'
+  opcord: '20'
+  opcdes: Consulta Pas 1 Reg.Existències INICIALS
+  opcdbo: ! 'Consulta Pas 1 '
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '80'
+  pantip: '0'
+  mnusec: '1002'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.164106'
+  opcmodul: consulta
+menudets_115:
+  id: '143'
+  mnukey: '11'
+  opcord: '40'
+  opcdes: Consulta Pas 2 Reg.Existències FINALS
+  opcdbo: ! 'Consulta Pas 2 '
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '81'
+  pantip: '0'
+  mnusec: '1005'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.175171'
+  opcmodul: consulta
+menudets_116:
+  id: '146'
+  mnukey: '7'
+  opcord: '200'
+  opcdes: Consulta Pagament de COMISSIONS
+  opcdbo: Consulta Pagame
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '140'
+  pantip: '0'
+  mnusec: '1002'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.186384'
+  opcmodul: consulta
+menudets_117:
+  id: '149'
+  mnukey: '7'
+  opcord: '220'
+  opcdes: Consulta Interessos a FAVOR
+  opcdbo: Consulta Intere
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '141'
+  pantip: '0'
+  mnusec: '1005'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.197791'
+  opcmodul: consulta
+menudets_118:
+  id: '152'
+  mnukey: '7'
+  opcord: '240'
+  opcdes: Consulta Interessos en CONTRA
+  opcdbo: Consulta Intere
+  opcfrm: frm_consulta_general_historial
+  opcind: '1'
+  opcbot: '0'
+  brakey: '142'
+  pantip: '0'
+  mnusec: '1008'
+  created_at: 
+  updated_at: '2013-01-19 14:03:43.208589'
+  opcmodul: consulta
+menudets_119:
+  id: '14'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar pagament proveïdor
+  opcdbo: Mod.Pagament
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '21'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.872885'
+  opcmodul: assistit
+menudets_120:
+  id: '20'
+  mnukey: '7'
+  opcord: '20'
+  opcdes: Reintegrament de Banc
+  opcdbo: Reintegrament
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '41'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.928842'
+  opcmodul: assistit
+menudets_121:
+  id: '39'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació ISI mòduls
+  opcdbo: Mod. ISI mod.
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '90'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:26.9956'
+  opcmodul: assistit
+menudets_122:
+  id: '45'
+  mnukey: '13'
+  opcord: '40'
+  opcdes: Llistat de configuració de balanç
+  opcdbo: Llistat config.
+  opcfrm: frm_lst_config
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.062232'
+  opcmodul: assistit
+menudets_123:
+  id: '57'
+  mnukey: '15'
+  opcord: '20'
+  opcdes: Moviments comptables
+  opcdbo: Mant. Moviments
+  opcfrm: frm_mant_brain
+  opcind: '1'
+  opcbot: '0'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.128774'
+  opcmodul: assistit
+menudets_124:
+  id: '64'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar pagament dividend
+  opcdbo: Modificar pagam
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '50'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.195209'
+  opcmodul: assistit
+menudets_125:
+  id: '71'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificar pagament quota prèstec
+  opcdbo: Modificar pagam
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '40'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.251183'
+  opcmodul: assistit
+menudets_126:
+  id: '85'
+  mnukey: '2'
+  opcord: '70'
+  opcdes: Passar Client a Duptós Cobrament
+  opcdbo: Client a Duptós
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '13'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.362025'
+  opcmodul: assistit
+menudets_127:
+  id: '96'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Pas Prèstec LT a CT
+  opcdbo: Modificació Pas
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '45'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.440297'
+  opcmodul: assistit
+menudets_128:
+  id: '105'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Aportació Socis o Propietaris
+  opcdbo: Modificació Apo
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '51'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.507047'
+  opcmodul: assistit
+menudets_129:
+  id: '114'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Meritació SALARI BRUT
+  opcdbo: Modificació Mer
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '60'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.573503'
+  opcmodul: assistit
+menudets_130:
+  id: '123'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Pagament a la CASS
+  opcdbo: Modificació Pag
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '63'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.640219'
+  opcmodul: assistit
+menudets_131:
+  id: '132'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Amortitzacions Imm. Material
+  opcdbo: Modificació Amo
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '72'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.706784'
+  opcmodul: assistit
+menudets_132:
+  id: '141'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Pas 1 Reg.Existències INICIALS
+  opcdbo: Modificació Pas
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '80'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.784706'
+  opcmodul: assistit
+menudets_133:
+  id: '142'
+  mnukey: '11'
+  opcord: '30'
+  opcdes: Pas 2 Regular Existències FINALS
+  opcdbo: 2 Exist.FINALS
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '81'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.79572'
+  opcmodul: assistit
+menudets_134:
+  id: '144'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Pas 2 Reg.Existències FINALS
+  opcdbo: Modificació Pas
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '81'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.806917'
+  opcmodul: assistit
+menudets_135:
+  id: '145'
+  mnukey: '7'
+  opcord: '190'
+  opcdes: Pagament de COMISSIONS
+  opcdbo: Pag. Comissions
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '140'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.817993'
+  opcmodul: assistit
+menudets_136:
+  id: '147'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Pagament de COMISSIONS
+  opcdbo: Modificació Pag
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '140'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.829039'
+  opcmodul: assistit
+menudets_137:
+  id: '148'
+  mnukey: '7'
+  opcord: '210'
+  opcdes: Interessos a FAVOR
+  opcdbo: Int. a FAVOR
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '141'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.840182'
+  opcmodul: assistit
+menudets_138:
+  id: '150'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Interessos a FAVOR
+  opcdbo: Modificació Int
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '141'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.851165'
+  opcmodul: assistit
+menudets_139:
+  id: '151'
+  mnukey: '7'
+  opcord: '230'
+  opcdes: Interessos en CONTRA
+  opcdbo: Int. en CONTRA
+  opcfrm: frm_p1_alta
+  opcind: '1'
+  opcbot: '0'
+  brakey: '142'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.862347'
+  opcmodul: assistit
+menudets_140:
+  id: '153'
+  mnukey: '0'
+  opcord: '0'
+  opcdes: Modificació Interessos en CONTRA
+  opcdbo: Modificació Int
+  opcfrm: frm_p1_modi
+  opcind: '0'
+  opcbot: '0'
+  brakey: '142'
+  pantip: '1'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.873513'
+  opcmodul: assistit
+menudets_141:
+  id: '52'
+  mnukey: '1'
+  opcord: '50'
+  opcdes: Entrada d´Assentaments
+  opcdbo: Ent.Assentament
+  opcfrm: frm_entrada_apunts
+  opcind: '1'
+  opcbot: '4'
+  brakey: '0'
+  pantip: '0'
+  mnusec: '0'
+  created_at: 
+  updated_at: '2013-01-19 14:04:27.095456'
+  opcmodul: assentaments/new

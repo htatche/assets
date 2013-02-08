@@ -1,0 +1,39 @@
+---
+historials_001:
+  id: '62'
+  empkey: 
+  brakey: '20'
+  ctkey: '38'
+  numdoc: '1000'
+  datdoc: '2013-02-04'
+  datsis: '2013-02-04'
+  impdoc: '100'
+  comdoc: Comentari general
+  optgen: 
+  optimp: '1'
+  optpag: '1'
+  optreb: '0'
+  indcom: '0'
+  datcom: 
+  ctasse: 
+  created_at: '2013-02-04 15:10:36.434497'
+  updated_at: '2013-02-04 15:10:36.434497'
+historials_002:
+  id: '63'
+  empkey: 
+  brakey: '20'
+  ctkey: '95'
+  numdoc: '1'
+  datdoc: '2013-02-06'
+  datsis: '2013-02-06'
+  impdoc: '100'
+  comdoc: Comment
+  optgen: 
+  optimp: '1'
+  optpag: '1'
+  optreb: '0'
+  indcom: '0'
+  datcom: 
+  ctasse: 
+  created_at: '2013-02-06 02:00:54.613492'
+  updated_at: '2013-02-06 02:00:54.613492'

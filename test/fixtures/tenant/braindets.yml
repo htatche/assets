@@ -1,0 +1,82 @@
+---
+braindets_001:
+  id: '1'
+  brdlin: '10'
+  brdcon: Interessos deutes crèdits
+  brddes: '6623'
+  brdpde: '1'
+  created_at: 
+  updated_at: 
+  brakey: '44'
+braindets_002:
+  id: '2'
+  brdlin: '10'
+  brdcon: Indemnitzacions
+  brddes: '641'
+  brdpde: '1'
+  created_at: 
+  updated_at: 
+  brakey: '60'
+braindets_003:
+  id: '3'
+  brdlin: '20'
+  brdcon: Altres despeses socials
+  brddes: '649'
+  brdpde: '1'
+  created_at: 
+  updated_at: 
+  brakey: '60'
+braindets_004:
+  id: '4'
+  brdlin: '10'
+  brdcon: Retencions
+  brddes: '465'
+  brdpde: '1'
+  created_at: 
+  updated_at: 
+  brakey: '61'
+braindets_005:
+  id: '5'
+  brdlin: '10'
+  brdcon: Comissions
+  brddes: '626'
+  brdpde: '1'
+  created_at: 
+  updated_at: 
+  brakey: '43'
+braindets_006:
+  id: '6'
+  brdlin: '10'
+  brdcon: Comissions
+  brddes: '626'
+  brdpde: '1'
+  created_at: 
+  updated_at: 
+  brakey: '42'
+braindets_007:
+  id: '7'
+  brdlin: '10'
+  brdcon: Comissions
+  brddes: '626'
+  brdpde: '1'
+  created_at: 
+  updated_at: 
+  brakey: '12'
+braindets_008:
+  id: '8'
+  brdlin: '10'
+  brdcon: Comissions
+  brddes: '626'
+  brdpde: '1'
+  created_at: 
+  updated_at: 
+  brakey: '46'
+braindets_009:
+  id: '9'
+  brdlin: '20'
+  brdcon: Interessos
+  brddes: '6653'
+  brdpde: '1'
+  created_at: 
+  updated_at: 
+  brakey: '46'

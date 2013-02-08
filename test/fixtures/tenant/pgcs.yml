@@ -1,0 +1,4716 @@
+---
+pgcs_001:
+  id: '1001'
+  pgccla: '1'
+  pgckey: 
+  parent_id: 
+  pgccte: '1'
+  pgcdes: FINANÇAMENT BÀSIC
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: 
+  ancestry: 
+pgcs_002:
+  id: '1002'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1001'
+  pgccte: '10'
+  pgcdes: CAPITAL
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-23 20:35:04'
+  ancestry: '1001'
+pgcs_003:
+  id: '1003'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1002'
+  pgccte: '100'
+  pgcdes: Capital social
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:05'
+  ancestry: 1001/1002
+pgcs_004:
+  id: '1004'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1002'
+  pgccte: '101'
+  pgcdes: Fons social
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:05'
+  ancestry: 1001/1002
+pgcs_005:
+  id: '1005'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1002'
+  pgccte: '103'
+  pgcdes: Capital
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-11-01 18:52:00'
+  ancestry: 1001/1002
+pgcs_006:
+  id: '1006'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1002'
+  pgccte: '108'
+  pgcdes: Accions o participacions pròpies en situacions especials
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:05'
+  ancestry: 1001/1002
+pgcs_007:
+  id: '1007'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1002'
+  pgccte: '109'
+  pgcdes: Accions o participacions pròpies per reducció de capital
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:05'
+  ancestry: 1001/1002
+pgcs_008:
+  id: '1008'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1001'
+  pgccte: '11'
+  pgcdes: RESERVES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-23 20:35:04'
+  ancestry: '1001'
+pgcs_009:
+  id: '1009'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1008'
+  pgccte: '110'
+  pgcdes: Prima d’emissió
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:05'
+  ancestry: 1001/1008
+pgcs_010:
+  id: '1010'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1008'
+  pgccte: '112'
+  pgcdes: Reserva legal
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:05'
+  ancestry: 1001/1008
+pgcs_011:
+  id: '1011'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1008'
+  pgccte: '113'
+  pgcdes: Reserves estatutàries
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:05'
+  ancestry: 1001/1008
+pgcs_012:
+  id: '1012'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1008'
+  pgccte: '114'
+  pgcdes: Reserves voluntàries
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1008
+pgcs_013:
+  id: '1013'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1008'
+  pgccte: '115'
+  pgcdes: Reserva per accions pròpies
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1008
+pgcs_014:
+  id: '1014'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1008'
+  pgccte: '116'
+  pgcdes: Reserva de revaloració
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1008
+pgcs_015:
+  id: '1015'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1008'
+  pgccte: '118'
+  pgcdes: Aportacions de socis o propietaris
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1008
+pgcs_016:
+  id: '1016'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1008'
+  pgccte: '119'
+  pgcdes: Altres reserves
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1008
+pgcs_017:
+  id: '1017'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1001'
+  pgccte: '12'
+  pgcdes: RESULTATS PENDENTS D’APLICACIÓ
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-23 20:35:04'
+  ancestry: '1001'
+pgcs_018:
+  id: '1018'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1017'
+  pgccte: '120'
+  pgcdes: Romanent
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1017
+pgcs_019:
+  id: '1019'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1017'
+  pgccte: '121'
+  pgcdes: Resultats negatius d’exercicis anteriors
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1017
+pgcs_020:
+  id: '1020'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1017'
+  pgccte: '129'
+  pgcdes: Resultat de l’exercici
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1017
+pgcs_021:
+  id: '1021'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1001'
+  pgccte: '13'
+  pgcdes: SUBVENCIONS I DONACIONS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-23 20:35:04'
+  ancestry: '1001'
+pgcs_022:
+  id: '1022'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1021'
+  pgccte: '130'
+  pgcdes: Subvencions oficials de capital
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1021
+pgcs_023:
+  id: '1023'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1021'
+  pgccte: '131'
+  pgcdes: Donacions i llegats de capital
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1021
+pgcs_024:
+  id: '1024'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1021'
+  pgccte: '132'
+  pgcdes: Altres subvencions, donacions i llegats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1021
+pgcs_025:
+  id: '1025'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1001'
+  pgccte: '14'
+  pgcdes: PROVISIONS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-23 20:35:04'
+  ancestry: '1001'
+pgcs_026:
+  id: '1026'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1025'
+  pgccte: '141'
+  pgcdes: Provisió per tributs
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:06'
+  ancestry: 1001/1025
+pgcs_027:
+  id: '1027'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1025'
+  pgccte: '143'
+  pgcdes: Provisió per desmantellament, retirament o rehabilitació de l’immobilitzat
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1025
+pgcs_028:
+  id: '1028'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1025'
+  pgccte: '145'
+  pgcdes: Provisió per actuacions mediambientals
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1025
+pgcs_029:
+  id: '1029'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1025'
+  pgccte: '146'
+  pgcdes: Provisió per altres responsabilitats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1025
+pgcs_030:
+  id: '1030'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1001'
+  pgccte: '16'
+  pgcdes: DEUTES A LLARG TERMINI AMB PARTS VINCULADES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-23 20:35:04'
+  ancestry: '1001'
+pgcs_031:
+  id: '1031'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1030'
+  pgccte: '160'
+  pgcdes: Deutes a llarg termini amb entitats de crèdit vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1030
+pgcs_032:
+  id: '1032'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1030'
+  pgccte: '161'
+  pgcdes: Proveïdors d’immobilitzat a llarg termini, parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1030
+pgcs_033:
+  id: '1033'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1030'
+  pgccte: '162'
+  pgcdes: Creditors per arrendament financer a llarg termini, parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1030
+pgcs_034:
+  id: '1034'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1030'
+  pgccte: '163'
+  pgcdes: Altres deutes a llarg termini amb parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1030
+pgcs_035:
+  id: '1035'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1001'
+  pgccte: '17'
+  pgcdes: DEUTES A LLARG TERMINI PER PRÉSTECS REBUTS, EMPRÈSTITS I ALTRES CONCEPTES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-23 20:35:04'
+  ancestry: '1001'
+pgcs_036:
+  id: '1036'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1035'
+  pgccte: '170'
+  pgcdes: Deutes a llarg termini amb entitats de crèdit
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1035
+pgcs_037:
+  id: '1037'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1035'
+  pgccte: '171'
+  pgcdes: Deutes a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1035
+pgcs_038:
+  id: '1038'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1035'
+  pgccte: '173'
+  pgcdes: Proveïdors d’immobilitzat a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1035
+pgcs_039:
+  id: '1039'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1035'
+  pgccte: '174'
+  pgcdes: Creditors per arrendament financer a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1035
+pgcs_040:
+  id: '1040'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1035'
+  pgccte: '175'
+  pgcdes: Efectes a pagar a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1035
+pgcs_041:
+  id: '1041'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1035'
+  pgccte: '177'
+  pgcdes: Obligacions i bons
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1035
+pgcs_042:
+  id: '1042'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1035'
+  pgccte: '179'
+  pgcdes: Deutes representats en altres valors negociables
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:07'
+  ancestry: 1001/1035
+pgcs_043:
+  id: '1043'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1001'
+  pgccte: '18'
+  pgcdes: PASSIUS PER FIANCES, GARANTIES I ALTRES CONCEPTES A LLARG TERMINI
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-23 20:35:04'
+  ancestry: '1001'
+pgcs_044:
+  id: '1044'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1043'
+  pgccte: '180'
+  pgcdes: Fiances rebudes a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:08'
+  ancestry: 1001/1043
+pgcs_045:
+  id: '1045'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1043'
+  pgccte: '181'
+  pgcdes: Bestretes rebudes per vendes o prestacions de serveis a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:08'
+  ancestry: 1001/1043
+pgcs_046:
+  id: '1046'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1043'
+  pgccte: '185'
+  pgcdes: Dipòsits rebuts a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:08'
+  ancestry: 1001/1043
+pgcs_047:
+  id: '1047'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1043'
+  pgccte: '189'
+  pgcdes: Garanties financeres a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:08'
+  ancestry: 1001/1043
+pgcs_048:
+  id: '1048'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1001'
+  pgccte: '19'
+  pgcdes: SITUACIONS TRANSITÒRIES DE FINANÇAMENT
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-23 20:35:04'
+  ancestry: '1001'
+pgcs_049:
+  id: '1049'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1048'
+  pgccte: '194'
+  pgcdes: Capital emès pendent d’inscripció al Registre de Societats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-19 20:47:08'
+  ancestry: 1001/1048
+pgcs_050:
+  id: '1050'
+  pgccla: '1'
+  pgckey: 
+  parent_id: 
+  pgccte: '2'
+  pgcdes: ACTIU NO CORRENT
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: 
+  ancestry: 
+pgcs_051:
+  id: '1051'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1050'
+  pgccte: '20'
+  pgcdes: IMMOBILITZAT INTANGIBLE
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:35'
+  ancestry: '1050'
+pgcs_052:
+  id: '1052'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1051'
+  pgccte: '200'
+  pgcdes: Despeses d’establiment
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:35'
+  ancestry: 1050/1051
+pgcs_053:
+  id: '1053'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1051'
+  pgccte: '201'
+  pgcdes: Investigació
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:35'
+  ancestry: 1050/1051
+pgcs_054:
+  id: '1054'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1051'
+  pgccte: '202'
+  pgcdes: Desenvolupament
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:35'
+  ancestry: 1050/1051
+pgcs_055:
+  id: '1055'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1051'
+  pgccte: '203'
+  pgcdes: Concessions administratives
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:35'
+  ancestry: 1050/1051
+pgcs_056:
+  id: '1056'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1051'
+  pgccte: '204'
+  pgcdes: Propietat industrial
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:35'
+  ancestry: 1050/1051
+pgcs_057:
+  id: '1057'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1051'
+  pgccte: '205'
+  pgcdes: Fons de comerç
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:35'
+  ancestry: 1050/1051
+pgcs_058:
+  id: '1058'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1051'
+  pgccte: '206'
+  pgcdes: Drets de traspàs
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:35'
+  ancestry: 1050/1051
+pgcs_059:
+  id: '1059'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1051'
+  pgccte: '207'
+  pgcdes: Aplicacions informàtiques
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1051
+pgcs_060:
+  id: '1060'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1051'
+  pgccte: '208'
+  pgcdes: Altre immobilitzat intangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1051
+pgcs_061:
+  id: '1061'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1051'
+  pgccte: '209'
+  pgcdes: Bestretes per immobilitzat intangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1051
+pgcs_062:
+  id: '1062'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1050'
+  pgccte: '21'
+  pgcdes: IMMOBILITZAT TANGIBLE
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: '1050'
+pgcs_063:
+  id: '1063'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1062'
+  pgccte: '210'
+  pgcdes: Terrenys i béns naturals
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1062
+pgcs_064:
+  id: '1064'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1062'
+  pgccte: '211'
+  pgcdes: Construccions
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1062
+pgcs_065:
+  id: '1065'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1062'
+  pgccte: '212'
+  pgcdes: Instal·lacions tècniques
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1062
+pgcs_066:
+  id: '1066'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1062'
+  pgccte: '213'
+  pgcdes: Maquinària
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1062
+pgcs_067:
+  id: '1067'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1062'
+  pgccte: '214'
+  pgcdes: Utillatge
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1062
+pgcs_068:
+  id: '1068'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1062'
+  pgccte: '215'
+  pgcdes: Altres instal·lacions
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1062
+pgcs_069:
+  id: '1069'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1062'
+  pgccte: '216'
+  pgcdes: Mobiliari
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1062
+pgcs_070:
+  id: '1070'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1062'
+  pgccte: '217'
+  pgcdes: Equips per a processos d’informació
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1062
+pgcs_071:
+  id: '1071'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1062'
+  pgccte: '218'
+  pgcdes: Elements de transport
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:36'
+  ancestry: 1050/1062
+pgcs_072:
+  id: '1072'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1062'
+  pgccte: '219'
+  pgcdes: Altre immobilitzat tangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: 1050/1062
+pgcs_073:
+  id: '1073'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1050'
+  pgccte: '22'
+  pgcdes: INVERSIONS IMMOBILIÀRIES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: '1050'
+pgcs_074:
+  id: '1074'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1073'
+  pgccte: '220'
+  pgcdes: Inversions en terrenys i béns naturals
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: 1050/1073
+pgcs_075:
+  id: '1075'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1073'
+  pgccte: '221'
+  pgcdes: Inversions en construccions
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: 1050/1073
+pgcs_076:
+  id: '1076'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1050'
+  pgccte: '23'
+  pgcdes: IMMOBILITZAT INTANGIBLE EN CURS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: '1050'
+pgcs_077:
+  id: '1077'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1076'
+  pgccte: '230'
+  pgcdes: Adaptació de terrenys i béns naturals
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: 1050/1076
+pgcs_078:
+  id: '1078'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1076'
+  pgccte: '231'
+  pgcdes: Construccions en curs
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: 1050/1076
+pgcs_079:
+  id: '1079'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1076'
+  pgccte: '232'
+  pgcdes: Instal·lacions tècniques en muntatge
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: 1050/1076
+pgcs_080:
+  id: '1080'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1076'
+  pgccte: '233'
+  pgcdes: Maquinària en muntatge
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: 1050/1076
+pgcs_081:
+  id: '1081'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1076'
+  pgccte: '237'
+  pgcdes: Equips per processos d’informació en muntatge
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: 1050/1076
+pgcs_082:
+  id: '1082'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1076'
+  pgccte: '238'
+  pgcdes: Altre immobilitzat tangible en curs
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: 1050/1076
+pgcs_083:
+  id: '1083'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1076'
+  pgccte: '239'
+  pgcdes: Bestretes per immobilitzat tangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:37'
+  ancestry: 1050/1076
+pgcs_084:
+  id: '1084'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1050'
+  pgccte: '24'
+  pgcdes: INVERSIONS FINANCERES A LLARG TERMINI EN PARTS VINCULADES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: '1050'
+pgcs_085:
+  id: '1085'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1084'
+  pgccte: '240'
+  pgcdes: Participacions a llarg termini en parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1084
+pgcs_086:
+  id: '1086'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1084'
+  pgccte: '241'
+  pgcdes: Valors representatius de deute a llarg termini de parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1084
+pgcs_087:
+  id: '1087'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1084'
+  pgccte: '242'
+  pgcdes: Crèdits a llarg termini a parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1084
+pgcs_088:
+  id: '1088'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1050'
+  pgccte: '25'
+  pgcdes: ALTRES INVERSIONS FINANCERES A LLARG TERMINI
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: '1050'
+pgcs_089:
+  id: '1089'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1088'
+  pgccte: '250'
+  pgcdes: Inversions financeres a llarg termini en instruments de patrimoni
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1088
+pgcs_090:
+  id: '1090'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1088'
+  pgccte: '251'
+  pgcdes: Valors representatius de deute a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1088
+pgcs_091:
+  id: '1091'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1088'
+  pgccte: '252'
+  pgcdes: Crèdits a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1088
+pgcs_092:
+  id: '1092'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1088'
+  pgccte: '253'
+  pgcdes: Crèdits a llarg termini per alienació d’immobilitzat
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1088
+pgcs_093:
+  id: '1093'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1088'
+  pgccte: '254'
+  pgcdes: Crèdits a llarg termini al personal
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1088
+pgcs_094:
+  id: '1094'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1088'
+  pgccte: '258'
+  pgcdes: Imposicions a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1088
+pgcs_095:
+  id: '1095'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1050'
+  pgccte: '26'
+  pgcdes: FIANCES I DIPÒSITS CONSTITUÏTS A LLARG TERMINI
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: '1050'
+pgcs_096:
+  id: '1096'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1095'
+  pgccte: '260'
+  pgcdes: Fiances constituïdes a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1095
+pgcs_097:
+  id: '1097'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1095'
+  pgccte: '265'
+  pgcdes: Dipòsits constituïts a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:38'
+  ancestry: 1050/1095
+pgcs_098:
+  id: '1098'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1050'
+  pgccte: '28'
+  pgcdes: AMORTITZACIÓ ACUMULADA DE L’IMMOBILITZAT
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: '1050'
+pgcs_099:
+  id: '1099'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1098'
+  pgccte: '280'
+  pgcdes: Amortització acumulada de l’immobilitzat intangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1098
+pgcs_100:
+  id: '1100'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1098'
+  pgccte: '281'
+  pgcdes: Amortització acumulada de l’immobilitzat tangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1098
+pgcs_101:
+  id: '1101'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1098'
+  pgccte: '282'
+  pgcdes: Amortització acumulada de les inversions immobiliàries
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1098
+pgcs_102:
+  id: '1102'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1050'
+  pgccte: '29'
+  pgcdes: DETERIORAMENT DE VALOR D’ACTIUS NO CORRENTS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: '1050'
+pgcs_103:
+  id: '1103'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1102'
+  pgccte: '290'
+  pgcdes: Deteriorament de valor de l’immobilitzat intangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1102
+pgcs_104:
+  id: '1104'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1102'
+  pgccte: '291'
+  pgcdes: Deteriorament de valor de l’immobilitzat tangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1102
+pgcs_105:
+  id: '1105'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1102'
+  pgccte: '292'
+  pgcdes: Deteriorament de valor de les inversions immobiliàries
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1102
+pgcs_106:
+  id: '1106'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1102'
+  pgccte: '293'
+  pgcdes: Deteriorament de valor de participacions a llarg termini en parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1102
+pgcs_107:
+  id: '1107'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1102'
+  pgccte: '294'
+  pgcdes: Deteriorament de valor de valors representatius de deute a llarg termini
+    de parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1102
+pgcs_108:
+  id: '1108'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1102'
+  pgccte: '295'
+  pgcdes: Deteriorament de valor de crèdits a llarg termini a parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1102
+pgcs_109:
+  id: '1109'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1102'
+  pgccte: '296'
+  pgcdes: Deteriorament de valor de participacions en el patrimoni net a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1102
+pgcs_110:
+  id: '1110'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1102'
+  pgccte: '297'
+  pgcdes: Deteriorament de valor de valors representatius de deute a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:39'
+  ancestry: 1050/1102
+pgcs_111:
+  id: '1111'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1102'
+  pgccte: '298'
+  pgcdes: Deteriorament de valor de crèdits a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:13:40'
+  ancestry: 1050/1102
+pgcs_112:
+  id: '1112'
+  pgccla: '1'
+  pgckey: 
+  parent_id: 
+  pgccte: '3'
+  pgcdes: EXISTÈNCIES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: 
+  ancestry: 
+pgcs_113:
+  id: '1113'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1112'
+  pgccte: '30'
+  pgcdes: COMERCIALS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:41'
+  ancestry: '1112'
+pgcs_114:
+  id: '1114'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1113'
+  pgccte: '300'
+  pgcdes: Mercaderies A
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:41'
+  ancestry: 1112/1113
+pgcs_115:
+  id: '1115'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1113'
+  pgccte: '301'
+  pgcdes: Mercaderies B
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:41'
+  ancestry: 1112/1113
+pgcs_116:
+  id: '1116'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1112'
+  pgccte: '31'
+  pgcdes: MATÈRIES PRIMERES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:41'
+  ancestry: '1112'
+pgcs_117:
+  id: '1117'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1116'
+  pgccte: '310'
+  pgcdes: Matèries primeres A
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:41'
+  ancestry: 1112/1116
+pgcs_118:
+  id: '1118'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1116'
+  pgccte: '311'
+  pgcdes: Matèries primeres B
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:41'
+  ancestry: 1112/1116
+pgcs_119:
+  id: '1119'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1112'
+  pgccte: '32'
+  pgcdes: ALTRES APROVISIONAMENTS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:41'
+  ancestry: '1112'
+pgcs_120:
+  id: '1120'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1119'
+  pgccte: '320'
+  pgcdes: Elements i conjunts incorporables
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:41'
+  ancestry: 1112/1119
+pgcs_121:
+  id: '1121'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1119'
+  pgccte: '321'
+  pgcdes: Combustibles
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:41'
+  ancestry: 1112/1119
+pgcs_122:
+  id: '1122'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1119'
+  pgccte: '322'
+  pgcdes: Recanvis
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:41'
+  ancestry: 1112/1119
+pgcs_123:
+  id: '1123'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1119'
+  pgccte: '325'
+  pgcdes: Materials diversos
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: 1112/1119
+pgcs_124:
+  id: '1124'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1119'
+  pgccte: '326'
+  pgcdes: Embalatges
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: 1112/1119
+pgcs_125:
+  id: '1125'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1119'
+  pgccte: '327'
+  pgcdes: Envasos
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: 1112/1119
+pgcs_126:
+  id: '1126'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1119'
+  pgccte: '328'
+  pgcdes: Material d’oficina
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: 1112/1119
+pgcs_127:
+  id: '1127'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1112'
+  pgccte: '33'
+  pgcdes: PRODUCTES EN CURS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: '1112'
+pgcs_128:
+  id: '1128'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1127'
+  pgccte: '330'
+  pgcdes: Productes en curs A
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: 1112/1127
+pgcs_129:
+  id: '1129'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1127'
+  pgccte: '331'
+  pgcdes: Productes en curs B
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: 1112/1127
+pgcs_130:
+  id: '1130'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1112'
+  pgccte: '34'
+  pgcdes: PRODUCTES SEMIACABATS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: '1112'
+pgcs_131:
+  id: '1131'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1130'
+  pgccte: '340'
+  pgcdes: Productes semiacabats A
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: 1112/1130
+pgcs_132:
+  id: '1132'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1130'
+  pgccte: '341'
+  pgcdes: Productes semiacabats B
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: 1112/1130
+pgcs_133:
+  id: '1133'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1112'
+  pgccte: '35'
+  pgcdes: PRODUCTES ACABATS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: '1112'
+pgcs_134:
+  id: '1134'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1133'
+  pgccte: '350'
+  pgcdes: Productes acabats A
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: 1112/1133
+pgcs_135:
+  id: '1135'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1133'
+  pgccte: '351'
+  pgcdes: Productes acabats B
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: 1112/1133
+pgcs_136:
+  id: '1136'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1112'
+  pgccte: '36'
+  pgcdes: SUBPRODUCTES, RESIDUS I MATERIALS RECUPERATS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:42'
+  ancestry: '1112'
+pgcs_137:
+  id: '1137'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1136'
+  pgccte: '360'
+  pgcdes: Subproductes A
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: 1112/1136
+pgcs_138:
+  id: '1138'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1136'
+  pgccte: '361'
+  pgcdes: Subproductes B
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: 1112/1136
+pgcs_139:
+  id: '1139'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1136'
+  pgccte: '365'
+  pgcdes: Residus A
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: 1112/1136
+pgcs_140:
+  id: '1140'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1136'
+  pgccte: '366'
+  pgcdes: Residus B
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: 1112/1136
+pgcs_141:
+  id: '1141'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1136'
+  pgccte: '368'
+  pgcdes: Materials recuperats A
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: 1112/1136
+pgcs_142:
+  id: '1142'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1136'
+  pgccte: '369'
+  pgcdes: Materials recuperats B
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: 1112/1136
+pgcs_143:
+  id: '1143'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1112'
+  pgccte: '39'
+  pgcdes: DETERIORAMENT DE VALOR DE LES EXISTÈNCIES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: '1112'
+pgcs_144:
+  id: '1144'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1143'
+  pgccte: '390'
+  pgcdes: Deteriorament de valor de les mercaderies
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: 1112/1143
+pgcs_145:
+  id: '1145'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1143'
+  pgccte: '391'
+  pgcdes: Deteriorament de valor de les matèries primeres
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: 1112/1143
+pgcs_146:
+  id: '1146'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1143'
+  pgccte: '392'
+  pgcdes: Deteriorament de valor d’altres aprovisionaments
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: 1112/1143
+pgcs_147:
+  id: '1147'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1143'
+  pgccte: '393'
+  pgcdes: Deteriorament de valor dels productes en curs
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:43'
+  ancestry: 1112/1143
+pgcs_148:
+  id: '1148'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1143'
+  pgccte: '394'
+  pgcdes: Deteriorament de valor dels productes semiacabats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1112/1143
+pgcs_149:
+  id: '1149'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1143'
+  pgccte: '395'
+  pgcdes: Deteriorament de valors dels productes acabats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1112/1143
+pgcs_150:
+  id: '1150'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1143'
+  pgccte: '396'
+  pgcdes: Deteriorament de valor dels subproductes, residus i materials recuperats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1112/1143
+pgcs_151:
+  id: '1151'
+  pgccla: '1'
+  pgckey: 
+  parent_id: 
+  pgccte: '4'
+  pgcdes: CREDITORS I DEUTORS PER OPERACIONS COMERCIALS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: 
+  ancestry: 
+pgcs_152:
+  id: '1152'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1151'
+  pgccte: '40'
+  pgcdes: PROVEÏDORS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: '1151'
+pgcs_153:
+  id: '1153'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1152'
+  pgccte: '400'
+  pgcdes: Proveïdors
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1151/1152
+pgcs_154:
+  id: '1154'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1152'
+  pgccte: '401'
+  pgcdes: Proveïdors, efectes comercials a pagar
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1151/1152
+pgcs_155:
+  id: '1155'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1152'
+  pgccte: '403'
+  pgcdes: Proveïdors, empreses del grup
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1151/1152
+pgcs_156:
+  id: '1156'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1152'
+  pgccte: '404'
+  pgcdes: Proveïdors, empreses associades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1151/1152
+pgcs_157:
+  id: '1157'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1152'
+  pgccte: '405'
+  pgcdes: Proveïdors, altres parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1151/1152
+pgcs_158:
+  id: '1158'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1152'
+  pgccte: '406'
+  pgcdes: Envasos i embalatges a retornar a proveïdors
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1151/1152
+pgcs_159:
+  id: '1159'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1152'
+  pgccte: '407'
+  pgcdes: Bestretes a proveïdors
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1151/1152
+pgcs_160:
+  id: '1160'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1151'
+  pgccte: '41'
+  pgcdes: CREDITORS DIVERSOS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: '1151'
+pgcs_161:
+  id: '1161'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1160'
+  pgccte: '410'
+  pgcdes: Creditors per prestacions de serveis
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1151/1160
+pgcs_162:
+  id: '1162'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1160'
+  pgccte: '411'
+  pgcdes: Creditors, efectes comercials a pagar
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:44'
+  ancestry: 1151/1160
+pgcs_163:
+  id: '1163'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1151'
+  pgccte: '43'
+  pgcdes: CLIENTS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: '1151'
+pgcs_164:
+  id: '1164'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1163'
+  pgccte: '430'
+  pgcdes: Clients
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1163
+pgcs_165:
+  id: '1165'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1163'
+  pgccte: '431'
+  pgcdes: Clients, efectes comercials a cobrar
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1163
+pgcs_166:
+  id: '1166'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1163'
+  pgccte: '432'
+  pgcdes: Clients, operacions de “factoring”
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1163
+pgcs_167:
+  id: '1167'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1163'
+  pgccte: '433'
+  pgcdes: Clients, empreses del grup
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1163
+pgcs_168:
+  id: '1168'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1163'
+  pgccte: '434'
+  pgcdes: Clients, empreses associades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1163
+pgcs_169:
+  id: '1169'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1163'
+  pgccte: '435'
+  pgcdes: Clients, altres empreses vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1163
+pgcs_170:
+  id: '1170'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1163'
+  pgccte: '436'
+  pgcdes: Clients de cobrament dubtós
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1163
+pgcs_171:
+  id: '1171'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1163'
+  pgccte: '437'
+  pgcdes: Envasos i embalatges a retornar per clients
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1163
+pgcs_172:
+  id: '1172'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1163'
+  pgccte: '438'
+  pgcdes: Bestretes de clients
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1163
+pgcs_173:
+  id: '1173'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1151'
+  pgccte: '44'
+  pgcdes: DEUTORS DIVERSOS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: '1151'
+pgcs_174:
+  id: '1174'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1173'
+  pgccte: '440'
+  pgcdes: Deutors
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1173
+pgcs_175:
+  id: '1175'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1173'
+  pgccte: '441'
+  pgcdes: Deutors, efectes comercials a cobrar
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1173
+pgcs_176:
+  id: '1176'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1173'
+  pgccte: '446'
+  pgcdes: Deutors de cobrament dubtós
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1173
+pgcs_177:
+  id: '1177'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1151'
+  pgccte: '46'
+  pgcdes: PERSONAL
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: '1151'
+pgcs_178:
+  id: '1178'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1177'
+  pgccte: '460'
+  pgcdes: Bestretes de remuneracions
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1177
+pgcs_179:
+  id: '1179'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1177'
+  pgccte: '465'
+  pgcdes: Remuneracions pendents de pagament
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:45'
+  ancestry: 1151/1177
+pgcs_180:
+  id: '1180'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1177'
+  pgccte: '466'
+  pgcdes: Remuneracions mitjançant sistemes d’aportació definida pendents de pagament
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1177
+pgcs_181:
+  id: '1181'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1151'
+  pgccte: '47'
+  pgcdes: ADMINISTRACIONS PÚBLIQUES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: '1151'
+pgcs_182:
+  id: '1182'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1181'
+  pgccte: '470'
+  pgcdes: Administracions públiques, deutor
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1181
+pgcs_183:
+  id: '1183'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1181'
+  pgccte: '472'
+  pgcdes: Administracions públiques, import indirecte suportat
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1181
+pgcs_184:
+  id: '1184'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1181'
+  pgccte: '473'
+  pgcdes: Administracions públiques, retencions i pagaments a compte per ISI
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1181
+pgcs_185:
+  id: '1185'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1181'
+  pgccte: '475'
+  pgcdes: Administracions públiques, creditor
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1181
+pgcs_186:
+  id: '1186'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1181'
+  pgccte: '476'
+  pgcdes: Caixa Andorrana de Seguretat Social, creditors
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1181
+pgcs_187:
+  id: '1187'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1181'
+  pgccte: '477'
+  pgcdes: Administracions públiques, impost indirecte repercutit
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1181
+pgcs_188:
+  id: '1188'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1151'
+  pgccte: '48'
+  pgcdes: AJUSTAMENTS PER PERIODIFICACIÓ
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: '1151'
+pgcs_189:
+  id: '1189'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1188'
+  pgccte: '480'
+  pgcdes: Despeses anticipades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1188
+pgcs_190:
+  id: '1190'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1188'
+  pgccte: '485'
+  pgcdes: Ingressos anticipats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1188
+pgcs_191:
+  id: '1191'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1151'
+  pgccte: '49'
+  pgcdes: DETERIORAMENT DE VALOR DE CRÈDITS COMERCIALS I PROVISIONS A CURT TERMINI
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: '1151'
+pgcs_192:
+  id: '1192'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1191'
+  pgccte: '490'
+  pgcdes: Deteriorament de valor de crèdits per operacions comercials
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1191
+pgcs_193:
+  id: '1193'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1191'
+  pgccte: '493'
+  pgcdes: Deteriorament de valor de crèdits per operacions comercials amb parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:46'
+  ancestry: 1151/1191
+pgcs_194:
+  id: '1194'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1191'
+  pgccte: '499'
+  pgcdes: Provisions per operacions comercials
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1151/1191
+pgcs_195:
+  id: '1195'
+  pgccla: '1'
+  pgckey: 
+  parent_id: 
+  pgccte: '5'
+  pgcdes: COMPTES FINANCERS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: 
+  ancestry: 
+pgcs_196:
+  id: '1196'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1195'
+  pgccte: '50'
+  pgcdes: EMPRÈSTITS, DEUTES AMB CARACTERÍSTIQUES ESPECIALS I ALTRES EMISSIONS ANÀLOGUES
+    A CURT TERMINI
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: '1195'
+pgcs_197:
+  id: '1197'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1196'
+  pgccte: '500'
+  pgcdes: Obligacions i bons a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1195/1196
+pgcs_198:
+  id: '1198'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1196'
+  pgccte: '505'
+  pgcdes: Deutes representats en altres valors negociables a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1195/1196
+pgcs_199:
+  id: '1199'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1196'
+  pgccte: '506'
+  pgcdes: Interessos a curt termini d’emprèstits i altres emissions anàlogues
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1195/1196
+pgcs_200:
+  id: '1200'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1195'
+  pgccte: '51'
+  pgcdes: DEUTES A CURT TERMINI AMB PARTS VINCULADES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: '1195'
+pgcs_201:
+  id: '1201'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1200'
+  pgccte: '510'
+  pgcdes: Deutes a curt termini amb entitats de crèdit vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1195/1200
+pgcs_202:
+  id: '1202'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1200'
+  pgccte: '511'
+  pgcdes: Proveïdors d’immobilitzat a curt termini, parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1195/1200
+pgcs_203:
+  id: '1203'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1200'
+  pgccte: '512'
+  pgcdes: Creditors per arrendament financer a curt termini, parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1195/1200
+pgcs_204:
+  id: '1204'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1200'
+  pgccte: '513'
+  pgcdes: Altres deutes a curt termini amb parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1195/1200
+pgcs_205:
+  id: '1205'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1200'
+  pgccte: '514'
+  pgcdes: Interessos a curt termini de deutes amb parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1195/1200
+pgcs_206:
+  id: '1206'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1195'
+  pgccte: '52'
+  pgcdes: DEUTES A CURT TERMINI PER PRÉSTECS REBUTS I ALTRES CONCEPTES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: '1195'
+pgcs_207:
+  id: '1207'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1206'
+  pgccte: '520'
+  pgcdes: Deutes a curt termini amb entitats de crèdit
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1195/1206
+pgcs_208:
+  id: '1208'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1206'
+  pgccte: '523'
+  pgcdes: Proveïdors d’immobilitzat a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:47'
+  ancestry: 1195/1206
+pgcs_209:
+  id: '1209'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1206'
+  pgccte: '524'
+  pgcdes: Creditors per arrendament financer a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:48'
+  ancestry: 1195/1206
+pgcs_210:
+  id: '1210'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1206'
+  pgccte: '526'
+  pgcdes: Dividend actiu a pagar
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:48'
+  ancestry: 1195/1206
+pgcs_211:
+  id: '1211'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1206'
+  pgccte: '527'
+  pgcdes: Interessos a curt termini de deutes amb entitats de crèdit
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:48'
+  ancestry: 1195/1206
+pgcs_212:
+  id: '1212'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1206'
+  pgccte: '528'
+  pgcdes: Altres deutes a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:48'
+  ancestry: 1195/1206
+pgcs_213:
+  id: '1213'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1206'
+  pgccte: '529'
+  pgcdes: Provisions a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:48'
+  ancestry: 1195/1206
+pgcs_214:
+  id: '1214'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1195'
+  pgccte: '53'
+  pgcdes: INVERSIONS FINANCERES A CURT TERMINI EN PARTS VINCULADES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:48'
+  ancestry: '1195'
+pgcs_215:
+  id: '1215'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1214'
+  pgccte: '530'
+  pgcdes: Participacions a curt termini en parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:48'
+  ancestry: 1195/1214
+pgcs_216:
+  id: '1216'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1214'
+  pgccte: '531'
+  pgcdes: Crèdits i valors representatius de deute a curt termini de parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:48'
+  ancestry: 1195/1214
+pgcs_217:
+  id: '1217'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1214'
+  pgccte: '533'
+  pgcdes: Interessos a curt termini de crèdits i valors representatius de deute de
+    parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:48'
+  ancestry: 1195/1214
+pgcs_218:
+  id: '1218'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1214'
+  pgccte: '535'
+  pgcdes: Dividend a cobrar d’inversions financeres en parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:48'
+  ancestry: 1195/1214
+pgcs_219:
+  id: '1219'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1195'
+  pgccte: '54'
+  pgcdes: ALTRES INVERSIONS FINANCERES A CURT TERMINI
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: '1195'
+pgcs_220:
+  id: '1220'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1219'
+  pgccte: '540'
+  pgcdes: Inversions financeres a curt termini en instruments de patrimoni
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1219
+pgcs_221:
+  id: '1221'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1219'
+  pgccte: '541'
+  pgcdes: Crèdits i valors representatius de deute a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1219
+pgcs_222:
+  id: '1222'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1219'
+  pgccte: '543'
+  pgcdes: Crèdits a curt termini per alienació d’immobilitzat
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1219
+pgcs_223:
+  id: '1223'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1219'
+  pgccte: '544'
+  pgcdes: Crèdits a curt termini al personal
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1219
+pgcs_224:
+  id: '1224'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1219'
+  pgccte: '545'
+  pgcdes: Dividend a cobrar
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1219
+pgcs_225:
+  id: '1225'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1219'
+  pgccte: '546'
+  pgcdes: Interessos a curt termini de crèdits i valors representatius de deutes
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1219
+pgcs_226:
+  id: '1226'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1219'
+  pgccte: '548'
+  pgcdes: Imposicions a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1219
+pgcs_227:
+  id: '1227'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1195'
+  pgccte: '55'
+  pgcdes: ALTRES COMPTES NO BANCARIS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: '1195'
+pgcs_228:
+  id: '1228'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1227'
+  pgccte: '550'
+  pgcdes: Titular de l’explotació
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1227
+pgcs_229:
+  id: '1229'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1227'
+  pgccte: '551'
+  pgcdes: Compte corrent amb socis i administradors
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1227
+pgcs_230:
+  id: '1230'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1227'
+  pgccte: '552'
+  pgcdes: Compte corrent amb altres persones i entitats vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1227
+pgcs_231:
+  id: '1231'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1227'
+  pgccte: '554'
+  pgcdes: Compte corrent amb unions temporals d’empreses i comunitats de béns
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1227
+pgcs_232:
+  id: '1232'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1227'
+  pgccte: '555'
+  pgcdes: Partides pendents d’aplicació
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1227
+pgcs_233:
+  id: '1233'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1227'
+  pgccte: '556'
+  pgcdes: Desemborsaments exigits sobre participacions en el patrimoni net
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:49'
+  ancestry: 1195/1227
+pgcs_234:
+  id: '1234'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1227'
+  pgccte: '557'
+  pgcdes: Dividend actiu a compte
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1227
+pgcs_235:
+  id: '1235'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1195'
+  pgccte: '56'
+  pgcdes: FIANCES I DIPÒSITS REBUTS I CONSTITUÏTS A CURT TERMINI I AJUSTOS PER PERIODIFICACIÓ
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: '1195'
+pgcs_236:
+  id: '1236'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1235'
+  pgccte: '560'
+  pgcdes: Fiances rebudes a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1235
+pgcs_237:
+  id: '1237'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1235'
+  pgccte: '561'
+  pgcdes: Dipòsits rebuts a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1235
+pgcs_238:
+  id: '1238'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1235'
+  pgccte: '565'
+  pgcdes: Fiances constituïdes a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1235
+pgcs_239:
+  id: '1239'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1235'
+  pgccte: '566'
+  pgcdes: Dipòsits constituïts a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1235
+pgcs_240:
+  id: '1240'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1235'
+  pgccte: '567'
+  pgcdes: Interessos pagats per anticipat
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1235
+pgcs_241:
+  id: '1241'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1235'
+  pgccte: '568'
+  pgcdes: Interessos cobrats per anticipat
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1235
+pgcs_242:
+  id: '1242'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1235'
+  pgccte: '569'
+  pgcdes: Garanties financeres a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1235
+pgcs_243:
+  id: '1243'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1195'
+  pgccte: '57'
+  pgcdes: TRESORERIA
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: '1195'
+pgcs_244:
+  id: '1244'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1243'
+  pgccte: '570'
+  pgcdes: Caixa, euros
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1243
+pgcs_245:
+  id: '1245'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1243'
+  pgccte: '571'
+  pgcdes: Caixa, moneda estrangera
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1243
+pgcs_246:
+  id: '1246'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1243'
+  pgccte: '572'
+  pgcdes: Bancs i institucions de crèdit c/c vista, euros
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:50'
+  ancestry: 1195/1243
+pgcs_247:
+  id: '1247'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1243'
+  pgccte: '573'
+  pgcdes: Bancs i institucions de crèdit c/c vista, moneda estrangera
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:51'
+  ancestry: 1195/1243
+pgcs_248:
+  id: '1248'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1243'
+  pgccte: '574'
+  pgcdes: Bancs i institucions de crèdit, comptes d’estalvi, euros
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:51'
+  ancestry: 1195/1243
+pgcs_249:
+  id: '1249'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1243'
+  pgccte: '575'
+  pgcdes: Bancs i institucions de crèdit, comptes d’estalvi, moneda estrangera
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:51'
+  ancestry: 1195/1243
+pgcs_250:
+  id: '1250'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1243'
+  pgccte: '576'
+  pgcdes: Inversions a curt termini de gran liquiditat
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:51'
+  ancestry: 1195/1243
+pgcs_251:
+  id: '1251'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1195'
+  pgccte: '58'
+  pgcdes: ACTIUS NO CORRENTS MANTINGUTS PER A LA VENDA I ACTIUS I PASSIUS ASSOCIATS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:51'
+  ancestry: '1195'
+pgcs_252:
+  id: '1252'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1251'
+  pgccte: '580'
+  pgcdes: Immobilitzat
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:51'
+  ancestry: 1195/1251
+pgcs_253:
+  id: '1253'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1251'
+  pgccte: '581'
+  pgcdes: Inversions amb persones i entitats vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1251
+pgcs_254:
+  id: '1254'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1251'
+  pgccte: '582'
+  pgcdes: Inversions financeres
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1251
+pgcs_255:
+  id: '1255'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1251'
+  pgccte: '583'
+  pgcdes: Existències, deutors comercials i altres comptes a cobrar
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1251
+pgcs_256:
+  id: '1256'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1251'
+  pgccte: '584'
+  pgcdes: Altres actius
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1251
+pgcs_257:
+  id: '1257'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1251'
+  pgccte: '585'
+  pgcdes: Provisions
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1251
+pgcs_258:
+  id: '1258'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1251'
+  pgccte: '586'
+  pgcdes: Deutes amb característiques especials
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1251
+pgcs_259:
+  id: '1259'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1251'
+  pgccte: '587'
+  pgcdes: Deutes amb persones i entitats vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1251
+pgcs_260:
+  id: '1260'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1251'
+  pgccte: '588'
+  pgcdes: Creditors comercials i altres comptes a pagar
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1251
+pgcs_261:
+  id: '1261'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1251'
+  pgccte: '589'
+  pgcdes: Altres passius
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1251
+pgcs_262:
+  id: '1262'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1195'
+  pgccte: '59'
+  pgcdes: DETERIORAMENT DEL VALOR D’INVERSIONS FINANCERES A CURT TERMINI I D’ACTIUS
+    NO CORRENTS MANTINGUTS PER
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: '1195'
+pgcs_263:
+  id: '1263'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1262'
+  pgccte: '593'
+  pgcdes: Deteriorament de valor de participacions a curt termini en parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1262
+pgcs_264:
+  id: '1264'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1262'
+  pgccte: '594'
+  pgcdes: Deteriorament de valor de valors representatius de deute a curt termini
+    de parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1262
+pgcs_265:
+  id: '1265'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1262'
+  pgccte: '595'
+  pgcdes: Deteriorament de valor de crèdits a curt termini en parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1262
+pgcs_266:
+  id: '1266'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1262'
+  pgccte: '597'
+  pgcdes: Deteriorament de valor de valors representatius de deute a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:52'
+  ancestry: 1195/1262
+pgcs_267:
+  id: '1267'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1262'
+  pgccte: '598'
+  pgcdes: Deteriorament de valor de crèdits a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1195/1262
+pgcs_268:
+  id: '1268'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1262'
+  pgccte: '599'
+  pgcdes: Deteriorament de valor d’actius no corrents mantinguts per a la venda
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1195/1262
+pgcs_269:
+  id: '1269'
+  pgccla: '1'
+  pgckey: 
+  parent_id: 
+  pgccte: '6'
+  pgcdes: COMPRES I DESPESES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: 
+  ancestry: 
+pgcs_270:
+  id: '1270'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1269'
+  pgccte: '60'
+  pgcdes: COMPRES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: '1269'
+pgcs_271:
+  id: '1271'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1270'
+  pgccte: '600'
+  pgcdes: Compres de mercaderies
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1269/1270
+pgcs_272:
+  id: '1272'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1270'
+  pgccte: '601'
+  pgcdes: Compres de matèries primeres
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1269/1270
+pgcs_273:
+  id: '1273'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1270'
+  pgccte: '602'
+  pgcdes: Compres d’altres aprovisionaments
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1269/1270
+pgcs_274:
+  id: '1274'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1270'
+  pgccte: '606'
+  pgcdes: Descomptes sobre compres per pagament immediat
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1269/1270
+pgcs_275:
+  id: '1275'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1270'
+  pgccte: '607'
+  pgcdes: Treballs realitzats per altres empreses
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1269/1270
+pgcs_276:
+  id: '1276'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1270'
+  pgccte: '608'
+  pgcdes: Devolucions de compres i operacions similars
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1269/1270
+pgcs_277:
+  id: '1277'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1270'
+  pgccte: '609'
+  pgcdes: Ràpels per compres
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1269/1270
+pgcs_278:
+  id: '1278'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1269'
+  pgccte: '61'
+  pgcdes: VARIACIÓ D’EXISTÈNCIES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: '1269'
+pgcs_279:
+  id: '1279'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1278'
+  pgccte: '610'
+  pgcdes: Variació d’existències de mercaderies
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1269/1278
+pgcs_280:
+  id: '1280'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1278'
+  pgccte: '611'
+  pgcdes: Variació d’existències de matèries primeres
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1269/1278
+pgcs_281:
+  id: '1281'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1278'
+  pgccte: '612'
+  pgcdes: Variació d’existències d’altres aprovisionaments
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:53'
+  ancestry: 1269/1278
+pgcs_282:
+  id: '1282'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1269'
+  pgccte: '62'
+  pgcdes: SERVEIS EXTERNS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: '1269'
+pgcs_283:
+  id: '1283'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1282'
+  pgccte: '620'
+  pgcdes: Despeses en investigació i desenvolupament de l’exercici
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1282
+pgcs_284:
+  id: '1284'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1282'
+  pgccte: '621'
+  pgcdes: Arrendaments i cànons
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1282
+pgcs_285:
+  id: '1285'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1282'
+  pgccte: '622'
+  pgcdes: Reparacions i conservació
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1282
+pgcs_286:
+  id: '1286'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1282'
+  pgccte: '623'
+  pgcdes: Serveis de professionals independents
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1282
+pgcs_287:
+  id: '1287'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1282'
+  pgccte: '624'
+  pgcdes: Transports
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1282
+pgcs_288:
+  id: '1288'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1282'
+  pgccte: '625'
+  pgcdes: Primes d’assegurances
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1282
+pgcs_289:
+  id: '1289'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1282'
+  pgccte: '626'
+  pgcdes: Serveis bancaris i similars
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1282
+pgcs_290:
+  id: '1290'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1282'
+  pgccte: '627'
+  pgcdes: Publicitat, propaganda i relacions públiques
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1282
+pgcs_291:
+  id: '1291'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1282'
+  pgccte: '628'
+  pgcdes: Subministraments
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1282
+pgcs_292:
+  id: '1292'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1282'
+  pgccte: '629'
+  pgcdes: Altres serveis
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1282
+pgcs_293:
+  id: '1293'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1269'
+  pgccte: '63'
+  pgcdes: TRIBUTS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: '1269'
+pgcs_294:
+  id: '1294'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1293'
+  pgccte: '631'
+  pgcdes: Altres tributs
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: 1269/1293
+pgcs_295:
+  id: '1295'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1269'
+  pgccte: '64'
+  pgcdes: DESPESES DE PERSONAL
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:54'
+  ancestry: '1269'
+pgcs_296:
+  id: '1296'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1295'
+  pgccte: '640'
+  pgcdes: Sous i salaris
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1295
+pgcs_297:
+  id: '1297'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1295'
+  pgccte: '641'
+  pgcdes: Indemnitzacions
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1295
+pgcs_298:
+  id: '1298'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1295'
+  pgccte: '642'
+  pgcdes: Caixa Andorrana de Seguretat Social a càrrec de l’empresari
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1295
+pgcs_299:
+  id: '1299'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1295'
+  pgccte: '643'
+  pgcdes: Retribucions a llarg termini mitjançant sistemes d’aportació definida
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1295
+pgcs_300:
+  id: '1300'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1295'
+  pgccte: '649'
+  pgcdes: Altres despeses socials
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1295
+pgcs_301:
+  id: '1301'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1269'
+  pgccte: '65'
+  pgcdes: ALTRES DESPESES DE GESTIÓ
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: '1269'
+pgcs_302:
+  id: '1302'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1301'
+  pgccte: '650'
+  pgcdes: Pèrdues de crèdits comercials incobrables
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1301
+pgcs_303:
+  id: '1303'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1301'
+  pgccte: '659'
+  pgcdes: Altres pèrdues de gestió corrent
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1301
+pgcs_304:
+  id: '1304'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1269'
+  pgccte: '66'
+  pgcdes: DESPESES FINANCERES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: '1269'
+pgcs_305:
+  id: '1305'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1304'
+  pgccte: '660'
+  pgcdes: Despeses financeres per actualització de provisions
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1304
+pgcs_306:
+  id: '1306'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1304'
+  pgccte: '661'
+  pgcdes: Interessos d’obligacions i bons
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1304
+pgcs_307:
+  id: '1307'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1304'
+  pgccte: '662'
+  pgcdes: Interessos de deutes
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1304
+pgcs_308:
+  id: '1308'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1304'
+  pgccte: '663'
+  pgcdes: Pèrdues per venda, venciment o valoració d’instruments financers pel seu
+    valor raonable
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1304
+pgcs_309:
+  id: '1309'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1304'
+  pgccte: '664'
+  pgcdes: Despeses per dividends d’accions o participacions considerades passius financers
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:55'
+  ancestry: 1269/1304
+pgcs_310:
+  id: '1310'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1304'
+  pgccte: '665'
+  pgcdes: Interessos per descompte d’efectes i operacions de “factoring”
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1304
+pgcs_311:
+  id: '1311'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1304'
+  pgccte: '666'
+  pgcdes: Pèrdues en participacions i valors representatius de deute
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1304
+pgcs_312:
+  id: '1312'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1304'
+  pgccte: '667'
+  pgcdes: Pèrdues de crèdits no comercials
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1304
+pgcs_313:
+  id: '1313'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1304'
+  pgccte: '668'
+  pgcdes: Diferències negatives de canvi
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1304
+pgcs_314:
+  id: '1314'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1304'
+  pgccte: '669'
+  pgcdes: Altres despeses financeres
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1304
+pgcs_315:
+  id: '1315'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1269'
+  pgccte: '67'
+  pgcdes: PÈRDUES PROCEDENTS D’ACTIUS NO CORRENTS I DESPESES EXCEPCIONALS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: '1269'
+pgcs_316:
+  id: '1316'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1315'
+  pgccte: '670'
+  pgcdes: Pèrdues procedents de l’immobilitzat intangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1315
+pgcs_317:
+  id: '1317'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1315'
+  pgccte: '671'
+  pgcdes: Pèrdues procedents de l’immobilitzat tangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1315
+pgcs_318:
+  id: '1318'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1315'
+  pgccte: '672'
+  pgcdes: Pèrdues procedents de les inversions immobiliàries
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1315
+pgcs_319:
+  id: '1319'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1315'
+  pgccte: '673'
+  pgcdes: Pèrdues procedents de participacions a llarg termini en parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1315
+pgcs_320:
+  id: '1320'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1315'
+  pgccte: '675'
+  pgcdes: Pèrdues per operacions amb obligacions pròpies
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1315
+pgcs_321:
+  id: '1321'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1315'
+  pgccte: '678'
+  pgcdes: Despeses excepcionals
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:56'
+  ancestry: 1269/1315
+pgcs_322:
+  id: '1322'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1269'
+  pgccte: '68'
+  pgcdes: DOTACIONS PER AMORTITZACIONS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: '1269'
+pgcs_323:
+  id: '1323'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1322'
+  pgccte: '680'
+  pgcdes: Amortització de l’immobilitzat intangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1322
+pgcs_324:
+  id: '1324'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1322'
+  pgccte: '681'
+  pgcdes: Amortització de l’immobilitzat tangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1322
+pgcs_325:
+  id: '1325'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1322'
+  pgccte: '682'
+  pgcdes: Amortització de les inversions immobiliàries
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1322
+pgcs_326:
+  id: '1326'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1269'
+  pgccte: '69'
+  pgcdes: PÈRDUES PER DETERIORAMENT I ALTRES DOTACIONS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: '1269'
+pgcs_327:
+  id: '1327'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1326'
+  pgccte: '690'
+  pgcdes: Pèrdues per deteriorament de l’immobilitzat intangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1326
+pgcs_328:
+  id: '1328'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1326'
+  pgccte: '691'
+  pgcdes: Pèrdues per deteriorament de l’immobilitzat tangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1326
+pgcs_329:
+  id: '1329'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1326'
+  pgccte: '692'
+  pgcdes: Pèrdues per deteriorament de les inversions immobiliàries
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1326
+pgcs_330:
+  id: '1330'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1326'
+  pgccte: '693'
+  pgcdes: Pèrdues per deteriorament d’existències
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1326
+pgcs_331:
+  id: '1331'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1326'
+  pgccte: '694'
+  pgcdes: Pèrdues per deteriorament de crèdits per operacions comercials
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1326
+pgcs_332:
+  id: '1332'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1326'
+  pgccte: '695'
+  pgcdes: Dotació a la provisió per operacions comercials
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1326
+pgcs_333:
+  id: '1333'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1326'
+  pgccte: '696'
+  pgcdes: Pèrdues per deteriorament de participacions i valors representatius de deute
+    a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1326
+pgcs_334:
+  id: '1334'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1326'
+  pgccte: '697'
+  pgcdes: Pèrdues per deteriorament de crèdits a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1326
+pgcs_335:
+  id: '1335'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1326'
+  pgccte: '698'
+  pgcdes: Pèrdues per deteriorament de participacions i valors representatius de deute
+    a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1326
+pgcs_336:
+  id: '1336'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1326'
+  pgccte: '699'
+  pgcdes: Pèrdues per deteriorament de crèdits a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:57'
+  ancestry: 1269/1326
+pgcs_337:
+  id: '1337'
+  pgccla: '1'
+  pgckey: 
+  parent_id: 
+  pgccte: '7'
+  pgcdes: VENDES I INGRESSOS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: 
+  ancestry: 
+pgcs_338:
+  id: '1338'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1337'
+  pgccte: '70'
+  pgcdes: VENDES DE MERCADERIES, DE PRODUCCIÓ PRÒPIA, DE SERVEIS, ETC.
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: '1337'
+pgcs_339:
+  id: '1339'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1338'
+  pgccte: '700'
+  pgcdes: Vendes de mercaderies
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1338
+pgcs_340:
+  id: '1340'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1338'
+  pgccte: '701'
+  pgcdes: Vendes de productes acabats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1338
+pgcs_341:
+  id: '1341'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1338'
+  pgccte: '702'
+  pgcdes: Vendes de productes semiacabats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1338
+pgcs_342:
+  id: '1342'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1338'
+  pgccte: '703'
+  pgcdes: Vendes de subproductes i residus
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1338
+pgcs_343:
+  id: '1343'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1338'
+  pgccte: '704'
+  pgcdes: Vendes d’envasos i embalatges
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1338
+pgcs_344:
+  id: '1344'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1338'
+  pgccte: '705'
+  pgcdes: Prestació de serveis
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1338
+pgcs_345:
+  id: '1345'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1338'
+  pgccte: '706'
+  pgcdes: Descompte sobre vendes per pagament immediat
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1338
+pgcs_346:
+  id: '1346'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1338'
+  pgccte: '708'
+  pgcdes: Devolucions de vendes i operacions similars
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1338
+pgcs_347:
+  id: '1347'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1338'
+  pgccte: '709'
+  pgcdes: Ràpels sobre vendes
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1338
+pgcs_348:
+  id: '1348'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1337'
+  pgccte: '71'
+  pgcdes: VARIACIÓ D’EXISTÈNCIES
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: '1337'
+pgcs_349:
+  id: '1349'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1348'
+  pgccte: '710'
+  pgcdes: Variació d’existències de productes en curs
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1348
+pgcs_350:
+  id: '1350'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1348'
+  pgccte: '711'
+  pgcdes: Variació d’existències de productes semiacabats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1348
+pgcs_351:
+  id: '1351'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1348'
+  pgccte: '712'
+  pgcdes: Variació d’existències de productes acabats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1348
+pgcs_352:
+  id: '1352'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1348'
+  pgccte: '713'
+  pgcdes: Variació d’existències de subproductes, residus i materials recuperats
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1348
+pgcs_353:
+  id: '1353'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1337'
+  pgccte: '73'
+  pgcdes: TREBALLS REALITZATS PER L’EMPRESARI
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: '1337'
+pgcs_354:
+  id: '1354'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1353'
+  pgccte: '730'
+  pgcdes: Treballs realitzats per a l’immobilitzat intangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:58'
+  ancestry: 1337/1353
+pgcs_355:
+  id: '1355'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1353'
+  pgccte: '731'
+  pgcdes: Treballs realitzats per a l’immobilitzat tangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1353
+pgcs_356:
+  id: '1356'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1353'
+  pgccte: '732'
+  pgcdes: Treballs realitzats en inversions immobiliàries
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1353
+pgcs_357:
+  id: '1357'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1353'
+  pgccte: '733'
+  pgcdes: Treballs realitzats per a l’immobilitzat tangible en curs
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1353
+pgcs_358:
+  id: '1358'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1337'
+  pgccte: '74'
+  pgcdes: SUBVENCIONS, DONACIONS I LLEGATS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: '1337'
+pgcs_359:
+  id: '1359'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1358'
+  pgccte: '740'
+  pgcdes: Subvencions, donacions i llegats a l’explotació
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1358
+pgcs_360:
+  id: '1360'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1358'
+  pgccte: '746'
+  pgcdes: Subvencions, donacions i llegats de capital transferits al resultat de l’exercici
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1358
+pgcs_361:
+  id: '1361'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1358'
+  pgccte: '747'
+  pgcdes: Altres subvencions, donacions i llegats transferits al resultat de l’exercici
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1358
+pgcs_362:
+  id: '1362'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1337'
+  pgccte: '75'
+  pgcdes: ALTRES INGRESSOS DE GESTIÓ
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: '1337'
+pgcs_363:
+  id: '1363'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1362'
+  pgccte: '752'
+  pgcdes: Ingressos per arrendaments
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1362
+pgcs_364:
+  id: '1364'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1362'
+  pgccte: '753'
+  pgcdes: Ingressos de propietat industrial cedida en explotació
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1362
+pgcs_365:
+  id: '1365'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1362'
+  pgccte: '754'
+  pgcdes: Ingressos per comissions
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1362
+pgcs_366:
+  id: '1366'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1362'
+  pgccte: '755'
+  pgcdes: Ingressos per serveis al personal
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1362
+pgcs_367:
+  id: '1367'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1362'
+  pgccte: '759'
+  pgcdes: Ingressos per serveis diversos
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1362
+pgcs_368:
+  id: '1368'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1337'
+  pgccte: '76'
+  pgcdes: INGRESSOS FINANCERS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: '1337'
+pgcs_369:
+  id: '1369'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1368'
+  pgccte: '760'
+  pgcdes: Ingressos de participacions en instruments de patrimoni
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1368
+pgcs_370:
+  id: '1370'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1368'
+  pgccte: '761'
+  pgcdes: Interessos de valors representatius de deute
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1368
+pgcs_371:
+  id: '1371'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1368'
+  pgccte: '762'
+  pgcdes: Interessos de crèdits
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:17:59'
+  ancestry: 1337/1368
+pgcs_372:
+  id: '1372'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1368'
+  pgccte: '763'
+  pgcdes: Beneficis per venda, venciment o valoració d’instruments financers pel seu
+    valor raonable
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1368
+pgcs_373:
+  id: '1373'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1368'
+  pgccte: '766'
+  pgcdes: Beneficis en participacions i valors representatius de deute
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1368
+pgcs_374:
+  id: '1374'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1368'
+  pgccte: '768'
+  pgcdes: Diferències positives de canvi
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1368
+pgcs_375:
+  id: '1375'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1368'
+  pgccte: '769'
+  pgcdes: Altres ingressos financers
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1368
+pgcs_376:
+  id: '1376'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1337'
+  pgccte: '77'
+  pgcdes: BENEFICIS PROCEDENTS D’ACTIUS NO CORRENTS I INGRESSOS EXCEPCIONALS
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: '1337'
+pgcs_377:
+  id: '1377'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1376'
+  pgccte: '770'
+  pgcdes: Beneficis procedents de l’immobilitzat intangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1376
+pgcs_378:
+  id: '1378'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1376'
+  pgccte: '771'
+  pgcdes: Beneficis procedents de l’immobilitzat tangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1376
+pgcs_379:
+  id: '1379'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1376'
+  pgccte: '772'
+  pgcdes: Beneficis procedents de les inversions immobiliàries
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1376
+pgcs_380:
+  id: '1380'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1376'
+  pgccte: '773'
+  pgcdes: Beneficis procedents de participacions a llarg termini en parts vinculades
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1376
+pgcs_381:
+  id: '1381'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1376'
+  pgccte: '775'
+  pgcdes: Beneficis per operacions amb obligacions pròpies
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1376
+pgcs_382:
+  id: '1382'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1376'
+  pgccte: '778'
+  pgcdes: Ingressos excepcionals
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1376
+pgcs_383:
+  id: '1383'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1337'
+  pgccte: '79'
+  pgcdes: EXCÉS I APLICACIONS DE PROVISIONS I DE PÈRDUES PER DETERIORAMENT
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: '1337'
+pgcs_384:
+  id: '1384'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1383'
+  pgccte: '790'
+  pgcdes: Reversió del deteriorament de l’immobilitzat intangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1383
+pgcs_385:
+  id: '1385'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1383'
+  pgccte: '791'
+  pgcdes: Reversió del deteriorament de l’immobilitzat tangible
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:00'
+  ancestry: 1337/1383
+pgcs_386:
+  id: '1386'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1383'
+  pgccte: '792'
+  pgcdes: Reversió del deteriorament de les inversions immobiliàries
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:01'
+  ancestry: 1337/1383
+pgcs_387:
+  id: '1387'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1383'
+  pgccte: '793'
+  pgcdes: Reversió del deteriorament d’existències
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:01'
+  ancestry: 1337/1383
+pgcs_388:
+  id: '1388'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1383'
+  pgccte: '794'
+  pgcdes: Reversió del deteriorament de crèdits per operacions comercials
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:01'
+  ancestry: 1337/1383
+pgcs_389:
+  id: '1389'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1383'
+  pgccte: '795'
+  pgcdes: Excés de provisions
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:01'
+  ancestry: 1337/1383
+pgcs_390:
+  id: '1390'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1383'
+  pgccte: '796'
+  pgcdes: Reversió del deteriorament de participacions i valors representatius de
+    deute a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:01'
+  ancestry: 1337/1383
+pgcs_391:
+  id: '1391'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1383'
+  pgccte: '797'
+  pgcdes: Reversió del deteriorament de crèdits a llarg termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:01'
+  ancestry: 1337/1383
+pgcs_392:
+  id: '1392'
+  pgccla: '1'
+  pgckey: 
+  parent_id: '1383'
+  pgccte: '798'
+  pgcdes: Reversió del deteriorament de participacions i valors representatius de
+    deute a curt termini
+  pgcind: ''
+  pgcbas: '0'
+  created_at: 
+  updated_at: '2012-09-24 11:18:01'
+  ancestry: 1337/1383

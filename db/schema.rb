@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130119132448) do
+ActiveRecord::Schema.define(:version => 20130208041801) do
 
   create_table "braindets", :force => true do |t|
     t.integer  "brdlin"
@@ -54,7 +54,6 @@ ActiveRecord::Schema.define(:version => 20130119132448) do
   end
 
   create_table "empresas", :force => true do |t|
-    t.integer  "empkey"
     t.string   "empnom"
     t.integer  "emppgc"
     t.integer  "emploc"
@@ -63,7 +62,17 @@ ActiveRecord::Schema.define(:version => 20130119132448) do
     t.string   "empdli"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "database_name"
+    t.string   "schema"
+    t.boolean  "activada"
+    t.datetime "expiracio_contracte"
+  end
+
+  create_table "habilitacions", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "empresa_id"
+    t.integer  "level"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "histgens", :force => true do |t|
@@ -210,11 +219,6 @@ ActiveRecord::Schema.define(:version => 20130119132448) do
     t.string   "encrypted_password"
     t.string   "confirmation_code"
     t.boolean  "confirmed"
-  end
-
-  create_table "usuaris_empresas", :id => false, :force => true do |t|
-    t.integer "user_id"
-    t.integer "empresa_id"
   end
 
 end
