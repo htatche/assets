@@ -45,6 +45,26 @@ class User < ActiveRecord::Base
 
   scope :certified, where(:confirmed => true)
 
+  def is_member?(empresa_id)
+    hab = Habilitacio.where('user_id = ? AND empresa_id = ?',
+                            id,
+                            empresa_id)
+
+    hab.any? ? true : false
+  end
+
+  def is_admin?(empresa_id)
+    hab = Habilitacio.where('user_id = ? AND empresa_id = ?',
+                            id,
+                            empresa_id)
+
+    if hab.any?
+      return true if hab.first.level == 0
+    end
+
+    return false
+  end
+
   def encrypt_password
      if password.present?
       self.salt = BCrypt::Engine.generate_salt
@@ -72,11 +92,6 @@ class User < ActiveRecord::Base
 
   def match_password(login_password="")
     encrypted_password == BCrypt::Engine.hash_secret(login_password, salt)
-  end
-
-  def generate_password_auto
-    self.password = Digest::SHA1.hexdigest([email, Time.now, rand].join)[0,6]
-    self.password_confirmation = Digest::SHA1.hexdigest([email, Time.now, rand].join)[0,6]
   end
 
   def generate_confirmation_code

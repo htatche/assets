@@ -13,6 +13,21 @@ class EmpresesController < ApplicationController
     end
   end
 
+  def show
+    empresa = Empresa.find(params[:id])
+
+    # Creem el esquema si es el primer acces
+    if @current_user.is_admin?(empresa.id) && !empresa.schema
+      name = empresa.create_schema
+    end
+
+    if @current_user.is_member?(empresa.id)
+      load_schema
+    end 
+
+    redirect_to '/home'
+  end
+
   def create
 
     res = {}

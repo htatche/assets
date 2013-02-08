@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
   before_filter :authenticate_user
 
 protected 
-
   def authenticate_user
     unless session[:user_id]
       redirect_to(:controller => 'sessions', :action => 'login')
@@ -24,10 +23,6 @@ protected
     else
       return true
     end
-  end
-
-  def load_schema
-#Apartment::Database.switch('brossa')
   end
 
 public
@@ -74,6 +69,10 @@ public
     else
       render :json => {}
     end
+  end
+
+  def load_schema
+    Apartment::Database.switch(Empresa.first.schema)
   end
 
 

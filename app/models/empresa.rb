@@ -1,5 +1,5 @@
 class Empresa < ActiveRecord::Base
-  has_many :habilitacios
+has_many :habilitacios
   has_many :users, :through => :habilitacios
 
   validates :empnom,
@@ -32,12 +32,27 @@ class Empresa < ActiveRecord::Base
     end
 
   public
-
+    
     def self.cteMaxLength(empkey)
       find(empkey).emploc
     end
 
     def create_schema
+      random_name = (0...10).map{65.+(rand(26)).chr}.join.downcase
+      
+      begin 
+        Apartment::Database.create(random_name)
+        Apartment::Database.process(random_name) do
+          Apartment::Database.seed
+        end
+
+        update_attributes(:schema => random_name)
+        return random_name
+        
+      rescue Exception => e
+        logger.debug e.inspect
+        exit
+      end
     end
 
 end
