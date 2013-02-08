@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_many :empresas, :through => :habilitacions
+  has_many :habilitacios
+  has_many :empresas, :through => :habilitacios
   attr_accessor :password
   attr_accessible :nom, :cognoms, :username, :email, :password
 

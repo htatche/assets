@@ -1,5 +1,6 @@
 class Empresa < ActiveRecord::Base
-  has_many :users, :through => :habilitacions
+  has_many :habilitacios
+  has_many :users, :through => :habilitacios
 
   validates :empnom,
     :presence => true

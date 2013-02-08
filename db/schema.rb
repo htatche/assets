@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130208041801) do
+ActiveRecord::Schema.define(:version => 20130208093050) do
 
   create_table "braindets", :force => true do |t|
     t.integer  "brdlin"
@@ -69,10 +69,10 @@ ActiveRecord::Schema.define(:version => 20130208041801) do
 
   create_table "habilitacions", :force => true do |t|
     t.integer  "user_id"
-    t.string   "empresa_id"
     t.integer  "level"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "empresa_id"
   end
 
   create_table "histgens", :force => true do |t|

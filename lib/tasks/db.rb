@@ -8,6 +8,8 @@ end
 
 task :cleanusers  => [:environment] do
   User.all.each { |i| i.destroy }
+  Empresa.all.each { |i| i.destroy }
+  Habilitacio.all.each { |i| i.destroy }
 end
 
 task :createbrossa => [:environment] do
