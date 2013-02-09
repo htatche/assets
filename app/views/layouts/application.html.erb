@@ -9,26 +9,41 @@
 </head>
 <body>
 
+  <div id='rightmenu'>
+    <% if @current_user %>
+      <div id='usermenu'>
+        <ul>
+          <li> <%= image_tag('user.png') %> <%=  @current_user.nom %>
+            <ul>
+              <li> Configuracio </li>
+              <li><%= link_to 'Desconectar', '/logout' %> </li>
+            </ul>
+          </li>
+          <li> <%= image_tag('support.png') %> Suport
+            <ul>
+              <li id='/logout'> Documentació </li>
+              <li id='/logout'> Suport telefonic </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+
   <div id="appContainer">
 		<div id="appTabs">
       <ul>
-        <% if @current_user %>
-          <li hasclosebutton='false'>
-            <a href='#tabMenu'> <%= image_tag('user.png') %> <%=  @current_user.nom %> </a>
-          </li>
-        <% end %>
         <li class='start' hasclosebutton='false'>
-          <a href='#tabMenu'> <%= @current_user.empresas.first.empnom %> </a>
+          <% if @current_user %>
+            <a href='#tabMenu'> <%= @current_user.empresas.first.empnom %> </a>
+          <% else %>
+            Login
+          <% end %>
         </li>
       </ul>
-        <% if @current_user %>
-          <div>
-            <%= render :partial => 'users/home' %>
-          </div>
-        <% end %>
-        <div>
-          <%= yield %>
-        </div>
+      <div>
+        <%= yield %>
+      </div>
 	  </div>
 	</div>
 

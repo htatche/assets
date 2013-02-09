@@ -42,6 +42,11 @@ a {
   margin: auto;
 }
 
+#rightmenu {
+  float: left;
+  margin-right: 20px;
+}
+
 /* Tabs */
 #appTabs li.start {
   padding: 5px;
