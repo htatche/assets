@@ -12,10 +12,20 @@
   <div id="appContainer">
 		<div id="appTabs">
       <ul>
+        <% if @current_user %>
+          <li hasclosebutton='false'>
+            <a href='#tabMenu'> <%= image_tag('user.png') %> <%=  @current_user.nom %> </a>
+          </li>
+        <% end %>
         <li class='start' hasclosebutton='false'>
-          <a href='#tabMenu'> Inici </a>
+          <a href='#tabMenu'> <%= @current_user.empresas.first.empnom %> </a>
         </li>
       </ul>
+        <% if @current_user %>
+          <div>
+            <%= render :partial => 'users/home' %>
+          </div>
+        <% end %>
         <div>
           <%= yield %>
         </div>

@@ -18,7 +18,8 @@ protected
 
   def save_login_state
     if session[:user_id]
-      redirect_to(:controller => 'home', :action => 'index')
+      #redirect_to(:controller => 'home', :action => 'index')
+      redirect_to('/home')
       return false
     else
       return true
@@ -72,7 +73,8 @@ public
   end
 
   def load_schema
-    Apartment::Database.switch(Empresa.first.schema)
+    Apartment::Database.switch(session[:schema])
+    @current_empresa = Empresa.find_by_schema(session[:schema])
   end
 
 

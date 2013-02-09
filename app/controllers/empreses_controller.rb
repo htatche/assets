@@ -3,13 +3,24 @@ class EmpresesController < ApplicationController
   skip_before_filter :authenticate_user, :only => [:create, :update]
   before_filter :check_api_key, :only => :create
 
-  def home
-  end
-
   def check_api_key
     if params[:api_key] != ApplicationSettings.config['api_key']
       render :json => {:error => 'No he pogut crear la empresa'},
              :status => :unprocessable_entity
+    end
+  end
+
+  def home
+    if session[:schema]
+      redirect_to "/empreses/#{@current_user.empresas.first.id}"
+    else
+      if @current_user.empresas.count == 0
+        render :partial => 'contactar_empresa'
+      elsif @current_user.empresas.count == 1
+        redirect_to "/empreses/#{@current_user.empresas.first.id}"
+      elsif @current_user.empresas.count > 1
+        render :partial => 'choose'
+      end
     end
   end
 
@@ -18,14 +29,15 @@ class EmpresesController < ApplicationController
 
     # Creem el esquema si es el primer acces
     if @current_user.is_admin?(empresa.id) && !empresa.schema
-      name = empresa.create_schema
+      empresa.create_schema
     end
 
     if @current_user.is_member?(empresa.id)
+      session[:schema] = empresa.schema
       load_schema
     end 
 
-    redirect_to '/home'
+    @options = Menu.all
   end
 
   def create

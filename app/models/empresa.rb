@@ -47,11 +47,8 @@ has_many :habilitacios
         end
 
         update_attributes(:schema => random_name)
-        return random_name
-        
       rescue Exception => e
         logger.debug e.inspect
-        exit
       end
     end
 

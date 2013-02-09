@@ -17,7 +17,16 @@ $.datepicker.setDefaults( $.datepicker.regional['ca'] );
 $(document).ready(function() {
 	theme = getTheme();
 
-  $('#appTabs').jqxTabs({ position: 'top', theme: theme, showCloseButtons: true });
+  $('#appTabs').jqxTabs({
+    position: 'top',
+    theme: theme,
+    showCloseButtons: true
+  });
+
+  /* Ens asegurem de mostrar la Home de Empresa */
+  if ($('#appTabs').jqxTabs('length') > 1) {
+    $('#appTabs').jqxTabs('select', 1);  
+  }
 
   inputToNumeric = function(numeric, input, width, height) {
 

@@ -5,7 +5,7 @@
         <ul>
           <% menuOptions.each{ |i| %>
             <% unless i.opcmodul == 'consulta' %>
-              <li id='<%= i.opcmodul %>'><%= i.opcdes %></li>
+              <li id='<%= "/#{i.opcmodul}" %>'><%= i.opcdes %></li>
             <% end %>
           <% } %>
         </ul>
@@ -14,7 +14,7 @@
         <ul>
           <% menuOptions.each{ |i| %>
             <% if i.opcmodul == 'consulta' %>
-              <li id='consulta/<%= i.id %>'><%= i.opcdes %></li>
+              <li id='/consulta/<%= i.id %>'><%= i.opcdes %></li>
             <% end %>
           <% } %>
         </ul>
