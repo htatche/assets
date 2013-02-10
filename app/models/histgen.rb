@@ -20,8 +20,6 @@ class Histgen < ActiveRecord::Base
   end
 
   def comentari (comdoc, text_pra)
-    comen = comen.blank? ? '' : comen
-
     if comen.blank?
       comdoc
     else

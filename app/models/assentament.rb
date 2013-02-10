@@ -66,10 +66,6 @@ class Assentament
     @errors
   end
 
-  def getCompte
-    @compte = Compte.find_by_ctcte_or_new(@grup, @numcompte, @ctdesc)
-  end
-
   def validateCompte
 
     errors = []
@@ -165,7 +161,7 @@ class Assentament
       @contrapartides_param.each_with_index{ |i, index|
 
         @contrapartides[index] = Histgen.new({
-          :ctkey => Compte.getCompteId(i[1][:compte]),
+          :ctkey => Compte.find(i[1][:compte]).id,
           :hislin => index,
           :import => i[1][:import].sanitizeCurrency,
           :comen => i[1][:comment]
@@ -190,7 +186,7 @@ class Assentament
         @impostos_param.each_with_index { |i, index|
           @impostos[index] = Histimp.new({
             :hislin => index,
-            :ctkey => Compte.getCompteId(i[1][:compte]),
+            :ctkey => Compte.find(i[1][:compte]).id,
             :impbas => i[1][:import].sanitizeCurrency
           }) 
 
@@ -213,7 +209,7 @@ class Assentament
     
           @pagaments[index] = Histpag.new({
             :hislin => index,
-            :fpkey => Compte.getCompteId(i[1][:compte]),
+            :fpkey => Compte.find(i[1][:compte]).id,
             :import => i[1][:import].sanitizeCurrency,
             :datven => i[1][:date],
           }) 
@@ -253,13 +249,13 @@ class Assentament
 
   def save
     nassent = Moviment.getNewNumass
-    getCompte
+    compte = Compte.find_by_ctcte_or_new(@grup, @numcompte, @ctdesc)
 
-    if @compte.new_record?
-      @compte.save
+    if compte.new_record?
+      compte.save
     end
 
-    @general.ctkey = @compte.id
+    @general.ctkey = compte.id
     @general.save
 
     @contrapartides.each { |i|

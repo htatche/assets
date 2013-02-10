@@ -19,7 +19,7 @@ Mc::Application.routes.draw do
   resources :comptes
 
   #get 'assentaments/grid'
-  get 'assentaments/fillCtcteInput'
+  get 'assentaments/formatejarCompte'
   resources :assentaments
 
   get 'moviments/grid'

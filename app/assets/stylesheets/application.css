@@ -19,6 +19,7 @@ body {
   padding: 10px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   font-weight: normal;
+  background-color: rgba(16, 12, 27, 0.61);
 }
 
 h1 {
@@ -153,4 +154,8 @@ div.ui-datepicker{
 div.jqx-expander div.jqx-expander-header-content h3 {
   display: inline-block;
   margin: 0;
+}
+
+div.jqx-tabs ul.jqx-tabs-title-container {
+  margin-left: 5px;
 }

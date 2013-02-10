@@ -112,7 +112,7 @@ function ApuntForm(tab) {
 
   var getDescripcio = function(ctcte) {
     $.ajax({
-      url: '/assentaments/fillCtcteInput',
+      url: '/assentaments/formatejarCompte',
       data: 'numCompte='+ctcte,
       success: function(data) {
         var data = jQuery.parseJSON(data);
