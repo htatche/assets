@@ -44,4 +44,59 @@ class Brain < ActiveRecord::Base
     @grup = find_by_brakey(@brakey)
     @grup.bradest.nil? ? '' : @grup.bradest
   end
+
+  def construir_filtre_apunts(emplos, compte, signe)
+    var = compte[0, compte.length - emplos]
+
+    fields = [
+      ['braori', 'brapor'],
+      ['brades', 'brapde'],
+      ['braimp','braipr'],
+      ['brapag', 'braipa'],
+      ['brareb', 'braire']
+    ]
+
+    fields.each { |f|
+      #ssql = "#{f[1]} = #{signe} AND #{f[0]} = "
+      #       "Mid(#{var}, 1, Length(Concat(#{f[0]}, '0')) - 1)) OR"
+
+      ssql = ssql + "(#{f[1]} = #{signe}"
+           + " AND "
+           + "#{f[0]} = Mid(#{var}, 1, Length(Concat(#{f[0]}, '0')) - 1))"
+           + " OR "
+    }
+
+    ssql
+  end
+
+  def buscar_brain(apunts)
+    busca = []
+    wkey = 0
+ 
+    apunts.each_with_index { |a, idx|
+      signe = a.deure != 0 ? 1 : 0
+      ssql = construir_filtre_apunts(a.ctcte, signe)
+
+      wkey = idx
+      busca.delete_if { |i| i.conta < 2 } if wkey != idx
+
+      Brain.where(ssql).each { |b|
+        if busca.empty?
+          busca.push(
+          {
+            :wkey => idx,   
+            :brakey => b.brakey,
+            :bracon => b.bracon,
+            :conta => 1
+          }
+        else
+          busca.map! { |i|
+            if i[:wkey] == idx && i['brakey'] == b.brakey
+              i.conta = i.conta + 1
+            end
+          }
+        end
+      }
+    }
+  end
 end

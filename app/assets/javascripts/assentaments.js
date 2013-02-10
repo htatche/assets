@@ -115,8 +115,6 @@ function ApuntForm(tab) {
       url: '/assentaments/formatejarCompte',
       data: 'numCompte='+ctcte,
       success: function(data) {
-        var data = jQuery.parseJSON(data);
-
         _this.htmlDiv.find('input[name=ctcte]').val(data.ctcte);
         _this.htmlDiv.find('input[name=ctdesc]').val(data.ctdesc);
       }

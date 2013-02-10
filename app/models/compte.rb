@@ -81,7 +81,6 @@ class Compte < ActiveRecord::Base
     end
 
     if (compte =~ /^[0-9]+[.][0-9]+$/) && compte.length < emploc
-    exit 
       parts_compte = compte.split(".")
 
       if Pgc.where(:pgccte => parts_compte[0]).any?
@@ -89,13 +88,12 @@ class Compte < ActiveRecord::Base
         restant = emploc - tamany_compte
 
         if tamany_compte < emploc
-
           compte = parts_compte[0] + ('0' * restant) + parts_compte[1]
         end
       end
     end
 
-    compte
+    return compte
   end
 
 end
