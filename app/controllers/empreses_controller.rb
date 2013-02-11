@@ -16,7 +16,7 @@ class EmpresesController < ApplicationController
       redirect_to "/empreses/#{@current_user.empresas.first.id}"
     else
       if @current_user.empresas.count == 0
-        render :partial => 'contactar_empresa'
+        render 'contactar_empresa'
       elsif @current_user.empresas.count == 1
         redirect_to "/empreses/#{@current_user.empresas.first.id}"
       elsif @current_user.empresas.count > 1
@@ -54,6 +54,8 @@ class EmpresesController < ApplicationController
     new_password = Digest::SHA1.hexdigest(
       [params[:email], Time.now, rand].join
     )[0,6]
+    
+    user = nil # La creem aqui per utilitzarla despres del block
 
     begin 
       Empresa.transaction do
@@ -90,6 +92,8 @@ class EmpresesController < ApplicationController
           :level => 0
         }).save!
       end
+
+      UserMailer.signup_email(user).deliver
 
       render :json => res
     rescue ActiveRecord::RecordInvalid
