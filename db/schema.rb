@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130208093050) do
+ActiveRecord::Schema.define(:version => 20130211093025) do
 
   create_table "braindets", :force => true do |t|
     t.integer  "brdlin"
@@ -188,6 +188,14 @@ ActiveRecord::Schema.define(:version => 20130208093050) do
     t.integer  "numass"
     t.string   "cttext"
     t.integer  "ctimp"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "parametres", :force => true do |t|
+    t.integer  "pgc_id"
+    t.integer  "long_compte"
+    t.integer  "long_sufix"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

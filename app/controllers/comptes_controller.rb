@@ -37,7 +37,7 @@ class ComptesController < ApplicationController
     grup = Pgc.find(params[:compte][:pgc_id]).pgccte
     ctcte = params[:compte][:ctcte]
 
-    full_ctcte = Compte.completarCodi(grup, ctcte)
+    full_ctcte = Compte.completarCodi(@current_empresa.emploc, grup, ctcte)
 
     @compte = Compte.new(params[:compte])
     @compte.ctcte = full_ctcte

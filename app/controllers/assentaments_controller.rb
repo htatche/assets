@@ -11,11 +11,10 @@ class AssentamentsController < ApplicationController
   end
 
   def create
-    logger.debug params[:cttext].inspect
+    busca = Brain.buscar_brain(@current_empresa.emplos, params[:apunts])
+    Moviment.comptabilitzar(params[:apunts])
 
-    params[:apunts].each { |apunt|
-      logger.debug apunt.inspect
-    }
+    exit
   end
 
   def formatejarCompte

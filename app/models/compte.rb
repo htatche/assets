@@ -51,8 +51,7 @@ class Compte < ActiveRecord::Base
   end
 
   def self.completarCodi(grup, ctcte)
-
-    emploc = @current_empresa.emploc
+    emploc = Empresa.find_by_schema(session[:schema])
     grup = grup.to_s
     ctcte = ctcte.to_s
 

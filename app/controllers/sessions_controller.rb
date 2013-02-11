@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_filter :authenticate_user, :only => [:login, :login_attempt]
+  skip_before_filter :load_schema, :only => [:login, :login_attempt]
   before_filter :save_login_state, :only => [:login, :login_attempt]
 
  def login

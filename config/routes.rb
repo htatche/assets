@@ -1,5 +1,7 @@
 Mc::Application.routes.draw do
 
+  resources :parametres
+
   get "empreses/admin"
   match 'home' => 'empreses#home'
   resources :empreses

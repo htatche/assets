@@ -1,6 +1,7 @@
 class EmpresesController < ApplicationController
   respond_to :html, :json
   skip_before_filter :authenticate_user, :only => [:create, :update]
+  skip_before_filter :load_schema, :only => [:show]
   before_filter :check_api_key, :only => :create
 
   def check_api_key
@@ -29,7 +30,14 @@ class EmpresesController < ApplicationController
 
     # Creem el esquema si es el primer acces
     if @current_user.is_admin?(empresa.id) && !empresa.schema
-      empresa.create_schema
+      schema = empresa.create_schema
+      Empresa.seed_schema(schema)
+    end
+  
+    # Li demanem de parametritzar la empres si encara no ho ha fet
+    if @current_user.is_admin?(empresa.id) && Parametre.all.empty?
+      session[:schema] = empresa.schema
+      redirect_to :controller => :parametres, :action => :new
     end
 
     if @current_user.is_member?(empresa.id)

@@ -36,11 +36,7 @@ class Moviment < ActiveRecord::Base
     :if => :ctimp
 
   after_initialize :fire
-  attr_accessor :haver, :deure, :descrCompte
-
-  def descrCompte
-    self.compte.ctdesc
-  end
+  attr_accessor :haver, :deure
 
   def self.getNewNumass
     max = maximum('numass')
@@ -72,8 +68,9 @@ class Moviment < ActiveRecord::Base
     end
   end
 
-  def set_num_compte=(numCompte)
-    self.ctkey = numCompte
+  def comptabilitzar
+#clau_ass = Historial.
+
   end
 
 end

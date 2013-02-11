@@ -32,23 +32,27 @@ has_many :habilitacios
     end
 
   public
-    
-    def self.cteMaxLength(empkey)
-      find(empkey).emploc
-    end
 
     def create_schema
       random_name = (0...10).map{65.+(rand(26)).chr}.join.downcase
       
       begin 
         Apartment::Database.create(random_name)
-        Apartment::Database.process(random_name) do
-          Apartment::Database.seed
-        end
-
         update_attributes(:schema => random_name)
       rescue Exception => e
-        logger.debug e.inspect
+        logger.error e
+      end
+
+      return random_name
+    end
+
+    def self.seed_schema(schema)
+      begin 
+        Apartment::Database.process(schema) do
+          Apartment::Database.seed
+        end
+      rescue Exception => e
+        logger.error e
       end
     end
 
