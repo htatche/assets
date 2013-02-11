@@ -161,7 +161,7 @@ class Assentament
       @contrapartides_param.each_with_index{ |i, index|
 
         @contrapartides[index] = Histgen.new({
-          :ctkey => Compte.find(i[1][:compte]).id,
+          :ctkey => Compte.find_by_ctcte(i[1][:compte]).id,
           :hislin => index,
           :import => i[1][:import].sanitizeCurrency,
           :comen => i[1][:comment]
@@ -186,7 +186,7 @@ class Assentament
         @impostos_param.each_with_index { |i, index|
           @impostos[index] = Histimp.new({
             :hislin => index,
-            :ctkey => Compte.find(i[1][:compte]).id,
+            :ctkey => Compte.find_by_ctcte(i[1][:compte]).id,
             :impbas => i[1][:import].sanitizeCurrency
           }) 
 
@@ -209,7 +209,7 @@ class Assentament
     
           @pagaments[index] = Histpag.new({
             :hislin => index,
-            :fpkey => Compte.find(i[1][:compte]).id,
+            :fpkey => Compte.find_by_ctcte(i[1][:compte]).id,
             :import => i[1][:import].sanitizeCurrency,
             :datven => i[1][:date],
           }) 

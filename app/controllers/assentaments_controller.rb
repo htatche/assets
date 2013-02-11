@@ -18,8 +18,7 @@ class AssentamentsController < ApplicationController
   end
 
   def formatejarCompte
-    @input = Compte.formatejarCompte(@current_empresa.emploc,
-                                     params[:numCompte])
+    @input = Compte.formatejar_compte(params[:numCompte])
     @compte = Compte.find_by_ctcte(@input)
 
     render :json => {:ctcte => @compte.ctcte, :ctdesc => @compte.ctdesc }

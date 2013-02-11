@@ -51,7 +51,7 @@ class Compte < ActiveRecord::Base
   end
 
   def self.completarCodi(grup, ctcte)
-    emploc = Empresa.find_by_schema(session[:schema])
+    emploc = Parametre.long_compte
     grup = grup.to_s
     ctcte = ctcte.to_s
 
@@ -73,7 +73,8 @@ class Compte < ActiveRecord::Base
 
   # Formatejem el compte en format 'grup.compte'
   # S'utilitza desde la entrada de assentaments
-  def self.formatejarCompte(emploc, compte)
+  def self.formatejar_compte(compte)
+    emploc = Parametre.long_compte
 
     if !Compte.where(:ctcte => compte).empty?
       return Compte.find_by_ctcte(compte).ctcte
