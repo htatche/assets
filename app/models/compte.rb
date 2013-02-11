@@ -49,7 +49,7 @@ class Compte < ActiveRecord::Base
     if comptes.present?
       noucompte = comptes.last.ctcte.to_i + 1
     else
-      raise 'No existeix cap compte amb aquest grup'
+      noucompte = completarCodi(grup, 1).to_i
     end    
   end
 

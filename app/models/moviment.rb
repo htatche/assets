@@ -35,7 +35,7 @@ class Moviment < ActiveRecord::Base
   private
 
   def ctdcta_is_a_data?
-    errors.add(:ctdcta, :not_a_date) unless ctdcta.is_a_date?
+#errors.add(:ctdcta, :not_a_date) unless ctdcta.is_a_date?
   end
 
   public
@@ -57,13 +57,11 @@ class Moviment < ActiveRecord::Base
   end
 
   def self.comptabilitzar (apunts)
-    clau_ass =  (Historial.maximum('id') if Historial.any?) || 1
+    #clau_ass =  (Historial.maximum('id') if Historial.any?) || 1
     num_ass =  (Moviment.maximum('numass') if Moviment.any?) || 1
 
     apunts.each_with_index { |a, idx|
       a = a[1]
-      wkey = idx
-      
       signe = a['deure'] != '0' ? 1 : -1
       import = a['deure'] != '' ? a['deure'] : a['haver']
 
@@ -79,10 +77,7 @@ class Moviment < ActiveRecord::Base
       }).save!
 
       # Falte brossa !
-
-      clau_ass = clau_ass + 1
-      num_ass = num_ass + 1
-      wkey = idx
+      a['numass'] = num_ass
     }
   end
 

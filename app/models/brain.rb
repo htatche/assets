@@ -58,9 +58,6 @@ class Brain < ActiveRecord::Base
     ]
 
     fields.each_with_index { |f, idx|
-      #ssql = "#{f[1]} = #{signe} AND #{f[0]} = "
-      #       "Mid(#{var}, 1, Length(Concat(#{f[0]}, '0')) - 1)) OR"
-
       ssql = ssql + "#{f[1]} = #{signe}
              AND 
             #{f[0]} = substr('#{var}', 1, Length(Concat(#{f[0]}, '0')) - 1)"
@@ -73,24 +70,20 @@ class Brain < ActiveRecord::Base
 
   def self.buscar_brain(apunts)
     busca = []
-    wkey = 0
  
     apunts.each_with_index { |a, idx|
-      @@my_logger.debug "Apunt: #{idx}, wkey: #{wkey}"
-
       a = a[1]
-      signe = a['deure'] != 0 ? 1 : -1
+      signe = a['deure'] != '' ? 1 : -1
       ssql = construir_filtre_apunts(a['ctcte'], signe)
 
-      busca.delete_if { |i| i[:conta] < 2 } if busca.any? && wkey != idx
-
+      busca.delete_if { |i| i[:conta] < 2 }
+      
       Brain.where(ssql).each_with_index { |b, bidx|
-        @@my_logger.debug "Brain: #{bidx}, brakey: #{b.brakey}"
 
-        if busca.empty?
+        buscabis = busca.select { |bis| bis[:brakey] == b.brakey }
+        if buscabis.empty?
           busca.push (
             {
-              :wkey => idx,   
               :brakey => b.brakey,
               :bracon => b.bracon,
               :conta => 1
@@ -98,21 +91,15 @@ class Brain < ActiveRecord::Base
           )
         else
           busca.each { |i|
-            if i[:wkey] == idx && i[:brakey] == b.brakey
+            if i[:brakey] == b.brakey
               i[:conta] = i[:conta] + 1
             end
           } 
         end
-        
-        @@my_logger.debug busca.to_yaml
       }
-
-      wkey = idx
     }
 
-    @@my_logger.info "Borrem els conta <2..."
     busca.delete_if { |i| i[:conta] < 2 }
-    @@my_logger.debug busca.to_yaml
     return busca
   end
 end

@@ -13,6 +13,9 @@ class AssentamentsController < ApplicationController
   def create
     busca = Brain.buscar_brain(params[:apunts])
     Moviment.comptabilitzar(params[:apunts])
+    Historial.crear_desde_assentament(params[:apunts], busca)
+    logger.debug params[:apunts]
+    raise
 
 
 

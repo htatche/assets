@@ -64,4 +64,22 @@ class Historial < ActiveRecord::Base
 
     mov.save!
   end
+
+  def self.crear_desde_assentament (apunts, busca)
+    apunts.each { |a|
+      if busca.any?
+        brain = Brain.where('brakey = ?', a['brakey']).any?
+        if brain.any?
+          wbraori = brain.braori == '' : brain.braori
+          wbrades = brain.brades == wbraori : brain.brades
+          wbraimp = brain.braimp == wbraori : brain.braimp
+          wbrapag = brain.brapag == wbraori : brain.brapag
+          wbrareb = brain.brareb == wbraori : brain.brareb
+
+          apunts.select { |i|
+            i['ctcte'] != ''
+            && ...
+not like '" & wbraori & "%' AND wctcte not like '" & wbrades & "%' AND wctcte not like '" & wbraimp & "%' AND wctcte not like '" & wbrapag & "%' AND wctcte not like '" & wBraReb & "%'"
+                Set rst_3 = cmd2.Execute
+  end
 end
