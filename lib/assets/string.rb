@@ -5,14 +5,14 @@ class String
     Float(self) != nil rescue false
   end
 
-  def date?
+  def is_a_date?
     begin
-      Date.parse(self)
+      Date.strptime("{ #{self} }", "{ %d/%m/%Y }")
     rescue
-      false
-    else
-      true
+      return false
     end
+    
+    return true
   end
 
   def sanitizeCurrency

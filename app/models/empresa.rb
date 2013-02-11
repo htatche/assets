@@ -5,25 +5,21 @@ has_many :habilitacios
   validates :empnom,
     :presence => true
 
-  #validates :expiracio_contracte,
-  #  :presence => true,
-  #  :on => :create
+  validates :expiracio_contracte,
+    :presence => true,
+    :on => :create
 
-  #validate :expiracio_contracte_is_a_date?,
-  #  :if => :expiracio_contracte
+  validate :expiracio_contracte_is_a_date?,
+    :if => :expiracio_contracte
+
   validate :activada_is_a_bool?,
     :if => :activada
 
   private
 
     def expiracio_contracte_is_a_date?
-      begin
-        DateTime.parse(expiracio_contracte) 
-      rescue
-        errors.add(:expiracio_contracte, 'No es una data')
-      end
+      errors.add(:ctdcta, :not_a_date) unless expiracio_contracte.is_a_date?
     end
-
 
     def activada_is_a_bool?
      if !(activada.is_a?(TrueClass) || activada.is_a?(FalseClass))

@@ -11,8 +11,10 @@ class AssentamentsController < ApplicationController
   end
 
   def create
-    busca = Brain.buscar_brain(@current_empresa.emplos, params[:apunts])
+    busca = Brain.buscar_brain(params[:apunts])
     Moviment.comptabilitzar(params[:apunts])
+
+
 
     exit
   end

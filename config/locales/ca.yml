@@ -119,6 +119,7 @@ ca:
       too_long: és massa llarg (%{count} caràcters màxim)
       too_short: és massa curt (%{count} caràcters mínim)
       wrong_length: no té la longitud correcte (%{count} caràcters exactament)
+      not_a_date: no és una data vàlida
     template:
       body: ! 'Hi ha hagut problemes amb els següents camps:'
       header:

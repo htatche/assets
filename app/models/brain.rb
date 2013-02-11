@@ -46,8 +46,8 @@ class Brain < ActiveRecord::Base
     @grup.bradest.nil? ? '' : @grup.bradest
   end
 
-  def self.construir_filtre_apunts(emplos, compte, signe)
-    var = compte[0, compte.length - emplos.to_i]
+  def self.construir_filtre_apunts(compte, signe)
+    var = compte[0, compte.length - Parametre.long_sufix.to_i]
     ssql = ""
     fields = [
       ['braori', 'brapor'],
@@ -71,7 +71,7 @@ class Brain < ActiveRecord::Base
     ssql
   end
 
-  def self.buscar_brain(emplos, apunts)
+  def self.buscar_brain(apunts)
     busca = []
     wkey = 0
  
@@ -80,7 +80,7 @@ class Brain < ActiveRecord::Base
 
       a = a[1]
       signe = a['deure'] != 0 ? 1 : -1
-      ssql = construir_filtre_apunts(emplos, a['ctcte'], signe)
+      ssql = construir_filtre_apunts(a['ctcte'], signe)
 
       busca.delete_if { |i| i[:conta] < 2 } if busca.any? && wkey != idx
 
