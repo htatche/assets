@@ -2,23 +2,23 @@ class ComptesController < ApplicationController
   respond_to :html, :json
 
   def new
-    @empresa = Empresa.first
     @compte = Compte.new
 
     respond_with do |format|
       format.html do
-        render :partial => 'form', :format => :html
+        render :partial => 'form', :format => :html,
+               :locals => {:long_sufix => Parametre.long_sufix}
       end
     end
   end
 
   def edit
-    @empresa = Empresa.first
     @compte = Compte.find_by_ctcte(params[:id])
 
     respond_with do |format|
       format.html do
-        render :partial => 'form', :format => :html
+        render :partial => 'form', :format => :html,
+               :locals => {:long_sufix => Parametre.long_sufix}
       end
     end
   end

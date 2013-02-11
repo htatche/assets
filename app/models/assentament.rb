@@ -9,7 +9,7 @@ class Assentament
     @opckey = params[:opckey]
     @date = params[:date]
     @comment = params[:comment] || ''
-    @auto = params[:assignar_codi_auto] || true
+    @auto = params[:assignar_codi_auto] ? true : false
 
     if params[:import]
       @import = params[:import].sanitizeCurrency
@@ -96,7 +96,8 @@ class Assentament
       end
     elsif @ctcte.empty? and !@ctdesc.empty?
       if @auto
-        @numcompte = Compte.generarNou(@grup)
+        braori = Brain.find_by_brakey(@grup).braori
+        @numcompte = Compte.generarNou(braori)
       else
         errors = [{:field => @lits.lit4,
                    :msg => 'no pot estar buit'}]
@@ -114,7 +115,8 @@ class Assentament
 
   def validateNumdoc
     errors = {}
-    if Historial.buscarFactura(@opckey, @numdoc, @ctcte).present?
+    if @ctcte.present? &&
+       Historial.buscarFactura(@opckey, @numdoc, @ctcte).present?
       error = {:field => @lits.lit3, :msg => 'Factura duplicada'}
     end
 
@@ -249,7 +251,8 @@ class Assentament
 
   def save
     nassent = Moviment.getNewNumass
-    compte = Compte.find_by_ctcte_or_new(@grup, @numcompte, @ctdesc)
+    braori = Brain.find_by_brakey(@general.brakey).braori
+    compte = Compte.find_by_ctcte_or_new(braori, @numcompte, @ctdesc)
 
     if compte.new_record?
       compte.save

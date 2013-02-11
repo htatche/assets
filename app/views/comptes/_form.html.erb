@@ -9,7 +9,7 @@
       <%= f.hidden_field :pgc_id %>
     <label for="name">Compte comptable</label>
       <% if @compte.new_record? %>
-        <%= f.text_field :ctcte, :maxlength => @empresa.emplos %>
+        <%= f.text_field :ctcte, :maxlength => long_sufix %>
       <% else %>
         <%= f.text_field :ctcte, :disabled => true %>
         <%= f.hidden_field :ctcte %>

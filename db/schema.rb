@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211093025) do
+ActiveRecord::Schema.define(:version => 20130211114227) do
 
   create_table "braindets", :force => true do |t|
     t.integer  "brdlin"
@@ -55,11 +55,6 @@ ActiveRecord::Schema.define(:version => 20130211093025) do
 
   create_table "empresas", :force => true do |t|
     t.string   "empnom"
-    t.integer  "emppgc"
-    t.integer  "emploc"
-    t.integer  "emplos"
-    t.string   "empdlo"
-    t.string   "empdli"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "schema"
@@ -96,7 +91,6 @@ ActiveRecord::Schema.define(:version => 20130211093025) do
   end
 
   create_table "historials", :force => true do |t|
-    t.integer  "empkey"
     t.integer  "brakey"
     t.integer  "ctkey"
     t.string   "numdoc"

@@ -9,4 +9,8 @@ class Parametre < ActiveRecord::Base
   def self.long_sufix
     first.long_sufix
   end
+
+  def self.pgc_id
+    first.pgc_id
+  end
 end

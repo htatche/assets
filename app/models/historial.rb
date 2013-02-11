@@ -38,10 +38,10 @@ class Historial < ActiveRecord::Base
     if numdoc and ctcte
       ctkey = Compte.completarCodi(grup, ctcte)
           
-      Historial.where('empkey = ?', 1)
-           .where('brakey = ?', grup)
-           .where('numdoc = ?', numdoc)
-           .where('ctkey = ?', ctkey)
+      Historial
+      .where('brakey = ?', grup)
+      .where('numdoc = ?', numdoc)
+      .where('ctkey = ?', ctkey)
     end
 
   end

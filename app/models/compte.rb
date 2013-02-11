@@ -19,12 +19,15 @@ class Compte < ActiveRecord::Base
   end
 
   def self.find_by_ctcte_or_new(grup, ctcte, ctdesc)
-    compte = find_by_ctcte(ctcte)
+    compte = where("ctcte LIKE '?'", ctcte)
+    pgc_id = Parametre.pgc_id
 
     if compte.present?
       return compte
     else
-      pgc = Pgc.where('pgccla = ? AND pgccte = ?', 1, grup)
+      logger.debug pgc_id
+      logger.debug grup
+      pgc = Pgc.where("pgccla = ? AND pgccte = ?", pgc_id, grup)
 
       if pgc.present?
         return compte = new({
@@ -34,7 +37,7 @@ class Compte < ActiveRecord::Base
           :pgc_id => pgc.first.id
         })
       else
-        raise 'No he trobat el grup #{grup} dins del PGC'
+        raise "No he trobat el grup #{grup} dins del PGC"
       end
     end
 
