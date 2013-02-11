@@ -1,5 +1,4 @@
 class PgcsController < ApplicationController
-
   respond_to :html, :json
 
   def index

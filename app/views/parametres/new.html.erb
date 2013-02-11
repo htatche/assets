@@ -1,5 +1,5 @@
-<div class='parametres-new-container'>
-  <h2>Benvingut a Assets, <%= @current_user.nom %>.</h2>
+<div class='parametres-new'>
+  <h1>Benvingut a Assets, <%= @current_user.nom %>.</h1>
 
   <p> Et demanem uns breus instants per a configurar la teva empresa, et prometem
       que sera ràpid ! 
@@ -10,8 +10,8 @@
       <div class="error ui-state-error ui-corner-all">
         <%= flash[:error] %>
         <% if @parametre.errors.any? %>
-          <ul class='sign-form-errors'>
-            <% for message_error in @paremetre.errors.full_messages %>
+          <ul>
+            <% for message_error in @parametre.errors.full_messages %>
               <li><%= message_error %></li>
             <% end %>
           </ul>
@@ -23,7 +23,7 @@
       <ol>
         <li>
           <label> Pla general de comptabilitat </label>
-          <%= f.text_field :pgc_id %>
+          <%= f.select(:pgc_id, @pgctipus) %>
         </li>
         <li>
           <label> Longitud del compte comptable </label>

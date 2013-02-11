@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211114227) do
+ActiveRecord::Schema.define(:version => 20130211134938) do
 
   create_table "braindets", :force => true do |t|
     t.integer  "brdlin"
@@ -208,6 +208,12 @@ ActiveRecord::Schema.define(:version => 20130211114227) do
   end
 
   add_index "pgcs", ["ancestry"], :name => "index_pgcs_on_ancestry"
+
+  create_table "pgctipus", :force => true do |t|
+    t.string   "descripcio"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
