@@ -4,9 +4,4 @@ class HomeController < ApplicationController
   def index 
     @menuOptions = Menu.all
   end
-
-  def home
-    render :partial => 'home/home'
-  end
-
 end

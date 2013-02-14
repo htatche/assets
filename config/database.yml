@@ -6,7 +6,7 @@ development:
   username: postgres
   password: icetea069
 
-test:
+test: &test
   adapter: postgresql
   encoding: utf8
   database: assets_test
@@ -21,3 +21,6 @@ production:
   pool: 5
   username: postgres
   password: icetea069
+
+cucumber:
+  <<: *test

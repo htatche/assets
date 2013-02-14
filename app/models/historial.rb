@@ -70,16 +70,24 @@ class Historial < ActiveRecord::Base
       if busca.any?
         brain = Brain.where('brakey = ?', a['brakey']).any?
         if brain.any?
-          wbraori = brain.braori == '' : brain.braori
-          wbrades = brain.brades == wbraori : brain.brades
-          wbraimp = brain.braimp == wbraori : brain.braimp
-          wbrapag = brain.brapag == wbraori : brain.brapag
-          wbrareb = brain.brareb == wbraori : brain.brareb
+          wbraori = brain.braori
+          wbrades = brain.brades == '' ? wbraori : brain.brades
+          wbraimp = brain.braimp == '' ? wbraori : brain.braimp
+          wbrapag = brain.brapag == '' ? wbraori : brain.brapag
+          wbrareb = brain.brareb == '' ? wbraori : brain.brareb
 
           apunts.select { |i|
-            i['ctcte'] != ''
-            && ...
-not like '" & wbraori & "%' AND wctcte not like '" & wbrades & "%' AND wctcte not like '" & wbraimp & "%' AND wctcte not like '" & wbrapag & "%' AND wctcte not like '" & wBraReb & "%'"
-                Set rst_3 = cmd2.Execute
+#(   !!(i['ctcte'] =~ /^#{wbraori}.*/)
+#            && !!(i['ctcte'] =~ /^#{wbrades}.*/)
+#            && !!(i['ctcte'] =~ /^#{wbraimp}.*/)
+#            && !!(i['ctcte'] =~ /^#{wbrapag}.*/)
+#            && !!(i['ctcte'] =~ /^#{wbrareb}.*/)
+#            )
+          }
+        end
+      end
+    }
+
+    raise apunts.inspect
   end
 end

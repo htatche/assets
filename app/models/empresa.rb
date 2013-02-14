@@ -5,12 +5,12 @@ has_many :habilitacios
   validates :empnom,
     :presence => true
 
-  validates :expiracio_contracte,
-    :presence => true,
-    :on => :create
+ # validates :expiracio_contracte,
+ #   :presence => true,
+ #   :on => :create
 
-  validate :expiracio_contracte_is_a_date?,
-    :if => :expiracio_contracte
+ # validate :expiracio_contracte_is_a_date?,
+  #  :if => :expiracio_contracte
 
   validate :activada_is_a_bool?,
     :if => :activada
