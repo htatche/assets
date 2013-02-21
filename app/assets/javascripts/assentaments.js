@@ -39,7 +39,7 @@ function AssentamentForm (tab) {
       type: reqType,
       data: data,
 
-      success: function(data) {  },
+      success: function(data) { },
       error:   function(data) { }
     });
 
