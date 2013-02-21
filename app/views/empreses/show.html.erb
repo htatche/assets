@@ -1,11 +1,11 @@
 <div class="tab-container">
-  <h1 class='welcome'>
-    <span>Comptabilitat de </span>
-    <%= @current_empresa.empnom %>
-  </h1>
+  <div class="empresa-home">
+    <h1 class='empresa-titol'>
+      <span>Comptabilitat de </span>
+      <%= @current_empresa.empnom %>
+    </h1>
 
-  <div class='menu-container'>
-    <div class='menuOptions'>
+    <div class='menu-container'>
       <% @options.each { |opt| %>
         <div name='<%= opt.mnutit %>' class='option'  id=<%= "/#{opt.route}/#{opt.id.to_s}" %>>
           <img src='/assets/icons/48x48/<%= opt.mnuico %>'/>

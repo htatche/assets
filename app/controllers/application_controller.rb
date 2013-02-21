@@ -77,5 +77,4 @@ public
     @current_empresa = Empresa.find_by_schema(session[:schema])
   end
 
-
 end

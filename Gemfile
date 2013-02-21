@@ -1,11 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.8'
-#gem 'rails', '3.1.3'
-
-
-# Bundle edge Rails instead:
-# gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'ancestry'
 gem 'rake'
@@ -22,13 +17,14 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'cucumber-rails'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
 end
 
 group :test do
   gem 'faker'
+  gem 'minitest'
+  gem 'cucumber-rails'
   gem 'capybara'
   gem 'guard-rspec'
   gem 'launchy'

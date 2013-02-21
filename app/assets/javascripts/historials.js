@@ -23,7 +23,11 @@ function Consulta (tab, el) {
         localdata: data
       };
 
-  var dataAdapter = new $.jqx.dataAdapter(source);
+  var dataAdapter = new $.jqx.dataAdapter(source, {
+    downloadComplete: function (data, status, xhr) { },
+    loadComplete: function (data) { },
+    loadError: function (xhr, status, error) { }
+  });
 
   _this.loadGrid = function() {
     $.getJSON(
@@ -158,11 +162,13 @@ function Consulta (tab, el) {
     htmlDiv.find('#dateTo').datepicker();
   
     _this.setBindings();
-    _this.loadGrid();
   };
 
   _this.setBindings = function() {
     htmlDiv.find('form').submit(function() {
+      if (!_this.grid) {
+        _this.loadGrid();
+      }
       _this.search();
       
       /* Cancel primary submit action (.preventDefault()) */

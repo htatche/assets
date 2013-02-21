@@ -19,14 +19,12 @@ class Compte < ActiveRecord::Base
   end
 
   def self.find_by_ctcte_or_new(grup, ctcte, ctdesc)
-    compte = where("ctcte LIKE '?'", ctcte)
+    compte = where("ctcte LIKE ?", ctcte)
     pgc_id = Parametre.pgc_id
 
     if compte.present?
-      return compte
+      return compte.first
     else
-      logger.debug pgc_id
-      logger.debug grup
       pgc = Pgc.where("pgccla = ? AND pgccte = ?", pgc_id, grup)
 
       if pgc.present?

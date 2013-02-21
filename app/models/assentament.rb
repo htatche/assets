@@ -252,6 +252,7 @@ class Assentament
   def save
     nassent = Moviment.getNewNumass
     braori = Brain.find_by_brakey(@general.brakey).braori
+
     compte = Compte.find_by_ctcte_or_new(braori, @numcompte, @ctdesc)
 
     if compte.new_record?

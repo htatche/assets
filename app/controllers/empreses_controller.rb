@@ -83,6 +83,8 @@ class EmpresesController < ApplicationController
           res = {:data => 'new_user',
                  :email => params[:email],
                  :password => new_password}
+      
+          UserMailer.signup_email(user).deliver
         end
 
         # Associa l'usuari com a administrador de l'empresa
@@ -92,8 +94,6 @@ class EmpresesController < ApplicationController
           :level => 0
         }).save!
       end
-
-      UserMailer.signup_email(user).deliver
 
       render :json => res
     rescue ActiveRecord::RecordInvalid

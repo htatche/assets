@@ -1,16 +1,14 @@
 //= require jquery
-// UJS desactivat perque tarda massa en carregar en entorn dev
 //= require jquery_ujs
 //= require jquery.ui.button
 //= require jquery.ui.dialog
-//= require jquery.effects.all
-//= require jquery.ui.datepicker-ca
+//= require jquery.ui.datepicker
+//= require jquery.ui.effect.all
 //= require ../../../vendor/assets/javascripts/underscore-min.js
 //= require ../../../vendor/assets/javascripts/backbone-min.js
 //= require ../../../vendor/assets/javascripts/jqwidgets/globalization/jquery.global.js
 //= require_tree ../../../vendor/assets/javascripts/
 //= require_tree .
-// jquery-ui defaults
 
 $.datepicker.setDefaults( $.datepicker.regional['ca'] );
 

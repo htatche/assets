@@ -69,7 +69,7 @@ function AssentamentForm (tab) {
     var dataAdapter = new $.jqx.dataAdapter(gridSource);
     var grid = _this.htmlGrid.jqxGrid({
       width: '100%',
-      source: dataAdapter,
+      //source: dataAdapter,
       theme: theme,
       sortable: true,
       pageable: true,
@@ -149,7 +149,7 @@ function ApuntForm(tab) {
 
     _this.htmlDiv.find('input[name=data_apunt]').datepicker();
 
-    _this.htmlDiv.find('input[name=ctcte]').live('keydown', function(e) { 
+    _this.htmlDiv.find('input[name=ctcte]').on('keydown', function(e) { 
       var keyCode = e.keyCode || e.which; 
 
       if (keyCode == 9) { 

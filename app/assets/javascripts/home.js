@@ -22,14 +22,14 @@ $(document).ready(function() {
     });
   }
 
-  $('div.menuOptions').find('div.option').dblclick(function() {
+  $('div.empresa-home div.menu-container').find('div.option').dblclick(function() {
     var route = $(this).attr('id');
     var title = $(this).attr('name');
 
     loadTab(route, title);
   });
 
-  $('div.menuOptions').find('div.option').hover(
+  $('div.empresa-home div.menu-container').find('div.option').hover(
     function() {
       $(this).addClass('hover');
     },
@@ -39,7 +39,7 @@ $(document).ready(function() {
   );
 
   // Prevent text and menu icons from being selected
-  $('div.menuOptions').live('selectstart dragstart', function(evt) {
+  $('div.empresa-home div.menu-container').on('selectstart dragstart', function(evt) {
     evt.preventDefault();
     return false;
   });

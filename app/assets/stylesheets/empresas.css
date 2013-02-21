@@ -6,3 +6,51 @@ div.contactar-empresa h3 {
   font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
   color: #333;
 }
+
+div.empresa-home {
+  width: auto;
+  margin-left: 20px;
+  display: inline-block;
+}
+
+h1.empresa-titol {
+  margin: 10px 0 30px 40px;
+}
+
+h1.empresa-titol span {
+  font-weight: 100;
+}
+
+div.empresa-home div.option {
+  float: left;
+  width: 100px;
+  height: 90px;
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+
+  border: 1px solid transparent;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+
+div.empresa-home div.option.hover {
+  background-color: #C7C7C7;
+  border: 1px solid #aaa;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+}
+
+div.empresa-home div.option img {
+  top: -100px;
+  z-index: -1;
+}
+
+div.empresa-home div.option div.text {
+  vertical-align: middle;
+  margin: 5px;
+}

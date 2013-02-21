@@ -1,5 +1,6 @@
 class Historial < ActiveRecord::Base
   belongs_to :compte, :foreign_key => 'ctkey'
+
   with_options :dependent => :destroy do |assoc|
     assoc.has_many :histgens
     assoc.has_many :histimps
@@ -77,7 +78,7 @@ class Historial < ActiveRecord::Base
           wbrareb = brain.brareb == '' ? wbraori : brain.brareb
 
           apunts.select { |i|
-#(   !!(i['ctcte'] =~ /^#{wbraori}.*/)
+            !!(i['ctcte'] =~ /^#{wbraori}.*/)
 #            && !!(i['ctcte'] =~ /^#{wbrades}.*/)
 #            && !!(i['ctcte'] =~ /^#{wbraimp}.*/)
 #            && !!(i['ctcte'] =~ /^#{wbrapag}.*/)

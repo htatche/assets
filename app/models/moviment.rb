@@ -81,9 +81,6 @@ class Moviment < ActiveRecord::Base
     }
   end
 
-
-
-
 ## Legacy setters
   def haver=(import)
     unless import.empty? then
