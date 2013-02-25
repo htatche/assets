@@ -31,7 +31,7 @@ function AssentamentForm (tab) {
     var cttext = _this.htmlDiv.find('input[name=cttext]').val();
     var data = {
       cttext: cttext,
-      apunts: assentament
+      apunts: JSON.stringify(assentament)
     }
 
     $.ajax({

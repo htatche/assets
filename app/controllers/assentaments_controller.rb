@@ -11,15 +11,10 @@ class AssentamentsController < ApplicationController
   end
 
   def create
-    busca = Brain.buscar_brain(params[:apunts])
-    Moviment.comptabilitzar(params[:apunts])
-    Historial.crear_desde_assentament(params[:apunts], busca)
-    logger.debug params[:apunts]
-    raise
-
-
-
-    exit
+    apunts = JSON.parse(params[:apunts])
+    busca = Brain.buscar_brain(apunts)
+    Moviment.comptabilitzar(apunts)
+    Historial.crear_desde_assentament(apunts, busca)
   end
 
   def formatejarCompte

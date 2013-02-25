@@ -52,7 +52,7 @@ class Brain < ActiveRecord::Base
     fields = [
       ['braori', 'brapor'],
       ['brades', 'brapde'],
-      ['braimp','braipr'],
+      ['braimp', 'braipr'],
       ['brapag', 'braipa'],
       ['brareb', 'braire']
     ]
@@ -72,7 +72,6 @@ class Brain < ActiveRecord::Base
     busca = []
  
     apunts.each_with_index { |a, idx|
-      a = a[1]
       signe = a['deure'] != '' ? 1 : -1
       ssql = construir_filtre_apunts(a['ctcte'], signe)
 

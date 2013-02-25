@@ -33,17 +33,16 @@ class EmpresesController < ApplicationController
       schema = empresa.create_schema
       Empresa.seed_schema(schema)
     end
-  
-    # Li demanem de parametritzar la empres si encara no ho ha fet
-    if @current_user.is_admin?(empresa.id) && Parametre.all.empty?
-      session[:schema] = empresa.schema
-      redirect_to :controller => :parametres, :action => :new
-    end
-
+    
     if @current_user.is_member?(empresa.id)
       session[:schema] = empresa.schema
       load_schema
     end 
+
+    if @current_user.is_admin?(empresa.id) && Parametre.all.empty?
+      session[:schema] = empresa.schema
+      redirect_to :controller => :parametres, :action => :new
+    end
 
     @options = Menu.all
   end

@@ -61,7 +61,6 @@ class Moviment < ActiveRecord::Base
     num_ass =  (Moviment.maximum('numass') if Moviment.any?) || 1
 
     apunts.each_with_index { |a, idx|
-      a = a[1]
       signe = a['deure'] != '0' ? 1 : -1
       import = a['deure'] != '' ? a['deure'] : a['haver']
 

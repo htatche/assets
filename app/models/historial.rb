@@ -69,7 +69,7 @@ class Historial < ActiveRecord::Base
   def self.crear_desde_assentament (apunts, busca)
     apunts.each { |a|
       if busca.any?
-        brain = Brain.where('brakey = ?', a['brakey']).any?
+        brain = Brain.where('brakey = ?', a['brakey'])
         if brain.any?
           wbraori = brain.braori
           wbrades = brain.brades == '' ? wbraori : brain.brades
@@ -77,18 +77,14 @@ class Historial < ActiveRecord::Base
           wbrapag = brain.brapag == '' ? wbraori : brain.brapag
           wbrareb = brain.brareb == '' ? wbraori : brain.brareb
 
-          apunts.select { |i|
-            !!(i['ctcte'] =~ /^#{wbraori}.*/)
-#            && !!(i['ctcte'] =~ /^#{wbrades}.*/)
-#            && !!(i['ctcte'] =~ /^#{wbraimp}.*/)
-#            && !!(i['ctcte'] =~ /^#{wbrapag}.*/)
-#            && !!(i['ctcte'] =~ /^#{wbrareb}.*/)
-#            )
+          apunts.select! { |i|
+            !!(i['ctcte'] =~ /^#{wbraori}.*/ && i['ctcte'] =~ /^#{wbrades}.*/ && i['ctcte'] =~ /^#{wbraimp}.*/ && i['ctcte'] =~ /^#{wbrapag}.*/ && i['ctcte'] =~ /^#{wbrareb}.*/)
           }
+
+          raise apunts.inspect
         end
       end
     }
 
-    raise apunts.inspect
   end
 end
