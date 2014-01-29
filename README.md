@@ -1,1 +1,1 @@
-# Assets - cloud accounting
+# Cloud accounting
